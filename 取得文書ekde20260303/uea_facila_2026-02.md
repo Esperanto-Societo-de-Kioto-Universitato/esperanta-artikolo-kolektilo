@@ -1,0 +1,204 @@
+---
+source: "UEA Facila (uea.facila.org)"
+generated_at: "2026-03-03T10:41:51.194967+00:00"
+generator: "retradio_lib.py"
+time_range: "2026-02-07 – 2026-02-27"
+---
+
+
+# Nur objekto
+
+**Published:** 2026-02-07
+
+**URL:** https://uea.facila.org/filmetoj/nur-objekto-r384
+
+**Categories:** Filmetoj
+
+[Embed] https://www.youtube.com/embed/1fp-0LWa2cc?width=100%25&height=86.25
+
+Ĉu laŭ via opinio la filmeto estas facila aŭ malfacila por Esperanto-lernantoj? malfacila , tre facila
+
+
+---
+
+# Ĉu Monto Zamenhof?
+
+**Published:** 2026-02-11
+
+**URL:** https://uea.facila.org/artikoloj/%C4%9Denerale/%C4%89u-monto-zamenhof-r508
+
+**Categories:** Ĝenerale
+
+**Audio:** https://uea.facila.org/uploads/monthly_2026_02/MontoZamenhofred.mp3.737dc4b0b2ba4452dc59aa49e5d7f41c.mp3
+
+Monto Vaalserberg -- Foto: Xamos, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=6699279
+
+Eblas aŭskulti ĉi tiun artikolon, kiun voĉlegis Margaret Zaleski-Zamenhof.
+
+En eta angulo inter Belgujo, Germanujo kaj Nederlando iam troviĝis tute malgranda landeto, kiu restis sendependa de 1816 ĝis 1919. Tiu landeto nomiĝis Neŭtrala Moresnet.
+
+Dum la frua 20-a jarcento, d-ro Wilhelm Molly, esperantista kuracisto en Moresnet, proponis ke Neŭtrala Moresnet fariĝu sendependa ŝtato kun Esperanto kiel komuna lingvo. Pri lia propono vi povas legi en jena artikolo aperinta en uea.facila . La propono ne estis sukcesa, tamen multaj el la tiutempaj loĝantoj lernis Esperanton.
+
+Post la Unua Mond-milito, Moresnet fariĝis parto de Belgujo. Ĝi estas nun municipo kun la nomo Kelmis, en la germanlingva regiono de Belgujo.
+
+Ĉe la Tri-Landa Punkto, kie renkontiĝas la limoj de Belgujo, Germanujo kaj Nederlando, staras la monto Vaalserberg. Je 322 metroj, ĝi estas la plej alta punkto en Nederlando. Nuntempe estas reta petskribo , laŭ kiu oni ŝanĝu la nomon de la monto al Monto Zamenhof, honore al la kreinto de Esperanto. Universala Esperanto-Asocio (UEA) invitas ĉiujn, kiuj subtenas la idealon de internacia amikeco, subskribi la petskribon kaj kontribui al ĝia diskonigo.
+
+La petskribon iniciatis la artisto, poligloto kaj esperantisto Shabi Fiumei. UEA kunlaboras kun li plurmaniere kaj subtenas la iniciaton kiel kulturan kaj informan agadon. Pri la iniciato jam aperis raporto (kun filmeto) en la belga publika amas-komunikilo BRF ( Belgischer Rundfunk ). En ĝi Jan Sabri Cetinkaya, direktoro de la Muzeo Vieille Montagne en Kelmis, mem prezentas parton de sia mesaĝo en Esperanto. La raporto kaj la filmeto estas troveblaj ĉi tie . Ili estas en la germana, sed eblas traduki la artikolon per la helpo de reta tradukilo.
+
+“Eble la kampanjo ne sukcesos ŝanĝi la nomon de la monto, sed ĝi paroligas homojn pri Esperanto, kaj tio estas jam sukceso. Estas aparte rimarkinde, ke du neesperantistoj uzas iom da Esperanto por raporti pri ĝi,” komentas la Vicprezidanto de UEA, Seán Ó Riain, kiu okupiĝas pri Informado. Li gvidas la kunlaboron kun Shabi Fiumei.
+
+UEA atentigas, ke – senkonsidere al la fina rezulto de la renomiga propono – la iniciato jam konkrete kontribuas al pli vasta publika atento pri Esperanto, pri ĝiaj valoroj, kaj pri ĝia historia kaj kultura heredaĵo .
+
+Fonto: Gazetara Komuniko de UEA n-ro 1281 (2026-02-03)
+
+7
+
+2
+
+direktoro: ĉefo de oficejo, laborejo, komerca organizaĵo, asocio aŭ simile.
+
+d-ro: doktoro.
+
+heredaĵo: tio, kion oni laŭleĝe trans-donas post sia morto al siaj gefiloj aŭ al aliaj homoj; tio, kion la nuntempaj homoj trans-donas al la homoj, kiuj vivos en la estonteco; tio, kion la nuntempaj homoj ricevis de siaj antaŭuloj, aŭ trans-donas al siaj poste-uloj.
+
+honore: montrante respekton pro la gravaj aferoj, kiujn iu homo faris aŭ faras.
+
+iniciati: kiel la unua fari ion aŭ proponi ion; iniciato: nova agado aŭ propono.
+
+kampanjo: laŭplana agado por realigi difinitan celon.
+
+kun-labori: okupiĝi kune pri iu komuna laboro aŭ projekto.
+
+municipo: urbo aŭ regiono kun la rajto prizorgi siajn proprajn aferojn je loka nivelo.
+
+pet-skribo: dokumento kun iu peto, subskribita de multaj membroj de la publiko.
+
+poligloto: homo kiu kapablas paroli multajn lingvojn.
+
+sen-dependa: memstara, funkcianta sen la neceso ricevi permeson aŭ helpon de iu aŭ io alia; (pri lando aŭ komunumo) reganta sin mem; funkcianta memstare kiel aparta sistemo.
+
+sub-skribi: skribi sian nomon fine de dokumento por montri, ke oni mem verkis ĝin, aŭ por konsenti pri la enhavo.
+
+sub-teni: helpi homon, asocion, projekton, politikon aŭ simile, por ke ĝi sukcesu.
+
+
+---
+
+# Mono en siaj diversaj strangaj formoj
+
+**Published:** 2026-02-16
+
+**URL:** https://uea.facila.org/filmetoj/mono-en-siaj-diversaj-strangaj-formoj-r385
+
+**Categories:** Filmetoj
+
+[Embed] https://www.youtube.com/embed/6rk647p2hJs?width=100%25&height=86.25
+
+Ĉu laŭ via opinio la filmeto estas facila aŭ malfacila por Esperanto-lernantoj? malfacila , tre facila
+
+
+---
+
+# Kio estas Zamenhof / Esperanto-objekto?
+
+**Published:** 2026-02-24
+
+**URL:** https://uea.facila.org/artikoloj/%C4%9Denerale/kio-estas-zamenhof-esperanto-objekto-r509
+
+**Author:** Toño del Barrio
+
+**Categories:** Ĝenerale
+
+**Audio:** https://uea.facila.org/uploads/monthly_2026_02/zeo2.mp3.c58e8993bf3f468d188be87c85be9366.mp3
+
+Kelkaj ZEO-j: la juna Zamenhof (Bjalistoko, Pollando), Esperanto-Parko (Vieno, Aŭstrujo), monumento al Esperanto (Sabadell, Hispanujo), Insulo Esperanto (maldekstre en la grupo, Antarkto), asteroido.
+
+Eblas aŭskulti ĉi tiun artikolon, kiun voĉlegis Simone Schumacher.
+
+Diference de aliaj lingvoj, Esperanto ne estas ligita kun fizika teritorio . Iam estis provoj uzi Esperanton kiel lingvon de iuj lokoj, ekzemple en uea.facila vi povas trovi artikolojn pri Neŭtrala Moresnet kaj Insulo de la Rozoj . Tiuj ne ekzistas plu, tamen ankoraŭ eblas trovi spacojn ligitajn al Esperanto aŭ al Zamenhof en multaj lokoj de la mondo. Oni donis al ili la nomon Zamenhof/Esperanto-Objektoj (mallonge: ZEO-j ). Tiu nomo rilatas al lokoj, stratoj, monumentoj aŭ aliaj objektoj nomitaj laŭ d-ro L. L. Zamenhof aŭ la helplingvo Esperanto. Ilin ni povas nomi la fizika Esperantujo .
+
+La plej multaj ZEO-j estas stratoj kaj parkoj nomitaj laŭ Esperanto aŭ Zamenhof. Krome, ekzistas Esperanto-monumentoj, kiel la 12-metra skulptaĵo en Sabadell (Hispanio), kaj memorlokoj, kiel la tombo de d-ro Zamenhof en Varsovio.
+
+Tombo de d-ro Zamenhof kaj lia edzino en Varsovio
+
+La unua konata ZEO estis boato kun la nomo Esperanto , konstruita en 1896 en Malago (Hispanio). Brazilo kaj Pollando havas po pli ol cent ZEO-jn. La pola urbo Malbork enhavas pli ol kvardek diversajn erojn ligitajn al Esperanto.
+
+Ankaŭ naturaj lokoj ricevis Esperantajn nomojn, kiel Kabo Esperanto en Svalbardo (Norvegio), la plej norda ZEO, kaj Insulo Esperanto en Antarkto , la plej suda. Eĉ du asteroidoj portas nomojn rilatajn al nia lingvo: 1421 Esperanto kaj 1462 Zamenhof . Kaj antaŭ nelonge naskiĝis la ideo doni la nomon Zamenhof al monto en la punkto kie renkontiĝas la limoj de Belgio, Germanio kaj Nederlando.
+
+Ekzistas ankaŭ entreprenoj kun la nomo Esperanto , kiel hoteloj kaj kafejoj, same kiel komercaj markoj . Tamen, tiujn oni ne nepre konsideras en la kategorio ZEO-j.
+
+En 1997 aperis libro titolita Monumente pri Esperanto , kun kompleta listo de la tiam konataj ZEO-j (1044 en 54 landoj). Vi povas legi ĝin senpage en la retejo de Universala Esperanto-Asocio (UEA), kaj laŭdezire elŝuti ĝin. Tamen, la libro estas malnova kaj la listo ne estis ĝisdatigita de tiam. Tial UEA kreis komisionon por ĝisdatigi la liston kaj kunordigi agadojn rilatajn al ZEO-j. Ĝi krome celas antaŭenigi la rekonon kaj konservadon de la multaj historiaj kaj geografiaj signoj de Esperanto.
+
+ZEO-j povas esti gravaj por la Esperanto- komunumo . Ili videbligas la lingvon al la ekstera publiko. Sed ili ankaŭ efikas interne, ĉar ili kreas senton de identeco inter la parolantoj. Multaj esperantistoj ŝatas viziti la konatajn ZEO-jn aŭ fotiĝi apud monumento de Zamenhof. Tiel, kvankam mankas al ni propra teritorio, ili ja trovas ian “fizikan Esperantujon”.
+
+Toño del Barrio
+
+6
+
+1
+
+Toño del Barrio estas hispana esperantisto. Li estis prezidanto de Hispana Esperanto-Federacio de 2011 ĝis 2020. Nun li estas direktoro de Fondaĵo Esperanto (Zaragozo) kaj komitatano de UEA. Li esploris pri historio de la Esperanto-movado en Hispanujo kaj kontribuis al libroj, gazetoj kaj blogoj, per tradukoj, artikoloj kaj originalaj eseoj. Persona retejo: https://www.delbarrio.eu/ .
+
+Antarkto: la plej suda, glacia regiono de nia Tero.
+
+asteroido: ĉiela objekto malgranda.
+
+boato: malgranda akvo-veturilo, kiu entenas malmulte da homoj.
+
+d-ro: doktoro.
+
+entrepreno: ekonomia unuo, ekzemple komerca, industria, bonfara kaj simile, kiu produktas ion aŭ plenumas iun taskon.
+
+Esperantujo: la Esperanta mondo.
+
+fizika: korpa, ne mensa aŭ virtuala.
+
+geografia: rilata al la regionoj kaj landoj de nia Tero.
+
+identeco: la maniero, laŭ kiu oni vidas sin; la bildo, kiun homo aŭ hom-grupo havas pri si mem.
+
+kabo: longa ter-peco aŭ ter-angulo, kiu elstaras en la maron.
+
+komisiono: malgranda grupo formita interne de pli granda organizaĵo kun la celo plenumi difinitan taskon.
+
+kompleta: en kiu mankas nenio.
+
+komunumo: societo bazita sur komuneco de vivo kaj interesoj.
+
+kun-ordigi: aranĝi la diversajn partojn de afero, por ke ili bone funkciu kune.
+
+marko: aparta nomo donita al produkto, servo aŭ komerca organizaĵo, per kiu oni rekonas ĝin, kaj kiun aliaj similaj produktoj aŭ servoj ne rajtas uzi, ekzemple Coca-Cola, Nike, Samsung kaj simile.
+
+monumento: konstruaĵo aŭ ŝtona artaĵo konstruita memore al grava homo aŭ okazaĵo.
+
+rekono: kono de iu afero, ĉar oni jam renkontis ĝin pli frue; la ago akcepti ion kiel validan aŭ valoran.
+
+skulptaĵo: artaĵo el ŝtono, ligno aŭ simila materialo.
+
+teritorio: regiono apartenanta al iu ŝtato aŭ popolo, kiu konsideras ĝin propra kaj defendas ĝin kontraŭ enveno de eksteruloj.
+
+titoli: doni nomon al libro, poemo, teatraĵo, aŭ simila verko.
+
+tombo: fosaĵo en la tero aŭ fermita dometo, en kiun oni metas mortinton; memoriga ŝtono starigita ĉe tia loko.
+
+
+---
+
+# La ogro, kiu faris orajn fekaĵojn
+
+**Published:** 2026-02-27
+
+**URL:** https://uea.facila.org/filmetoj/la-ogro-kiu-faris-orajn-feka%C4%B5ojn-r386
+
+**Categories:** Filmetoj
+
+[Embed] https://www.youtube.com/embed/QsQIOmWGDLY?width=100%25&height=86.25
+
+2
+
+1
+
+Ĉu laŭ via opinio la filmeto estas facila aŭ malfacila por Esperanto-lernantoj? malfacila , tre facila
+
+
+---

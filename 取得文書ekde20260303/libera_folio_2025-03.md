@@ -1,0 +1,255 @@
+---
+source: "Libera Folio (liberafolio.org)"
+generated_at: "2026-03-03T10:41:27.929740+00:00"
+generator: "retradio_lib.py"
+time_range: "2025-03-03 – 2025-03-24"
+---
+
+
+# Rusaj esperantistoj verkos pri milito
+
+**Published:** 2025-03-03
+
+**URL:** https://www.liberafolio.org/2025/03/03/rusaj-esperantistoj-verkos-pri-milito/
+
+**Categories:** movado
+
+La landa asocio de UEA en Rusio aranĝas literaturan konkurson pri ”la Granda Venko, heroismo de nia popolo”. Ankaŭ ”nunaj militeventoj” povas esti prilumataj, laŭ la reguloj de la konkurso.
+
+La 9-an de majo oni en Rusio solenos la 80-an datrevenon de la fino de la dua mondmilito. Lige kun tio Rusia Esperanto-Unio, la landa asocio de UEA, anoncis literaturan konkurson kun la titolo ”Tiu Tag’ de l’ Venko”.
+
+En la konkurso povas partopreni ”ĉiuj esperantistoj de la lando”, do supozeble nur rusianoj. La konkurso laŭ la anonco okazas ”omaĝe al la 80-a datreveno de la Granda Venko super faŝismo”. Tamen la tekstoj povas temi ne nur pri la dua mondmilito, sed ankaŭ pri la  nuna agresa milito de Rusio en Ukrainio:
+
+Akceptatas: Rakontoj, eseoj, noveloj, versaĵoj, rememoroj originale verkitaj en Esperanto aŭ tradukitaj, laŭteme ligitaj kun la Granda Venko, heroismo de nia popolo. Ankaŭ nunaj militeventoj povas esti prilumitaj.
+
+La plej bonaj verkoj estos publikigitaj en Cerbe kaj Kore , la literatura suplemento al Ponto , la revuo de REU. Al la aŭtoroj oni promesas libro- aŭ monpremiojn.
+
+Iniciatinto de la projekto estas Svetlana Smetanina. Ŝi ne rajtis daŭrigi kiel ĉefdelegito de UEA en Rusio, pro kio REU proteste ĉesis pagi kotizon al UEA. Daŭra nepago de la kotizo fare de landa asocio laŭ la statuto de UEA kaŭzos perdon de la aliĝinta statuso.
+
+Smetanina longe estis la reprezentanto de REU en la komitato de UEA, sed nun ŝia nomo ne plu aperas en la listo de la komitatanoj.  Rusia Esperanto-Asocio konsideras la okupitan teritorion de Ukrainio parto de Rusio , kaj pretas aktivi tie.
+
+
+---
+
+# Usono volas pli da potenco en UEA
+
+**Published:** 2025-03-04
+
+**URL:** https://www.liberafolio.org/2025/03/04/usono-volas-pli-da-potenco-en-uea/
+
+**Categories:** UEA, movado
+
+La landa asocio de UEA en Usono proponas ŝanĝi la statuton de UEA tiel, ke jam ekde 251 membroj landaj asocioj havu ne unu, sed du komitatanojn. Nun la limo estas 1 000 membroj – cifero, kiun Esperanto-USA ne havas ŝancon atingi.
+
+Laŭ la nuna statuto de UEA, ĉiu aliĝinta asocio kun minimume 100 membroj elektas unu komitatanon A, kiu reprezentas la asocion en la supera decida organo de UEA, la komitato. Ĉiu plena milo da membroj donas unu plian komitatanon A, ĝis maksimume ses komitatanoj.
+
+Iam tio eble havis sencon, sed nun tre malmultaj landaj asocioj havas pli ol mil membrojn, dum eĉ la plej etaj asocioj raportas cent membrojn kaj kotizas por ili, por rajti je almenaŭ unu komitatano. Esperanto-USA, la landa asocio de UEA en Usono, tial proponas ŝanĝi tiun regulon.
+
+Laŭ la propono sendita al la komitato, por du komitatanoj sufiĉu 251 membroj kaj por tri sufiĉu 501. Asocioj kun pli ol mil membroj laŭ la propono havu kvar komitatanojn, tiuj kun pli ol du mil havu kvin, kaj tiuj kun pli ol tri mil membroj havu ses komitatanojn.
+
+Tiamaniere oni respektos la intencon de la originala statuto, sed samtempe malfermos la komitaton al novaj fortoj kaj motivigos landajn asociojn havigi pli da membroj, Esperanto-USA argumentas.
+
+”Por asocio kun ekzemple 200 aŭ eĉ 400 membroj, estas nerealisme eĉ strebi por mil; sed estas realisme strebi por 250 aŭ 500, kaj zorgi ne iri sub tiu limo”, la landa asocio skribas en sia motivigo. Krome, pli vaste reprezenta komitato disponigos pli da kandidatoj por la estraro de UEA, laŭ la teksto de la propono.
+
+Laŭ Brandon Sowers, la prezidanto de Esperanto-USA, kun la enkonduko de tia ŝanĝo en la statuton de UEA povus veni ”nova sango kaj novaj ideoj kaj energioj en la komitato”.
+
+– Ŝajnas al mi, ke unu el la problemoj pri la komitato en ĝia nuna formo estas ke apenaŭ okazas ŝanĝiĝo en ĝia konsisto. Mi ne certas, kiom el la landaj asocioj nun havas pli ol 250 membroj, sed mi supozas, ke devas esti almenaŭ iuj, Brandon Sowers diras.
+
+Esperanto-USA nun havas proksimume 550 membrojn, do post la proponata statutŝanĝo ĝi ricevus du pliajn komitatanojn.
+
+– Certe multe dependos de tio, kiel la respektivaj landaj asocioj elektos siajn aldonajn komitatanojn. Mi esperas, ke ĝenerale la LA-oj prioritatigos diversecon en siaj komitatanaroj, do, se jam estas ekzemple iu veterano kiu servis tre longe, la dua estu iu pli juna, kiu povos mem longe servi. Krome, mi opinias, ke ĝi donos modere pli fortan voĉon kaj rolon al la asocioj kiuj havas iom da karno, se oni permesos al vegano paroli tiel.
+
+Libera Folio: Kiajn iniciatojn laŭ via opinio la komitato devus entrepreni por plibonigi la staton de UEA?
+
+– Mi pensas, ke la komitato kaj la estraro devus entrepreni multajn iniciatojn por plibonigi la staton. Efektive, estus tre bone havi kampanjon por peti sugestojn tiurilate. Eĉ pli interese estus, se la diversaj landaj asocioj, kaj la diversaj individuaj membroj, komencus demandi sin ”kiel la stato de UEA povas pliboniĝi, kaj kion mi povas proponi aŭ fari por helpi tion”, kaj eventuale el tio povus estiĝi debato. Konsideru tion ĉi unu kontribuo al tio.
+
+Ĉu tamen ne estas aliaj aferoj en UEA, kiujn necesus pli urĝe ŝanĝi ol la statuton?
+
+– Se organizo bonstatas, ne tre gravas modifi la statuton. Se organizo malbonstatas, ĝenerale statut-modifo en si mem ne solvos la problemojn. Kaj mi supozas ke similas ankaŭ ĉi-kuntekste. Tamen, ni ankaŭ konsideras ke estas konvena momento proponi tiun ĉi modifon, ĝuste pro tio ke baldaŭ renoviĝos la komitato, do, estas taŭga momento pensi pri ĝia konsisto kaj ĝia stato kiel instanco, kiu supozeble devas esti viva kaj vigla.
+
+– Ni, Esperanto-USA, intencas esti pli aktiva en la internacia sfero, inkluzive de UEA, kaj do ni ankaŭ volas havi pli aktivan rolon en la komitato, enplekti pli da niaj membroj en ĝin, tiel ke ni ne dependu je unu sola persono por scii, kio okazas, aŭ por influi ĝin.
+
+Grava problemo laŭ Brandon Sowers estas, ke malmultaj scias, kio okazas ene de UEA kaj kiuj estas la gravaj aferoj traktendaj.
+
+– Mi tre volus vidi viglan debaton pri tio, kiuj estas la plej urĝaj ŝanĝoj por UEA, kaj mi tre kuraĝigas tiujn, kiuj havas ideojn, verki pri ili, provi konvinki aliajn, ĉar kompreneble povus estiĝi proponoj kiuj iras en malsamaj direktoj.
+
+Li atentigas, ke la propono pri statutŝanĝo neniel malhelpas aliajn sugestojn pri bezonataj ŝanĝoj en la asocio.
+
+– Male, mi eĉ diros, ke mi esperas, ke la propono igos aliajn esti pli kuraĝaj pri ŝanĝoproponoj. Finfine, la Asocio apartenas al ni ĉiuj (al ĉiuj individuaj kaj aligitaj membroj, sed laŭ mi ĝi apartenas morale ankaŭ al la movado ĝenerale), do, se estas io, kion ni konsideras plibonigebla, ni provu igi ĝin pli bona.
+
+
+---
+
+# Trump donis novajn argumentojn por Esperanto
+
+**Published:** 2025-03-04
+
+**URL:** https://www.liberafolio.org/2025/03/04/trump-donis-novajn-argumentojn-por-esperanto/
+
+**Categories:** vidpunkto
+
+Tra la mondo ni dependas de Usono en multaj internaciaj aferoj, kaj tio fariĝas aparte evidenta en momentoj, kiam Usono ne plu volas ludi la rolon de policisto sed tiun de mafiestro de la mondo. Tio validas ankaŭ pri la angla lingvo. Eble en ĉi tiuj malcertaj tempoj ne plu estas tiom absurda la ideo pri lingvo, kiu povus unuigi anstataŭ disigi la homaron, skribas Marc van Oostendorp.
+
+La usona prezidanto Donald Trump kaj vicprezidanto JD Vance lerte uzis la ilon de potenco nomatan ’lingvo’ dum sia renkontiĝo kun la ukraina prezidanto Volodimir Zelenskij lastvendrede. Ilia celo estis timigi kaj superruzi sian kunparolanton, kaj la fakto, ke la konversacio okazis en la angla, donis al ili klaran avantaĝon.
+
+Aŭskultante anglalingvajn paroladojn de Zelenskij en la lastaj jaroj, oni rimarkas, ke li plibonigis sian lingvaĵon por pli efike plenumi sian diplomatian rolon. Ĉu Trump aŭ Vance regas alian lingvon krom la angla, restas nekonate. Ili profitis de sia denaska lingvo por starigi lingvan baron kontraŭ Zelenskij, kiu bezonis frakcion de sekundo pli por vortumi siajn pensojn. Tiun mallongan momenton la usonanoj lerte utiligis.
+
+La mondo jam kutimiĝis al la angla kiel la lingvo de la internacia ordo – ŝajne neŭtrala ilo por komunikado. Sed kiel la esperantistoj certe scias, tio signifas, ke la plimulto de la homaro devas lerni ĝin kun granda penado, nur por trovi sin superita de homo, kiu havas la naturan avantaĝon paroli sian denaskan lingvon.
+
+Tra la mondo ni dependas de Usono en multaj internaciaj aferoj, ne nur lingvaj, kaj tio fariĝas aparte evidenta en momentoj, kiam Usono ne plu volas ludi la rolon de policisto sed tiun de mafiestro de la mondo. Multaj kernaj aspektoj de la interreto restas en usonaj manoj. Eŭropaj registaroj kaj entreprenoj stokas vastajn kvantojn da sentemaj datumoj en usonaj serviloj, kiujn usonaj aŭtoritatoj povas aliri sub certaj kondiĉoj.
+
+Sed la sama problemo validas por la angla lingvo. Oni ofte prezentas ĝin kiel neŭtralan lingvon, sed kiel ni scias, ĝi estas la lingvo de malgranda grupo de ŝtatoj, kiuj devenas de la brita imperio. Donald Trump komprenas ĉi tiun potencon pli bone ol multaj: en la tago de la renkontiĝo kun Zelenskij, li dekretis, ke la angla fariĝu la sola oficiala lingvo de Usono.
+
+Nun, kiam la monda ordo ŝanceliĝas, ni havas la ŝancon rekonstrui ĝin pli juste kaj demokratie – tiel ke ne unu sola popolo havu specialajn privilegiojn en internacia interagado. Alivorte, la klasikaj argumentoj de Zamenhof pri neŭtrala mondlingvo ree fariĝas aktualaj.
+
+Dum longa tempo oni mokis tiun ideon, konsiderante ĝin naiva, ĉar la mondo ja elektis la anglan. Sed eble, en ĉi tiuj malcertaj tempoj, ĝi ne plu estas tiom absurda: lingvo, kiu povus unuigi anstataŭ disigi la homaron. Lingvo, kiu jam dum pli ol jarcenton funkcias en malgranda, sed dediĉita komunumo, kaj en kiu oni povas ĉion fari kion oni bezonas en internacia komunikado sur pli justa bazo.
+
+Ĉu tio signifas, ke tiam ne plu ekzistus politikistoj, kiuj misuzas sian potencon? Ankaŭ pri tio ni jam trovis la respondon: kompreneble ne estus tiel. Sed unu potenca ilo estos forprenita el iliaj manoj.
+
+Marc van Oostendorp
+
+Nederlanda versio de la artikolo aperis en de Volkskrant
+
+.
+
+
+---
+
+# Ĉu UEA kunvenos konstitucie?
+
+**Published:** 2025-03-11
+
+**URL:** https://www.liberafolio.org/2025/03/11/cu-uea-kunvenos-konstitucie/
+
+**Categories:** UEA
+
+Universala Esperanto-Asocio aranĝu ”konstitucian kunvenon” por ĉion refari desube. Tian ideon prezentas la antaŭa estrarano de la asocio Orlando Raola, responde al la propono de Esperanto-USA pri statutŝanĝo. Duncan Charters opinias ke la ideo venas en konvena momento kaj kredas ke la plimulto de la membroj konsentas pri la bezono.
+
+Antaŭ semajno Libera Folio raportis pri la propono de Esperanto-USA ŝanĝi la statuton de Universala Esperanto-Asocio tiel, ke la pli grandaj landaj asocioj havu pli da komitatanoj. En la komitata diskutejo la temon post la apero de la artikolo levis José Antonio del Barrio, kiu prezentis malan opinion, nome ke ne la landaj asocioj sed la individuaj membroj estas subreprezentataj en la supera organo de UEA:
+
+– Fakte, mi tre dubas ke indas nun dediĉi penojn al ŝanĝo de statuto, sed se oni decidus tion entrepreni, mi favorus la altigon de nombro de B-komitatanoj, kaj ne de reprezentantoj de landaj asocioj, kiuj krome ofte ne renoviĝas. Almenaŭ tion mi pretas subteni se la propono alvenas dum mia deĵorperiodo, li skribis.
+
+Stefan MacGill konsentis kun la proponintoj, ke neniu landa asocio plu atingas mil membrojn, kio laŭ la nuna statuto necesus por havi duan komitatanon, kaj proponis malaltigon de la limo al 800. Ankaŭ la komitatanoj B, kiuj reprezentas la individuajn membrojn, laŭ li povus esti iom pli multaj.
+
+– La relativa pezo de la landaj asocioj kaj la individuaj membroj treniĝas en la movado jam de cent jaroj! Sed por kreskigo de la nombro, devas esti pli da kandidatoj!
+
+Samtempe li atentigas, ke pli granda komitato iĝos eĉ malpli kapabla liveri rezultojn. Ĝuste pro tio li en 2013 proponis la kreon de malpli granda organo, ”konsilio”, kiu aldonu laborfortojn al la estraro. Listo de la anoj de tiu konsilio plu troveblas en la retejo de UEA, sed efektive okazis nenia aktivado en ĝi post 2018.
+
+– Bedaŭrinde, tiu organo vere ne aktive sukcesis, eble pro mia kapablo dediĉi tempon al ilia funkciigo, eble ĉar temis pri malbona ideo dekomence, Stefan MacGill skribas.
+
+Kiel ajn, ŝanĝi la statuton de UEA laŭ li postulus multe da laboro:
+
+– Humphrey Tonkin sukcesis en ĉ. 1980, sed neniu poste alprenis tiun preskaŭ maleblan sizifan taskon.
+
+Orlando Raola, iama estrarano de UEA, entuziasmas ke fine okazas diskuto pri la strukturo de la asocio. Laŭ li estas nun tempo por granda kunveno kiu diskutu la fundamentojn: ĉu plu indas, ke UEA estu bazita sur landaj asocioj, ĉu la komitato en sia nuna formo kapablas plenumi sian taskon, kaj ĉu la celo de la asocio unuavice estu servi la membrojn aŭ antaŭenigi Esperanton. Laŭ li necesas novaj statutoj kaj regularoj por racia stirado de la ŝipo UEA:
+
+– Ĉiu demandu  sin: ĝis la kioma ni lasos la barkon drivi, forturnante nian atenton de la vere atentindaj ”elefantoj en la salono”?
+
+Prezidanto Duncan Charters plusendis la proponon de Orlando Raola al la tuta komitato kaj promesis aldoni ĝin kiel diskutindan temon en la strategia laborplanado:
+
+– Efektive, necesas minimume komisiono pri statutŝanĝoj, ne nur pro lastatempaj proponoj, sed ankaŭ por ke ĝi konformiĝu al la novaj nederlandaj leĝoj rilate neprofitcelajn asociojn.  Do via ripetata ideo revenas en tute konvena momento, ĉar mi supozas ke plimulto el niaj membroj konsentas pri la bezono.
+
+La planado de la strategia laborplano de UEA daŭras de 2017 , sed konkretaj rezultoj apenaŭ videblas.
+
+Aliĝis al la diskuto ankaŭ honora prezidanto Humphrey Tonkin, kiu konsentas, ke la nuna statuto de UEA estis kreita por tute alia monda situacio antaŭ 45 jaroj. Tamen la kreado de nova statuto laŭ li forrabus tempon kaj riskus bremsi la pozitivan laboron de UEA, en tempo kiam aktivado por Esperanto devus havi pli altan prioritaton.
+
+– Cetere, se ĉiuj komitatanoj aktive engaĝus sin en la laboro de la Asocio, ni povus multon atingi. Ĉu la nuna statuto malbone funkcias pro la malbona funkcio de la komitatanoj – aŭ inverse?  Aŭ nek-nek?
+
+
+---
+
+# AI necesigis interpretadon al Esperanto
+
+**Published:** 2025-03-18
+
+**URL:** https://www.liberafolio.org/2025/03/18/ai-necesigis-interpretadon-al-esperanto/
+
+**Categories:** movado
+
+Esperanto-Ligo de Bosnio kaj Hercegovino estis la organizanto de dutaga popularscienca ronda tablo pri la temo ”Lingvo kaj artefarita intelekto” en Sarajevo fine de februaro. La federacia ministerio pri edukado kaj scienco estis la aŭspicianto kaj ĉefa financanto de la renkontiĝo. La diskutantoj konsentis interalie, ke algoritmoj neniam estas neŭtralaj, kaj ke la AI-motoro ne komprenas la frazojn kiujn ĝi generas, rakontas nia aŭtoro Federico Gobbo.
+
+Imagu esti invitita aliĝi al prelegantaro pri la temo de generipova artefarita intelekto (genAI). Ĉiu alia preleganto venas de lando en kiu oni parolas lingvon kiun la aliaj komprenas, kaj la celo de la prelegantaro estas trovi manierojn kunlabori inter la respektivaj institucioj kaj trans la landaj limoj. Poste estas vi, kiu parolas lingvon ĝisoste internacian, sed kiun preskaŭ neniu el la aliaj prelegantoj parolas aŭ komprenas, kaj pro tio estas organizata skipo de tri interpretistoj por ebligi al vi sekvi la prelegojn kaj diskutojn de ĉiuj aliaj per aŭskultiloj, dum al ĉiuj aliaj la interpreta servo utilas nur kiam parolas vi.
+
+Jen kio okazis al mi dum la ronda tablo pri la temo ”Lingvo kaj artefarita intelekto”, kiu okazis en la tagduo 20-21-a de februaro. Ne, la aliaj prelegantoj ne parolis Esperanton (krom unu, Samir Ribić, profesoro pri komputiko kaj esperantisto, kiu tamen ne instruas la lingvon en sia universitato). Ĉiuj prelegantoj parolis la bosnan, ĉar la rondan tablon organizis Esperanto-Ligo de Bosnio kaj Hercegovino, en Sarajevo.
+
+La tri interpretistoj estis esperantistoj, kiuj elesperantigis mian penson al respektive la bosna, la serba kaj la kroata. Kaj la sufiĉe amuza paradokso de la tuta situacio estis la temo pri kiu ni estis invititaj paroli: la lastatempa furoraĵo en la bitteknologia mondo, tio estas la generipova artefarita intelekto kaj kiel ĝi influas la lingvojn. Partopreninte la situacion, do, mi povas unue rimarki, ke genAI tute ne kapablas anstataŭi homajn interpretistojn.
+
+La starpunkto de la ronda tablo estas, ke AI ĝenerale ne povas solvi problemojn anstataŭante homojn, sed ja povas esti valora helpilo. Kelkaj prelegantoj atentigis, ke la termino ”intelekto” aŭ ”inteligento” en la esprimo AI, siatempe inventita fare de John McCarthy en 1956 en Usono, efektive ne estis la plej taŭga por eviti la nuntempan miskomprenon pri la kapabloj de ĉi tiu bitteknologio. Alia kuniga opinio estas, ke AI devas esti uzata ne facilanime sed atente, konsidere kaj zorge.
+
+Unu el la problemoj malantaŭ tio estas, ke la datumoj kaj la fontokodo ofte ne estas malfermitaj por esti analizataj sub lupeo. Flanke al tio, konsiderendas la malsimileco inter la kvanto de datumoj por trejni la AI-motoron je dispono en la angla kaj la datokvanto en ĉiuj aliaj lingvoj, kaj, aparte grave, en malgrandaj lingvoj kiel la bosna kaj Esperanto – ”malgrandaj” laŭ la vidpunkto de la ĉeesto en la bitmondo, kiel precizigis prave profesoro en la Universitato de Sarajevo pri la bosna, serba kaj kroata lingvoj, Halid Bulić.
+
+Paradokse, mi klarigis, ke Esperanto estas pli videbla kaj subtenata bitmonde ol multaj lingvoj laŭ aliaj kriterioj pli vivipovaj ol ĝi, ekzemple laŭ la nombro de parolantoj.
+
+En sia prelego, Samir Ribić celis malmistifiki la aŭron de mistero kiu ĉirkaŭas AI, rakontante ĝian historion. Fakte ni nun vivas la lastan ŝtupon, tiun de genAI, sed pleje la problemoj restas la samaj de jardekoj. La unua ”babileja roboto” (jen la signifo malantaŭ la vorto ”ĉatboto”) nomiĝis Eliza, kaj estis eksperimento farita en la 1960-aj.
+
+Tiutempe la babilejo salutis la uzanton asertante, ke ĝi estas psikoterapiisto. Se la uzanto restas je tiu ĉi iluzio, la AI-motoro povas esti surprize verosimila dum iom da tempo, kaj fakte efektive helpi la uzanton, antaŭ ol enui, se la uzanto iras al kompleksaj temoj. La algoritmo tiam estis simpla, ĉar la asertoj estis turnitaj al demandoj reprenante la samajn vortojn.
+
+Fidi je la AI-maŝino kvazaŭ ĝi reale komprenus la demandojn de la uzanto restas same probleme hodiaŭ, eĉ se la akurateco de genAI estas multe pli alta ol tiu de la primitiva Eliza. Gravas refari la pensan eksperimenton de la usona filozofo John Searle, konatan kiel la Ĉina Ĉambro: la eksperimento pruvas, ke la manipulado de la homa lingvo fare de AI estas pure sintaksa, sen ajna semantiko.
+
+Alivorte, la kompreno pri la enhavo de la frazoj kiujn proponas al la uzanto la AI-motoro estas tute kaj nur en la kapo de la uzanto, ne de la maŝino. Do, la ĉefa demando finfine, pri kiu ĉiuj prelegantoj akordiĝas, estas: kion homoj gajnas per genAI kaj kion malgajnas? Kaj ĉu estas specifaj homgrupoj kiuj gajnas super aliaj?
+
+Tio malfermas alian dimension al la disvastiĝo de genAI, kiel rimarkigis Amila Akagić, profesorino pri informadiko en la Universitato de Sarajevo, nome la timon perdi laborpostenojn pro la anstataŭado fare de genAI. Eĉ tiu ĉi timo estas malnova, ĉar ĉiuj teknologioj, kiam ili alvenas la socion, estas suspektindaj por partoj de la socio kiuj ne komprenas la teknikaĵojn malantaŭ ilia funkciado.
+
+En la kazo de AI, ne facilas kompreni tiajn teknikaĵojn, kaj pro tio la strebo malmistifiki valoras la penon hodiaŭ pli ol antaŭe. La fakto ke malantaŭ la kurteno troviĝas neŭroretoj, kiujn homo ne povas inspekti, ne faciligas la forigon de la timo, eĉ pratimo, perdi la politikan kontrolon de tiu ĉi bitteknologio.
+
+La estro de la Departemento pri komunikado kaj ĵurnalismo ĉe la Fakultato de politikaj sciencoj en la Universitato de Sarajevo, profesoro Fahira Fejzić-Čengić, montris, ke de kiam industrio forprenis la gvidan rolon en la disvolviĝo de AI de la akademiaj instancoj, kiel ekzemple universitatoj kaj esplorcentroj, pli kaj pli malfacilas esplori pri ĝi, pro la netravideblo de la fontokodoj kaj de la konar-bazo malantaŭ la funkciado de genAI-motoroj.
+
+Spertulas pri ili specife profesoro Razija Turčinhodžić Mulahasanović, kiu esploras kaj instruas en la sama universitato. Ŝi proponis respondi la demandon ”Ĉu AI estas pli inteligenta ol ni?”.
+
+Al ŝi mia respondo estis inversigi la demandon jene: ĉu homoj iĝas pli stultaj pro AI? Mi menciis epizodon por klarigi la inversigon. En la historio de la Turing-a Testo, estas fama la misjuĝo pri spertulo pri Ŝekspiro, Cynthia Clay, kies kono pri la poeto estis tiel perfekta, ke ŝi estis konsiderita nehoma (por interesatoj: temas pri la unua eldono en 1991 de la Premio Loebner, kiu nun ne plu ekzistas).
+
+Nasir Muftić, docento pri juro en la Universitato de Sarajevo, atentigis, ke estas jura vakuo pri la respondeco de la respondoj de AI, ĉar ne klaras al kiu iras la kreditokapablo kaze de aŭtomata decido. Ekzemple, se kuracisto fidas je konsulto de AI por diagnozi malsanon kaj finfine la paciento mortas pro misdiagnozo, kiu respondecas? La kuracisto, aŭ la entrepreno malantaŭ la genAI-babilejo?
+
+Tiu ĉi rimarko instigis diskuton pri la supozata neŭtraleco de genAI, pro manko de morala konscio en la maŝino. Tamen, algoritmoj neniam estas neŭtralaj, ĉar ili estas fasonataj laŭ plano kaj celo, fare de la homoj kiuj fine programas ilin. Se la rezulta programo estas parte aŭtonoma, kiel en la kazo de genAI, la morala flanko de la tuta afero estas eĉ pli grava.
+
+Kelkaj utilaj aplikoj de tiuj algoritmoj estas jam uzataj, kiel montris la raporto de Senija Šehanović, docento en la Universitato de Zenica pri komunikado kaj amaskomunikilaro, pri la uzo de genAI fare de bosnaj universitataj studentoj. Ekzemplon donis Semir Hambo, ĉefredaktoro de populara retportalo en la bosna: AI helpas trovi malamparoladon en komentoj al novaĵaj artikoloj en ĝi kaj forigi ilin aŭtomate.
+
+Mia repliko estas, ke, laŭ mia sperto, malutilaj uzoj pli gravas ol la utilaj, almenaŭ en la kunteksto de la studentoj en la Universitato de Amsterdamo. Fakte, foje ili uzas la helpon de genAI por verki siajn eseojn sen agnoski ties helpon, kaj ne ĉiam facilas pruvi, ke ili kondutis tiel. Tio estas malferma problemo, kies solvo ne klaras: almenaŭ agnosko de la uzo de genAI povus esti etike pli akceptebla ol tute intenca kaŝo.
+
+Je la fino de la ronda tablo, estiĝis planoj kunverki manifeston pri etika uzo de genAI en la publika spaco, kiu instigu pli da kunlaboro inter la prelegantoj de la areo, dum la traduko al Esperanto faciligu la disvastigon al aliaj spertuloj tra la mondo kaj espereble al propono kunlabori fruktoplene. Finfine, ni jam pavimis longan vojon el la antikveco, kiam sklavoj estis kvazaŭ iloj anstataŭ homoj kaj havis neniun rajton, atentigis prof-ino Fahira Fejzić-Čengić.
+
+Prof-ro Samir Ribić proponis adopti en la manifeston kibernetikan difinon de la afero: la diferenco inter genAI kaj la antaŭa situacio estas la centriĝo de la maŝin-maŝina komuniko, kies dinamiko stiras la hom-maŝinan. Kaj tio movas la homajn estaĵojn en la periferion de la komunik-sistemo, kaj neniu el la prelegantoj volus ion similan.
+
+La laboro de la interpretistoj estis grandioza, kaj mi estas dankema al ili, sed mi devas konfesi, ke aŭskulti dum du labortagoj preskaŭ ĉiun prelegon tra interpretado per aŭskultiloj estas vere laciga tasko. Ĉiuokaze, la sperto estis tre interesa kaj povas iĝi modelo por konstrui ponton inter esperantistaj kaj neesperantistaj spertuloj pri difinita interesplena temo serioze diskutinda.
+
+Federico Gobbo
+
+
+---
+
+# Ĉu AI riĉigas la Esperantan kulturon?
+
+**Published:** 2025-03-24
+
+**URL:** https://www.liberafolio.org/2025/03/24/cu-ai-ricigas-la-esperantan-kulturon/
+
+**Categories:** kulturo
+
+Artefarita intelekto helpas riĉigi la Esperanto-kulturon. Tion opinias Georg Jähnig, kiu uzis AI-ilon por muzikigi poemojn de Zamenhof. Sed ĉu muzikaĵoj kreitaj tiel vere apartenas al la Esperanto-kulturo?
+
+Ĵus aperis en la reto Ludovika Poezio – muzikalbumo kreita per artefarita intelekto fare de Georg Jähnig, germana esperantisto loĝanta en Prago. Laŭ li temas pri la unua muzikalbumo en Esperanto, kiu estas kreita per AI.
+
+La albumo estas la unua ero en la projekto Nova Tonaro, de Georg Jähnig. Ĝi tamen ne estas la unua muzika projekto en Esperanto produktita per AI – pliaj eksperimentaj verkoj de alia aŭtoro troveblas ĉe Bitoj kaj Dopamino.
+
+La nova albumo enhavas dek kantojn en tre diversa stilo, de roko kaj diskoteka muziko ĝis ĵazo kaj balado. La tekstoj de la kantoj baziĝas sur poemoj de Zamenhof. Aperas interalie funka versio de Ho mia kor’ , ĵaza versio de Al la fratoj kaj energia tekno-versio de En sonĝo princinon mi vidis .
+
+La albumo estas ”senpage disponebla en streaming- [elsendfluaj] servoj kiel Spotify, Apple Music kaj YouTube ktp, por ke ĉiuj povu sperti la eksperimentan kombinaĵon de Zamenhofa poezio kaj modernaj muzikaj ĝenroj”, Georg Jähnig skribas en gazetara komuniko.
+
+Libera Folio: Ĉu vi volus rakonti, kun kiu celo vi kreis la muzikaĵojn, kaj ĉu vi kredas, ke esperantistoj volos aŭskulti muzikaĵojn kreitajn per AI?
+
+– Certe. Mi eltrovis la ilon Suno antaŭ unu jaro kaj tuj ŝategis kiel facile oni povas krei sufiĉe altnivelan muzikon. Kaj komencis krei mallongajn kantojn por amikoj , kiujn ankaŭ ili ŝatis.
+
+– Intertempe, la kvalito de Suno ege kreskis, kaj mi kredis, ke tia muziko povas plaĉi eĉ pli al multe da homoj. Ĉefe inter parolantoj de relative malgrandaj lingvoj, la homforto estas nevasta, do ankoraŭ ne ekzistas tiom da specifaj Esperantaj muzikaĵoj, ekzemple en funko, triphopo aŭ etosmuziko, laŭ mia scio. AI tie povas facile helpi kreskigi la proponadon kaj tiel riĉigi la Esperanto-kulturon.
+
+Sed ĉu produktoj kreitaj per AI vere estas Esperanto-kulturo?
+
+– Kial ili ne estu?
+
+Nu, la demando estas ĉu produktoj kreitaj per AI entute estas kulturo, aŭ io tute alia.
+
+– Mi kredas ke plej gravas la rezulto: ĉu eblas ĝui, aŭskulti AI-kreitan muzikon aŭ danci al ĝi? Certe jes. Ĉu AI-kreinto povas verki sian propran tekston kaj nur uzi AI por krei nur la muzikon? Ankaŭ jes. Imagu kiom da esperantistoj eble tute ne konis la poezion de Zamenhof kaj nun povos eltrovi ĝin.
+
+– Laŭ mi tio estas iom la sama debato kiel kiam aperis elektronikaj muzikiloj. Kaj la demando iom similas al ”Ĉu Esperanto entute estas lingvo, aŭ io tute alia?”
+
+
+---

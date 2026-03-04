@@ -11,3 +11,5 @@ output/
 *.zip
 *.Zone.Identifier
 *Zone.Identifier
+logs/
+fuyou/

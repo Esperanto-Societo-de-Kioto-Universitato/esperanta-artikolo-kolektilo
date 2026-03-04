@@ -1,0 +1,341 @@
+---
+source: "Libera Folio (liberafolio.org)"
+generated_at: "2026-03-03T10:41:27.985577+00:00"
+generator: "retradio_lib.py"
+time_range: "2025-11-04 – 2025-11-30"
+---
+
+
+# Plusoj kaj minusoj en la nova strategia plano
+
+**Published:** 2025-11-04
+
+**URL:** https://www.liberafolio.org/2025/11/04/plusoj-kaj-minusoj-en-la-nova-strategia-plano/
+
+**Categories:** movado
+
+La nova strategia plano de UEA estas facile superrigardebla kaj listigas kvin klarajn celojn por la proksima jaro. Tamen entute dek kvin ”strategiaj” celoj por la sekvaj jaroj estas tro multe, des pli ke ne klaras, kio estas prioritata kaj kiu respondecas pri plenumo, opinias Tim Owen. Francisco Javier Moleón volus ke UEA konsideru, kial esperantistoj ne vidas kialon aliĝi al la asocio, dum Osmo Buller miras ke la prezidanto de UEA indikis sin mem kiel la aŭtoron de la plano.
+
+UEA denove havas strategian planon por la proksimaj jaroj. La plano kun la akronimo AKIRI ekvalidos post kiam la komitato ĝin aprobos, rakontis la nova prezidanto de UEA, Fernando Maia, en vidpunkta artikolo en Libera Folio .
+
+La antaŭa strategia plano de UEA estis kompilita sub la gvido de Mark Fettes, kaj ĝi ekvalidis en 2013. Oni uzis multe da tempo por ellabori tre detalan, 38-paĝan planon, sed efektive preskaŭ nenion planitan la asocio sukcesis realigi. Krome la plano ĉesis validi jam en 2017.
+
+Ellaboradon de nova plano indikis kiel sian prioritaton Duncan Charters en sia unua novjara mesaĝo kiel prezidanto de UEA komence de 2020. Dum liaj du mandatperiodoj oni multe diskutis pri la plano, sed ĝi neniam pretiĝis.
+
+Fine, komence de oktobro 2025, iom pli ol du monatojn post sia elektiĝo, Fernando Maia povis prezenti la planon, kiun li kompletigis kaj kompilis ĉefe surbaze de la diskutoj okazintaj dum la mandatperiodoj de Charters.
+
+La plano prezentas entute dek kvin ”strategiajn celojn” por la kvin ”strategiaj kampoj” – administrado, kunlaborado, informado, rilatoj kaj instruado. La inicialoj de tiuj vortoj formas la akroniman nomon de la plano, AKIRI.
+
+Krom la ”strategiaj celoj” por la jaroj 2025–2030, la plano difinas ankaŭ kvin prioritatojn por la venonta jaro. Tiuj estas:
+
+Funkciigi novan membro-sistemon por plibonigi la uzanto-sperton kaj la efikecon de la internaj procezoj.
+
+Kreskigi enspezojn tra projektoj, donacoj kaj investoj por kompensi redukton de enspezoj pro kotizoj.
+
+Konkludi la vendon de la oficeja domo ĉe Nieuwe Binnenweg 176 (Roterdamo) por subteni pli efikan oficejan modelon (inkluzive revizii la funkciigon de la Libroservo por subteni ĝian mision).
+
+Kreskigi la konscion pri Esperanto por ebligi trafajn informojn kaj akiri pli da subteno al la movado.
+
+Kreskigi la membraron por fortigi la tutmondan reprezentecon de UEA.
+
+Tim Owen, direktoro de Esperanto-Asocio de Britio, trovas tiun listigon de kvin klaraj prioritatoj por la proksima jaro la plej pozitiva trajto de la nova plano.
+
+– En grandaj deklaroj eblas perdi la fokuson, des pli, kiam temas pri periodo kvinjara. Ke tiu kvino estas prezentata eksplicite, do, estas gratulinde.
+
+Des pli laŭdinde estas laŭ li, ke almenaŭ kvar el la indikitaj punktoj estas klare mezureblaj – aŭ oni sukcesos pri la indikita tasko, aŭ ne sukcesos. Tiel ekzemple pri la funkciigo de nova membrosistemo:
+
+– Oni aŭ jes aŭ ne estos sukcesinta funkciigi tion, do facile mezurebla celo. Tio laŭ mi estas la plej decida paŝo, ĉar kredeble ĝi celas ankaŭ la retejon; nenio prezentas UEA kiel stagnan, aliepokan pli ol tio. Se ŝanĝiĝos nenio alia, moderna retejo estos pozitivaĵo. Kaj male: se pliboniĝos ĉio alia, ne vere gravos, ĉar la publika eksteraĵo estos ĉio, kion vidos novuloj.
+
+Malpli facile mezureblas la celo “kreskigi la konscion pri Esperanto”, kaj ĝenerale laŭ Tim Owen ne klaras, kiel tio povus okazi grandskale.
+
+La nova plano estas laŭ li relative facile legebla, interalie ĉar ĝi estas multe malpli ampleksa ol la antaŭa plano.
+
+– La legebleco venas ne sole de tio; multe helpas la moderna prezento. Tiun efikon montras la tute freŝa Strategia Laborplano de TEJO: mi ankoraŭ ne finleĝis ĝin pro ĝia tekstmureco, malgraŭ tio, ke ĝi malpli longas je triono, laŭ vortkalkulo.
+
+La problemo pri la antaŭa laborplano laŭ Tim Owen estis, ke ne evidentis, kiu faros kion, kaj finfine mankis plenumontoj. Similan problemon li vidas en la nova plano.
+
+– Estas prezentataj po tri strategiaj celoj por la kvin branĉoj Administrado, Kunlaborado, Informado, Rilatoj kaj Informado. Kiuj estas prioritatoj? Kiu plenumos? Kiel?
+
+Francisco Javier Moleón, iama oficisto de UEA, pli kritike sintenas al la plano, kaj proponas al la asocio pripensi, kial la kotizaj enspezoj ŝrumpas.
+
+– UEA devus sin demandi, kial esperantistoj ne vidas klaran kialon aliĝi al UEA. Tio estus grava parto de strategia plano. Konsilo: proponu bonajn servojn, kaj homoj volonte aliĝos; proponu mizerajn servojn, kaj homoj same volonte malaliĝos.
+
+En la strategia plano troviĝas interalie ”programoj 101 kaj 1001”, kiuj celas ke landaj asocioj en iuj landoj strebu havigi 101 novajn membrojn, dum landaj asocioj en Ĉinio, Usono, Japanio, Brazilo, Francio kaj Germanio strebu havigi eĉ 1001 novajn membrojn.
+
+Moleón tamen atentigas, ke oni ŝajne ne atendas ke tiuj novaj membroj alportu kotizajn enspezojn. Almenaŭ laŭ la konkreta ekzemplo pri Kubo, prezentita en la plano, la membrokotizoj estu subvenciitaj.
+
+– UEA ne havos novajn enspezojn, sed mem elspezos la necesan monon. Nu, tio estas ja bela maniero atingi 101 membrojn. Tiel oni povos atingi ankaŭ 1001 membrojn. Verŝajne eĉ 10 001.
+
+Nerealisma li trovas la programon Oceanio, kiu celas ”fortigi kaj videbligi la Esperanto-movadon en Oceanio, kun speciala atento al instru- kaj informagadoj kaj al indiĝenaj komunumoj kaj lingvoj”.
+
+– Ĉe legado tiu programo tuj ŝajnis al mi ambicia: la tuta Oceanio! Ĝis mi atingis la finon de la alineo: ”simile por Azio, Afriko, Eŭropo kaj Ameriko”. Tiam la nur ambicia programo iĝis monumenta. Ni vidos, kio iĝos almenaŭ el la nur ambicia programo. Mi ne miros, se la rezulto estos fojaj gazetaraj komunikoj pri kurseto en la urbo XYZ de la oceania lando QWERTY. Kaj fino de la monumenta planero.
+
+Bela kaj pompa laŭ li estas la celo ”fortigi la akademiecan prestiĝon de Esperanto per subteno al universitataj katedroj, bibliotekoj kaj arkivoj, esplorprogramoj kaj sciencaj kongresoj”.
+
+– Sed kion tio signifas en la praktiko? Kiel tia subteno efektiviĝos? Ĉu temas pri mona subteno, sponsoreco (”UEA apogas tion”), kunlaboro kun niaj sciencistoj (kie ili estas?)…? Mi suspektas, ke tio restos bela idealo malfacile konkretiĝonta. Sed eble mi eraras (kiel tiom ofte) kaj ĝi montriĝos la plej sukcesa ero de la plano.
+
+Osmo Buller, antaŭa ĝenerala direktoro de UEA, atentigas ke la dokumento devas esti benita de la komitato por ke ĝi estu konsiderata oficiala strategia plano de UEA.
+
+– Krome en ĝi ne povas esti mi-esprimoj, nek ĝi povas surhavi kovrile individuan aŭtoron. Eĉ Lapenna ne metis sian nomon en siaj strategiaj dokumentoj. Ankaŭ ne faris tion Tonkin nek Fettes.
+
+– La antaŭa strategia plano parolis pri UEA kiel eduka movado kaj difinis kiel ĝian gravan taskon edukadon al tutmonda konscio. Tio ne estas sufiĉe elstarigita en la nun proponata plano. Mi ĉiam vidis UEA ankaŭ kiel klerigan asocion, kiu ĉiel strebu plialtigi la klerecan nivelon de la movado. Tio mankas en la plano, kio konkrete aperas ekzemple en tio, ke ĝi diras nenion pri la revuo, kiu devus havi ŝlosilan rolon kiel kleriganto de membroj.
+
+Ke UEA neglektas sian klerigan taskon, laŭ Buller montriĝas ankaŭ en la formorto de la eldona agado, pri kiu la plano same silentas.
+
+– Estas malĝojige konstati, ke ekzemple pri la movada historio regas granda nescio ne nur inter esperantistoj ĝenerale sed eĉ inter movadaj gvidantoj. Iam mi skribis en la revuo, ke historia kono estas bufro kontraŭ naiveco, kiu delogas fari multekostajn erarojn kaj ripeti samajn elreviĝojn. La strategia plano devus preni serioze refortigon de tiu bufro.
+
+– Bedaŭrinde eblas jam timi, ke la nova plano havos saman sorton kiel la antaŭa, nome forgeson. Kvankam publikigita antaŭ tri semajnoj, en la komitata diskutlisto regas plena silento pri ĝi.
+
+
+---
+
+# Ratkaptistoj kaj Tubaro prezentas kantoparadon
+
+**Published:** 2025-11-11
+
+**URL:** https://www.liberafolio.org/2025/11/11/ratkaptistoj-kaj-tubaro-prezentas-kantoparadon/
+
+**Categories:** interreto
+
+Per la retejo Tubaro, kreita antaŭ ses jaroj, eblas pli facile trovi Esperantan enhavon en Youtube. En Germanio dum la pandemio la loka Esperanto-klubo en Hameln, La Ratkaptista Bando, serĉis novajn manierojn kunveni kaj komencis regule prezenti Esperantajn kantojn. Nun la ratkaptistoj kunigis siajn fortojn kun Tubaro kaj prezentas propran kantoparadon, kun ĉifromonaj premioj. Sed kio do estas la retejo Aperu.net, kie la novaĵo aperis?
+
+En 2019 Libera Folio rakontis pri la nova retejo Tubaro , kies celo laŭ la iniciatinto Pablo Busto estas ĉefe konkeri la mondon, sed unue  montri filmojn en Esperanto en koncentrita loko. La fina mondokonkero ankoraŭ ne okazis, sed la filmetoj amasiĝas, kaj ĵus en Aperu.net aperis informo pri kantoparado ĉe Tubaro.
+
+Kio do estas Aperu.net , kion celas la kantoparado, kaj kio okazas ĉe Tubaro? Ni petis la aktivulojn klarigi.
+
+Libera Folio: Unue, kio estas Aperu.net?
+
+Pablo Busto: – Aperu.net estas granda projekto, kiu celas kunligi ĉion, aŭ preskaŭ ĉion, kio okazas en la esperanta interreto. Pro tio kie ĝi estas grandega projekto, ni iris iom post iom, kaj la unua paŝo estas Tubaro, kiu aktive serĉas en Youtube la laste publikigitajn filmojn en Esperanto aŭ pri Esperanto. La ĉefpaĝo de Aperu.net estas la centro por kolekti kaj prezenti la plej bonajn erojn el la sub-projektoj (el kiuj nuntempe nur Tubaro ekzistas).
+
+– La fina celo estas videbligi interesaĵojn, kaj helpi la kreantojn ne devi aktive diskonigi siajn kreaĵojn en sociaj retoj, forumoj, ktp, ĉar anstataŭe, oni povas viziti Aperu por ekscii pri novaj esperantaĵoj. Ĉi-momente ni povus diri ke Tubaro estas ĉirkaŭ 75% el tio kio ĝi devus esti, dum Aperu estas malpli ol 10% de la tuta projekto. Aldone al Tubaro, aliaj pripensitaj sub-projektoj estas similaĵo por podkastoj, por revuoj…
+
+Kio estas la kantoparado kaj kion ĝi celas?
+
+Pablo Busto: – Kantoparado estas monata konkurso kiun organizas la Hamelena Esperanto-asocio. Fakte, ĉi tiu estas jam la 56-a kantoparado. El la vidpunkto de la Hamelena asocio, pli da homoj konos ilian kantoparadon kaj espereble pli da homoj partoprenos estontece, eĉ se ne estas premio. Por la tuta esperantistaro, pli da homoj ekkonu la retejon Aperu.net. Tiurilate, la rezulto de la konkurso jam estas pozitiva.
+
+Heinz Sprick : – En la komenco de la pandemio nia loka Esperanto-klubo en Hameleno (Hameln, Germanio), ”La Ratkaptista Bando”, serĉis vojon por kunveni rete. Ni trovis ĝin per la regulaj kunvenoj per Zoom kaj mi serĉis programerojn , kiujn ni povus fari. Jam antaŭ la pandemio mi iam proponis surloke vesperon, kiam ĉiu povis prezenti ŝatatan kanton. Ĉiuj Kantoparadoj ekde la unua ankoraŭ troveblas ĉe Eventa Servo.
+
+– Ekzistas jam multegaj kantoj en Esperanto. La celo estas konatigi tiujn kantojn, kiujn homoj ŝatas. Mi ne nur invitas la proponintojn de la kantoj, iom paroli dum la Kantoparado kial la kanto plaĉas al vi, sed ankaŭ provas serĉi kaj inviti la kantistojn, verkistojn kaj komponistojn al la Zoom-kunvenoj por iom klarigi pri la kanto. Pro tio kelkfoje la Kantoparado estas ankaŭ kunvenejo de muzikistoj.
+
+– La ĉefaj celoj do estas ĝui belan muzikon dum bela vespero, publikigi kaj konatigi belajn Esperanto-kantojn, kunigi la muzikistojn kaj ĉiujn muzikŝatantojn kaj per la konkurso ankaŭ instigi ilin verki novajn kantojn.
+
+Kiel oni premios la gajnintojn?
+
+Pablo Busto: – Ni decidis fari tion per ĉifromono, konkrete per Bitcoin. Iel, ĝi ŝajnas la plej neŭtrala maniero por internaciaĵoj kiel ĉi tiu. Kaj inter ĉiuj ĉifromonoj, ni decidis fari tion per Bitcoin, ĉar ĝi estas la plej konata.
+
+Kiel estiĝis la listo de la 32 kantoj kiuj partoprenas?
+
+Heinz Sprick: – Pro la pasintaj Kantoparadoj, serĉante muzikistojn per Fejsbuko aŭ aliaj kanaloj, mi jam konatiĝis kun multaj el ili. Pro tio mi sendis al pli ol 80 muzikistoj inviton por partopreni la konkurson per sufiĉe nova kanto, ne pli aĝa ol du jarojn. Mi ĝojegas, ke finfine 32 muzikistoj sendis kanton por partopreni la konkurson. Kelkaj el ili eĉ verkis nun vere novan kanton kaj eĉ registris aŭ filmis ĝin. Pro tio mi jam nun pensas, ke la Konkurso estas sukceso.
+
+Kiel oni elektos la gajnintojn?
+
+Pablo Busto: – Per iu miksa sistemo. La Tubara populareco funkcias tiel ke algoritmo mezuras kiom da spektoj iu filmo ricevis, kiom da homoj spektis ĝin, kiom da ŝatoj, malŝatoj, komentoj… kaj miksante tiujn ĉi datumojn, ĝi ordigas la 32 partoprenantojn. Paralele, okazos voĉdonado organizata de la Hamelena asocio. Kaze de fina sampoentiĝo la permana voĉdono havos prioritaton.
+
+– Rektaj spektoj en Jutubo ne estas utilaj por tubara populareco. Spektoj, komentoj, ŝatoj devas okazi tra tubaro.aperu.net , se oni volas helpi siajn plej ŝatatajn muzikistojn diskonigi siajn kreaĵojn tra Tubaro.
+
+Ĉu vi havas pliajn planojn?
+
+Pablo Busto: – Multege. Iom post iom, aldoni mankantajn funkciojn al Tubaro kaj al Aperu, pretigi la menciitajn paralelajn projektojn por revuoj, podkastoj… Sed mallongdaŭre, kiel videblajn ecojn por uzantoj, ni planas ebligi uzantkontojn, kaj ankaŭ ebligi, ke uzantoj mem organizos similajn konkursojn, kun propraj kriterioj. Fakte, tio estas plia el la multaj celoj, lerni kiel organizi tion, por scii, kion eblas plibonigi.
+
+Heinz Sprick: – Ni certe planas daŭrigi la Kantoparadon, unufoje monate, kutime la 2-an merkredon de la monato, krom dum la someraj monatoj julio kaj aŭgusto. Mi ŝatus, se ankaŭ iom pli da muzikistoj venus al niaj kunvenoj. Kaj mi ĝojus, se per la Kantoparado ni povus instigi la muzikistojn verki novajn kantojn, kaj per ili doni al multaj aŭskultantoj belan kaj agrablan tempon kaj kelkfoje ankaŭ per la tekstoj sentemajn pripensigajn momentojn.
+
+
+---
+
+# Scivola homo de bonkora toleremo
+
+**Published:** 2025-11-21
+
+**URL:** https://www.liberafolio.org/2025/11/21/scivola-homo-de-bonkora-toleremo/
+
+**Categories:** movado
+
+La 13-an de novembro en la aĝo de 88 jaroj en Varsovio forpasis la elstara pola esperantisto Roman Dobrzyński, honora membro de UEA kaj PEA, ĵurnalisto kaj verkisto. En 1967 li edziĝis al la germana esperantisto Erika Rauschert.  ”Nun, kiam ambaŭ ne plu vivas, ni kun admiro memoras du homojn, kiuj ligiĝinte per Esperanto donis modelon por la kunvivado”, skribas Ulrich Lins.
+
+Kiam mortas fama esperantisto, la nekrologoj kutime omaĝas lin jene. Oni listigas liajn kontribuojn al la movado aŭ literaturo de Esperanto, sekvas pli-malpli detala resumo de lia profesia, do eksteresperanta aktivado.
+
+Se nur listigi la funkciojn de Roman Dobrzyński ĵus mortinta, 88-jara, tio ŝajnas facila: 1963–65 redaktoro de Pola Esperantisto , 1966–69 vicprezidanto de TEJO kaj redaktoro de Kontakto , 1986-89 prezidanto de PEA, 1989–91 vicprezidanto de UEA. 1989 Honora Membro de PEA, 2005 Honora membro de UEA.
+
+Sed tio neniel montras al lia signifo. Veninte al Esperanto en sia junaĝo, Roman restis fidela al ĝi ĝisfine; li mortis dum la lasta el la multaj vojaĝoj, kiuj kondukis lin al Bjalistoko, kie li helpis establi en 1987 Fondumon Esperanto.
+
+La unuan stimulon al la lingvo donis gustuma spertado dum la Kvina Monda Festivalo de Studentoj en Varsovio en julio 1955; tie li eksciis, ke ekzistas ”monda lingvoproblemo”. Baldaŭ atingis lin invito al Esperanta kurso. Li demandis sian patron, ĉu valoras lerni tiun ”strangan lingvon”.
+
+La patra respondo ”Lernu, ĉiu scio povas montriĝi utila en cia vivo” konvinkis lin, ĉar la patro, kiu spertis militon kaj malriĉecon, nur pene eskapante la stadion de analfabeteco, jam antaŭe admonis siajn kvar filojn: ”Filoj, lernu. Jen la bonŝanca okazo. Se vi ne lernos, vi laboraĉos kiel mi.”
+
+Roman eklernadis, spitante la malfavorajn kondiĉojn, en kiuj li vivis pro la militaj sekvoj kaj la lerneje spertata nekompetenteco de la ”popoldemokratiaj“, alivorte stalinistaj regantoj de Pollando. Pro la ĝenerala manko de instruistoj la reĝimo devis utiligi por la instruado ekzemple rusinon kaj francinon.
+
+Roman estis forte impresita de licea profesoro, kiu alparole nomis siajn dekkvarjarajn lernantojn ”sinjoroj”, demandis ilin ”Ĉu vi volas lerni kunlabore kun mi?”, kaj ”amikigis nin kun literaturo per sia arta legado de altvaloraj verkoj” kun kompleta neglekto de socialisma realismo.
+
+La universitata studfako de Roman estis juro. Foje li superruzis siajn profesorojn. Prepare al ekzameno pri La kapitalo de Karl Marx li longe kaj profunde legis la verkon ‒ kun la rezulto, ke la profesoroj, eble atendinte de siaj studentoj gurditajn frazojn, nervoziĝis pro la scivolo de Roman, pro liaj detalemo kaj demandemo, tiel ke ili fine kapitulacis kaj ŝanĝis la temon.
+
+Roman multon faris flanke de la studado. Li vojaĝis eksterlanden (unue al Bulgario kaj Rumanio) au dediĉis sin al Esperanto. ”Dum miaj universitataj kolegoj gajnis groŝojn pro lavado de fenestroj aŭ de aliaj pezaj laboroj, mi enspezis monon pro kursoj de la lingvo internacia.” Li verkis la legolibron, La nigra kokino , kiun PEA eldonis en 10 000 ekzempleroj. En 1958 li kunfondis la kabaredon ”Verda Simio”. En 1959 li helpis kunorganizi la jubile-jaran UK en Varsovio.
+
+En 1961 Roman magistriĝis pri juro (verkinte tezon pri la jura statuso de Antarkto), sed anstataŭ eniri profesion li decidis aldoni plian studfakon, nome ĵurnalismon, malgraŭ la onidiro, ke la fako produktas multe da ĵurnalistoj, kiuj ”scias ĉion pri nenio, kaj nenion pri ĉio”. Tamen li sukcesis submeti diploman tezon pri la temo ”La Esperanta gazetaro”.
+
+Pro la TEJO-kongreso en Wokingham (1961) li unuafoje povis vojaĝi okcidenten, do malkovri la ”liberan mondon”. Aventura estis en somero 1964 dumonata, kvarmil-kilometra traveturo de Hispanio per pola skotero. La lingvon li lernis danke al lernolibro de la hispana origine destinita nur por rusoj. La akiron de hispana vizo, tiutempe raraĵo por civitano de satelita ŝtato de Soveta Unio, li dankis al esperantistoj, kiuj estis iom influaj funkciuloj de la baldaŭ falonta reĝimo de generalo Franco.
+
+Fruktoj de la vojaĝo estis la apero de du enkondukaj libroj pri Hispanio, la unuaj por poloj post jardekoj. Ili bone vendiĝis kaj iĝis bazo de lia posta renomo kiel specialisto pri Hispanio kaj Latinameriko, precipe kiam en 1973 li eklaboris por la Pola Televido.
+
+Kvankam lia tuta ĝistiama vivo karakteriziĝis per la kuneco de profesio kaj Esperanto (en la pola vikipedio li estas prezentita kiel ”ĵurnalisto kaj esperantisto”), en 1963 en lian vivon venis Erika, denove pure Esperanta afero. Erika, naskita Rauschert, abiturientino kaj freŝa esperantistino en Hamburgo, petis en letero al Pola Esperantisto peri al ŝi adresojn de ”polaj homoj” korespondemaj.
+
+Parte pro la tiklo implicanta kontakton kun homo el la Federacia Respubliko Germanio, lando, kiun la reĝimo por disciplini siajn civitanojn kutimis uzi kiel ”timigilon”, kun kiu la pola popolo evitu rilatojn, sed eble pli multe pro la iom naiva, nerezistebla ĉarmo de Erika, la redaktoro, Roman, kaptis ŝian leteron por sia propra uzo kaj blokis la transdonon de la korespondpeto en aliajn manojn. La du ekkorespondis, vizitis unu la alian kaj ĉiam pli interproksimiĝis.
+
+Roman longe sciis pri germanoj nur en ligo kun la milito kaj ekstremaj kruelaĵoj. Tion li pretis malatenti, ankaŭ pro la konatiĝo kun samgeneraciaj TEJO-anoj en 1961. Sed li devis venki alispecajn obstaklojn: la geedziĝon de Erika kaj Roman en 1967 antaŭis lukto, ĉar la parencoj kaj geamikoj de Erika ne povis kompreni, eĉ konsterniĝis pro ŝia volo translokiĝi al Pollando, kun kiu okcidenta Germanio ne havis diplomatiajn rilatojn kaj pri kiu vaste regis ignoro aŭ antaŭjuĝoj. Finfine, la 4-an de januaro 1967, la paro geedziĝis.
+
+Ni rezignu prezenti familiajn aferojn tro detale. Roman ankoraŭ en 1967 faris novan, ekscitan vojaĝon, al Mongolio. Erika naskis du gefilojn kaj firme ekŝatis la polojn kaj ilian vivmanieron. Malpli ol kvar jarojn post la geedziĝo ŝi estis ĝislarme kortuŝita observante la skuan momenton, kiam Willy Brandt, dum vizito al la iama Varsovia Geto, subite surgenuiĝis tie honore al la viktimoj. La paro kune vojaĝis al ekzemple Japanio, Ĉinio kaj Brazilo.
+
+Roman Dobrzyński havis talenton altiri homojn per siaj filmoj kaj libroj kaj eble precipe per sia konversaciemo. Tiuokaze li malfacile estis haltigebla; dum kongresoj la edzino ofte devis lin fortiri el vigla interparolo kaj kuntreni al alia programero, sed ankaŭ tiu rapide absorbis la atenton de Roman tiom, ke denove necesis lin bremsi.
+
+Post lia morto Katalin Kováts nostalgie memoris la komunan laboron kun Roman. Preparante filmon, ili buse veturis plurcent kilometrojn tra Pollando – estis tagoj ”plenaj je rakontoj, anekdotoj, ŝercoj kaj klaĉoj”.
+
+Mirinde, ke Roman sukcesis plenumi tiom da taskoj – eduki du gefilojn, produkti ducent filmojn por la pola televido, filmojn pri la 72-a UK, pri Oomoto kaj pri ”Bona Espero” kaj prilabori la tre sukcesan lingvokurson Mazi en Gondolando (1995). Pri ĉi lasta Roman rakontis, ke ĝi spegulas historion de aventuroj kaj emocioj – historion, kiu estis eĉ kortuŝa en tiu senco, ”ke ĝi finiĝis per mia korinfarkto”.
+
+El siaj verkoj li mem eble plej multe ŝatis libron, kiun en 2003 li verkis kune kun la nepo de L.L. Zamenhof: La Zamenhof-strato , tradukitan en 15 (?) lingvojn. En 2005 UEA donis al Roman la premion Grabowski, en 2022 la pola Ministerio pri Kulturo kaj Nacia Heredaĵo aljuĝis al li la bronzan medalon ”Gloria Artis”. Fine de 2024 aperis Romano pri Romano : lia aŭtobiografio. 86-jara li vojaĝis al la unua afrika UK, sekvajare al Brno.
+
+Kiam okazis tiuj lastaj vojaĝoj, la edzino jam ne plu vivis. Komence de la naŭdekaj jaroj ĉe Erika ekestis okulmalsano, al kiu en 2016 aldoniĝis kancero. Kuracprovoj en Pollando kaj Germanio ne alportis la esperatan rezulton; la familio longan tempon ne povis vivi kune.
+
+Komence de marto 2020 Erika forpasis. Nun, kiam ambaŭ ne plu vivas, ni kun admiro memoras du homojn, kiuj ligiĝinte per Esperanto donis modelon por la kunvivado de poloj, de germanoj kaj de multaj homoj, kiuj sopiras pri mondo, en kiu la interhomajn rilatojn konsistigas nebridebla scivolo, bonkora toleremo kaj sprito.
+
+Ulrich Lins
+
+
+---
+
+# DeepL fine lernis Esperanton – ĉu plu gravas?
+
+**Published:** 2025-11-25
+
+**URL:** https://www.liberafolio.org/2025/11/25/deepl-fine-lernis-esperanton-cu-plu-gravas/
+
+**Categories:** interreto
+
+En 2012 estis granda novaĵo, ke la aŭtomata tradukilo de Google ekparolis Esperanton. De tiam la kvalito de aŭtomataj tradukoj eksplode evoluis. Nun tradukon al kaj el Esperanto proponas ankaŭ la fama tradukilo DeepL. Sed kiu funkcias plej bone? Kaj ĉu homaj tradukistoj plu bezonatos?
+
+Kiam Google en 2012 aldonis Esperanton al la lingvoj de sia aŭtomata tradukilo, la kompanio mem trovis la novaĵon tiel grava, ke pri ĝi aperis aparta afiŝo en la blogo de Google – kun titolo en Esperanto. Kompreneble raportis ankaŭ Libera Folio .
+
+Kiam komence de novembro Esperanto aperis inter la lingvoj subtenataj de alia fama aŭtomata tradukservo, DeepL, la novaĵo pasis preskaŭ nerimarkita, kaj la gazetara servo de la kompanio neniel reagis al demando de Libera Folio pri la temo.
+
+István Ertl, ĉiama kunlaboranto de Libera Folio , sed ankaŭ profesia tradukisto ĉe la Eŭropa Revizora Kortumo, diras ke la ĝenerala evoluo de maŝina tradukado estas vertiĝodona por ĉiuj, multoble pli ol la plej multaj homoj imagis.
+
+– En la 1980-aj jaroj mi legis pri DLT kaj la uzo de Esperanto en tiu regul-baza projekto; en la 1990-aj mi redaktis ĉe UEA broŝuron de Dan Maxwell pri la temo. En 2003, kiam mi eklaboris ĉe EU, miaj ĉefaj laboriloj ankoraŭ estis Word, Google, vortaroj kaj terminaroj pliparte paperaj.
+
+– Tra la jaroj aldoniĝis tradukmemoroj kaj fine maŝintradukado, per sistemo evoluigita interne de la EU-institucioj. Nuntempe mi preskaŭ ĉiam laboras ne kiel ”vera” tradukisto, sed kiel revizianto de maŝintradukaĵo jen pli jen malpli bona.
+
+Ŝajne do la aldono de Esperanto al DeepL ne plu estas aparte unika okazaĵo, des pli ke la firmao samtempe anoncis la aldonon de pli ol 70 lingvoj en eksperimenta beta-statuso. Interalie ĉiuj oficialaj lingvoj de EU nun estas haveblaj ĉe DeepL, kiun oni ĝenerale konsideras unu el la plej bonaj libere alireblaj aŭtomataj tradukiloj.
+
+La ”malnovaj” lingvoj de DeepL estas traktataj per klasika komputada modelo nomata ”neŭra reto”, evoluigita dum multaj jaroj. La rapidan aldonon de multaj novaj lingvoj ebligis la uzo de granda lingvo-modelo (angle LLM), teknologio kiun uzas popularaj servoj kiel ChatGPT. La tradukoj faritaj per la nova teknologio eble ne tuj estos same kvalitaj kiel tiuj faritaj per la klasika modelo de DeepL.
+
+Ĉiuokaze la kvalito de aŭtomataj tradukoj el kaj al Esperanto enorme evoluis dum la pasinta jardeko. Ni prenu la anglalingvan originalon, kiun ni uzis en 2012, kaj komparu.
+
+Originala teksto en la angla: BUENOS AIRES, February 22, 2012 (AFP) – Around 340 people were injured, some of them seriously, Wednesday when a train derailed and struck a railway station platform in Buenos Aires, transport and health officials said. Around a dozen ambulances were sent to the accident in the west of the Argentine capital to treat those hurt, said Alberto Crescenti, a senior city official. Transportation Secretary Juan Pablo Schiavi gave the toll and said many of the passengers were badly injured, including some with multiple fractures and abrasions, adding that “there could be fatalities” among the casualties. Traduko de Google en 2012: Bonaero, februaro 22, 2012 (AFP) – Ĉirkaŭ 340 homoj estis vunditaj, kelkaj el ili serioze, merkredo kiam trajno elreliĝis kaj frapis fervoja stacidomo kajo en Buenos Aires, transporto kaj sano respondeculoj diris. Ĉirkaŭ dekduo ambulancoj estis senditaj al la akcidento en la okcidento de la argentina ĉefurbo trakti tiujn malfelicxan, diris Alberto Crescenti, altranga urbo oficiala. Transporto Sekretario Johano Paŭlo Schiavi donis la paspago kaj diris multajn el la pasaĝeroj estis grave vunditaj, inkludante iuj kun multnombraj frakturoj kaj abrasions, aldonante ke ”ne povis esti viktimoj” inter la viktimoj.
+
+Originala teksto en la angla: BUENOS AIRES, February 22, 2012 (AFP) – Around 340 people were injured, some of them seriously, Wednesday when a train derailed and struck a railway station platform in Buenos Aires, transport and health officials said. Around a dozen ambulances were sent to the accident in the west of the Argentine capital to treat those hurt, said Alberto Crescenti, a senior city official. Transportation Secretary Juan Pablo Schiavi gave the toll and said many of the passengers were badly injured, including some with multiple fractures and abrasions, adding that “there could be fatalities” among the casualties.
+
+Traduko de Google en 2012: Bonaero, februaro 22, 2012 (AFP) – Ĉirkaŭ 340 homoj estis vunditaj, kelkaj el ili serioze, merkredo kiam trajno elreliĝis kaj frapis fervoja stacidomo kajo en Buenos Aires, transporto kaj sano respondeculoj diris. Ĉirkaŭ dekduo ambulancoj estis senditaj al la akcidento en la okcidento de la argentina ĉefurbo trakti tiujn malfelicxan, diris Alberto Crescenti, altranga urbo oficiala. Transporto Sekretario Johano Paŭlo Schiavi donis la paspago kaj diris multajn el la pasaĝeroj estis grave vunditaj, inkludante iuj kun multnombraj frakturoj kaj abrasions, aldonante ke ”ne povis esti viktimoj” inter la viktimoj.
+
+Kvankam la teksto estas ĝenerale komprenebla, tuj evidentas pluraj fuŝoj, plej rimarkinde eble ”tiujn malfelicxan”, eĉ kun ikso, anstataŭ ”la vunditojn”, kaj ”ne povis esti viktimoj inter la viktimoj” anstataŭ ”povis esti mortintoj inter la viktimoj”. La nuna versio de la Google-tradukilo multe pli bone elturniĝas pri la sama teksto.
+
+Traduko de Google en 2025: BONAERO, 22-a de februaro 2012 (AFP) – Ĉirkaŭ 340 homoj vundiĝis, kelkaj el ili grave, merkrede kiam trajno dereliĝis kaj trafis kajon de fervoja stacio en Bonaero, diris transportaj kaj sanaj oficistoj. Ĉirkaŭ dekduo da ambulancoj estis senditaj al la akcidento en la okcidento de la argentina ĉefurbo por trakti la vunditojn, diris Alberto Crescenti, altranga urba oficisto. La ministro pri transportado Juan Pablo Schiavi donis la nombron kaj diris, ke multaj pasaĝeroj estis grave vunditaj, inkluzive de kelkaj kun multoblaj frakturoj kaj abrazioj, aldonante, ke ”povus esti mortoj” inter la viktimoj.
+
+Traduko de Google en 2025: BONAERO, 22-a de februaro 2012 (AFP) – Ĉirkaŭ 340 homoj vundiĝis, kelkaj el ili grave, merkrede kiam trajno dereliĝis kaj trafis kajon de fervoja stacio en Bonaero, diris transportaj kaj sanaj oficistoj. Ĉirkaŭ dekduo da ambulancoj estis senditaj al la akcidento en la okcidento de la argentina ĉefurbo por trakti la vunditojn, diris Alberto Crescenti, altranga urba oficisto. La ministro pri transportado Juan Pablo Schiavi donis la nombron kaj diris, ke multaj pasaĝeroj estis grave vunditaj, inkluzive de kelkaj kun multoblaj frakturoj kaj abrazioj, aldonante, ke ”povus esti mortoj” inter la viktimoj.
+
+La nova tradukilo de DeepL elturniĝas sufiĉe bone pri la teksto, tamen ne tute same bone kiel la ĝisdata versio de Google. La plej evidenta fuŝo aperas tuj en la komenco:
+
+Traduko de DeepL: BUENOSA ERO, la 22-an de februaro 2012 (AFP) – Ĉirkaŭ 340 homoj vundiĝis, iuj el ili grave, merkrede kiam trajno devojis de la trako kaj trafis platformon de fervoja stacidomo en Buenos Aires, diris transportaj kaj sanitaraj oficistoj. Ĉirkaŭ dekduo da ambulancoj estis senditaj al la akcidento en la okcidento de la argentina ĉefurbo por kuraci la vunditojn, diris Alberto Crescenti, altranga urba oficisto. La Transporta Sekretario Juan Pablo Schiavi konfirmis la nombron kaj diris, ke multaj el la pasaĝeroj estis grave vunditaj, inkluzive de iuj kun multoblaj frakturoj kaj skrapaĵoj, aldonante, ke ”povus esti mortintoj” inter la viktimoj.
+
+Traduko de DeepL: BUENOSA ERO, la 22-an de februaro 2012 (AFP) – Ĉirkaŭ 340 homoj vundiĝis, iuj el ili grave, merkrede kiam trajno devojis de la trako kaj trafis platformon de fervoja stacidomo en Buenos Aires, diris transportaj kaj sanitaraj oficistoj. Ĉirkaŭ dekduo da ambulancoj estis senditaj al la akcidento en la okcidento de la argentina ĉefurbo por kuraci la vunditojn, diris Alberto Crescenti, altranga urba oficisto. La Transporta Sekretario Juan Pablo Schiavi konfirmis la nombron kaj diris, ke multaj el la pasaĝeroj estis grave vunditaj, inkluzive de iuj kun multoblaj frakturoj kaj skrapaĵoj, aldonante, ke ”povus esti mortintoj” inter la viktimoj.
+
+Ni fine vidu, kiel funkcias la ĝisdata versio de la lingvomodelo de ChatGPT, kiu ja ne estas unuavice evoluigita por tradukoj. Jen la rezulto.
+
+Traduko de ChatGPT: BUENOS-AIRESO, la 22-an de februaro 2012 (AFP) – Ĉirkaŭ 340 homoj estis vunditaj, kelkaj el ili grave, merkredon kiam trajno elreliĝis kaj trafis la peronon de fervoja stacio en Bonaero, laŭ informoj de transportaj kaj sanaj oficialuloj. Ĉirkaŭ dekduo da ambulancoj estis senditaj al la akcidentloko en la okcidenta parto de la argentina ĉefurbo por prizorgi la vunditojn, diris Alberto Crescenti, supera urba funkciulo. La Transporta Sekretario Juan Pablo Schiavi donis la nombron de viktimoj kaj diris, ke multaj el la pasaĝeroj estis severe vunditaj, inter ili kelkaj kun multnombraj frakturoj kaj kontuziĝoj, aldonante ke ”povus esti mortintoj” inter la viktimoj.
+
+Traduko de ChatGPT: BUENOS-AIRESO, la 22-an de februaro 2012 (AFP) – Ĉirkaŭ 340 homoj estis vunditaj, kelkaj el ili grave, merkredon kiam trajno elreliĝis kaj trafis la peronon de fervoja stacio en Bonaero, laŭ informoj de transportaj kaj sanaj oficialuloj. Ĉirkaŭ dekduo da ambulancoj estis senditaj al la akcidentloko en la okcidenta parto de la argentina ĉefurbo por prizorgi la vunditojn, diris Alberto Crescenti, supera urba funkciulo. La Transporta Sekretario Juan Pablo Schiavi donis la nombron de viktimoj kaj diris, ke multaj el la pasaĝeroj estis severe vunditaj, inter ili kelkaj kun multnombraj frakturoj kaj kontuziĝoj, aldonante ke ”povus esti mortintoj” inter la viktimoj.
+
+Estas amuze konstati, ke en ĉiuj tradukoj, krom la ĉi-jara versio de Google, la nomo de la argentina ĉefurbo nelogike aperas en pli ol unu formo. Nur la ĝisdata versio de Google ne konfuziĝis pro la fakto ke la urbonomo komence aperas tutmajuskle, kaj ĉie ĝuste nomis la urbon ”Bonaero”.
+
+Sed la eraroj kaj strangaĵoj en aŭtomate tradukitaj tekstoj iĝas ĉiam malpli multaj, kaj almenaŭ por nebeletraj tekstoj ofte sufiĉas malmulta redaktado por ke la rezulto estu kontentiga, diras István Ertl.
+
+– Mi facile imagas ke, ene de kelkaj jardekoj aŭ eĉ jaroj, la profesio de tradukisto fairiĝos io simila al tio kio nun estas forĝisto au ĉapelfaristo: daŭre bezonata, sed malpli grandnombre ol iam, por taskoj apartaj kaj bezonantaj specifajn kapablojn.
+
+
+---
+
+# Forpasis Rob Moerbeek, vivanta institucio
+
+**Published:** 2025-11-30
+
+**URL:** https://www.liberafolio.org/2025/11/30/forpasis-rob-moerbeek-vivanta-institucio/
+
+**Categories:** movado
+
+Rob Moerbeek eklaboris en la Centra Oficejo de UEA en Roterdamo en julio 1969. Ĉiuj, kiuj iam vizitis la oficejon, certe konas kaj memoras lian senpretendan afablecon. Lia lasta labortago tie estis la 7-a de novembro 2025. Tri semajnojn poste li forpasis en la aĝo de 89 jaroj.
+
+Jaŭde la 27-an de novembro 2025 Rob Moerbeek, unu el la plej konataj vizaĝoj de la internacia Esperanto-movado, forpasis en sia hejmurbo Beverwijk (Nederlando). Rob naskiĝis la 1-an de majo 1936 en socialisma Esperantomedio – liaj gepatroj, Jan Moerbeek kaj Alida Elisabeth Prins, estis idealismaj laboristoj kiuj ekzerciĝis pri la lingvo dum promenoj, dum juna Rob, tiam gimnaziano, aŭskultis.
+
+Li elektis studi klasikajn lingvojn, instruate de docentoj kiuj inspiris lin pri la malnovgreka, la latina kaj la antikva historio. Dum sia instruista periodo (1963–1969) li aniĝis en 1966 al Federacio de Laboristaj Esperantistoj (FLE) en Nederlando kaj al Universala Esperanto-Asocio (UEA).
+
+Post somera volontulado li estis dungi­ta en 1969 kiel oficisto en la Roterdama centra oficejo de UEA, de la direktoro Victor Sadler. Dum 32 jaroj li respondecis pri la sendo de libroj kaj revuoj, zorgis pri la kolekto de Biblioteko Hector Hodler kaj pri la arkivo.
+
+Krome li estis konata kiel la ĉefprovleganto de la tuta movado: li korektis interalie la revuojn Esperanto, Monato, Internacia Pedagogia Revuo, Scienca Revuo, Fenikso (de Esperanto Nederland), Esperantista Vegetarano kaj La kontakto (la revuo de la nederlandaj blindulaj esperantistoj). Li estis provleganto ankaŭ por ĉiuj libroj kaj broŝuroj de UEA.
+
+Krom sia oficeja laboro Rob daŭrigis studojn. Li sekvis prelegojn pri Esperanto ĉe la Universitato de Amsterdamo kaj en 1978 estis nomumita speciala docento pri Esperanto. Ĝis 1998 li instruis tie, entuziasmigante generaciojn da nederlandaj studentoj por la internacia lingvo. Kiel instruisto kaj korektisto li havis tre akran okulon por bona lingvouzo; laŭ liaj lernantoj li ne nur rekonis krudajn erarojn, sed ankaŭ klarigis ilin komprenige kaj korektis ilin didaktike.
+
+Rob interkonatiĝis kun sia estonta edzino, Nora Reinders Bartels, kiam ŝi, kiel blindulino, sekvis lian kurson. Kune ili engaĝiĝis por la situacio de blinduloj en la Esperantomovado. Nora tradukis libron pri Anne Frank; ŝi mortis en 1998. Post tio, Rob daŭrigis la laboron: li reprezentis LIBE (Ligo Internacia de Blindaj Esperantistoj) en la komitato de UEA kaj helpis fondi la nederlandan sekcion Nosobe. Liaj ligoj kun la blindula komunumo restis ĉefa fadeno tra lia vivo; eĉ liaj kursoj estis ĝustatempe adaptitaj por brajlo.
+
+Rob havis ankaŭ fortan socian engaĝiĝon ekster Esperantujo. Li kampanjis kontraŭ fumado kaj kune kun sia edzino estis aktiva en TADEN, la monda asocio de nefumantaj esperantistoj. Li subtenis pacajn kaj mondfederalismajn iniciatojn, skribis leterojn al oficialuloj de UN kaj aliaj decidofarantoj, kaj organizis kursojn por anoj de la Universala Federacio. En oktobro li ankoraŭ tradukis en Esperanton paroladon de la nederlanda eksministro Jan Pronk pri la situacio en Gazao.
+
+Tra la jaroj Rob tradukis kaj redaktis multajn tekstojn. Inter la plej konataj tradukoj troviĝas la teologia verko La afero Jesuo kaj la Judoj de Peter J. Tomson en Esperanton kaj, inverse, la nederlandaj versioj de la lernolibro Esperanto per rekta metodo (2007).
+
+La sindediĉo de Rob Moerbeek ne restis nerimarkita. En 2000 li ricevis la Premion Deguĉi pro sia longa kontribuo por esperantistoj en evolulandoj kaj por homoj kun handikapoj. Dum la Universala Kongreso de UEA en 2011 oni nomumis lin honora membro de UEA, kaj tri jarojn poste li fariĝis honora membro ankaŭ de la internacia instruista asocio ILEI.
+
+Kulmino por li venis la 28-an de aprilo 2018: dum Malferma Tago de la Centra Oficejo la urbestro de Beverwijk alpinglis al li la rubandon kiu faris lin Kavaliro en la Ordeno de Oranje-Nassau. Li ricevis tiun reĝan distingon pro sia longa laboro por la Esperantomovado, sia subteno al la blindula movado kaj sia redakta kaj instrua agado.
+
+Post lia formala emeritiĝo en 2001 Rob plu laboris du tagojn semajne kiel volontulo en la Centra Oficejo – tasko kiun li plenumis ĝis la lasta momento. Lia lasta labortago en la CO estis la 7-a de novembro 2025.
+
+Laŭ kolegoj li restis, spite al aĝo kaj sanproblemoj, daŭre aktiva: li gvidis kursojn, vojaĝis al kongresoj kaj konferencoj, laboris por blindulaj asocioj kaj instruistaj organizaĵoj, kaj estis membro de sennombraj kluboj. La venonta (decembra) numero de la revuo Esperanto estas ankoraŭ korektita de li. Per sia akra rigardo li rimarkis erarojn kiujn aliaj eĉ ne vidis, kaj li preferis labori ol fanfaroni.
+
+Por la nederlanda Esperanto-movado Rob Moerbeek estis vivanta institucio. Li funkciis interalie kiel komisiito por eksteraj kontaktoj. Li ankaŭ kunlaboris pri la brajla biblioteko, konsilis lokajn klubojn kaj reprezentis nederlandajn esperantistojn en internaciaj medioj. Liaj neŝancelebla sindediĉo al lingva zorgo, instrua kompetento kaj socia justeco formis generaciojn da esperantistoj, en Nederlando kaj la tuta mondo.
+
+Rob Moerbeek montris kion signifas vivo en servo de idealisma projekto. Li kunigis lingvan kompetentecon kun profunda socia engaĝiĝo kaj praktika sindediĉo. Ke li restis fidela al zorgema korektado kaj persona subteno ankaŭ en epoko de novaj komunikiloj, faris lin kvazaŭ modela ‘samideano’. Lia vivoverko memorigas al ni kiel unusola volontulo povas levi la kvaliton de tutmonda movado. Tio verŝajne estas la plej grava heredaĵo, kiun Rob Moerbeek lasas al ni.
+
+Marc van Oostendorp
+
+
+---
+
+# UEA ne sukcesis vendi sian domon
+
+**Published:** 2025-11-30
+
+**URL:** https://www.liberafolio.org/2025/11/30/uea-ne-sukcesis-vendi-sian-domon/
+
+**Categories:** UEA, movado
+
+La planata vendo de la Centra Oficejo de UEA ĝis nun ne efektiviĝis, ĉar la aĉetonto ne sukcesis pagi la garantiaĵ on. UEA tamen esperas, ke la vendokontrakto povos esti subskribita post la jarŝanĝo. Plu mankas plano por la estonteco de la libroservo.
+
+En sia longa sabata kunsido la komitato de UEA traktis la buĝeton por la venonta jaro. La buĝeto enhavas neniujn gravajn ŝanĝojn rilate la kostojn de la oficeja domo en Nieuwe Binnenweg 176, nek rilate la funkciadon de la libroservo, kiu troviĝas en la sama domo.
+
+Tio estas iom miriga, se konsideri ke la komitato de UEA jam en februaro 2022 decidis vendi la domon. En septembro 2025 la estraro fine informis, ke estas trovita aĉetonto por la domo. Post la formaligo de la vendo la domo devos esti malplenigita ene de 4–6 monatoj.
+
+Post septembro aperis neniaj novaj informoj pri la vendo de la domo, krom malprecizaj onidiroj pri planoj por lasta, ferma Malferma tago, kiu okazu en la Centra Oficejo en januaro 2026. La programo por tiu Malferma tago tamen neniam estis publikigita, do probable ĝi ne okazos.
+
+Dum la komitata kunsido la estraro informis, ke la vendokontrakto pri la domo en Nieuwe Binnenweg 176 ĝis nun ne estis subskribita, ĉar la aĉetonto ne sukcesis pagi la postulatan garantian sumon. Origine la aĉetonto promesis pagi la sumon senprokraste, sed poste montriĝis, ke por tio devos esti aranĝita banka prunto.
+
+Krome la aĉetonto volas atendi ĝis post la jarŝanĝo, pro iuj antaŭvidataj leĝoŝanĝoj en Nederlando, informis ĝenerala direktoro Martin Schäffer. Tamen li plu esperas, ke la vendo povos esti formaligita en proksima tempo.
+
+– Tio signifas ke ni ankoraŭ ne havas tutan certecon pri la transdono de la domo, kiam ĝi okazos. Plej frue la unuan de aprilo, sed nur se ni akceptos tion, ĉar ni devas prepari la transdonon bone, Martin Schäffer diris.
+
+Laŭ li la pakado de aĵoj en la Centra Oficejo bone progresas kaj estas spaco por meti la aĵojn.
+
+– Do entute mi daŭre estas optimisma ke ĉio marŝos. Sed kompreneble restas la risko ke io okazos kaj finfine oni ne akceptos aĉeti la domon. Tio kompreneble estus problemo, sed tamen ne influus tre forte la buĝeton, do ni ankaŭ en tiu kazo elturniĝos.
+
+Kio okazos pri la libroservo tamen tute ne klaras. Laŭ Martin Schäffer UEA plu konsideras diversajn planojn. Kiun vojon oni elektos interalie dependos de tio, ĉu TEJO post la perdo de la oficejo en Nieuwe Binnenweg 176 decidos havigi al si alian ejon. Se jes, tie povus troviĝi ankaŭ ia libroservo, li diras.
+
+– Se TEJO decidus ke oni volas havi aldonan oficejon en Roterdamo, iomete pli grandan, por ankaŭ havi volontulojn de TEJO tie, ni sukcesos aranĝi tion, almenaŭ en iu, ni diru, pli eta formo. Kaj krome daŭre estas la ideo, aŭ la esploroj, pri libroservo en alia loko, sed ni bedaŭrinde ne multe progresis pri tio. Ni havas nun pli… iomete pli konkretajn planojn pri tio, sed ankoraŭ ni ne havas tutan klarecon, aŭ neniu kontrakto ĝis nun estas farita.
+
+Post diskuto pri diversaj detaloj de la buĝeto la komitato akceptis ĝin senŝanĝe, kun 31 poraj voĉoj kaj du sindetenoj. Du el la ĉeestantaj komitatanoj ne voĉdonis.
+
+Prezidanto Fernando Maia amplekse prezentis la finan version de la strategia plano Akiri, kiu same estis aprobita sen ajna kontraŭa voĉo. 30 komitatanoj voĉdonis por la plano, du sin detenis kaj du ne voĉdonis.
+
+
+---

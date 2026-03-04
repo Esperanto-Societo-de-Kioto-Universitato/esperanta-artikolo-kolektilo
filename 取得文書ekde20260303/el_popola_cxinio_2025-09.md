@@ -1,0 +1,1805 @@
+---
+source: "El Popola Ĉinio (esperanto.china.org.cn)"
+generated_at: "2026-03-03T10:42:50.493915+00:00"
+generator: "retradio_lib.py"
+time_range: "2025-09-01 – 2025-09-30"
+---
+
+
+# Enketo de CGTN: Defendi estas plej bona memorigo
+
+**Published:** 2025-09-01
+
+**URL:** http://esperanto.china.org.cn/2025-09/01/content_118046729.htm
+
+**Categories:** Plej Freŝaj
+
+Okdek jarojn post la dua mondmilito, la homaro denove staras ĉe vojkruciĝo: unuiĝo aŭ dividiĝo, dialogo aŭ antagonismo, kungajno aŭ nula sumo. Subteni la rezultojn de la venko de la dua mondmilito kaj la postmilitan internacian ordon fariĝis ĝenerala konsento.
+
+Laŭ la tutmonda enketo farita de CGTN al 11 913 individuoj, 62.1% de la enketitoj kredas, ke konservi la venkajn rezultojn de la dua mondmilito estas esenca por subteni la postmilitan internacian ordon. 67.9% de la enketitoj konsentas, ke la UN-centrigita internacia sistemo estas la kerno de la postmilita internacia ordo. Inter la G7-landoj subteno al ĉi tiuj du proponoj estas je 52.5% kaj 62.8% respektive.
+
+Hodiaŭ, la tutmondaj defioj rilate al paco, disvolviĝo, sekureco kaj administrado daŭre severiĝas. 58% de la tutmondaj enketitoj kredas, ke la postmilita internacia ordo estas subfosata, kaj 58.9% eksplicite identigas Usonon kiel la plej grandan interrompanton de ĉi tiu ordo. Krome, 64.8% de la enketitoj diras, ke usonaj komerc-protektismaj politikoj damaĝas la tutmondan liberkomercan sistemon; 65.5% atentigas, ke usonaj teknologiaj baroj malhelpas la liberan fluon de sciencaj kaj teknikaj talentuloj; 67.9% diras, ke usonaj retiriĝoj el internaciaj interkonsentoj kaj organizoj malhelpas tutmondan kunlaboron kaj multflankecon; kaj 67% opinias, ke kiel la konstanta membro de la Sekureca Konsilio de UN, Usono malfortigas la aŭtoritaton de UN per retenado de kotizoj kaj misuzo de siaj rajtoj pri problemoj inter Palestino kaj Israelo.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">"Dead To Rights": Por la herooj en 1937 - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Xi Jinping: ŜKO surŝultrigas pli grandajn respondecojn por protekti pacon kaj akceli disvolviĝon
+
+**Published:** 2025-09-01
+
+**URL:** http://esperanto.china.org.cn/2025-09/01/content_118053991.htm
+
+**Categories:** Plej Freŝaj
+
+La 31-an de aŭgusto ĉina prezidanto Xi Jinping diris, ke la Ŝanhaja Kunlabora Organizo (ŜKO) surŝultrigas pli grandajn respondecojn por protekti regionan pacon kaj stabilecon, kaj por akceli disvolviĝon de diversaj landoj en la mondo kun pliiĝantaj necertecoj kaj akcelitaj ŝanĝiĝoj.
+
+Xi Jinping faris la rimarkojn en bonveniga bankedo por internaciaj gastoj, kiuj estas en la ĉina havenurbo Tianjin por ĉeesti la Pintkunvenon de ŜKO 2025. Li esprimis fidon, ke per komunaj klopodoj de ĉiuj partioj, la pintkunveno atingos kompletan sukceson, kaj ŜKO certe ludos pli grandan rolon kaj atingos pli da progreso, alportante pli grandan kontribuon al akcelo de la unueco kaj kunlaboro inter la membroŝtatoj, kunigante la fortojn de la tutmonda sudo kaj antaŭenpuŝante la homan civilizacion por pli da progreso.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Floroj ornamas Pekinon por 80-a datreveno de la venko kontraŭ faŝismo - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Suizhou, Hubei: De legendo de Shennong al ĉefurbo de ŝitako
+
+**Published:** 2025-09-01
+
+**URL:** http://esperanto.china.org.cn/2025-09/01/content_118054347.htm
+
+**Categories:** Plej Freŝaj
+
+de BUI HAI MUNG
+
+Fine de aŭgusto, nia ĵurnalista teamo vizitis la urbon Suizhou en la provinco Hubei, kiu estas laŭdita kiel ĉefurbo de ŝitako en Ĉinio. La esplorvojaĝo malkaŝis vivan rakonton pri kampara evoluigo, kie legenda tradicio kunfandiĝas kun moderna scienco kaj novigaj politikoj.
+
+Birdrigardo de fungplantejo en Suizhou
+
+Komenco de legendo
+
+La rakonto pri la ŝitako ĉi tie devenas de malnova mito. Oni diras, ke antaŭ 5 000 jaroj, la agrikultura dio Shennong sur la monto Dahong (nun en Suixian-gubernio de Suizhou) gustumis centojn da herboj kaj plantoj, kaj li estis venenita sepdek fojojn en unu tago. La Ĉiela Imperiestro, kortuŝita de lia sincereco, sendis ambasadoron por doni al li "magian branĉon". Sur la magia branĉo estis fungosporoj; Shennong frapis plantojn per ĝi, kaj post sep tagoj sur putriĝantaj arboŝeloj kreskis rondetaj fungokapoj -- oni kredas, ke tiuj estis la unuaj ŝitak-fungoj en la historio.
+
+Impona transformo: De sperto al alt-teknologio
+
+De la legendo, nuntempe Suizhou fariĝis unu el la pintaj ŝitak-produktaj regionoj en Ĉinio. Ĉi tiu okupado de la merkato komenciĝis per revolucio en pensado kaj tekniko. Se antaŭe kamparanoj ĉefe fidis sperton kaj dependis de naturo, nun ili fariĝis veraj "agrikulturaj laboristoj", majstrante pli ol 20 modernajn teknikojn kiel inteligentan temperaturan kontroladon kaj kontraŭsezonan fungokultivadon tutjare.
+
+Birdrigardo de ŝitaka plantejo en Suizhou
+
+La ŝlosila movforto de ĉi tiu transformo kuŝas en la sistema "teorio + praktiko + atestilo" -- trejnada strategio efektivigita de la oficejo pri homaj resursoj de Suizhou, kun la celo "trejni personon, provizi por persono, riĉigi familion".
+
+Ĉirkaŭa subtena ekosistemo de politiko
+
+La sukceso de la kamparanoj estas subtenata de kompleta "trejnado + entreprenado + financo" -- subtena sistemo kreita de la loka registaro. Ĉi tiu sistemo malfermis rapidan vojon por agrikultura entreprenado, kun 450 milionoj da juanoj en garantiitaj entreprenaj pruntoj kaj 6.4 milionoj da juanoj en entreprenaj subvencioj disponeblaj.
+
+Tipa ekzemplo estas la projekto de revenintaj junuloj en la urbeto Tangcheng. Ili sukcese konstruis ĉenon de forcejoj kun skalo de unu miliono da sakoj da fungoinokuloj, kreante laborpostenojn por 220 lokaj laboristoj kun enspezo atinganta 12 000 juanojn monate.
+
+Ene de ŝitak-plantejo en Suizhou
+
+Krome, strategia kunlaboro kun la Ĉina Agrikultura Universitato por establi esplorplataĵojn liveris imponajn rezultojn: Sukcesa bredado de 40 altkvalitaj fungospecoj kaj antaŭenigo de 10 novaj teknikoj. Tio donas al suizhou-a ŝitako konkurecan avantaĝon kaj merkat-prezigan kapablon internacie.
+
+Simbola figuro: De kamparano al "vivtranssenda vendanto"
+
+La evolu-rakonto ne nur temas pri ciferoj, sed ankaŭ pri ŝanĝitaj vivoj. Ĉe la fungkultura bazo de Suizhou, ni renkontis sinjorinon Xia Jinfang, 64-jaraĝa, kiu estas vigla vivtranssenda vendanto. Ŝi klarigis, ke post labortago, de la 7-a ĝis la 9-a vespere, ŝi regule aperas en videosendoj kaj entuziasme prezentas al uzantoj tra la lando hejmajn agrikulturajn produktojn kiel ŝitakon, persikon, persikrezinojn, ovojn produktitajn de libere bredita kokino ktp. La plejparto de ĉi tiuj produktoj venas de vilaĝanoj je la aĝoj inter 50 kaj 70, kiuj estas lertaj pri kultivado sed malertaj en vendado. Danke al videosendoj de ŝia teamo, tiaj altkvalitaj agrikulturaj produktoj atingas la tutlandan merkaton.
+
+Foto kun sinjorino Xia Jinfang
+
+Komence de sia videosendo antaŭ 4 jaroj, sinjorino Xia estis tre nervostreĉa kaj ne kuraĝis paroli antaŭ la fotilo. Sed danke al subteno de lokaj elektronikkomercaj trejnadoj, ŝi lernis la teknikon kaj kapablis uzi lingvaĵon taŭgan por la interreta medio. Ŝi diris, ke krom trejnado, ŝi ankaŭ memlernis kaj akiris sperton per observado de aliaj videosendistoj. Antaŭe, ŝi sentis, ke la kvanto de subtenantoj ne sufiĉas, sed konstante multiĝis spertoj, la afero iom post iom ŝanĝiĝis. Post kelkaj jaroj, la kvanto de subtenantoj kreskis. Ŝia vendado kreskis de nur kelkaj mendoj al dekoj da, kaj fine atingis centojn da mendoj en nur du horoj. Per senĉesa klopodo, ĉiu el ŝiaj videosendoj povas altiri dekojn da miloj da subtenantoj. Kio samtempe kontribuas al la valoro de agrikulturaj produktoj, kaj altigas la enspezojn de kamparanoj. "Pionire lerni, persisteme dividi kaj diskonigi la hejmajn specialaĵojn al pli multaj homoj estas mia deziro," diris s-ino Xia.
+
+Leciono el la ĉina kampara evolu-modelo
+
+La sukcesa rakonto de Suizhou kaj s-ino Xia vivece ilustras la ĉinan strategion pri kampara reprosperigo, lanĉitan en 2017. La strategio celas solvi la malekvilibran evoluon inter urboj kaj kamparoj, antaŭenigi agrikulturan modernigon, plibonigi la vivkvaliton de loĝantoj, kaj atingi la sukceson en reduktado de malriĉeco. La strategio enfokusigas kvin ĉefajn punktojn: evoluigi distingajn industriojn, protekti la medion, konstrui kamparan civilizacion, plibonigi administran efikecon, kaj altigi homan vivnivelon. Per rimedoj kiel talenta trejnado, financa subteno, elektronikkomerca evoluo kaj cifereca infrastruktura konstruado, ĉi tiu strategio helpas ĉinajn kamparojn fari fortajn ŝanĝojn.
+
+La "riĉiga fungo" de Suizhou estas ne nur ekonomia sukcesa rakonto, sed ankaŭ modelo pri kampara transformado en la cifereca erao, portante esperon kaj inspiron al aliaj kamparaj regionoj tra Ĉinio kaj la mondo. Aliaj landoj, precipe evoluantaj landoj, povas lerni de ĉi tiu politiko kaj la ĉina aliro al malriĉecoredukto kaj kampara evoluigo.
+
+<span style="font-family: "times new roman"; font-size: 20px;">Xi Jinping: ŜKO surŝultrigas pli grandajn respondecojn por protekti pacon kaj akceli disvolviĝon - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Rana Mitter: Ĉina Kontraŭjapana Rezistmilito estas grava parto de Monda Kontraŭfaŝisma Milito
+
+**Published:** 2025-09-02
+
+**URL:** http://esperanto.china.org.cn/2025-09/02/content_118053909.htm
+
+**Categories:** Plej Freŝaj
+
+Lastatempe Rana Mitter, profesoro pri uson-ĉinaj rilatoj ĉe la Kolegio Harvard Kennedy, ricevis intervjuon de raportisto. Li diris, ke la Kontraŭjapana Rezistmilito de Ĉinio estas grava parto de la Monda Kontraŭfaŝisma Milito, kaj la kontribuoj de Ĉinio por la dua mondmilito devas esti pli vaste konata.
+
+Li diris, ke en la jaro 1937, kiam komenciĝis la agresado de Japanio, multaj eksterlandaj observantoj opiniis, ke Ĉinio eble ne povus venki, sed la lando rezistis firme kaj la rezistmilito ŝanĝis ĉion. La rezistado de ĉinoj havas grandan signifon, milionoj da japanaj militistoj estis senditaj al Ĉinio, sed ne al aliaj lokoj de Azi-Pacifiko. Sen la kontribuo de Ĉinio, la kontraŭfaŝisma alianco sukcesus ege malfacile.
+
+Li diris, ke oni havas multajn taskojn por ĝuste koni la kontribuojn de Ĉinio en la dua mondmilito. La okcidentaj landoj ankoraŭ ne sufiĉe scias pri la klopodoj, dediĉoj kaj vera graveco de Ĉinio. Kvankam nun estas iuj koncernaj verkoj, tamen oni bezonas pli da. Li kredas, ke tiu milito estas unu el la plej detrupovaj fenomenoj en la homara historio, "ni devas, tra la historio, lerni kiel krei pacon daŭripove, juste kaj dece".
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Enketo de CGTN: Defendi estas plej bona memorigo - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Nigra Mito: Zhongkui anoncita
+
+**Published:** 2025-09-02
+
+**URL:** http://esperanto.china.org.cn/2025-09/02/content_118053946.htm
+
+**Categories:** Plej Freŝaj
+
+Frumatene de la 20a de aŭgusto, en la ekspozicio pri ludoj en Kölner, Germanio, la teamo Lud-scienco anoncis sian novan verkon
+
+Nigra Mito: Zhongkui
+
+. Ĝis posttagmezo de tiu tago la anonc-filmeto jam estis vidita por 7.65 milionoj da fojoj sur ĉinaj vide-platformoj kun pli ol 50 miloj da komentoj. La temo rapide okupis la unuan lokon en la listo pri plej multe diskutataj temoj en la interreto.
+
+La teamo elektis la daton la 20-a de aŭgusto por publikigi la anonon, ĉar tio estis kutimo por multaj jaroj.
+
+La teamo klarigis sian ambicion. Post sukceso de la ludo
+
+Nigra Mito: Wukong
+
+, ili deziras provi novan kaj malsaman lud-sperton, defii novajn lud-karakterojn kaj krei novan en mondkoncepto kaj rakontado.
+
+Dum Tang-dinastio (618-907) imperiestro Xuanzong en malsano sonĝis, ke eta demono ŝtelis la malgrandan parfum-saketon de Yang Guifei kaj lian jadan fluton. Granda demono kaptis la etan demonon, elŝiris ĝiajn okulojn kaj dispecigis ĝin por manĝi. La granda demono sin prezentis kiel Zhongkui, malsukcesinto en militista ekzameno, kiu ĵuris forigi malbonajn spiritojn por la imperiestro. Post vekiĝo, la imperiestro resaniĝis kaj ordonis al pentristo Wu Daozi pentri la bildon de Zhongkui, kun dekreto ĉe jarfino pentri la bildon de Zhongkui por forpeli malbonajn spiritojn kaj disvastigi ĝin tra la lando.
+
+Redaktoro: Liu Zijia
+
+<span style="font-family: "times new roman"; font-size: 20px;">Floroj ornamas Pekinon por 80-a datreveno de la venko kontraŭ faŝismo - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Xi Jinping faris gravan paroladon memorfeste al 80-a datreveno de venko en Ĉina Popola Rezistmilito kontraŭ Japana Agreso kaj Monda Kontraŭfaŝisma Milito
+
+**Published:** 2025-09-03
+
+**URL:** http://esperanto.china.org.cn/2025-09/03/content_118058957.htm
+
+**Categories:** Plej Freŝaj
+
+La 3-an de septembro okazis grandioza ceremonio memorfeste al la 80-a datreveno de la venko en la Ĉina Popola Rezistmilito kontraŭ Japana Agreso kaj la Monda Kontraŭfaŝisma Milito. En la ceremonio ĉina prezidanto Xi Jinping faris gravan paroladon.
+
+Xi Jinping diris: "La Ĉina Popola Rezistmilito Kontraŭ Japana Agreso estis grava parto de la Monda Kontraŭfaŝisma Milito. La ĉina popolo faris grandajn kontribuojn al la savado de la homa civilizacio kaj al la protektado de la monda paco per grandega sinofero de la ĉina nacio."
+
+"La historio avertas nin, ke la homaro kundividos la estontecon nur se ĉiuj landoj kaj ĉiuj nacioj traktos unu la alian egale, kunvivos harmonie kaj sincere helpos unu la alian, por ke ili povu protekti la komunan sekurecon, forigi la radikojn de milito kaj malpermesi ripeton de la historiaj tragedioj!"
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Rana Mitter: Ĉina Kontraŭjapana Rezistmilito estas grava parto de Monda Kontraŭfaŝisma Milito - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Xi Jinping revuis milittrupojn en Pekino
+
+**Published:** 2025-09-03
+
+**URL:** http://esperanto.china.org.cn/2025-09/03/content_118058964.htm
+
+**Categories:** Plej Freŝaj
+
+Ĉina prezidanto Xi Jinping revuis milittrupojn en Pekino dum la militista parado celebre al la 80-a datreveno de la venko en la Ĉina Popola Rezistmilito kontraŭ Japana Agreso kaj la Monda Kontraŭfaŝisma Milito, la 3-an de septembro.
+
+Staranta en Hongqi-veturilo, Xi Jinping, ankaŭ ĝenerala sekretario de la Centra Komitato de la Komunista Partio de Ĉinio kaj prezidanto de la Centra Milita Komsiono, donis komandon por komenco de la revuo.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Rana Mitter: Ĉina Kontraŭjapana Rezistmilito estas grava parto de Monda Kontraŭfaŝisma Milito - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Prezidanto de Hungara Laborista Partio Gyula Thurmer: Ni survojas al homara komunumo de komuna estonteco
+
+**Published:** 2025-09-03
+
+**URL:** http://esperanto.china.org.cn/2025-09/03/content_118059310.htm
+
+**Categories:** Plej Freŝaj
+
+Ni estas multe impresitaj de la militista parado en Pekino. En la parolado de ĉina prezidanto Xi Jinping, lia voko memori la pasintecon kaj krei pli bonan estontecon kuraĝigas nin.
+
+Hodiaŭ niaj koroj kaj animoj estas en Pekino. Ni sendas niajn varmajn kaj plej bonajn dezirojn al la ĉina popolo okaze de la 80-a datreveno de la venko en la Ĉina Popola Rezistmilito Kontraŭ Japana Agreso kaj la Monda Kontraŭfaŝisma Milito.
+
+Ni esprimas nian profundan respekton al la ĉina popolo, kiu faris grandan oferon. Ni memoras la martirojn, soldatojn kaj senkulpajn civitanojn, kiuj perdis siajn vivojn en la milito.
+
+Ni neniam forgesos, ke la heroa lukto de la ĉina popolo estis granda kontribuo al la batalo de la eŭropa popolo kontraŭ faŝismo. Estas nia tasko veki la kolektivan memoron de la eŭropaj popoloj de la pasinteco kaj substreki, ke ni ŝuldas multon al la ĉina popolo.
+
+Ni esprimas nian respekton al la Komunista Partio de Ĉinio, kiu mobilizis la popolamason, organizis la vastan nacian unuiĝintan fronton kaj superatakis la malamikon per vasta popola rezistmilito.
+
+La reprospero de la ĉina nacio estas nehaltigebla. Kiel diris prezidanto Xi Jinping, 80 jaroj pasis ekde la venko de la ĉina popolo. Dum tiuj ok jardekoj Ĉinio atingis, sub la gvidado de la Komunista Partio de Ĉinio, grandegajn sukcesojn en ekonomio, scienco kaj militkampo.
+
+La Hungara Laborista Partio estas konvinkita, ke la sukcesa disvolviĝo de socialismo kun ĉinaj karakterizoj kuraĝigas la popolojn de la mondo. La penso de Xi Jinping pri Socialismo kun Ĉinaj Trajtoj en la Nova Epoko montras, ke socialismo ne estas la pasinteco, sed la nuntempo kaj la estonteco.
+
+Ĉinio estas forta iniciatinto kaj defendanto de la monda paco. Ni subtenas la klopodon de Ĉinio por paco kaj tutmonda sekureco.
+
+Ni subtenas la Tutmondan Registaran Iniciaton iniciatitan de prezidanto Xi Jinping ĉe la kunveno "Ŝanhaja Kunlabora Organizo Plus".
+
+Ni esperas, ke la internacia komunumo lernos el la historio, tiel ke diversaj landoj kunlaboros por pli justa kaj egaleca tutmonda administrada sistemo kaj antaŭeniros al homara komunumo de komuna estonteco por la tuta homaro.
+
+<span style="font-family: "times new roman"; font-size: 20px;">Rana Mitter: Ĉina Kontraŭjapana Rezistmilito estas grava parto de Monda Kontraŭfaŝisma Milito - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Arkeologia elfosado rivelas pecon de pekina historio
+
+**Published:** 2025-09-04
+
+**URL:** http://esperanto.china.org.cn/2025-09/04/content_118054025.htm
+
+**Categories:** Plej Freŝaj
+
+La muzeo pri antikvaj heredaĵoj konstruita sur la antikva sidejo de Luxian estis inaŭgurita en junio ĉi-jare en Tongzhou-distrikto de Pekino. En la loko, kie nun troviĝas la muzeo, okazis arkeologia elfosado inter septembro kaj decembro 2020, sur areo de 3 500 kvadrataj metroj. Rezulte de tiu elfosado, 408 ruinaĵoj -- datitaj de Okcidenta Han-dinastio (206 a.K.-25) ĝis Qing-dinastio (1616-1911) -- estis rivelitaj.
+
+Puto de Han-dinastio (206 a.K-220) malkovrita de arkeologoj
+
+Por pli bone komprenigi al vizitantoj la gravecon kaj signifon de tiu arkeologiejo, parto de la elfositaj lokoj estas konservataj preskaŭ kiel arkeologoj lasis ilin post la elfosado, kun antikvaĵoj en la loko, kie ili estis trovitaj, markoj indikantaj la sinsekvajn tavolojn da elfosita grundo kaj aron da antikvaĵoj.
+
+Ceramika vazo trovita en antikva tombo de la periodo Militantaj Regnoj (475-221 a.K.)
+
+La antikvaĵoj elfositaj en tiu loko rivelas la rolon de la regiono de nuna Pekino kiel parto de la komandejo Yuyang, unu el la kvin komandejoj (administraj distriktoj) laŭlonge de la norda limo de la antikva ŝtato Yan en la periodo 311-272 a.K. La eltrovaĵoj montras, ke homaj setlejoj en tiu loko ekzistas jam de la 5-a jarcento a.K., estiginte bazon por la fondiĝo de Luxian dum Han-dinastio. Luxian, kies nomo signifas "gubernio de la vojo, estis grava nabo trairata de akvovojoj ligantaj Yanshan-monton al Bohai-maro kaj ankaŭ vojo inter la regionoj de Yanji kaj Liaodong. Pro sia strategia lokigo por Han-dinastio, la urbocentro de Liaodong estis ĉirkaŭita de muroj kaj poste fariĝis konata kiel antikva registara sidejo de Luxian.
+
+Bronzaj moneroj de Okcidenta Han-dinastio (202 a.K.-8 p.K.)
+
+Inter la 10-a kaj la 13-a jarcentoj, Luxian iom post iom perdis sian funkcion kiel urbon kaj fariĝis konata kiel antikva vilaĝo proksime al la Granda Kanalo. La arkeologiaj eltrovaĵoj rivelis antikvajn vojojn kun markoj de longtempa uzo kaj tombojn de sinsekvaj generacioj de familioj, kiuj tie loĝis, kiuj alportas gravajn informojn pri la historio de Tongzhou kaj la evoluo de socia vivo ĉe la norda parto de la Granda Kanalo.
+
+Tombo el brikoj kun ligna strukturo, datita de inter la 10-a kaj la 12-a jarcento
+
+Raportis kaj fotis: Rafael Henrique Zerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;">Floroj ornamas Pekinon por 80-a datreveno de la venko kontraŭ faŝismo - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Ĉu la dua mondmilito komenciĝis en 1931?
+
+**Published:** 2025-09-04
+
+**URL:** http://esperanto.china.org.cn/2025-09/04/content_118058354.htm
+
+**Categories:** Plej Freŝaj
+
+Kiam brita historiisto Richard Overy verkis pri la dua mondmilito el nova perspektivo, li konsciiĝis ke, pri tiu ĉi temo, delonge lia koncepto estis regata de ampleksaj raportoj kaj eŭropaj kaj amerikaj interpretoj, kiuj longe formis historiografion.
+
+Lia plej nova verko
+
+Sango kaj Ruinoj: La Granda Imperia Milito, 1931-1945
+
+(origine: Blood and Ruins: The Great Imperial War, 1931-1945) novigis la tempolinion de la milito kaj donas pli vastan tutmondan perspektivon.
+
+Tiuj novaj koloniistoj, kiuj aperis en la malfrua 19-a jarcento, volis krei siajn proprajn imperiojn, sed ili trovis, ke restis malmulte da spaco por iliaj ambicioj. La tutmonda ekonomia krizo de 1929 profundigis tion, instigante agresemajn ekspansiismajn agojn.
+
+Overy diris, ke la milito fakte ne komenciĝis en 1939 per la invado al Pollando fare de Germanio, sed en 1931 per la invado al Ĉinio fare de Japanio. Ŝovante la kronologian ankron reen al Azio, Overy agnoskas tion, kion ĉinaj historiistoj longe insistis -- la milito kontraŭ Japanio de 1931 ĝis 1945 estis nedisigebla parto de la pli granda tutmonda konflikto.
+
+Overy diris, ke la rezistmilito de la ĉina popolo kontraŭ japana agreso (1931-1945) estis gravega parto de la tutmonda lukto kontraŭ faŝismo. Dum la tuta milito, Ĉinio sendis pli da soldatoj ol Britio aŭ Usono kaj signife kontribuis por malpovigi japanajn militfortojn. Sen la longdaŭra rezisto de Ĉinio, la rezulto de la dua mondmilito povus esti ŝanĝita draste.
+
+"Dum tiom longa tempo, la Okcidento ignoris tion, kio okazis en Azio. Ili fokusiĝis sur la pacifika milito -- Usono kontraŭ Japanio," klarigis Overy. Ŝovante la fokuson al tutmonda konflikto, kiu englutis Azion kaj Eŭropon, Overy metis la militon en la pli larĝa kunteksto de imperiaj rivalecoj fine de la 19-a jarcento.
+
+Li montris, ke dekomence la milito estis lukto kontraŭ agreso, kiu ekspansiis siajn batalfrontojn tra Azio kaj Eŭropo.
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;"><em>Nigra Mito: Zhongkui</em> anoncita - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# De Hanojo al Pekino: Vojaĝo de 80 jaroj por memori historion kaj rigardi estontecon
+
+**Published:** 2025-09-04
+
+**URL:** http://esperanto.china.org.cn/2025-09/04/content_118059411.htm
+
+**Categories:** Plej Freŝaj
+
+de BUI HAI MUNG
+
+La jaro 2025 markas gravan historian mejloŝtonon por kaj Vjetnamio kaj Ĉinio -- du najbaraj landoj kun amikeco de longa historio. En Hanojo, la vjetnama popolo solene festas la 80-an datrevenon de sia Nacia Tago (1945.9.2-2025.9.2), dum en Pekino, Ĉinio organizas grandiozan revuon por memori la 80-an datrevenon de la venko kontraŭ faŝismo en la 3-a de septembro 2025. Tiuj du ŝajne apartaj eventoj fakte havas profundan ligon: Ili kune rakontas pri la sopiro al sendependeco, libero kaj paco de la aziaj popoloj, kaj samtempe montras la fortiĝon de la duflankaj rilatoj pere de signifoplenaj diplomatiaĵoj.
+
+Parado en Pekino
+
+Partopreno de internaciaj ŝtatestroj: Simbolo de solidareco kaj kunlaboro
+
+La festado en Pekino por la 80-a datreveno de la Venko de Ĉinio en la Kontraŭjapana Rezistmilito kaj la Monda Kontraŭfaŝisma Milito ne estis nur ĉina evento, sed fariĝis okazo por la internacia komunumo kune rememori kaj eltiri valorajn historiajn lecionojn. Rimarkinde, 26 ŝtatestroj kaj registarestroj ĉeestas la festan aranĝon. Inter ili estas la vjetnama prezidanto Luong Cuong. La ĉeesto de gvidantoj el multaj landoj -- aparte el Azio, kiel Rusio (prezidento Putin), Nord-Koreio (gvidanto Kim Jong-un), Laoso, Kamboĝo, Indonezio, Malajzio... -- montras la ampleksan rekonon pri la kontribuo de Ĉinio dum la dua mondmilito, same kiel ĝian penadon antaŭenigi pacon kaj regionan kunlaboron.
+
+Prezidanto Xi Jinping kun alilandaj ŝtatestroj en Pekino
+
+La ĉeesto de la vjetnama prezidanto en la revuo de Pekino estis grava mejloŝtono, spegulante la tradician amikecon kaj la ĉiam pli profundan kunlaboron inter la du partioj, la du ŝtatoj kaj la du popoloj. Tio akiras eĉ pli da signifo konsiderante, ke ambaŭ landoj solenas grandajn datrevenojn en la sama jaro 2025.
+
+Partopreno de la ĉina armeo en la revuo en Vjetnamio: Milita diplomatio kaj amikeco
+
+La duflankaj rilatoj ne nur limiĝas al altnivelaj vizitoj, sed ankaŭ montriĝas per konkretaj kaj simbolaj agoj. La 31-an de aŭgusto Zhao Leji, prezidanto de la Konstanta Komitato de la Tutlanda Popola Kongreso de Ĉinio, faris oficialan viziton al Vjetnamio por ĉeesti la 80-an datrevenon de la Aŭgusta Revolucio kaj la Nacia Tago de Vjetnamio. Samtempe Ĉinio sendis militan delegacion de 120 soldatoj por partopreni en la revuo en Hanojo.
+
+Renkontiĝo inter prezidanto de la Konstanta Komitato de la Tutlanda Popola Kongreso de Ĉinio Zhao Leji kaj prezidanto de la Vjetnama Nacia Asembleo Tran Thanh Man
+
+Tiu evento iĝis aparte signifoplena, ĉar en aprilo 2025 Vjetnamio jam invitis trupon de la Ĉina Popola Liberiga Armeo al la festoj pri la 50-a datreveno de la Liberigo de la Sudo kaj Nacia Reunuiĝo. Dum tiu solena evento, 118 ĉinaj soldatoj partoprenis en la parado, kaj ili eĉ prezentis artajn programojn kaj kantis revoluciajn kantojn en la vjetnama lingvo, forte kortuŝante la vjetnaman popolon. Tiaj interŝanĝoj ne nur pruvas reciprokan konfidon, sed ankaŭ funkcias kiel viva atesto pri la kreskanta milita amikeco kaj kunlaboro inter la du landoj, plifortigante la komprenon kaj kunligon inter iliaj armeoj kaj popoloj.
+
+Rigardo reen al la historia aŭtuno de 1945
+
+En aŭgusto 1945 la senkondiĉa kapitulaco de Japanio estas historia turnopunkto por la tuta Azio. Por Ĉinio, tio estis la venko post longa kontraŭfaŝisma milito, atestante la grandegajn oferojn de la ĉina popolo al la komuna venko. En Vjetnamio, la falo de la japana faŝismo kreis la "unufojan ŝancon en jarmilo" por la vjetnama popolo leviĝi kaj gajni sendependecon. Sub la gvido de Viet Minh kaj prezidanto Ho Chi Minh, la vjetnama popolo lanĉis tutlandan insurekcion. La 2-an de septembro 1945, ĉe la historia placo Ba Dinh, Ho Chi Minh proklamis la deklaracion pri sendependeco, fondante la Vjetnaman Demokratian Respublikon. Tiu evento ne nur finis jarcentan kolonian regadon, sed ankaŭ malfermis novan epokon.
+
+Kiel la du landoj memoras kaj honoras la historion
+
+En Pekino, la revuo por la 80-a datreveno de la venko kontraŭ faŝismo estas organizita grandioze, kun la ĉeesto de multaj internaciaj gvidantoj. La evento montras ne nur la naciajn defendkapablojn, sed ankaŭ la pozicion de Ĉinio sur la monda scenejo. La mesaĝo "memori historion, honori heroojn, subteni pacon kaj malfermi la estontecon" estis emfaze elsendita tra la tuta aranĝo.
+
+Parado en Hanojo
+
+En Vjetnamio, la solenoj por la 80-a datreveno de la Nacia Tago okazis tutlande kun partopreno de milionoj da homoj. La ĉefa enhavo estis edukado pri la patriota tradicio, omaĝo al falintaj herooj, kaj konfirmo de la volo defendi sendependecon, suverenecon kaj la atingojn de la reformado. Precipe, krom la partopreno de la ĉina armeo, ankaŭ armeaj trupoj el Rusio, Laoso kaj Kamboĝo ĉeestis, montrante internacian solidarecon kaj vastan rekonon pri la kontribuo de Vjetnamio al la batalo por la nacia sendependeco kaj la monda paco.
+
+Ĉina armeo en la parado en Vjetnamio
+
+Historiaj lecionoj kaj direkto al la estonteco
+
+Kaj Vjetnamio kaj Ĉinio profunde aprezas la valorojn de paco, sendependeco kaj memstareco. La lecionoj de la pasinteco servas kiel fundamento por kune fronti nunajn kaj estontajn defiojn. La historia sperto pri kontraŭstaro al eksteraj agresoj fariĝis komuna memoro, kiu povas konstrui fidon kaj antaŭenigi amikajn, reciproke utilajn kaj najbarajn rilatojn.
+
+En la nuntempe kompleksa geostrategia situacio, la komuna rememoro pri historio elsendas fortan mesaĝon pri la sopiro al paco, stabileco kaj komuna disvolviĝo de Azio. Ekonomia kunlaboro, kultura interŝanĝo kaj kontaktoj inter la popoloj de la du landoj ĉiam pli fortiĝas, kontribuante al la firmigo de la tradicia amikeco. La ĉeesto de altnivelaj gvidantoj kaj la simbolaj militaj interŝanĝoj dum ĉi tiu jaro de gravaj jubileoj estas klara pruvo de la tendenco al kunlaboro kaj evoluo.
+
+La 80-jara vojaĝo de ambaŭ landoj estas profunde markita de la bataloj por nacia sendependeco kaj defendo de suvereneco. Kvankam la manieroj de festado malsamas, ambaŭ la du popoloj celas la samajn universalajn valorojn de la homaro: Libero, sendependeco kaj paco. La ĉeesto de la vjetnama prezidanto en la armea parado de Pekino kaj la partopreno de la ĉina armeo en la parado de Hanojo ne estas nur unuopaj diplomatiaĵoj, sed vivaj pruvoj de la ĉiam pli profunda kaj substanca evoluo de la duflankaj rilatoj en pluraj kampoj: Politiko, defendo, kulturo kaj interpopolaj kontaktoj.
+
+Rigardi reen al la pasinteco por kune iri al pli hela estonteco -- jen la informo, kiun ambaŭ Vjetnamio kaj Ĉinio volas transdoni per tiuj solenaj festoj. Surbaze de la komuna konservado kaj disvolvado de la historiaj lecionoj, la najbareca amikeco inter la du landoj daŭre fortiĝos kaj disvolviĝos por la bono de la du popoloj, kaj por paco kaj stabileco en la regiono kaj en la tuta mondo.
+
+<span style="font-family: "times new roman"; font-size: 20px;">Rana Mitter: Ĉina Kontraŭjapana Rezistmilito estas grava parto de Monda Kontraŭfaŝisma Milito - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Kirgiza klerulo Igor Shestakov: La tutmonda sekureco eblas nur kiam landoj traktas unu la aliajn kiel egalajn partnerojn
+
+**Published:** 2025-09-04
+
+**URL:** http://esperanto.china.org.cn/2025-09/04/content_118061293.htm
+
+**Categories:** Plej Freŝaj
+
+Ĉina gvidanto memorigas nin, ke la mondo estas sur la rando de novaj defioj de grandskalaj militoj.
+
+Estas simbole, ke estis Ĉinio, kiu sukcesis kolekti la plej grandan nombron da eksterlandaj ŝtatestroj por la parado en Pekino. La lando sufer-spertis gravajn perdojn kaj spertis abomenaĵojn kaŭze de tiuj batalantaj ĉe la flanko de faŝismo, de militisma Japanio.
+
+La ĉinaj paĝoj de la historio de la dua mondmilito nun ne estas tiel konataj de la tutmonda komunumo. Sekve, tiu ĉi parado omaĝe al la 80-a datreveno de la venko de la Ĉina Popola Rezistmilito kontraŭ Japana Agreso kaj la Monda Kontraŭfaŝisma Milito rememorigis la mondon pri la rolo de Ĉinio en ĉi tiu milito.
+
+Ĉina prezidanto Xi Jinping ankaŭ rememorigas, ke hodiaŭ la mondo alfrontas novajn defiojn kaj minacojn. Tial la ĉina gvidanto vokis la tutmondan komunumon al dialogo, harmonio kaj kunlaboro por la paco surtere, anstataŭ kolizio inter nacioj.
+
+Hodiaŭ, kiam Usono provas krei la regulojn de unupolusa mondo, Xi Jinping emfazis, ke tutmonda sekureco eblas nur kiam la landoj de la mondo traktas unu la aliajn kiel egalajn partnerojn kaj subtenas unu la aliajn. Tio estas klare montrata de la koncepto de Ĉinio pri ekstera politiko, kiu baziĝas sur la "spirito de Ŝanhajo" kaj sur la ideo de homara komunumo de komuna estonteco. Tiuj doktrinoj celas plifortigi kaj antaŭenigi reciproke utilajn ekonomiajn kunlaborojn.
+
+Tiu ĉi parado montris la gravecon por ŝtato havi potencan kaj modernan armeon por protekti sian nacian suverenecon, kaj tion sukcese montris la armeo de Ĉinio.
+
+---
+
+*Igor Shestakov, direktoro de la Centro por Fakaj Iniciatoj "Oy Ordo" (Centro de Penso) kaj politika sciencisto en Kirgizio
+
+<span style="font-family: "times new roman"; font-size: 20px;">De Hanojo al Pekino: Vojaĝo de 80 jaroj por memori historion kaj rigardi estontecon - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Ĝenerala sekretario de Komunista Partio de Svislando Massimiliano Ay: Propono de prezidanto Xi Jinping estas unua paŝo por pli justa monda ordo
+
+**Published:** 2025-09-04
+
+**URL:** http://esperanto.china.org.cn/2025-09/04/content_118061344.htm
+
+**Categories:** Plej Freŝaj
+
+Ni deziras ĉion plej bonan al la ĉina popolo por la 80-a datreveno de la venko kontraŭ la japana imperiismo kaj faŝismo.
+
+La memorfesto emfazas la gravecon de la Unuiĝinta Fronto, kiun ĉinaj komunistoj kaj patriotoj konstruis tiutempe kontraŭ la japanaj agresantoj kaj kiu hodiaŭ povas esti adoptita pli vaste kontraŭ la atlantika imperiismo kaj por konstrui multpolusan mondon.
+
+Rigardante la liston de ŝtatestroj invititaj al Pekino, oni vidas, kiel imperiismaj landoj izolis sin en sia aroganteco kaj ke novaj ekvilibroj jam aperis. Kaj, mi kredas, ke pripensado pri la graveco ne ripeti la hororojn de la dua mondmilito servas por eviti trian mondmiliton, kiel ŝajnas rekomendi NATO kaj EU, laborante por subfosi ajnan provon de batalhalto en Ukrainio kaj fermante siajn okulojn al la genocido de la palestina popolo.
+
+Ni nun bezonas pli bone kunordigi la pacmovadojn en la Okcidento por limigi la militemajn NATO-provokojn. Koncerne Svislandon, ni devas engaĝiĝi al restarigo de la neŭtraleco, kiu estis grave difektita en la lastaj jaroj.
+
+Nun, kiam multipolusismo enradikiĝas kaj la tutmonda sudo postulas la lokon, kiun ĝi meritas, la internaciaj organizoj jam ne plu estas taŭgaj por okcidento, kiu ne plu respektas la internacian juron.
+
+Ĉe ĉi tiu punkto, estas ĝuste, unuflanke, defendi la aŭtoritaton de UN por montri la kontraŭdirojn de la atlantika sistemo, kiu kredas sin morale supera, sed mem estas la unua, kiu malfortigas demokration kaj sekurecon.
+
+Aliflanke, tamen, ni ne povas fari ian iluzion, ke la imperiismaj potencoj magie retropaŝos. Tial ni estas tre impresitaj de la propono de prezidanto Xi pri tutmonda regada iniciato, ĝi estas la unua paŝo por pli justa monda ordo.
+
+<span style="font-family: "times new roman"; font-size: 20px;">De Hanojo al Pekino: Vojaĝo de 80 jaroj por memori historion kaj rigardi estontecon - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Sekretario de la Centra Komitato de la Komunista Partio de Taĝikio Jamshed Sabirovich Yunusov: Ni devas sciigi la veron al junuloj
+
+**Published:** 2025-09-04
+
+**URL:** http://esperanto.china.org.cn/2025-09/04/content_118061444.htm
+
+**Categories:** Plej Freŝaj
+
+Kiel malfacile estis gajni pacon, kaj kiom alta prezo estis pagita por paca vivo!
+
+Oni devas rimarki, ke lastatempe en la Okcidento aperis multaj publikaĵoj pri la dua mondmilito kaj pri la rolo de Usono kaj ĝiaj satelitoj en la detruo de faŝismo en Eŭropo.
+
+Post la kolapso de Sovetunio, Usono kaj ĝiaj NATO-aliancanoj provas reverki historion laŭ propra plaĉo, distordante la rolon kaj perdojn suferitajn de la sovetia popolo.
+
+Ĝi atingis la punkton, kie oni tute ne mencias la heroan rolon de la sovetia popolo en la liberigo de Eŭropo, kaj estas aparte grave rimarki, ke estis la soldatoj de la Ruĝa Armeo, kiuj liberigis Eŭropon kaj savis la kaptitojn de naziaj koncentrejoj.
+
+Bedaŭrinde, en Usono kaj Eŭropo, ĉiam malpli da homoj memoras la abomenaĵojn de la nazioj kaj la sekvojn de la masakroj. La nuna junularo en Eŭropo ne konas la veran historion, kaj iliaj politikaj gvidantoj ne zorgas pri la vero.
+
+La venko kontraŭ Nazia Germanio estis venko por 15 frataj respublikoj kunigitaj en la potenca Unio de Sovetaj Socialismaj Respublikoj. La savita mondo devas memori la heroaĵon de la sovetiaj soldatoj.
+
+Nun, koncerne la rolon de Ĉinio en la dua mondmilito. Ni scias, ke militisma Japanio flankis kun Hitler. La milito kontraŭ militisma Japanio kaj la heroaĵoj de ĉinaj soldatoj, ilia volo, kuraĝo kaj amo al sia hejmlando ne povas esti forgesitaj.
+
+Mi ŝatus emfazi la fakton, ke Hiroŝimo kaj Nagasako estis bombitaj de la usonanoj, sed la teruro spertita de la japanoj estas forgesita. Junuloj en Japanio ne konas sian propran historion; ili kredas, ke Rusio bombis ilin.
+
+Ĉi tio estas ankoraŭ plia distordo de la historio, kaj kompreneble oni devas kontraŭbatali ĝin. Ĉina prezidanto Xi Jinping faris historian takson de tiuj eventoj en sia parolado. Sovetunio batalis kontraŭ faŝismo sur sia propra grundo kaj liberigis Eŭropon.
+
+En Azio, Ĉinio batalis kontraŭ la brutala kaj sangavida satelito de Hitler, militisma Japanio. Rusio kaj Ĉinio batalis por paco kontraŭ faŝismo, kaj bedaŭrinde, ĉi tiu fakto devas esti pruvita al la internacia komunumo hodiaŭ citante la heroajn farojn de la sovetia kaj ĉina popoloj. La ĉefa mesaĝo de kamarado Xi Jinping estas, ke ĝi diras la veron pri la milito.
+
+<span style="font-family: "times new roman"; font-size: 20px;">De Hanojo al Pekino: Vojaĝo de 80 jaroj por memori historion kaj rigardi estontecon - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Fabio Massimo Parenti: La koncepto konstrui la homaran komunumon de komuna estonteco trovos akcepton tra la mondo
+
+**Published:** 2025-09-04
+
+**URL:** http://esperanto.china.org.cn/2025-09/04/content_118061507.htm
+
+**Categories:** Plej Freŝaj
+
+Okaze de la 80-a datreveno de la venko en la Ĉina Popola Rezistmilito kontraŭ Japana Agreso kaj la Monda Kontraŭfaŝisma Milito, mi deziras aliĝi kun respekto kaj admiro al la memoro de tiuj, kiuj oferis sian vivon por la paco kaj digno de la popoloj.
+
+Ĉinio faris la plej grandan kontribuon de la mondo, laŭ homa ofero, al la granda Monda Kontraŭfaŝisma Milito en la Dua Mondmilito.
+
+La kuraĝo de la preskaŭ 30 milionoj falintaj ankoraŭ kaj eterne simbolas la vojon sekvendan por estonteco libere de faŝismo: pro ĉi tiu alta kialo, la ceremonioj okazigitaj en Pekino devas inspiri ĉiujn, kiuj en la nuntempo laboras humile, sed kun decidemo, por konstrui pli justan mondon sen militoj.
+
+Prezidanto Xi Jinping, en sia parolado sur la Placo Tian'anmen, volis memorigi la mondon -- kun firmeco kaj digno -- pri la decida elekto inter paco kaj milito, reasertinte la sindevontigon de Ĉinio, kiu ne lasas sin timigi, sed kiu antaŭ ĉio aspiras kontribui al pli justa tutmonda ordo, ne plu regata de kelkaj okcidentaj landoj.
+
+Historio estas do gvidilo por la nuntempo kaj la estonteco de la homaro.
+
+En ĉi tiu tre signifa momento en la historio de la popoloj de la mondo, mi esprimas la esperon, ke la iniciato de Xi Jinping por konstrui la homaran komunumon de komuna estonteco trovos akcepton tra la mondo, plifortigante la senton de kolektiva respondeco al la mondo bazita sur kunlaboro, reciproka respekto kaj harmonio inter nacioj.
+
+---
+
+*Fabio Massimo Parenti, profesoro pri Tutmondaj Studoj en la Itala Internacia Instituto Lorenzo de Medici, kun aparta atento al la rolo de Ĉinio en la multpolusa mondo. Li estas membro de italaj kaj eksterlandaj organizoj pri la internaciaj rilatoj, kiel EARTH CHARTER INTERNATIONAL CHINA, esplorinstituto akreditita ĉe la Unuiĝintaj Nacioj. Prof-ro Parenti estas la aŭtoro de pluraj libroj kaj eseoj pri internaciaj aferoj kaj gepolitiko eldonitaj en la itala kaj en la angla.
+
+<span style="font-family: "times new roman"; font-size: 20px;">De Hanojo al Pekino: Vojaĝo de 80 jaroj por memori historion kaj rigardi estontecon - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Miraklo: Nombro de ruĝaj ibisoj kreskis de 7 al 10 mil!
+
+**Published:** 2025-09-05
+
+**URL:** http://esperanto.china.org.cn/2025-09/05/content_118045385.htm
+
+**Categories:** Plej Freŝaj
+
+Kiel aparta specio de orienta Azio, ruĝa ibiso estas laŭdata kiel orienta gemo. Oni kredas, ke tia birdo portas bonaŭguron. Antaŭe ĝi estis trovebla en Ĉinio, la Korea Duoninsulo, Japanio kaj la fora oriento de Rusio.
+
+Ĝi postulas habitaton kun altkvalita medio kaj estas rigardata kiel atestanto de bonkvalita natura medio. Tamen, pro industria disvolviĝo, ĝia populacio draste malpliiĝis:
+
+En 1963, mortis la lasta ruĝa ibiso en Sovetunio;
+
+En 1979, ruĝa ibiso malaperis sur la Korea Duoninsulo;
+
+En 2003, mortis la lasta ruĝa ibiso en Japanio.
+
+Sed espero ne estingiĝis!
+
+La 23-an de majo 1981 sciencistoj de la Instituto pri Zoologio sub la Ĉina Akademio de Sciencoj malkovris la lastajn 7 ruĝajn ibisojn en Yaojiagou, Yangxian-gubernio de Shaanxi-provinco! La malkovro skuis la mondon kaj malfermis novan ĉapitron en la protektado de tiu specio.
+
+Post jardekoj da protektado, en novembro 2023, Shaanxi-provinco anoncis, ke la tutmonda nombro de ruĝaj ibisoj superis 10 000!
+
+Ĉi tio estas granda sukceso en la historio de mediprotektado kaj pruvas, ke homaro povas vivi harmonie kun la naturo!
+
+Dankon al protektantoj de ruĝaj ibisoj!
+
+Redaktoro: Gao Shuyuan
+
+<span style="font-family: "times new roman"; font-size: 20px;">Muzeo pri Pagoda Kulturo en Xuchang - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Danjiangkou kaj la projekto Sud-norda Akvotransigo -- Vojaĝo de suda akvo al nordo
+
+**Published:** 2025-09-05
+
+**URL:** http://esperanto.china.org.cn/2025-09/05/content_118062703.htm
+
+**Categories:** Plej Freŝaj
+
+de BUI HAI MUNG
+
+Kiel ebligas al urboj en norda Ĉinio trinki bonkvalitan akvon transportitan de miloj da kilometroj fore de la suda parto de la lando? La respondo troviĝas ĉe Danjiangkou -- la koro de la grandioza akvopovo de la jarcento, la projekto Sud-norda Akvotransigo.
+
+La 30-an de aŭgusto, sekvante la grupon de ĉinaj ĵurnalistoj al Hubei-provinco, mi havis la okazon viziti Danjiangkou. Antaŭ mia alveno, mi jam aŭdis pri la granda projekto kaj sciis, ke Danjiangkou estas ĝia kerna parto.
+
+Por kompreni la projekton, ni devas unue scii pri la malekvilibro de akvoresursoj inter la suda kaj norda partoj de Ĉinio. La sudo, precipe la jangzia baseno enhavas pli ol 80% de la tutlanda akvo, sed nur ĉirkaŭ 40% de la kultivebla tero. Male, la nordo (inkluzive de la norda ebenaĵo kun la grandaj urboj kiel Pekino kaj Tianjin) estas la politika kaj ekonomia centro, dense loĝata, sed posedas malpli ol 20% de akvo kaj suferas de severa akvomalabundo. Por ekvilibrigi tiun malegalecon, Ĉinio konstruis la projekton Sud-norda Akvotransigo -- la plej granda akvoinĝenieria projekto en la homa historio.
+
+Danjiangkou-akvorezervejo
+
+Danjiangkou -- granda avkorezervejo ĉe la rivero Hanjiang
+
+Danjiangkou situas en Hubei-provinco, ĉe la rivero Hanjiang -- la plej granda alfluanto de Jangzio. La konstruado de la akvorezervejo komenciĝis en 1958 kaj estis vastigita en la frua 21-a jarcento por servi al la projekto. Kun kapacito de dekoj da miliardoj da kubaj metroj, Danjiangkou estas nun la plej granda homfarita lago en Azio. Komence ĝi estis celita al kontraŭinundado, elektroproduktado kaj irigacio. Sed ekde 2014, kiam la centra itinero de la projekto ekfunkciis, ĝi ricevis nacian mision: Liveri akvon al la seka nordo.
+
+Laŭ oficialaj datumoj, dum la lastaj dek jaroj, Danjiangkou transpumpis pli ol 69 miliardojn da kubaj metroj da akvo al la nordo, servante al 26 grandaj urboj kaj pli ol 100 milionoj da homoj, kontribuante al la regiono de Pekino, Tianjin kaj Hebei.
+
+Ordig-linio de Yiqing-kompanio en Danjiangkou
+
+Paralele, la loka registaro prioritatigis protekton de la akvo. La loĝantoj diras: "Konservi la lagon pura estas tasko plenigenda je ajna kosto." Danke al strikta kontrolado kaj monitorado, en 2024 ĉiuj 57 alfluantoj de la lago atingis la normon II aŭ pli bonan; en pli ol 75% de la tagoj en la jaro, la lago estis ĉe la normo I -- la plej alta nivelo. Tio certigas ne nur sufiĉon de akvo, sed ankaŭ altan kvaliton.
+
+La akva ekonomio -- Nova vojo al disvolvado
+
+Danjiangkou ne estas nur akvoinĝenieria projekto, ĝi fariĝis ankaŭ centro de nova industrio: La akva ekonomio. Danke al siaj avantaĝoj, la urbo altiris konatajn kompaniojn kiel Nongfu, Yanjing, Beijing Yiqing kaj Huarun ktp. Kompleta industria ĉeno formiĝis, kiel produktado de trinkaĵoj, prilaborado de pakaĵoj kaj rilata merkatigo. Ĝis decembro 2024 la akvo-rilataj industrioj de Danjiangkou atingis produktvaloron de 18 miliardoj da juanoj, kio reprezentas 40% de la loka MEP.
+
+Parto de tiu enspezo estas reinvestita en mediprotekto. La urbo konstruis inteligentan kontrol-sistemon laŭ la principo "satelito rigardas, kamerao observas, patrolo navigas, subakva inspektado kontrolas", funkciigata 24/7 por rapide trakti ajnajn riskojn. Tio estas malofta modelo de kunfando inter ekonomia evoluo kaj ekologia protekto.
+
+La projekto de la jarcento
+
+Paroli pri Danjiangkou ankaŭ signifas mencii pri la akvotransigo -- la plej granda akvoinĝenieria projekto en la homa historio. La ideo transigi akvon de la sudo al la nordo aperis jam en Ming-dinastio, antaŭ 400-500 jaroj, sed nur en la 21-a jarcento ĝi realiĝis, kiam la bezono por industrio, agrikulturo kaj loĝantaro akre kreskis.
+
+La projekto konsistas el tri itineroj: Orienta, centra kaj okcidenta. El tiuj, la centra estas la plej grava: Ekirante de Danjiangkou, trans totale 1 400-km-longaj kanaloj, akvopontoj kaj tuneloj, por liveri akvon al Pekino, Tianjin kaj multaj provincoj de la nordo. La projekto kapablas transigi 44.8 miliardojn da kubaj metroj da akvo jare, servante al 438 milionoj da homoj en areo de milionoj da kvadrataj metroj, kun totala longeco de kanaloj kaj duktoj de pli ol 4 350 km. Ĝis julio 2025, la fazo I de la orienta kaj centra itineroj jam liveris pli ol 80 miliardojn da kubaj metroj da akvo, rekte plibonigante la vivon de 185 milionoj da homoj kaj liverante krome 8.5 miliardojn da kubaj metroj da akvo al pli ol 50 riveroj laŭ la itinero.
+
+Danjiangkou-akvorezervejo
+
+Kompare kun aliaj similaj projektoj en la mondo, la ĉina projekto superas per la grandiozeco. La projekto kalifornia akvokondukilo en Usono aŭ la projekto pri nacia rivera ligo en Barato estas famaj, sed ili povas egali ĝin nek laŭ longo, nek laŭ akvokapacito aŭ nombro da ricevantoj. Tial ĉi tiu projekto estas ne nur ĉina atingeco, sed ankaŭ atesto pri la plej alta nivelo de akvoinĝenierio en la mondo.
+
+Tamen grandeco alportas grandajn defiojn: Protekti la ekosistemon de la riveroj, certigi la akvokvaliton ĉe la fonto, trakti sociajn efikojn de translokigo. Ĉi tie la leciono estas klara: Evoluo ne povas esti apartigita de mediprotekto kaj la bono de la komunumo.
+
+Vidpunkto de fremda ĵurnalisto
+
+Kiel fremda ĵurnalisto, mi havis la okazon viziti Danjiangkou kaj atesti la imponan amplekson de la projekto. De supre, la lago etendiĝas kiel interna maro. La gigantaj digoj, pumpstacioj kaj tuneloj -- ĉio superis miajn atendojn kaj vekis veran admiron.
+
+En mia lando Vjetnamio, mi vizitis kelkajn hidroelektrajn projektojn, sed nur starante ĉe Danjiangkou mi vere sentis la diferencon. Tio ne estas nur inĝenieria verko, sed simbolo de longtempa perspektivo, firma decido kaj organiz-kapablo de Ĉinio.
+
+Imprese estis ankaŭ la maniero kiel lokaj homoj parolas pri la devo "konservi la akvon pura". En konversacioj kun loĝantoj kaj laboristoj, mi sentis fierecon miksitan kun respondeco. Por ili, protekti la akvon ne estas simpla ĉiutaga laboro, sed devo al la medio kaj al cent milionoj da homoj en la nordo.
+
+Montakva trinkaĵ-firmao en Danjiangkou
+
+Estonteca perspektivo -- de Ĉinio al la mondo
+
+Danjiangkou kaj la projekto ne estas nur akvokonservaj projektoj, sed ankaŭ atesto pri la kapablo de la homaro superi naturajn defiojn. En la kunteksto de klimat-ŝanĝiĝoj, sekeco kaj akvomalabundo fariĝantaj tutmondaj problemoj, la sperto de Ĉinio povas inspiri multajn landojn.
+
+De tiu sperto mi pensis pri la mekonga rivero -- longa je pli ol 4 300 km, fluanta tra ses landoj (Ĉinio, Mjanmaro, Laoso, Tajlando, Kamboĝo kaj Vjetnamio). Ĝi provizas vivrimedojn al preskaŭ 70 milionoj da homoj por agrikulturo, hidroenergio, fiŝkaptado kaj transporto. Sed kompare kun la projekto, kiu estas interna projekto sub centra administrado, Mekongo starigas defiojn de translandlima mastrumado, kie la interesoj de diversaj ŝtatoj ofte malsamas. Se la projekto montras la forton de unu nacio koncentri sian volon kaj rimedojn, Mekongo prezentas alian demandon: Kiel pluraj ŝtatoj povas kune administri kaj protekti komunan riveron? La leciono de la ĉina projekto memorigas nin, ke ĉu temas pri giganta interna projekto aŭ pri internacia baseno, la ŝlosilo al sukceso estas la kombino de scienco, longtempa planado kaj ĉefe kunlaboro por la komuna bono de milionoj da homoj dependaj de tiu akvo. La sperto de Ĉinio montras, ke por ke grandega projekto funkciu efike, la kernaj faktoroj ne estas nur tekniko, sed ankaŭ kunlaboro, kontrolado kaj daŭra politika engaĝiĝo. Tio estas ankaŭ sugesto por aliaj landoj: Nur per regiona kunlaboro, travidebla datuma kundivido kaj komuna celo de daŭripova disvolvo oni povas certigi longdaŭran akvosekurecon.
+
+El la koro de Danjiangkou, la akvo ne nur fluas al Pekino aŭ Tianjin, sed ankaŭ eniras en nian mondan konscion: Akvo estas vivo, kaj protekti akvon signifas protekti la estontecon de la homaro.
+
+<span style="font-family: "times new roman"; font-size: 20px;">Miraklo: Nombro de ruĝaj ibisoj kreskis de 7 al 10 mil! - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Komerco kaj servoj pri dorlotbestoj firmiĝas en Ĉinio
+
+**Published:** 2025-09-08
+
+**URL:** http://esperanto.china.org.cn/2025-09/08/content_118058370.htm
+
+**Author:** Rafael Henrique Zerbetto
+
+**Categories:** Plej Freŝaj
+
+Kiam mi transloĝiĝis al Ĉinio en 2015, malmultaj loĝantoj havis hundojn aŭ katojn hejme. Kion mi foje vidis estis emerituloj promenantaj kun siaj birdoj en kaĝo. Ĉe la angulo proksime al mia loĝejo, ili renkontiĝis kaj pasigis horojn ludante maĝongon. La birdoj, en siaj kaĝoj sur flanka tablo, restis rigardantaj siajn mastrojn ludi.
+
+La 20-an de aŭgusto, post la inaŭguro de la 27-a Azia Ekspozicio pri Hejmbestoj, vizitanto interagas kun kakatuo. (Foto:IC)
+
+Dorlotbestoj populariĝas
+
+Tempo pasis kaj mi rimarkis subitan populariĝon de dorlotbestoj, tiagrade ke necesis plibonigi la leĝaron de kelkaj grandaj urboj por trakti la defiojn portitajn de ĉi tiu nova vivstilo. Pasintjare, la kvanto de registritaj hejmbestoj en Ĉinio superis 120 milionojn.
+
+En Pekino, samkiel en kelkaj aliaj urboj, nunaj leĝoj limigas la kvanton de bestoj po loĝejo kaj ankaŭ la grandecon de hundoj en la centraj areoj de la urbo. Ĉiuj dorlotbestoj devas esti registritaj kaj ricevi la devigan vakcinadon.
+
+Estis ankaŭ zorgo pri bestaj fekaĵoj surstrate kaj la risko de akcidentoj, kiel mordoj al preterpasanto. Homo, kiu promenas kun sia hundo devas kolekti la fekaĵojn, kaj en kelkaj lokoj estas ankaŭ postulo de muzelo.
+
+Mi rimarkis ne nur pliiĝon en la kvanto de hundoj, sed ankaŭ, ke ili ĝenerale apartenas al familioj kun infanoj. Estas nova generacio de ĉinoj, kiuj kreskas akompanataj de ĉi tiuj bestoj, samkiel okazas jam de pluraj generacioj en Brazilo, kie hundoj delonge estas popularaj.
+
+Katoj estas la plej komuna elekto de fraŭlinoj, kiuj loĝas sole, precipe tiuj mezaĝaj. Kiam mi ekloĝis en Ĉinio, malmultaj homoj deklaris havi hejmbeston, sed nuntempe multaj inter miaj konatuloj diskonigas fotojn kaj filmetojn de siaj hejmbestoj en ĉinaj sociaj retejoj.
+
+Estas ankaŭ intereso pri ekzotaj bestoj, inter ili alpakoj kaj kapibaroj, ambaŭ indiĝenaj de Sud-Ameriko. Mi jam vidis homojn promenantajn kun ĉi tiuj bestoj surstrate, sed tio estas tre malofta kaj altiras atenton de pretepasantoj.
+
+De kafejoj al hoteloj, komerca ekspluatado de bestoj dividas opiniojn
+
+Mallonge antaŭ la pandemio de KOVID-19, katokafejoj (kafejoj, kie katoj apartenantaj al la loko interagas kun klientoj) populariĝis inter ĉinaj junuloj. En kelkaj el ili, la katoj libere promenas inter la klientoj, kiuj kutimas karesi ilin.
+
+Kato ripozas en katkafejo en la Interna Mongolio. (Foto: Rafael Henrique Zerbetto)
+
+En kelkaj aliaj kafejoj, la bestoj restas en areo apartigita per vitro aŭ krado. Mi vizitis unu el tiuj en la Interna Mongolio kaj rimarkis, ke la areo rezervita por katoj estis klimatizita kaj havis ludilojn, dometojn por ripozo, manĝaĵon kaj akvon. La laboristoj de la kafejo ricevis specifan trejnadon por prizorgi la felisedojn, povante identigi katon streĉitan aŭ ĝenatan kaj tuj interveni por ke tiu povu ripozi for de la homoj.
+
+Poste venis aliaj tipoj de kafejoj kun bestoj. Dum la pandemio, la modo estis alpakoj, kaj kelkaj kafejoj donis al klientoj, kontraŭ pago, la ŝancon havi proksiman kontakton kun tiuj amindaj bestoj. Lastatempe aperis kelkaj kafejoj kun kapibaroj, kutime kapibaridoj.
+
+Antaŭ kelkaj semajnoj, hotelo en Wuhan altiris atenton pro nova servo, kiu kaŭzis polemikon: Gastoj povas mendi specialan ĉambron por pasigi la nokton kun hundo provizita de la hotelo.
+
+La hotelo asertas, ke la bestoj estis severe selektitaj, trapasas rutinajn ekzamenojn ĉe bestokuracejo, ricevas vakcinadon kaj estas speciale trejnitaj por senti sin komforte kun nekonataj homoj. Krome, "hunda manaĝero" ĉiam estas disponebla por helpi la klientojn kaze de problemo en kunvivado kun la hundo.
+
+Laŭ la hotelo, la fizikaj kaj psikologiaj kondiĉoj de la bestoj estas taksataj ĉiutage kaj konstatite iu damaĝo al la hundo, la koncerna gasto estas metita en liston de homoj malpermesataj en la hotelo. Iniciatoj kiel ĉi tiu dividas opiniojn. Estas homoj, kiuj vidas ĉi tian servon kiel oportunon por tiuj, kiuj sopiras siajn bestojn dum vojaĝo aŭ ŝatus havi beston hejme, sed ne povas. Aliflanke, aliaj homoj plendas, ke ofta kontakto kun nekonataj homoj povas kaŭzi streĉon ĉe la bestoj.
+
+Ĉinoj elspezas pli kaj pli pri siaj dorlotbestoj
+
+La 27-a Azia Ekspozicio pri Hejmbestoj, okazinta fine de aŭgusto en Ŝanhajo, estis la plej granda ekspozicio pri hejmbestoj iam okazinta en la mondo. Pelata de junaj konsumantoj, la ĉina merkato por produktoj kaj servoj por hejmbestoj superis 300 miliardojn da juanoj (42 miliardoj da dolaroj) pasintjare, kun kresko je 7.5% kompare kun 2023.
+
+Datenoj de podetala retkomerca platformo montras kreskantan serĉadon por manĝaĵoj specifaj por bestoj de certa aĝo aŭ raso/grandeco, inteligentaj produktoj, medikamentoj kaj suplementoj, kaj novaj tipoj de manĝaĵoj. Krome, junaj ĉinoj elspezas pli por la sano de siaj bestoj, kio stimulis la disvolviĝon de produktoj kaj servoj pri bestosano en la lando.
+
+La disvolvado de tiu merkato ankaŭ kreis ŝancojn por novigaj servoj. Nur en la urbo Ŝanhajo malfermiĝis du novigaĵoj en la besta mondo ĉi-jare. Unu estas la unua "hunda gimnastikejo" de la lando, GOGOGYM, kiu havas infrastrukturon kaj kvalifikitan teamon por ke la bestoj ekzerciĝu, kaj ankaŭ liveras servojn pri beligo kaj masaĝo, krom vendejo de porhundaj produktoj.
+
+La alia noviga servo estas firmao nomita Wagtopia, fondita de la brazilano Fábio Alves da Silva, kiu liveras servojn de banado kaj tondado kaj socialigajn aktivaĵojn por dorlotbestoj, sed famiĝis ĉefe pro tio, ke ĝi estas la unua vendejo, kiu liveras freŝbakitajn manĝojn por bestoj. La ĉefa allogaĵo de Wagtopia estas ĝia tute travidebla centra kuirejo, kie fakula teamo disvolvas manĝojn por bestoj laŭ internaciaj normoj kaj alprenas malaltatemperaturajn kuirteknikojn por konservi la nutraĵojn.
+
+Ĉinio fariĝas pli amika al dorlotbestoj
+
+Rezulte de tiu rapida ŝanĝiĝo en vivstilo, entreprenoj klopodas por doni best-amikajn servojn por allogi novajn klientojn. Lastatempe multaj butikumcentroj, hoteloj, trinkejoj kaj restoracioj investas en areoj por hejmbestoj.
+
+Wagtopia en Ŝanhajo estas la unua bakejo dediĉita al farado de freŝaj manĝoj por bestoj.
+
+Pasintjare, la biletoj por specialaj vesperaj vizitoj al la ekspozicio "Sur la pinto de la piramido: La civilizo de antikva egipto", kiuj permesis al homoj viziti la ekspozicion akompanate de sia kato, estis rapide disvenditaj. Konstatinte la ekzisto de granda postulo pri tia servo, Muzeo de Ŝanhajo pristudas similajn sesiojn por venontaj ekspozicioj.
+
+En la turisma sektoro, krozŝipoj kun hejmbestoj estis bone akceptitaj de ĉinaj konsumantoj. En la transporta sektoro, kelkaj altrapidaj trajnoj funkciigas servojn de transportado de hejmbestoj: Mastroj kaj bestoj vojaĝas en la sama trajno, sed en apartaj vagonoj, kaj vizitoj dum la vojaĝo ne estas permesataj.
+
+En la lastaj semajnoj, la novaĵoj estis ĉefe kadre de aertransporto: Ekde la 15-a de aŭgusto la kompanio Hainan Airlines permesas la transportadon de bestoj en la kajuto en sia internacia itinero liganta Pekinon al Bankoko, Tajlando. La decido de la kompanio doni la servon sur internacia itinero venis nur duonjaro, post kiam kelkaj ĉinaj aviadaj kompanioj permesis la transportadon de bestoj en la kajuto en enlandaj flugoj.
+
+La 28-an de aŭgusto la internacia flughaveno Hangzhou Xiaoshan en la provinco Zhejiang inaŭguris salonon por bestoj, granda je 22 kvadrataj metroj, kun kapablo akcepti 20 hundojn kaj 30 katojn samtempe, kun malsamaj specioj tenataj en apartaj areoj. La bestoj povas esti monitorataj realtempe kaj eĉ interagi kun siaj mastroj distance.
+
+"La salono helpas solvi problemojn ligitajn al tradicia transportado de hejmbestoj, kiel plenaj kaĝoj, komplikaj proceduroj kaj nesufiĉa prizorgado," deklaris Wu Qirong, dungito de la flughaveno.
+
+Krom prizorgi la bonstaton de la bestoj, la salono liveras aldonajn servojn rilatajn al transportado de bestoj, inkluzive de hejma kolektado kaj liverado, vendo de aviadaj biletoj kaj traktado de kvarantenaj proceduroj. La flughaveno Shenzhen Bao'an ankaŭ havas salonon ekskluzivan por bestoj, kiu estis inaŭgurita pasintjare.
+
+La rapida disvolviĝo de la sektoro pri dorlotbestoj en Ĉinio povas alporti valorajn ŝancojn por Brazilo, kiu havas sperton kaj tradicion en tiu sektoro kaj kapablon doni bonkvalitajn produktojn kaj servojn al la ĉina merkato.
+
+Verkis: Rafael Henrique Zerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;"><em>Nigra Mito: Zhongkui</em> anoncita - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Pekina Centro por Prezentartoj gajnis internacian premion
+
+**Published:** 2025-09-08
+
+**URL:** http://esperanto.china.org.cn/2025-09/08/content_118061280.htm
+
+**Categories:** Plej Freŝaj
+
+Situanta en la nordokcidenta parto de la Centra Verda Arbarparko en la distrikto Tongzhou de Pekino, ĉi tiu konstruaĵo estis desegnita laŭ la koncepto "kultura grenejo", inspirite de antikvaj grenejoj kaj kanalveloj. Ĝi konsistas el tri apartaj konstruaĵoj, enhavantaj kvar internajn teatrejojn, nome operejo, koncertejo, dramteatrejo kaj malgranda teatrejo, kaj unu subĉiela teatrejo. Ĝia fasado montras metalajn panelojn interplektitajn kun vitraj kurtenmuroj, elvokante la bildon de malvolviĝanta teatra kurteno. Nokte lumigo kaj projekciado plifortigas ĝian distingan teatrejan etoson.
+
+La centro estis oficiale finkonstruita kaj inaŭgurita fine de 2023. Ĝi nun servas kiel grava platformo por kulturaj interŝanĝoj, gastigante prezentadojn, publik-engaĝiĝajn aktivadojn kaj internaciajn kulturajn kunlaborajn eventojn. Ekde sia inaŭguro, ĝi fariĝis unu el la ĉefa referenc-punktoj pri kulturo de Pekino.
+
+Ekde 2004, la organizaĵo Ĉikaga Ateneo: Muzeo de Arkitekturo kaj Dezajno, kune kun la Eŭropa Centro por Arkitekturo, Arto, Dezajno kaj Urbaj Studoj kaj la eldonejo Metropola Arto, organizas la Internaciajn Arkitekturajn Premiojn kiel manieron honorigi la plej bonajn kaj signifoplenajn novajn konstruaĵojn, pejzaĝajn arkitekturojn kaj projektojn desegnitajn kaj/aŭ konstruitajn de la ĉefaj arkitektoj, pejzaĝ-dezajnistoj kaj urboplanistoj de la tuta mondo. La programo honorigas novajn atingojn en dezajno kaj substrekas la direktojn kaj komprenon de nuntempaj pintnivelaj procezoj kongruaj kun la nuna penso pri dezajno.
+
+Tradukis: Rafael Henrique Zerbetto
+
+Fonto: Beijing Service
+
+<span style="font-family: "times new roman"; font-size: 20px;">De Hanojo al Pekino: Vojaĝo de 80 jaroj por memori historion kaj rigardi estontecon - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Ĉinaj entreprenoj repripensas diversigon de provizĉeno ekster Ĉinio?
+
+**Published:** 2025-09-09
+
+**URL:** http://esperanto.china.org.cn/2025-09/09/content_118068508.htm
+
+**Categories:** Plej Freŝaj
+
+de BUI HAI MUNG
+
+Dum la lasta jardeko, diversigo de provizĉeno ekster
+
+Ĉinio
+
+fariĝis direktilo por multaj ĉinaj entreprenoj, kiuj celas abundigi sian provizĉenon kaj eviti riskojn pro komercaj tensioj kun Usono. Sudorienta Azio, danke al siaj kostaj avantaĝoj, geografia situo kaj malfermitaj investpolitikoj, aperis kiel ideala celloko. Tamen, la ondo de produktada translokado al ĉi tiu regiono nun alfrontas novan defion: necerteco kaj kompleksaj tarif-politikoj de Usono -- precipe sub la regado de prezidento Donald Trump, kiu revenis al la Blanka Domo kun pli agresemajkomercaj politikoj.
+
+De diversigo de provizĉeno eskter
+
+Ĉinio
+
+al dilemo
+
+La reimposto de altaj tarifoj ne nur kontraŭas ĉinajn varojn, sed ankaŭ kontraŭas la eksportaĵojn de pluraj sudorient-aziaj landoj -- kiuj iam estis konsiderataj kiel "transita punkto" por ĉinaj entreprenoj -- tute ŝanĝis la planon. Se antaŭe Kamboĝo, Vjetnamio aŭ Indonezio estis realigeblaj alternativoj, nun ankaŭ ĉi tiuj landoj frontas tarifojn inter 19% kaj 40% por varoj eksportataj al Usono. Detale, la tarifoj de Trump en la regiono varias de minimumo de 10% por Singapuro ĝis maksimumo de 40% por Birmo kaj Laoso. Kamboĝo, Indonezio, Malajzio, Tajlando kaj Filipinoj suferas tarifojn de 19%. Vjetnamaj produktoj estas impostitaj je 20%. Dume, ĉinaj varoj estas tarifitaj je 30% dum la komerca "batal-paŭzo" (se aldoni ankaŭ la antaŭe truditajn tarifojn de la unua prezidenteco de Trump kaj aliaj akumulitaj impostoj, la entuta tarifo estas 55%). Ĉi tio malpliigas la motivadon de ĉinaj entreprenoj por vastigi fabrikojn en la regiono.
+
+La kazo de Minyuan Footwear estas elstara ekzemplo. Ili siatempe konstruis fabrikon en Kamboĝo por servi la usonan merkaton, sed devis ĉesi, ĉar usonaj klientoj -- kiuj esence regas la valorĉenon -- ŝanĝis sian direkton pro tro rapidaj ŝanĝoj en tarifaj politikoj. Longtempaj investoj nun aspektas tro riskaj en tiom malstabila medio.
+
+Alta kosto de translokiĝo
+
+Multaj ĉinaj fabrikantoj, kiuj gvidis la disigon de produktado, nun revenas al sia hejmlando. Krom la tarifoj, esenca zorgo estas la alta translokiga kosto kaj la risko perdi regadon super la provizoĉeno. Por atingi sufiĉan lokan valoron kaj eviti esti konsiderataj kiel "transŝipado" -- kiuj ankaŭ estas impostitaj je 40% -- multaj entreprenoj devas transloki tutajn produktajn liniojn, kvalifikitajn laboristojn, krudmaterialojn kaj eĉ loĝistikan infrastrukturon al alia lando -- kion ne ĉiuj povas fari tuj.
+
+Krome, laborproduktiveco, politika stabileco kaj infrastrukturo en multaj sudorient-aziaj landoj ankoraŭ ne povas konkuri kun Ĉinio. Multaj investantoj "provis kaj retiriĝis" -- kelkaj eĉ bedaŭras sian decidon. Zhao Fen, posedanto de kvar fabrikoj en Dongguan de Ĉinio, diris, ke multaj konkurantoj malfermis fabrikojn en la Sudorienta Azio, sed "ĉiuj bedaŭras pro tio". "La terkostoj altiĝis, la laborproduktiveco estas pli malalta kaj la tarifoj pliigitaj -- rezultigante pli altajn funkciigajn kostojn," ŝi diris. "La aldonita usona imposto kontraŭ malmultekostaj ĉinaj varoj efektive estas malalta kaj ne malpliigas la usonan konsumadon. Fakte, por niaj varoj, la tarifoj apenaŭ kreskis."
+
+Ĉinio restas neanstataŭigebla
+
+La fakto estas, ke Ĉinio ankoraŭ tenas nemalhaveblajn avantaĝojn en multaj industrioj. Industrioj kiel ludiloj, elektroniko, altkvalita teksaĵo… Ĉiuj forte dependas de teknologia kapablo, skalo kaj interna industria ekosistemo de Ĉinio. Eĉ translokante fabrikojn, kompanioj ankoraŭ devas transporti partojn el Ĉinio, tiel la kostoj ne malpliiĝas, sed eĉ kreskas. En tempo, kiam usonaj importistoj ankaŭ devas "ŝpari", ili ne plu premas siajn partnerojn translokiĝi je ĉiu prezo.
+
+Kion oni devas rimarki estas, ke se la diferenco en tarifoj inter Ĉinio kaj aliaj sudorient-aziaj landoj ne sufiĉas por kompensi la translokajn kostojn, la praktika elekto de multaj entreprenoj ankoraŭ estas… resti en Ĉinio.
+
+Fleksebleco iĝas ŝlosilo
+
+Oni povas diri, ke la plano de diversigo de provizĉeno eskter
+
+Ĉinio
+
+ne tute fiaskis, sed ĝi eniras fazon de ĝustigo kaj selektado. Nur entreprenoj kun longtempa vizio, forta financa bazo kaj alta adaptebleco povas sekvi ĝin ĝisfine. La plimulto devos pesi la profitojn kaj perdojn, sekvi politikajn ŝanĝojn kaj atendi la rezulton de komercaj intertraktadoj inter grandaj potencoj.
+
+La plano transloki produktadon el Ĉinio jam ne estas ununura vojo, sed fariĝis ekvacio plena je nekonataj faktoroj -- kie ĉiu movo devas esti zorge kalkulita. Por ĉinaj entreprenoj, provizora paŭzo de translokado por atendi pli bonan momenton estas sekura elekto -- en situacio, kie tarifoj povas ŝanĝiĝi dum unu nokto, sed reinvestaj kostoj daŭras jarojn.
+
+<span style="font-family: "times new roman"; font-size: 20px;">Pekina Centro por Prezentartoj gajnis internacian premion - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Ĉina prezidanto Xi Jinping ĉeestis virtualan BRICS-pintkunvenon en Pekino
+
+**Published:** 2025-09-09
+
+**URL:** http://esperanto.china.org.cn/2025-09/09/content_118069093.htm
+
+**Categories:** Plej Freŝaj
+
+Ĉina prezidanto Xi Jinping alvokis la BRICS-landojn kundefendi multflankismon kaj la multflankan komercan sistemon dum la virtuala BRICS-pintkunveno en Pekino la 8-an de septembro.
+
+"En ĉi tiu ŝlosila momento, BRICS-landoj, kiel reprezentantoj de la tutmonda sudo, devas agi laŭ la BRICS-spirito de malfermeco, inkluzivigo kaj reciproke utila kunlaboro, komune defendi multflankismon kaj la multflankan komercan sistemon, antaŭenigi pli grandan BRICS-kunlaboron, kaj konstrui homaran komunumon de komuna estonteco," diris Xi Jinping.
+
+"La historio diras al ni, ke multflankismo estas la komuna aspiro de la popolo kaj la ĝenerala tendenco de nia epoko," li diris, aldonante, ke multflankismo liveras gravan subtenon por mondaj paco kaj disvolviĝo.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Ĉinaj entreprenoj repripensas diversigon de provizĉeno ekster Ĉinio? - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Brita Komerca Sendito al Ĉinio Lewis Neal: Xiamen reprezentas ŝancojn
+
+**Published:** 2025-09-10
+
+**URL:** http://esperanto.china.org.cn/2025-09/10/content_118069086.htm
+
+**Categories:** Plej Freŝaj
+
+Brita Komerca Sendito al Ĉinio Lewis Neal ĉeestis la gazetaran konferencon por la 25-a Ĉina Internacia Foiro por Investo kaj Komerco posttagmeze de la 6-a de septembro por partopreni serion da aktivadoj.
+
+"Britio honoras esti la honora gasto de ĉi-jara foiro. Ni havas 400-kvadratmetran pavilonon kaj pli ol 100 kompaniojn partoprenantajn, markante la plej grandnombran partoprenon." Li diris, ke la foiro estas ideala platformo por Britio montri sian malferman, stabilan kaj tutmonde kunligitan ekonomion. La foiro ankaŭ estas aparte grava por britaj entreprenoj, kies kompanioj en multaj ŝlosilaj industrioj alte taksas la ŝancon.
+
+Parolante pri la perspektivoj de la ĉin-britaj ekonomiaj kaj komercaj rilatoj, li esprimis sian antaŭĝojon pri pragmata kunlaboro tra la foiro. "La foiro nun estas en sia 25-a jaro, kaj la Speciala Ekonomia Zono de Xiamen aĝas jam 45 jarojn. Tio donas al ni grandan optimismon kaj ĝojigas nin vidi ekonomiajn kaj komercajn interŝanĝojn inter Ĉinio kaj Britio atingi novan progreson."
+
+"Xiamen funkcias kiel pordego al ŝancoj," diris Lewis Neal, laŭdante la ekonomian viglecon de Xiamen. "Mi kredas, ke la foiro estas momento por ke Britio kaj Ĉinio kunlaboru por antaŭenigi komercajn ŝancojn." Ĉi tiu takso estas ne nur agnosko de la malfermeco kaj inkluzivigo de Xiamen, sed ankaŭ anoncas novajn ŝancojn por ĉin-brita ekonomia kaj komerca kunlaboro.
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Ĉinaj entreprenoj repripensas diversigon de provizĉeno ekster Ĉinio? - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Xi Jinping sendis gratulmesaĝon al 25-a Ĉina Internacia Foiro por Investo kaj Komerco
+
+**Published:** 2025-09-10
+
+**URL:** http://esperanto.china.org.cn/2025-09/10/content_118069126.htm
+
+**Categories:** Plej Freŝaj
+
+Ĉina prezidanto Xi Jinping sendis gratulmesaĝon al la 25-a Ĉina Internacia Foiro por Investo kaj Komerco en la 8-a de septembro, kiam la foiro malfermiĝis en Xiamen de la provinco Fujian.
+
+Xi Jinping diris, ke la Ĉina Internacia Foiro por Investo kaj Komerco, kun la konstanta temo "vastigi dudirektan investadon kaj komune antaŭenigi tutmondan disvolviĝon", ludis pozitivan rolon en la antaŭenigo de la konstruado de malferma monda ekonomio kaj fariĝis efika platformo por ke tutmondaj investantoj profundigu pragmatan kunlaboron.
+
+Xi Jinping emfazis, ke kiel grava kontribuanto kaj ankro de tutmonda ekonomia kresko, Ĉinio senŝancele plivastigos altnivelan malfermadon, antaŭenigos liberigon kaj faciligon de komercado kaj investado, daŭre dividos siajn disvolvajn ŝancojn kun la mondo, kaj aldonos pli da pozitiva energio kaj certeco en tutmondan disvolviĝon. Ĉinio volas kunlabori kun ĉiuj partioj por antaŭenigi inkluzivigan ekonomian tutmondiĝon kaj krei brilan estontecon de prospero kaj disvolviĝo.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Ĉinaj entreprenoj repripensas diversigon de provizĉeno ekster Ĉinio? - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Esperanta Tago 2025 -- La mondo malfermita por amo kaj vojaĝo
+
+**Published:** 2025-09-11
+
+**URL:** http://esperanto.china.org.cn/2025-09/11/content_118071455.htm
+
+**Categories:** Plej Freŝaj
+
+de Jevgenij Borjun
+
+La Rusia Esperantista Unio por la dua fojo en la jaro okazigis Esperantan Tagon en Krasnojarsk. La celo de la evento estis montri kiom unueca povas esti la Rusia Esperantista Unio. La eventon partoprenis pli ol 70 homoj de 12 regionoj de Rusio kaj Ĉinio, kaj ankaŭ esperantistoj de Japanio kaj Aŭstrio.
+
+"La programo inkludis prelegojn de estroj de la Rusia Esperantista Unio. Precipe, paroladoj de la prezidanto de la unio Viktor Aroskin kaj la prezidanto de la konsilio de la unio Dmitrij Cibulevskij, kiuj rakontis pri la internaciaj ligoj de la unio kun esperantistoj en Ĉinio kaj Usono. Ankaŭ, la renkontiĝo inkludis prelegojn pri la historio de Esperanto en Rusio, kaj ankaŭ prelego pri la eblecoj de la lingvo en nia lando," diris Jevgenij Borjun, unu el la organizantoj de la evento.
+
+En la kadro de la Rusia Esperanta Tago, ankaŭ okazis krea programo. La partoprenantoj okazigis rondtablajn babiladojn, koncerton, ludon kaj multajn aliajn aktivecojn. Precipe, esperantistoj organizis konkurson por la plej bona traduko de poemo.
+
+"Mi ŝatus aparte mencii la grandan intereson, kiun la partoprenantoj montris por nia komuna afero, studante la lingvon. Ni pensas, ke la lingvo de Zamenhof havas grandan potencialon kaj esperantistoj pretas uzi ĝin ĉie. La rezulto de nia komuna laboro estis, ke la nombro de novaj partoprenantoj, kiuj esprimis deziron partopreni en Esperanta tago, multe pliiĝis," aldonis Evgenij Borjun. Ĉiujare, kreskas la nombro de tiuj, kiuj volas lerni la lingvon. Nuntempe, la nombro de esperantistoj en Rusio estas ĉirkaŭ 400. La plej multaj el ili estas en Moskvo, Sankt-Peterburgo, Krasnodar kaj aliaj grandaj urboj.
+
+En la Rusia Esperanta Tago, oni prezentis la novan programon de la unio. Jevgenij Borjun diris, ke la celo de la unio estas malfermi la mondon al esperantistoj kaj helpi novajn esperantistojn trovi siajn proprajn amikojn kaj partnerojn. Li aldonis, ke la unio havas senpagajn kursojn en multaj rusaj urboj kaj helpas homojn trovi amikojn kaj partnerojn en Rusio kaj eksterlande.
+
+"Ni povas diri, ke la Rusia Esperanta Tago estas sukcesa. Ni sukcesis montri kiel unueca povas esti la esperantista komunumo. Ni esperas, ke venontjare la nombro de partoprenantoj pliiĝos eĉ pli," diris Jevgenij Borjun.
+
+<span style="font-family: "times new roman"; font-size: 20px;">Xi Jinping sendis gratulmesaĝon al 25-a Ĉina Internacia Foiro por Investo kaj Komerco - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Lujiazui, financa koro de Ŝanhajo kaj la tutmonda perspektivo
+
+**Published:** 2025-09-11
+
+**URL:** http://esperanto.china.org.cn/2025-09/11/content_118071656.htm
+
+**Categories:** Plej Freŝaj
+
+Ĉiuj scias, ke Novjorko estas la financa centro de Usono, kaj Londono estas la financa centro de Britio. Do, ĉu vi scias, kie estas la financa centro de Ĉinio?
+
+Financa pozicio de Pudong
+
+Situante ĉe la orienta bordo de la rivero Huangpu, Lujiazui estas nomata "la financa koro" de Ĉinio. Sur areo de nur iom pli ol 31 kvadrataj metroj, tie kolektiviĝas preskaŭ 50 000 entreprenoj, el kiuj pli ol 8 000 estas financaj firmaoj ĉinaj kaj alilandaj. La nubskrapuloj kiel la Ŝanhaja Turo, Jinmao-turo kaj la Monda Financa Centro de Ŝanhajo ne nur formas brilantan urbosilueton, sed ankaŭ atestas la staturon de internacia financa centro en forta leviĝo.
+
+De malnova haveno al nacia financa centro
+
+Antaŭ 35 jaroj, Lujiazui estis nur haveno, magazen-areo kaj malnova loĝkvartalo. En 1990, la ĉina registaro decidis starigi la Novan Disvolvan Zonon de Pudong, kio malfermis epokon de reformado kaj modernigo. Lujiazui estis elektita kiel kerna financa centro, eksperimentejo por pioniraj politikoj. Paŝo post paŝo, oni vidis miraklojn: En 1994 aperis la turo Orienta Perlo, markante la unuan transformon; en 1999 finiĝis la Jinmao-turo, poste sekvis la Monda Financa Centro kaj la Ŝanhaja Turo alta je 632 metroj, kiuj fariĝis simboloj de la nova ekonomia povo. Ene de nur 30 jaroj, Lujiazui transformiĝis de nuda tereno al unu el la ĉefaj financaj centroj de Azio.
+
+Ekonomia amplekso kaj gravaj kontribuoj
+
+Hodiaŭ, Lujiazui ne nur estas la ekonomia centro de Ŝanhajo, sed ankaŭ funkcias kiel lokomotivo por la tuta ĉina ekonomio. Ĝia MEP superas 600 miliardojn da juanoj, kun areo okupante nur 0.5% de Ŝanhajo kaj 2.6% de Pudong, tamen ĝi kontribuas preskaŭ 14% de la MEP de la urbo kaj 40% de tiu de Pudong. La financa sektoro estas la ĉefa forto, kun subteno de informa teknologio, komercaj servoj, profesiaj servoj kaj maraj servoj. Ĉi tie koncentriĝas tutmondaj financaj institucioj: 70% de eksterlandaj aktivaĵ-mastrumaj firmaoj, 40% de eksterlandaj bankoj kun jura personeco, 40% de eksterlandaj valorpaperaj kompanioj, 55% de tute eksterlandaj publikaj fondusoj... Preskaŭ ĉiuj eksterlandaj bankoj kaj asekuroj en Ŝanhajo lokiĝas ĉi tie. Krom financo, Lujiazui ankaŭ forte kontribuas al internacia komerco, profesiaj servoj, mara transporto kaj loĝistiko. Ĝis nun, la entreprenoj en la regiono kreis centmilojn da altkvalitaj laborpostenoj, akcelante la disvolvadon de tuta Pudong. Tiel, Ŝanhajo fariĝis la plej granda ekonomia centro de Ĉinio, kun MEP en 2024 superanta 5.392 miliardojn da juanoj, kio egalas al preskaŭ 4% de la landa totala.
+
+Abunda homa kapitalo kaj kultura diverseco
+
+La sukceso de Lujiazui ne apartiĝas de altkvalita homa rimedo. Nun, tie laboras ĉirkaŭ 550 000 personoj, el kiuj triono estas eksterlandanoj aŭ ĉinaj studentoj, kiuj lernis en aliaj landoj, en la kampoj de financo, juro, konsilado kaj teknologio. Ekde 2016, la loka administracio praktikigis politikojn por altiri fakulojn el bankoj, jurfirmaoj, konsilaj grupoj al la publika administrado. Tio igis la ŝtatan aparaton pli profesia kaj proksima al la merkato.
+
+Krom la laborfaktoro, Lujiazui ankaŭ konstruas modernan vivmedion. Jam pli ol 24 projektoj pri renovigo de konstruaĵoj efektiviĝis, inkluzive de anstataŭigo de malnovaj liftoj, plibonigo de verda spaco kaj konstruado de inteligentaj konstruaĵoj. La celo estas konstrui ne nur efikan laborejon, sed ankaŭ loĝindan urbareon, kie eksterlandaj fakuloj kaj oficejaj dungitoj povas establi komfortan vivon.
+
+Komparo kun tutmondaj financaj centroj
+
+Kompare kun Novjorko, Londono aŭ Hongkongo, Lujiazui ankoraŭ estas juna. Tamen ĝia forto kuŝas en unika kombino: Eksterordinara rapideco de disvolvo, fleksebla politik-testado, kaj vasta enlanda merkato. Se Novjorko estas la tradicia financa ĉefurbo kun Wall Street, Londono famas pro sia jura sistemo kaj Hongkongo pro longa internaciigo, tiam Lujiazui elstaras per sia rekta ligo al la disvolva strategio de lando kun pli ol 1.4 miliardoj da loĝantoj. Tiu kombino faras Lujiazui "la financa centro de la 21-a jarcento". Ĉi tie, entreprenoj ne nur aliras kapitalan merkaton kaj financajn servojn, sed ankaŭ povas utiligi la potencon de novigo -- de nova energio, artefarita intelekto ĝis elektronika komerco.
+
+Faktoroj de sukceso
+
+La leviĝo de Lujiazui ne estas hazarda. Zhu Haidong, vicdirektoro de la Administra Komitato de Lujiazui, klarigis la kialojn de la sukceso. Unue, la forta entreprena bazo kun preskaŭ 50 000 kompanioj kreas grandan kaj diversan internan merkaton, stimulante konkuradon kaj kreemon.
+
+Due, la profesia homa rimedo igis Lujiazui loko de altkvalitaj servoj. La kuraĝaj reformadoj de la administracio, kiuj enkondukis merkatajn fakulojn en la publikan administradon, favoris konsenton kaj efikan kunlaboron inter publika kaj privata sektoroj.
+
+Trie, Lujiazui profitas de pionira politika medio. Kiel parto de la Libera Komerca Zono de Ŝanhajo, ĝi rajtas testi multajn novajn politikojn -- pri internacia financo, komerca servo, eksterlanda valuta mastrumado. Tiuj politikoj altiras ne nur eksterlandajn entreprenojn, sed ankaŭ helpas enlandajn firmaojn iri al la mondo.
+
+Fine, la vivkvalito kaj kultura diverseco estas grandaj avantaĝoj. En Lujiazui oni povas labori tage en modernaj nubskrapuloj kaj vespere rapide ĝui la ekologian spacon en la ĉirkaŭaĵo de Pudong. Tiu ekvilibro donas al la loko neimageblan allogecon por internaciaj fakuloj.
+
+Komentoj de internaciaj investantoj
+
+S-ro Bertrabd Régbuer, tutmonda respondeculo pri la komerca reto de Ernst & Young (EY) en Eŭropo, dividis la kialon elekti Ŝanhajon kaj ĝenerale Ĉinion kiel celon de eksterlandaj investantoj:
+
+"Por Ŝanhajo, la urbo konsistigas ĉirkaŭ 25% de la eksterlanda investokapitalo en Ĉinio, kaj estas la unua regiono konsiderata favora por investado kaj komercado. Ŝanhajo ne nur estas facile atingebla, sed ankaŭ havas travideblan medion, amikan al internaciaj investantoj. La urba registaro ĉiam ludas la rolon de pontligilo inter lokaj kaj tutmondaj entreprenoj, kio faciligas kunlaboron kaj reciprokan komprenon. Krome, multaj el niaj internaciaj klientoj jam ĉeestas en Ĉinio de jardekoj; iuj entreprenoj restas en la lando dum 50-60 jaroj, eĉ antaŭ la pordmalfermo de Ĉinio. Tio montras, ke longtempa perspektivo, partnereco kaj reciproka respekto estas la ŝlosiloj. En la kunteksto de kompleksa tutmonda geopolitiko, la stabileco kaj prognozeblo de Ĉinio estas des pli aprezataj de investantoj. Plie, Ĉinio ĉiam subtenis politikon de malfermo kaj daŭre estas grava celo por eksterlandaj investoj. Internaciaj kompanioj kun longtempa perspektivo rigardas Ĉinion kiel strategian merkaton, kie oni investas ne nur por la enlanda utilo, sed ankaŭ pro ĝia valoro en la tuta tutmonda strategia ĉeno."
+
+S-ro Nakano Yosuke, ĉefdirektoro de ABeam-kompanio, ankaŭ komentis:
+
+"Ŝanhajo ne nur estas la 'ĉefurbo de klientoj', ĉar multaj hejmaj kaj eksterlandaj kompanioj metas siajn ĉefsidejojn ĉi tie, sed ankaŭ estas 'altejo de talentoj'. Tial, por ni, Ŝanhajo estas samtempe loko por kontakti klientojn kaj por altiri talentojn. Kvankam antaŭ kelkaj jaroj nia industrio estis forte vundita de la pandemio, danke al la zorgema atento kaj la impostaj kaj financaj avantaĝaj politikoj, nia entrepreno rapide superis malfacilaĵojn kaj reakiris kreskon. Ni estas profunde dankemaj al la ĉina registaro pro ĝia konstanta zorgo kaj akompano al entreprenoj."
+
+Defioj
+
+Krom la elstaraj atingoj, Lujiazui ankaŭ frontas multajn defiojn. Unu el la plej grandaj estas la tutmonda konkurenco. Dum internaciaj financaj centroj kiel Hongkongo, Singapuro, Tokio aŭ Dubajo senĉese enkondukas favorajn politikojn por allogi talentojn kaj kapitalfluojn, Lujiazui devas trovi vojon por plifortigi sian allogecon. Krome, la ŝanĝiĝema tutmonda ekonomia ciklo alportas ne malgrandan riskon por la financaj kaj komercaj entreprenoj lokitaj tie.
+
+Pri infrastrukturo, post pli ol 30 jaroj da disvolvado, multaj konstruaĵoj kaj laborejoj jam eniris fazon de maljuniĝo, postulante ampleksajn renovigojn. La loka registaro jam rimarkis ĉi tiun problemon kaj efektivigas dekojn da projektoj de "mikro-renovigo" por konstruaĵoj -- de anstataŭigo de liftoj, plibonigo de lumigaj sistemoj ĝis enkonduko de verdaj kaj inteligentaj teknologioj en laborejojn. Tamen ĉi tiu procezo postulas grandegajn kostojn kaj proksiman kunlaboron inter registaro kaj investantoj.
+
+Alia defio estas la ekvilibro inter disvolvado kaj urba vivo. Dum ĉiam pli da entreprenoj, laborforto kaj loĝantoj fluas en la regionon, la premo al trafiko, loĝado, kuracado kaj medio pliiĝas. Konservi Lujiazui kiel areon laborebla-loĝebla postulas delikatajn urbanajn administrajn strategiojn, kovrante de infrastruktura planado, disvolvo de publika transporto ĝis konstruado de ekvilibra vivserva ekosistemo.
+
+Por la estonteco
+
+En nova etapo, Lujiazui celas fariĝi "super-haveno" de financo kaj ciferecigo tutmonde. La fokuso estas plu malfermi la kampojn de bankado, valorpaperoj, fonduso, asekuro, samtempe altiri internaciajn organizojn pri verda financo, daŭrigebla investo kaj translandaj kapitalaj merkatoj. Krome, Lujiazui konstruas ampleksan servoplatformon por entreprenoj "iri eksteren"; tipa ekzemplo estas la Pudong-servocentro por Eksterlandaj Entreprenoj, kiu jam kunlaboras kun 79 internaciaj organizoj.
+
+Alia prioritato estas la disvolvo de Inteligenta Cifereca Haveno Lujiazui, utiligante artefaritan intelekton, grandajn datumojn kaj profesiajn servojn por akceli modernajn servajn industriojn kiel retaj sanzorgo, edukado kaj distra konsumo.
+
+Samtempe, Lujiazui pliigas investoaltiron el Mezoriento kaj landoj laŭ la iniciato "La Zono kaj Vojo", instigante multnaciajn kompaniojn plilarĝigi sian esplorpovon surloke. Lujiazui ne nur volas esti la "Wall Street de Ĉinio", sed ankaŭ centro de tutmonda kunfluo de kapitalo, teknologio kaj novigo.
+
+Alia ŝlosila punkto en la perspektivo estas krei verdan, inteligentan kaj loĝindan medion. Per la konstruado de ekologi-amikaj konstruaĵoj, disvolvo de verda transporto kaj diversigo de vivspacoj, Lujiazui celas esti ne nur tutmonda financa centro, sed ankaŭ loko, kie homoj povas vivi kaj labori daŭrigeble.
+
+Ekzemplo por la mondo
+
+Kiel eksterlanda  ĵurnalisto, je mia unua vizito al Lujiazui mi estis mirigita de la scenaro: La rivero Huangpu brile reflektas la lumojn de la nubskrapuloj. Ĉiu konstruaĵo ne nur estas arkitektura verko, sed ankaŭ viva atesto pri la miriga leviĝo de la areo, kiu antaŭ malpli ol kvar jardekoj estis simple aluvia tero. Sed kio restas en mia kapo ne estas nur la moderna ekstero, sed la sento pri kompleta ekosistemo: Loko, kie tutmondaj entreprenoj, oficejaj laboristoj, lokaj administrantoj kaj komunumoj kunekzistas harmonie. Por mi, Lujiazui estas kaj financa centro, kaj simbolo de la aspiro de Ĉinio en la 21-a jarcento.
+
+La rakonto de Lujiazui alportas multajn valorajn spertojn al landoj, kiuj celas krei modernajn financajn centrojn. Unue, la sukceso montras, ke la strategia perspektivo de la registaro estas decida. Ligi Lujiazui kun naciaj projektoj kiel la Libera Komerca Zono, reformaj pilot-programoj aŭ strategio de ampleksa novigo donis solidan fundamenton por disvolvado. Due, Lujiazui pruvas, ke financa centro ne povas baziĝi nur sur kapital-fluoj, sed devas havi ekosistemon. Preskaŭ 50 000 entreprenoj de financo, mara transporto, profesiaj servoj ĝis internacia komerco kreis "arbaron", kie ĉiu elemento subtenas la alian. Ĉi tiu modelo estas referenco por aliaj landoj, kiuj volas konstrui daŭrigeblajn financajn areojn. Trie, la homa faktoro kaj kulturo estas ŝlosilaj. Altiri dekmilojn da internaciaj fakuloj, krei malferman kaj diversan viv- kaj labor-mediojn faris Lujiazui lokon, kie talentoj volas resti longtempe. Aliaj landoj povas lerni de la maniero, kiel Ŝanhajo ne nur konstruis turojn sed ankaŭ konstruis komunumon. Fine, la plej grava estas: Ekonomia disvolvado kaj plibonigo de vivkvalito ne estas kontraŭaj. Male, se saĝe kombinitaj, tiuj du faktoroj helpas unu la alian, kreante daŭrigeblan disvolvan ciklon.
+
+Por landoj, kiuj volas krei novan financan ĉefurbon, Lujiazui estas viva pruvo.
+
+Verkis:
+
+Bui Hai Mung
+
+<span style="font-family: "times new roman"; font-size: 20px;">Xi Jinping sendis gratulmesaĝon al 25-a Ĉina Internacia Foiro por Investo kaj Komerco - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Lerni de historio kaj antaŭenigi plurflankismon
+
+**Published:** 2025-09-12
+
+**URL:** http://esperanto.china.org.cn/2025-09/12/content_118073623.htm
+
+**Author:** Rafael Henrique Zerbetto
+
+**Categories:** Plej Freŝaj
+
+"Hodiaŭ ni kunvenas ĉi tie por solene rememori la 80-an datrevenon de la venko en la Ĉina Popola Rezistmilito kontraŭ Japana Agreso kaj la Monda Kontraŭfaŝisma Milito, por rememori la historion, omaĝi la falintajn heroojn, aprezi la pacon kaj krei brilan estontecon." Tiuj vortoj estis eldiritaj de ĉina prezidanto Xi Jinping dum sia parolado en Tian'anmen la 3-an de ĉi tiu monato, ĵus antaŭ la milita parado, kies simbola valoro evidentigis diversajn gravajn temojn de nia epoko.
+
+La milita historio ne rakontata de Okcidento
+
+Kiam mi estis en mezlernejo, mi aŭdis de mia instruisto pri historio, ke la du mondmilitoj okazis en Eŭropo, kun nur kelkaj disvolviĝoj en aliaj kontinentoj. Tio klarigas la fakton, ke malmultaj homoj komprenas, kial nur Rusio kaj Ĉinio organizis celebradojn tiom pompajn kiel meritas la 80-jara datreveno de la venko de alianco en la milito.
+
+La ideo, ke preskaŭ la tuta milito estis en Eŭropo kaj komenciĝis en 1939 nur malkaŝas okcident-centritan manieron vidi la mondon. Tiu vidpunkto estis nediskutebla antaŭ jarcento, sed estas neakceptebla nuntempe.
+
+La milito fakte komenciĝis en 1931, kiam japanoj invadis Manĉurion, startigante la unuan el aro de internaciaj konfliktoj, kiuj interplektiĝis en mondan militon. La Incidento de Lugou-ponto en julio 1937 okazis post la interkonsento, kiu kunigis Germanion, Italion kaj Japanion, kaj pro tio estas konsiderata la momento, kiam la Ĉina Popola Rezistmilito kontraŭ Japana Agreso fariĝis tutmonda, kun Ĉinio ekricevanta eksteran subtenon por rezisti la agreson.
+
+Ĉinio kaj Sovetunio estas la landoj, kiuj suferis plej multajn perdojn en la milito: Dum nazioj mortigis pli ol 27 milionojn da sovetianoj, japanoj mortigis pli ol 30 milionojn en la kontinenta parto de Azio, preskaŭ ĉiujn ĉinojn. Pro tio, heredigi la memoron pri la milito estas gravega afero por la popoloj de ĉi tiuj du landoj.
+
+La danĝero de laŭplaĉaj rakontoj
+
+Ankaŭ estas fakto, inkluzive agnoskita en dokumentaj filmoj kaj libroj, ke la milito en la azi-pacifika regiono estis pli malfacila kaj sangelverŝa. La problemo estas, ke post fari tian aserton, okcidentaj historiaj libroj turnas sin al la atako kontraŭ Pearl Harbor kaj la usona kampanjo en la Pacifiko, troigante la rolon de tiu lando samkiel faras la holivudaj filmoj.
+
+Ĉi tiu rakonta distordado prezentas Usonon kiel la grandan heroon de la milito kun la celo forviŝi la faktojn kaj reverki la historion laŭ la interesoj de la okcidentaj potencoj. La celo de tiu distordo estas minimumigi la rolon de socialismaj landoj, transformi la holokaŭston en politikan kapitalon por Israelo kaj prezenti Japanion kiel viktimon anstataŭ agresanton.
+
+Kreita por persekuti socialismon dum la Malvarma Milito kaj pravigi la rolon de Usono kiel "monda polico", ĉi tiu rakonto subtenas, ke homoj aliĝu al ekstremismaj politikaj grupoj, kiuj estas efikaj por kulpigi aliajn kaj instigi malamon al specifaj grupoj, ekzemple nigruloj kaj enmigrantoj, sed ne kapablas alporti efektivan solvon al la problemoj.
+
+Per konservado de la historia vero kaj ĝia heredigo al novaj generacioj, Ĉinio montras, ke ĝi sekvas ĝustan vojon en sia disvolvado: La lando investas en edukado kaj scienco, kontraŭbatalas ekstremismojn kaj antaŭenigas ekonomian disvolviĝon, ĉio ĉi kun popola subteno.
+
+Malfacila tempo
+
+Dum vizito al Ĉinio por reprezenti Brazilon en la grava evento, la speciala konsilisto de brazila prezidanto Lula, Celso Amorim, kaptis la okazon por komenti pri la riskoj de la politiko de tarif-plialtigoj aplikataj de la usona registaro laŭ distordita koncepto de "reciprokeco". "Ĉi tiu ideo de reciprokeco estis la reĝimo alprenita dum la intermilita periodo, kaj kiu laŭ multaj historiistoj kontribuis al la profundigo de la depresio kaj rekte ankaŭ al la etoso, kiu kondukis al la dua mondmilito," deklaris Amorim.
+
+La mondo travivas kreskantan geopolitikan streĉitecon, kiu emas malboniĝi kun la leviĝo de populismaj ekstremdekstraj gvidantoj, kiel Donald Trump. Sankcioj kaj enmiksiĝoj en internajn aferojn de aliaj landoj fariĝis banalaĵoj, dum esencaj institucioj por paco, justeco kaj demokratio estas atakataj kaj malfortigataj. "Estas kvazaŭ la Monda Organizaĵo pri Komerco (MOK) ne ekzistus," bedaŭris Amorim dum intervjuo kun la brazila amaskomunikilo Brasil de Fato. Samkiel UN kaj multaj aliaj internaciaj institucioj de la postmilita periodo, MOK estas unu el pluraj mekanismoj kreita por arbitracii internaciajn disputojn, preventante pligraviĝon de konfliktoj kaj estigon de militoj.
+
+Laŭ tempopaso, ĉi tiuj institucioj malaktualiĝis, kaj pro tio, ke disvolviĝantaj landoj estas subreprezentataj, kaj pro misuzo de tiuj mekanismoj subtene al interesoj de mondpotencoj, kies plej bona ekzemplo estas la banaligo kaj misuzo de vetopovo en la Sekureca Konsilio de UN. Tiaj praktikoj damaĝis la legitimecon kaj efikon de internaciaj plurflankismaj mekanismoj.
+
+Dum la pandemio de KOVIM-19, ekzemple, la kritikoj de usona prezidento Donald Trump kontraŭ la Monda Organizaĵo pri Sano (MOS), bazitaj sur falsaj novaĵoj kaj konspiroj, erodis la aŭtoritaton de ĉi tiu institucio kaj malhelpis la naturan kondukadon de la lukto kontraŭ la malsano.
+
+Estas tiu sama logiko, kiun la brazila ekstremdekstro nun alprenas per misinformado pri la konduto de la Supera Kortumo de Brazilo kaj klopodo politikigi la proceson kontraŭ eksa prezidento Bolsonaro, samtempe kiam ĝi aranĝas en la kongreso manovron por pardoni liajn krimojn. Kion ili efektive celas estas multe pli ol liberigi unu homon el malliberejo: Ili volas malfortigi fundamentan kolonon de la brazila demokratio. La plano de la monda ekstremdekstro estas per premo senpovigi la instituciojn, kiuj certigas regadon de la leĝo.
+
+Tutmonda sudo kontraŭ imperiismo
+
+En ĉi tiu kunteksto de intensa politika polusiĝo, altiris la atenton de la mondo la ĉeesto de la rusa prezidento Vladimir Putin kaj la gvidanto de Korea Popol-Demokratia Respubliko (KDPR) Kim Jong-un, respektive dekstre kaj maldekstre de Xi Jinping dum la evento.
+
+En sia unua mandato kiel prezidento de Usono, Donald Trump, post malsukcesa renkontiĝo kun Kim Jong-un en Hanojo, Vjetnamio, decidis imponi ankoraŭ pli severajn sankciumojn kontraŭ KDPR. Ĉinio kaj Rusio tiam obeis la sankciumojn kiel signon de bonvolemo al Usono. Tamen, eĉ tiel la Blanka Domo decidis apliki sinsekvajn sankciumojn kontraŭ Rusio kaj Ĉinio. Rezulte de tio, kreiĝis etoso favora al pli forta alproksimiĝo inter ambaŭ landoj, kaj ankaŭ inter ili kaj KDPR.
+
+De dekstren Vladimir Putin, Xi Jinping kaj Kim Jong-un
+
+La klopodoj de Ĉinio rezultigis en senprecedenca ekonomia kaj socia disvolviĝo, la lando plibonigis sian pozicion en preskaŭ ĉiuj internaciaj rangoj kaj fariĝis monda avangardo en plej multaj sektoroj. Anstataŭ aplaŭdojn, la lando ricevis kreskantan malamikemon kaj teknologiajn sankciumojn, precipe de Usono.
+
+Laciĝinta de longtempa submetiĝo al imperiismo, la tutmonda sudo donas ĉiam pli da subteno al la ĉina propono estigi komunumon kun komuna estonteco por la homaro, kio esence temas pri kunkreado de plurpolusa kaj kontraŭimperiisma internacia ordo.
+
+Ĉinio respektas la suverenecon de ĉiuj landoj, traktante ilin kiel egaluloj, sen imponi kondiĉojn, kontraste al la okcidenta tradicio, kiu dividas la mondon inter "aŭtarkioj" kaj "demokratioj" surbaze de kriterioj arbitre kreitaj de ili mem senkonsidere al la monda diverseco de civilizacioj, kulturoj kaj tradicioj pri regado.
+
+Tutmonda Regada Iniciato
+
+Sed kiel antaŭenigi vere plurpolusan mondan regadon? Kontraste al la unuflankismo de Trump, Xi lanĉis la Tutmondan Regadan Iniciaton. Ĉi tiu nova iniciato temas precize pri kolekto de kontribuoj de la internacia komunumo por kune antaŭenigi reformadon de la institucioj kaj mekanismoj de monda regado, celante, ke ili fariĝu vere plurflankaj kaj demokratiaj.
+
+Farante tion, Xi indikas la ĝustan vojon por iom post iom malstreĉigi la nuntempan geopolitikan tension kaj la konstruadon de sistemo de tutmonda regado kapabla alporti longdaŭran pacon kaj prosperon al la mondo.
+
+Verkis: Rafael Henrique Zerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;">Esperanta Tago 2025 -- La mondo malfermita por amo kaj vojaĝo - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Nova teknologio formas estontecon de pudong-a flughaveno en Ŝanhajo
+
+**Published:** 2025-09-12
+
+**URL:** http://esperanto.china.org.cn/2025-09/12/content_118075438.htm
+
+**Categories:** Plej Freŝaj
+
+de BUI HAI MUNG
+
+Ĉefpordego de internacia aviado en Ĉinio
+
+Kiel la plej granda aera enirejo de Ĉinio, la Internacia Flughaveno de Pudong en Ŝanhajo ne nur funkcias kiel centro por pasaĝera kaj karga transito, sed ankaŭ fariĝis vitrino por montri la teknologian kapablon kaj la tutmondan konkurencivon de la urbo. En la unuaj ok monatoj de 2025, la flughaveno jam servis pli ol 25 milionojn da en- kaj elirantaj pasaĝeroj, kio signifas kreskon de 20.73% kompare kun la sama periodo pasintjare. Nur la nombro de internaciaj transitaj pasaĝeroj jam atingis preskaŭ 3.4 milionojn, la historian rekordon. Tiuj ciferoj klare montras la kreskantan allogon kaj la strategian rolon de Pudong sur la monda aviadmapo. Krom teknologio, la pozicio de Ŝanhajo en la tutmonda aviada reto ankaŭ estas neanstataŭigebla. Pri la avantaĝoj de Ŝanhajo en internacia transitado, la reprezentanto de loka dogano klarigis: "Unue, Ŝanhajo havas favoran komercan medion, kiu ebligas liveri alt-efikajn transitajn servojn. Due, ĝi posedas apartan geografian lokon. Trie, la flughavenoj de Ŝanhajo disponas pri riĉaj flugliniaj rimedoj, kaj ĝi estas unu el la malmultaj urboj en la mondo kun la avantaĝo 'du flughavenoj en unu urbo'."
+
+"Cifereca saĝeco" en dogana kontrolo
+
+Unu el la plej rimarkindaj iniciatoj en Pudong estas la projekto pri tiel nomata "inteligenta dogano". La komanda centro por pasaĝera inspektado funkcias kiel "cifereca cerbo", kiu integras tri kernajn teknikojn, ili estas kontraŭkontrabanda tekniko, san-kvaranteno kaj operacia kontrolo. Ĉi tiu sistemo kombinas datumbazojn pri pasaĝer-informoj, vizaĝ-rekonajn algoritmojn kaj skanajn aparatojn por rapide identigi riskojn, celi suspektatajn pakaĵojn kaj sekvi ilin. Samtempe, granda modela datuma modulo generas planeojn por epidemia monitorado de flugoj, kio helpas kuracistojn ĉe dogano aktive taksi riskojn kaj aranĝi koncernajn rimedojn. Surbaze de la granda datuma platformo, oni povas atingi situacian kontrolon en unu ekrano, kio ebligas unuecan gvidadon kaj efikan decidadon.
+
+Akcelilo por aŭtomata impost-repago
+
+Ŝanhajo estas inter la unuaj urboj en Ĉinio se temas pri aŭtomata impost-repago por eksterlandaj turistoj. En la unuaj ok monatoj de 2025 oni jam prilaboris pli ol 86 800 petojn, kio estas kresko je 1.82 obloj kompare kun la pasinta jaro, kun la totala sumo de repagoj atingante 2.03 miliardojn da juanoj, kreskis je pli ol 91.9%. La dogano de Ŝanhajo enkondukis plurajn novajn paŝojn por plirapidigi la procezon, interalie pligrandigante la memservajn fenestrojn kaj aplikante QR-kodojn sur speciale sigelitaj pakaĵoj por anstataŭi la tradician manan kontrolon. Tiuj solvoj mallongigis la tempon de prilaborado kaj faris la sperton de "aĉeto -- kontrolo -- repago" pli flua.
+
+La reprezentanto de la dogano diris: "Ni celas konstrui Ŝanhajon kiel la ĉefan cellokon por internaciaj vizitantoj, kie oni povas aĉeti, kontroli kaj ricevi repagon en unu kompleta, travidebla kaj oportuna sperto."
+
+Iu turisto el Rusio dividis sian impreson post provado de la memserva rabatsistemo: "Mi trovis, ke la proceduro en la flughaveno estas tre simpla. En unu aŭ du minutoj mi povas fini la tutan procezon sen helpo de iu doganisto. En Rusio ni ankoraŭ ne havas tiel oportunan aŭtomatan sistemon, do la sperto en Ŝanhajo vere impresis min."
+
+Tia atesto klare montras kiel teknologio estas aplikata por servi homojn, levi la kontentigan nivelon de vojaĝantoj kaj altiri pli da internacia konsumo en la urbo.
+
+Inteligenta infrastrukturo por kargotransito
+
+Krom la pasaĝera servo, Pudong registris ankaŭ rimarkindan progreson en la karga transito. Ekde junio 2025, la kvanto de internaciaj transitaj varoj rompis rekordojn dum tri sinsekvaj monatoj, atingante 17 000 tunojn en la unuaj ok monatoj, kio signifas 153%-an kreskon. Ĉi tiu salto fariĝis ebla danke al la modelo "centro+kampo", kiu konektas datumojn en reala tempo por permesi senpaperan kaj preskaŭ tujan doganan aprobon. La tiel nomataj "kamion-flugoj", kiuj konektas 26 internaciajn flughavenojn tra la lando, vastigis la loĝistikan reton kaj plifortigis la pozicion de Pudong kiel koran nodon por kargotransporto.
+
+Vojo al kompleta internacia aviada centro
+
+Per konstanta novigo, de inteligenta dogano ĝis aŭtomata impost-repago kaj moderna transit-sistemo por varoj, la Internacia Flughaveno de Pudong klare staras kiel kompleta tutmonda aviada centro. Ĝi ne nur konektas pasaĝerojn kaj varojn, sed ankaŭ montras la strategion de Ŝanhajo krei travideblan, oportunan kaj allogan komercan medion por la tuta mondo.
+
+<span style="font-family: "times new roman"; font-size: 20px;"><span style="font-family: "times new roman"; font-size: 20px;">Lerni de historio kaj antaŭenigi plurflankismon - esperanto.china.org.cn</span></span>
+
+El Popola Chinio
+
+
+---
+
+# La 2-a Premio de Ora Granda Pando malfermiĝis en Chengdu
+
+**Published:** 2025-09-12
+
+**URL:** http://esperanto.china.org.cn/2025-09/12/content_118075884.htm
+
+**Categories:** Plej Freŝaj
+
+La 12-an de septembro la 2-a Premio de Ora Granda Pando, kunaranĝita de la Ĉina Federacio de Literaturaj kaj Artaj Rondoj kaj la registaro de la provinco Sichuan, oficiale malfermiĝis en Chengdu, ĉefurbo de la provinco.
+
+La premio, kun granda pando kiel kultura simbolo, estas internacia kultura premio por filmo kaj televid-programo. Ĝi okazas ĉiun duan jaron. La ĉi-jara premio kun la temo "renkontiĝi kun lumo kaj ombro, rendevui kun beleco kaj ĉarmo" aranĝis programojn kiel kulturan forumon, amuzvesperon kaj la nokton de ora granda pando. Estas ankaŭ tri flankaj eventoj "spekti filmojn kune", "pandoj kondukas vin al la mondo" kaj "vizaĝ-al-vizaĝe kun pandoj". Oni faris tutmondan kolektadon de filmetoj kaj bildoj por ekspozicio. Entute 707 verkoj estis ricevitaj el la tuta lando. Oni invitis profesiajn fakulojn por fari la juĝadon, kaj 30 verkoj estis elektitaj, inter kiuj dek estis premiitaj.
+
+La celo de la evento estas konstrui malferman, profesian kaj efikan platformon kun scenaroj kiel ligilo, stimuli kreivan viglecon, kulturi novajn talentulojn en tiu kampo, trovi altkvalitajn materialojn kaj scenaristojn, helpi la pliprofundan integriĝon de kulturaj entreprenoj kaj rilataj industrioj, kaj antaŭenigi la altkvalitan disvolviĝon de la filma industrio.
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Nova teknologio formas estontecon de pudong-a flughaveno en Ŝanhajo - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Mia unua vojaĝo per la ĉina aviadilo C919
+
+**Published:** 2025-09-17
+
+**URL:** http://esperanto.china.org.cn/2025-09/17/content_118083252.htm
+
+**Categories:** Plej Freŝaj
+
+Vizito al Chengdu antaŭ nelonge donis al mi la okazon unuafoje vojaĝi per la ĵetaviadilo COMAC C919, sendepende evoluigita de Ĉinio por konkuri kun Boeing kaj Airbus en la kategorio de mallarĝ-korpusaj aviadiloj.
+
+Aviadilo COMAC C919 en la flughaveno Shuangliu de la urbo Chengdu
+
+La sperto komenciĝas ĉe la aĉeto de la biletoj: krom esti novaĵo, la ĉina aviadilo estas konkreta pruvo de la teknologia progreso de la lando, pri kio ĉinoj prifieras. Pro tio, apoj pri vendado de flugbiletoj kutime emfazas la flugojn kiuj alprenas ĉi tiun specifan aviadilon. Mi alvenis al la en-aviadila pordego ĝuste kiam la aviadilo alproksimiĝis, sekve mi povis observi la el-aviadiliĝon de pasaĝeroj de la antaŭa flugo. Subite mi estis surprizita de knabo, kiu fingre montris la aviadilon kaj ekkriis "Ŭaŭ, ĝi estas C919!", montrante sian entuziasmon vidi de proksime ĉindisvolvitan ĵetaviadilon.
+
+La vojaĝo
+
+La unua transdono de C919 al flugkompanio okazis en decembro 2022, kaj la kompanio China Eastern estas la inaŭgura kaj ĉefa uzanto de C919. COMAC, kiel ajna nova firmao fabrikanta aviadilojn, alfrontas malfacilojn por plirapidigi la produktadon, kaj ĝis nun transdonis malmultajn el ili. Kaj pro tio, ke ĉiuj volas sperti la ĉinan aviadilon, la flugoj kutime plenpleniĝas.
+
+Antaŭ ol eniri la flugmaŝinon, mi rimarkis ĝian rondan nazon kun glata integriĝo al la malantaŭa parto. Kiel nova kompanio, COMAC havis plenan liberecon krei modernan kaj funkcian dezajnon, celante kunigi la plej bonajn teknikojn kaj tendencojn en tiu sektoro por krei modernan kaj komfortan produkton. Ekzemplo estas la rektangula superkapa bagaĝujo, simila al tiuj uzataj de Airbus. Ĉi tiu dezajno optimumigas la bagaĝkapablon kaj akcelas la enir-elir-procedojn, kio estas grava avantaĝo en Ĉinio, kie pasaĝeroj preferas kunporti bagaĝojn en la kajuton.
+
+Mia dorsosako facile akomodiĝis al la spaco sub seĝo. USB-konektiloj kaj poŝoj kontribuas por ke la vojaĝo estu pli komforta.
+
+La kajuto, kun unu koridoro kaj tri sidlokoj je ĉiu flanko, surprizis min: bela kaj komforta, kun multe da spaco por la kruroj. Tamen, necesas emfazi, ke la interna aranĝo estas decidita de la flugkompanioj mem, kiuj elektas la pozicion de necesejoj, distancon inter sidlokoj, ktp. La sperto pri interna spaco povas varii de unu aviadilo al alia kaj tio ne rilatas al la fabrikanto aŭ modelo.
+
+Iel ajn, mi rimarkis, ke la faldeblaj tabletoj antaŭ la sidlokoj sekvas malsaman dezajnon ol tiu trovita de mi en aliaj aviadiloj. Mi trovis ilin tre oportunaj, eĉ havas subtenilon por poŝtelefono aŭ tabulkomputilo. Dum la flugo, kiam mi volis uzi mian komputilon por labori, la tableto ŝajnis iom malpli granda ol kutime, sed sufiĉa por la bezonoj de la pasaĝeroj.
+
+La spaco sub la antaŭa sidloko, kie mi metis mian dorsosakon, ŝajnis al mi taŭga kaj kun optimumigita spaco. Krome, la aviadilo havis bone lokitajn USB-konektilojn por ke pasaĝeroj ŝargu siajn aparatojn. La vojaĝo okazis trankvile kaj ni atingis Pekinon laŭ la antaŭvidita horaro.
+
+Ĉu kopio de Embraer?
+
+En Brazilo estas onidiro, ke la ĉina ĵetaviadilo estus "kopio" de la E-ĵet-oj de la brazila kompanio Embraer, sed tio evidente ne veras simple pro tio, ke C919 estas mallarĝ-korpusa aviadilo, kun ses sidlokoj povice, dum la E-ĵet-oj havas eĉ pli mallarĝan korpuson. La ideo de "kopio" baziĝas sur la fakto, ke Embraer havis kunentreprenon kun la ĉina AVIC en Ĉinio, sed ĉesis sian produktadon en la azia lando en 2016, kaj la unua flugo de C919 okazis en la sekva jaro. Pro tio, homoj spekulis, ke la ĉinoj, lerninte el brazilanoj kiel fabriki ĵetaviadilojn, elpelis la brazilanojn kaj ekfabrikis siajn proprajn produktojn.
+
+La vero, tamen, estas multe pli kompleksa. La kunentrepreno de Embraer en Ĉinio sin limigis al la muntado kaj atestado de la modelo ERJ-145, regiona ĵetaviadilo kun kapacito por 50 pasaĝeroj. La ĉinoj ricevis la partojn de la aviadiloj el Brazilo kaj muntis ilin en Ĉinio, ricevinte de la brazila kompanio nur la sciojn necesajn por muntado kaj atestado, kio certe estis granda helpo por la aeronaŭtika programo de Ĉinio, sed neniu evoluigas novan aviadilon nur per tio. Teknikaj detaloj montras, ke C919 havas pli da similecoj kun la ĵetaviadiloj de Airbus.
+
+En la jaroj 2000, la ERJ-145 estis la ideala aviadilo por la rapide kreskanta ĉina merkato, plena de itineroj kun nesufiĉe granda postulo por pravigi la uzon de pli grandaj aviadiloj. La rapida disvolviĝo de la lando kaŭzis konstatan kreskon en la kvanto de pasaĝeroj, sekve la ĉinaj kompanioj ekmendis la modelojn Boeing 737 kaj Airbus A320. La vendoj de ERJ-145 draste falis, kaŭzante ĉesigon de ĝia produktado en ĉinio pro manko de sufiĉaj mendoj.
+
+Samtempe, ĉinoj konsciis la geopolitikan riskon dependi je importitaj aviadiloj kaj pecoj, kaj decidis sendepende evoluigi siajn proprajn. Je tiu momento ili komencis projekti C919 por esti rekta konkuranto de la grandegaj firmaoj Boeing kaj Airbus, en kategorio kun kapacito supera al tiu de la brazilaj E-ĵet-oj.
+
+Konkurado kun Embraer povas okazi ĉe la limo inter la du kategorioj: la plej granda komerca ĵetaviadilo de la brazila kompanio, la E-195 E2, povas transporti plejmulte je 146 pasaĝeroj, proksima al la kapablo de la plej malgranda varianto de C919, kiu povas transporti 158. Sekve, en la merkato de ĵetaviadiloj por ĉirkaŭ 150 pasaĝeroj, ĉinoj kaj brazilanoj riskas iĝi konkurantoj en la estonteco, sed la ambicio de COMAC estas konstrui pli grandajn aviadilojn kaj defii la dupolusan konkuradon inter Airbus kaj Boeing en sektoroj, kie Embraer ne partoprenas.
+
+Survoje al brila estonteco
+
+Malgraŭ la sukceso de C919 en la ĉina merkato, COMAC ankoraŭ alfrontos grandajn defiojn ĝis kiam ĝiaj aviadiloj povos vere konkuri kun la du gigantoj de la internacia merkato. Unu problemo estas akiri la bezonatajn atestilojn de reguligaj agentejoj de fremdaj landoj, kio postulas longan tempon kaj plenumado de komplikaj postuloj.
+
+Manĝoj servataj en C919 estas en skatolo kun la nomo de la aviadilo
+
+Ĉi tiu defio estas pligrandigita de la internacia geopolitika streĉiĝo, kio povas kaŭzi prokraston en atestproceduroj kaj pliigi la riskon, ke la kompanio, dependa je okcidentaj komponantoj, estu trafita de sankciumoj. Ĉinoj evoluigas naciajn anstataŭaĵojn por la nune importitaj komponantoj de la aviadiloj, sed estos bezonata longa tempo ĝis kiam tiuj produktoj atingos la postulatan efikon kaj kvaliton.
+
+Ankaŭ estas teknikaj kaj komercaj defioj alfrontotaj, kiel la manko de tutmonda reto de postvenda subteno, la natura prefero de eblaj fremdaj klientoj por produktoj jam establitaj en la merkato, kaj la manko de datumoj pri la operaciumaj kostoj de malnovaj C919. Pro ĉi tiu kialo, COMAC unue devos solidiĝi en la ĉina merkato antaŭ ol serĉi pli altajn flugojn.
+
+Verkis kaj fotis: Rafael Henrique Zerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;">La 2-a Premio de Ora Granda Pando malfermiĝis en Chengdu - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Keenon -- Inteligentaj robotoj en Ĉinio: De estonta vizio al hodiaŭa realo
+
+**Published:** 2025-09-18
+
+**URL:** http://esperanto.china.org.cn/2025-09/18/content_118085620.htm
+
+**Categories:** Plej Freŝaj
+
+de BUI HAI MUNG
+
+Dum multaj jaroj, kiam oni parolis pri inteligentaj robotoj, en la menso aperis Japanio aŭ Usono -- la landoj longe famaj pro esploroj pri artefarita intelekto (AI) kaj aŭtomatigo. Tamen, kiel eksterlandano loĝanta kaj laboranta en Ĉinio, mi rimarkis alian realon. Ĉinio rapide leviĝas, fariĝante nova centro de la tutmonda industrio de intelektaj robotoj. Tio ne montriĝas nur en statistikoj aŭ esploraj raportoj, sed estas videbla en la ĉiutaga vivo de ĉi tiu lando. Post pli ol du jaroj en Ĉinio, mi jam alkutimiĝis vidi servajn robotojn liveri manĝaĵojn en restoracioj, hom-figurajn robotojn promeni inter homamasoj, aŭ eĉ gvidi vizitantojn. La evoluo jam ne restas ĉe koncepto, sed transformiĝis en konkretajn kaj praktikajn aplikojn en la vivo ĉi tie.
+
+Keenon
+
+-robotoj
+
+Unu el la plej konvinkaj pruvoj de tiu impresa rapideco estas la kompanio Keenon Robotics -- ĉina entrepreno kiu fariĝis mondgvidanto en la kampo de enkarniĝintaj servorobotoj. Sed antaŭ ol enprofundiĝi en la rakonto pri ĝi, necesas ĝenerala rigardo al la pejzaĝo de intelektaj robotoj en Ĉinio.
+
+La eksplodo de intelektaj robotoj en Ĉinio
+
+Ĉinio difinis AI kaj robotikon kiel strategiajn sektorojn, ligitajn al la plano "Ĉina fabrikado 2025" kaj la nacia vizio pri Industria 4.0. En la antaŭa jardeko, serio da politikoj estis lanĉitaj por subteni esploron, disvolvadon kaj novajn entreprenojn en la kampo de robotoj. En 2012, la Ministerio pri Scienco kaj Teknologio publikigis la "Specialan Planon pri Servorobotiko" ene de la 12-a Kvinjara Plano -- la unua fojo por Ĉinio sisteme antaŭenigi servorobotikon je nacia nivelo. Tio markis la transiron de pura scienca esploro al industriigo, kaj starigis la fundamenton por postaj dokumentoj kiel "Ĉina fabrikado 2025" kaj la "Plano pri disvolvado de la robotika industrio (2016–2020)". En 2017, la Ŝtata Konsilantaro de Ĉinio publikigis la "Planon por disvolvado de la nova-generacia AI", ŝlosila dokumento kiu unuafoje starigis AI kiel nacian strategion, desegnante la evoluan vojmapon por pli ol jardeko. Ĝi fariĝis la ĉefa gvidilo por ĉiuj AI-politikoj poste, inkluzive la iniciaton "AI+" kaj la lokajn programojn.
+
+XMAN-robotoj de
+
+Keenon
+
+Pli ol jardeko post tiuj komencaj politikoj, vizitante diversajn urbojn en Ĉinio, oni klare sentas veran "ondefikon de intelektaj robotoj". Tio ne estas hazarda evoluo, sed parto de longtempa strategio de la ĉina registaro pri AI kaj aŭtomatigo. En la lastaj jaroj, Ĉinio anoncis eĉ pli ambiciajn celojn. Laŭ la dokumento pri la efektivigo de "AI+" anoncita en la 21-a de aŭgusto 2025, ĝis 2027 la lando celas profundan integriĝon de AI en kernaj sektoroj, kun pli ol 70% penetra indico de inteligentaj terminalaj aparatoj kaj agentoj. Ĝis 2030, tiu proporcio atingos super 90%, kaj la "intelekta ekonomio" fariĝos grava pelilo de la ĉina kresko. Ĝis 2035, Ĉinio celas eniri novan fazon de "intelekta socio kaj ekonomio", provizante fortan subtenon por la baza modernigo de la lando.
+
+Por efektivigi tiun planon, Ĉinio lanĉis ampleksajn politikojn kiel impostaj instigoj por novigaj entreprenoj, ripozpunktoj de riskkapitalo por rilataj komencantaj firmaoj, kaj reto de altteknologiaj pilotaj zonoj en urboj kiel Ŝanhajo, Shenzhen kaj Hangzhou. Tiuj "eksperimentaj urboj" jam fariĝis vivantaj laboratorioj, kie servorobotoj funkcias en restoracioj, hoteloj, hospitaloj, kaj eĉ en publika transportado. Rezulte, Ĉinio ne nur produktas industrirobotojn por fabrikoj, sed ankaŭ rapide eniras la merkaton de servorobotoj en ĉiutaga vivo. Internaciaj teknologiaj eventoj okazigitaj en Ĉinio, kiel la Monda AI-Konferenco (WAIC) en Ŝanhajo, fariĝis scenejo por montri la plej novajn atingojn.
+
+Keenon
+
+: De komencanta firmao al monda gvidanto
+
+Fondita 2010 en Ŝanhajo, Keenon Robotics hodiaŭ estas konsiderata unu el la tutmondaj pioniroj pri servorobotoj. La diferenco de la kompanio, kompare kun multaj aliaj firmaoj, kuŝas en ĝia aliro: ne nur fokusiĝi je teknologia esploro, sed ankaŭ rekte enmeti robotikon en komercajn kaj ĉiutagajn aplikojn.
+
+Laŭ la plej freŝaj datumoj,
+
+Keenon
+
+jam liveris pli ol 100000 robotojn, ĉeestantajn en pli ol 600 urboj tra la mondo -- inkluzive Usonon, Japanion, la Korean Respublikon, kaj la landojn de Eŭropo kaj Mezoriento. La kompanio ankaŭ starigis internaciajn operaciajn centrojn de Los Angeles ĝis Tokio kaj Düsseldorf. Ĉio ĉi klare montras la globaligan ambicion de ĉinaj entreprenoj.
+
+Unu el la plej elstaraj produktoj estas la serio XMAN, precipe la hom-figura XMAN-F1, prezentita ĉe la Monda AI-Konferenco 2024. Dum vizito en la kompanio, mi vidis kiel tiu roboto plenumas taskojn antaŭe rezervitajn nur al homoj kiel farado de krevmaizaĵo, miksado de trinkaĵoj, aŭ purigado de ĉambroj. Impresis min ne nur la moveblo kaj fleksebleco, sed ankaŭ la maniero kiel la roboto integriĝas en homplena medio, sekure moviĝante tra mallarĝaj pasejoj kaj okupataj areoj. XMAN-F1 estis disvolvita laŭ la modelo ProS -- sistemo por "normigi taskojn laŭ pozicio". Alivorte,
+
+Keenon
+
+dividas la komercan medion (ekz. restoracioj, hoteloj) en specifajn taskojn kun normigitaj procezoj. La robotoj estas programitaj plenumi tiujn taskojn precize, tiel kreante "fermitaĵan servan ciklon". La granda avantaĝo de XMAN-F1 estas ĝia du-pieda moviĝo, ebligante superi ŝtupojn, deklivojn kaj eskalerojn -- ion, kion plej multaj radrilataj robotoj ne kapablas. Tiu paŝo estas ŝlosila por transiri de plataj spacoj al pli realismaj vivmedioj.
+
+La roborto XMAN-F1 servas trinkaĵojn kaj krevmaizaĵon.
+
+Robotoj fariĝas parto de la vivo
+
+Antaŭe robotoj estis ligitaj ĉefe al fabrikado aŭ laboratorio, sed hodiaŭ ili jam estas regula parto de hoteloj, restoracioj kaj hospitaloj. Mi mem plurfoje estis kondukita al tablo de roboto, ricevis manĝaĵojn alportitajn de ĝi, aŭ eĉ ricevis servajn instrukciojn. Tio montras, ke Ĉinio transformas intelektajn robotojn en novan socian infrastrukturon, ŝanĝante la manieron kiel homoj kaj maŝinoj kunekzistas.
+
+Keenon
+
+ne estas la sola ekzemplo, sed ĝi estas tipa pri kiel ĉinaj entreprenoj kapablas rapide skaliĝi -- de la vasta enlanda merkato ĝis la internacia sceno. Sinjoro Wanbin, estro pri internaciaj operacioj de
+
+Keenon
+
+, rimarkigis, ke la firmao unue enfokusigis sian atenton je la enlanda merkato. Nur kiam produktoj, datumoj kaj AI-teknologio sufiĉe maturiĝis, ĝi komencis disvolvi eksteren. Laŭ li, la sukceso devenas de pluraj faktoroj: unue, la rapidega disvolviĝo de AI en Ĉinio, kiu donis al startantoj egalan startpunkton kun la mondo sed kun pli granda rapido; due, la forta loka provizoĉeno; trie, la klara subteno de registaro je diversaj niveloj -- de urboj ĝis distriktoj, de ekonomiaj kaj komercaj komisionoj ĝis financaj politikoj. Subtenaj mezuroj pri kredito, eksporta asekuro kaj doganoj faciligis la internaciiĝon de produktoj. Kompreneble, la vojo ne estas facila. Atestoj, doganaj proceduroj kaj varaj kodoj postulas konstantan lernadon kaj adaptiĝon. Sed samtempe tio ankaŭ estas ŝanco por Ĉinio partopreni en la starigo de internaciaj normoj en la kampo de robotiko.
+
+De la sukceso de
+
+Keenon
+
+evidentiĝas: Ĉinio ne nur konstruis sian enlandan gvidpozicion, sed ankaŭ paŝon post paŝo firmigas sian rolon kiel tutmonda gvidanto pri inteligentaj servorobotoj.
+
+Ĉinio en nova rolo
+
+El la vidpunkto de internacia ĵurnalisto, mi vidas la ĉinan robotikan evoluon kiel unikan fenomenon. Unue, la rapideco: Ĉinio ne restis ĉe esploraj projektoj en laboratorioj, sed tuj aplikis robotikon en larĝan skalon kaj en ĉiutagan vivon, de grandaj modernaj urboj ĝis periferiaj regionoj. Due, la merkata amplekso: la grandega uzant-ekosistemo liveras idealan testan medion, kie robotoj estas senĉese provitaj, plibonigitaj kaj perfektigitaj. Trie, la tutmonda ambicio: ĉinaj firmaoj ne kontentiĝas nur pri enlanda merkato, sed aktive ekspansias al diversaj kontinentoj, konkurante kun Usono, Japanio kaj Eŭropo. La forta provizoĉeno kaj registaraj politikoj donas al ĉinaj produktoj pli grandan stabilecon en la internacia merkato.
+
+Tiuj tri faktoroj kune kreis potencojn, kiuj transformis Ĉinion de "postsekvanto" al unu el la gvidantoj de la tutmonda industrio de intelektaj servorobotoj.
+
+La estonteco jam ĉeestas
+
+Rigardante reen -- de la unuaj robotoj ĉe teknologiaj ekspozicioj ĝis hodiaŭ, kiam oni povas esti servata de roboto en restoracio -- la estonteco de kunvivado inter homoj kaj robotoj jam ne estas fora vizio. Ĉinio, per firmaoj kiel Keenon Robotics, aktive formas tiun estontecon.
+
+Tio ne estas nur rakonto pri teknologio, sed ankaŭ pri kunlaboro inter homoj kaj robotoj -- pri kiel ni povas krei pli inteligentan, pli oportunan kaj pli sekuran socion. Kaj laŭ mia propra sperto en Ĉinio, mi kredas, ke en la venontaj jaroj intelektaj robotoj ne nur fariĝos komuna vidaĵo en Ĉinio, sed ankaŭ disvastiĝos tra la tuta mondo.
+
+<span style="font-family: "times new roman"; font-size: 20px;">Mia unua vojaĝo per la ĉina aviadilo C919 - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Esenco de gvidlinioj de KPĈ por regado en Xinjiang
+
+**Published:** 2025-09-22
+
+**URL:** http://esperanto.china.org.cn/2025-09/22/content_118091095.htm
+
+**Categories:** Plej Freŝaj
+
+Blanka libro publikigita la 19-an de septembro de la Informa Oficejo de la Ŝtata Konsilantaro de Ĉinio eksplikis la esencon de la gvidlinioj de la Komunista Partio de Ĉinio (KPĈ) por regado en la Xinjiang-a Ujgura Aŭtonoma Regiono en la nova epoko.
+
+Laŭ la dokumento titolita "Gvidlinioj de KPĈ por regado de Xinjiang en la nova epoko: Praktiko kaj atingoj", la gvidlinioj prezentas profundan komprenon pri la situacio en Xinjiang kaj enkorpigas profundan pripenson pri la laboro rilata al la regiono fare de la Centra Komitato de KPĈ kun Xi Jinping kiel kerno.
+
+Laŭ la blanka libro, ili konsistigas kompletan sistemon de teorioj kun solida logiko kaj riĉa enhavo, kaj troviĝas ĉe la kerno de ĉiu laboro rilata al Xinjiang en la nova epoko.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;"><em>Keenon</em> -- Inteligentaj robotoj en Ĉinio: De estonta vizio al hodiaŭa realo - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Jingzhou-a Muzeo
+
+**Published:** 2025-09-22
+
+**URL:** http://esperanto.china.org.cn/2025-09/22/content_118091104.htm
+
+**Categories:** Plej Freŝaj
+
+Konstruita en 1958 oriente de la altgranda Kaiyuan-templo en la okcidenta parto de la Antikva Urbo Jingzhou, Jingzhou-a Muzeo nun estas nacia 4A-nivela turismejo, kiu kunligas ekspoziciojn, diskonigon kaj edukadon, konservadon de antikvaĵoj, protektadon kaj evoluon de la antikva urbo, arkeologian elfosadon kaj esploradon, konstruadon de arkeologia parko ktp. Kiel unu el la unuaj naciaj unuaklasaj muzeoj kaj publikaj institucioj, ĝi estas arta palaco de chu-kulturo kaj bela montrofenestro de la Antikva Urbo Jingzhou.
+
+Silka robo el la regno Chu
+
+Laka ujo kun ŝablono de sep leopardoj, drako kaj fenikso
+
+Dukapa tomboprotekta besto
+
+Jada masko el la Militantaj Regnoj
+
+Jingzhou-a Muzeo posedas pli ol 180 000 kulturajn antikvaĵojn, ĉefe el arkeologiaj elfosaĵoj. La kolektoj inkluzivas 561 unuagradajn naciajn antikvaĵojn, 1 542 duagradajn kaj 23 163 triagradajn. La plej valoraj inkluzivas prahistoriajn jadajn kaj ceramikajn bestojn, bronzaĵojn el la dinastioj Shang kaj Zhou, jadaĵojn el la reĝaj tomboj de la regno Chu en la Orienta Zhou-dinastio (770 a.K. -256 a.K.), glavojn de la reĝoj de la regno Yue de la Militantaj Regnoj (475 a.K.-221 a.K.), teksaĵojn kaj brodaĵojn el la tombo Mashan n-ro 1, bambuajn aŭ lignajn skribaĵojn kaj lakaĵojn el la regno Chu kaj la dinastioj Qin (221 a.K.-206 a.K.) kaj Han (206 a.K.-220), teksaĵojn kaj brodaĵojn el Okcidenta Han-dinastio (206 a.K.-25) ktp. Alia grava konservaĵo de la muzeo estas mumio tiom bone konservita, ke eblas vidi detalojn de siaj muskoloj kaj organoj, inkluzive de intesto kaj cerbo.
+
+Ĉimonate, okaze de la Chu-kultura Festivalo en Jingzhou, la muzeo preparis specialan ekspozicion pri antikvaj silkaĵoj elfositaj en antikvaj tomboj, inter kiuj estas la nura kompleta robo de la Militantaj Regnoj, kiu postvivis la tempon. Pro tio, ke tiuj silkaĵoj estas tre delikataj kaj altvaloraj, kelkaj el ili neniam antaŭe estis eksponataj al la publiko. Tiu speciala ekspozicio donas al la publiko unikan ŝancon vidi ilin.
+
+Jingzhou-a Muzeo, fenestro al la historio kaj kulturo de la antikva regno Chu, estas vizitinda de ĉinaj kaj eksterlandaj vizitantoj al Jingzhou. La jara vizit-nombro superas unu milionon, tial la institucio ludas gravan rolon en antaŭenigo de kulturo kaj civilizacia konservado.
+
+Raportis kaj fotis: Rafael Henrique Zerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;"><em>Keenon</em> -- Inteligentaj robotoj en Ĉinio: De estonta vizio al hodiaŭa realo - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# De Sun Wukong ĝis nubskrapuloj: Kultura vojaĝo en Lego-parko de Ŝanhajo
+
+**Published:** 2025-09-22
+
+**URL:** http://esperanto.china.org.cn/2025-09/22/content_118091187.htm
+
+**Categories:** Plej Freŝaj
+
+Infana mondo en la koro de Ŝanhajo
+
+Kiam la pordegoj de Lego-parko de Ŝanhajo malfermiĝis, aperis kolora mondo antaŭ miaj okuloj. Malgrandaj buntecaj Lego-brikoj jam delonge estas parto de la memoro de milionoj da infanoj tra la mondo, inkluzive de mi. Sed ĉi tie tiuj brikoj nun estas uzataj por rakonti tre ĉinajn rakontojn: Ekde Sun Wukong fluganta sur nuboj ĝis la nubskrapuloj de Ŝanhajo -- ĉio vivas tuj antaŭ mi. La spektaklo estas perfekta simbolo: De jarmila kultura heredaĵo ĝis tutmonda moderneco, de la legendo de Vojaĝo al la Okcidento ĝis la brilaj lumoj de Ŝanhajo. Ĉi tie lego-peco ne estas nur ludilo, sed ankaŭ komuna kreiva lingvo por rakonti diversajn rakontojn, kunligante pasintecon kaj nuntempon, Orienton kaj Okcidenton. Kaj ĝuste tiu interkruciĝo levas demandojn: Kial marko devenanta el norda Eŭropo, kun tutmonda karaktero kiel Lego, decidis rakonti ĉinajn rakontojn per la propra lingvo de Lego en Ŝanhajo? Kaj kio igas la version de Lego-parko en Ŝanhajo profunde malsama ol la aliaj Lego-parkoj en la mondo?
+
+Lego-homsimbolo en Lego-parko de Ŝanhajo
+
+La ĉinaj fragmentoj en la Lego-mondo
+
+La unua loko, kie mi vizitis, estas la areo Monkie Kid.  Ĝi estas la plej klara ekzemplo de tia "lokigo" en kreado. Sun Wukong -- popola rolulo tre konata de ĉinoj -- aperas ne nur kiel kultura simbolo, sed ankaŭ kiel gvidanto de interagaj spertoj: Pupteatro, scenejoj, spektakloj kun teknologio, kaj kunaj agadoj por familioj. Ne plu nur rakonto por legi, Monkie Kid transformiĝas en ilo por edukado kaj amuziĝo: Infanoj lernas pri kunlaboro, teamspirito kaj kuraĝo pere de praktikaj spertoj.
+
+Sun Wukong kun Ruyi-bastono
+
+Se Monkie Kid estas vojaĝo en la mito, tiam Mini World kondukas vizitantojn reen al realo -- sed je alia skalo. Ĉi tiu estas la koro de ĉiuj Lego-parkoj en la mondo, kaj en Ŝanhajo ĝi fariĝis la plej granda versio tutmonde, kun preskaŭ 20 milionoj da Lego-brikoj. De la Imperiestra Palaco en Pekino, la turo Orienta Perlo en Ŝanhajo, ĝis urboj en suda Ĉinio, ĉio estas rekreita tiel detale. Ĉiu anguleto enhavas rakonton: Lego-trajnoj trapasantaj la ponton de Nankino, boatoj flosantaj tra la kanaloj de Hangzhou, tradicia geedziĝo sur la riveroj de suda Ĉinio, aŭ Lego-turistoj fotantaj antaŭ Huangshan-montoj. Viziti Mini World donas al mi senton kvazaŭ vojaĝi tra Ĉinio.
+
+Ŝanhaja haveno
+
+La ĝenerala direktoro de Lego-parko klarigis, ke por realigi la celon transformi ĉi tiujn lokojn en Lego-parko kun forta ĉina karaktero, la kreiva teamo kun pli ol 100 homoj de Lego kaj Merlin dediĉis preskaŭ du jarojn al dezajnado. Sed tio, kio plej impresas min, ne estas la skalo, sed la kompleta "lokigo". Male al Mini World en Eŭropo, kie ofte aperas okcidentaj kasteloj, ĉi tie la fokuso estas sur ĉinaj pejzaĝoj, arkitekturo kaj simboloj, transformante ĝin en "viva Lego-mapo" de la lando. Mi kredas, ke ajna eksterlanda vizitanto, vidante ĉi tiujn Lego-scenojn de belaj ĉinaj pejzaĝoj, volos malkovri pli pri la ĉarmaj urboj de Ĉinio.
+
+Alia aparta sperto ĉi tie estas la boata itinero -- projekto aperanta por la unua fojo en Lego-parko. Ĝi trapasas ĉiujn 8 lokojn, inkluzive rekreon de urboj en suda Ĉinio. Alia parto montras pejzaĝojn laŭ Jangzio: Ekde la Potala Palaco en Xizang, Hongyadong kaj la Monumento de Liberigo en Chongqing, ĝis la rivero Huangpu. Tiuj scenoj ne nur estas rekreitaj per Lego-brikoj, sed ankaŭ portas mesaĝon, ke infanoj povas samtempe ludi, imagi, krei kaj lerni nature.
+
+Malgrandaj momentoj, grandaj memoroj
+
+Malantaŭ la vida efiko kaj la nombroj pri vizitantoj, ekzistas alia valoro, kiun Lego-parko de Ŝanhajo lerte eltiras: La emocia valoro. Kiam infano partoprenas en la "lernejo de veturado" kaj ricevas sian "unuan veturpermesilon en la vivo", laborantoj en Lego-parko organizas solenetan ceremonion por kuraĝigi, igante la sperton memorinda por la infano. Tiaj etaj, sed signifoplenaj detaloj troviĝas ĉie en la parko. Krome, Lego-parko ne estas nur ludejo por infanoj, ĝi estas spaco por ligiĝi inter gepatroj kaj infanoj. La bildo de familio kune konstruanta modelon, atendanta boateton transiri kanalon en suda Ĉinio, aŭ ĝoje krianta kiam rolulo aperas surscene -- ĉio nutras varmon, kunhavigon kaj kuneston. La rakontoj kiel Monkie Kid instruanta pri teamspirito ne estas malplenaj amuziĝoj; ili portas sociajn, edukajn kaj emociajn valorojn -- farante la sperton multe pli signifoplena por kaj infanoj kaj gepatroj.
+
+La Imperiestra Palaco de Pekino
+
+Kultura, ekonomia kaj socia signifoj
+
+Lego-parko de Ŝanhajo ne estas simple loko por infanoj ludi. Ĝi estas spaco por kultura dialogo. Ekde la brikoj inventitaj en Danio, hodiaŭ Lego rakontas ĉinajn rakontojn, en ĉina kunteksto, por kaj ĉinaj infanoj kaj internaciaj vizitantoj.
+
+Je pli profunda nivelo, Lego-parko de Ŝanhajo reflektas gravan tendecon: Tutmondiĝo ne egalas al unuigo. Sukcesa tutmonda marko ne nur alportas sian propran "memon", sed ankaŭ scias absorbi la esencon de la lando, kie ĝi enradikiĝas. Tiel la Lego-parko asimilis ĉinajn kulturajn simbolojn por krei unikan sperton en Ŝanhajo.
+
+La Ĉiela Templo de Pekino
+
+Ekonomie, Lego-parko de Ŝanhajo fariĝis nova motoro de kresko por la distrikto Jinshan kaj ĝiaj ĉirkaŭaj regionoj. La komerca strato apud la parko, kun 60% da restoracioj, 30% da podetalo kaj 10% da familiaj spertoj, estas ĉiam plena je klientoj. La lokaj hoteloj -- de Sheraton-hotelo ĝis malgrandaj gastdomoj -- registris rekordan loĝadon dum la somero. Laŭ taksoj, la pasaĝera fluo ĉe la rapidtrajna stacio Jinshanbei kreskis 2-3-oble kompare kun la tempo antaŭ la malfermo de la parko. En pli vasta perspektivo, la parko fariĝis katalizilo, kiu ŝanĝis Jinshan de antaŭe malmulte rimarkata loko ĝis nova celpunkto sur la turisma mapo de Ŝanhajo, altirante investojn en infrastrukturoj, servoj kaj laboroj.
+
+Lego-parko kaj Disney-parko de Ŝanhajo: Du diversaj rakontmanieroj
+
+Kiam oni parolas pri internaciaj amuzparkoj en Ĉinio, multaj tuj pensas pri Disney-parko de Ŝanhajo, kiu enradikiĝis en la urbo ekde 2016. Sed la apero de Lego-parko, kvankam je pli malgranda skalo, malfermis malsaman aliron: Ne nur enkonduki fremdan markon en Ĉinio, sed ankaŭ lasi tiun markon rakonti ĉinajn rakontojn.
+
+Stratoj en Nankino (miniatura Nankino)
+
+Disney-parko estas granda projekto kun investo de dekoj da miliardoj da dolaroj, konsiderata kiel "la enirpordo de Disney al Ĉinio". Delonge, Disney posedas tutmondan altiron, ligitan al figuroj kiel Mickey, Elsa aŭ Marvel-herooj. Ĉinoj iras al Disney-parko ĉefe por "tuŝi la Disney-revon", jam konatan tra la mondo. Lego-parko, male, estas pli malgranda, famili-orientita, speciale por infanoj inter 2-12 jaroj. Ĝia forto ne estas la tutmondaj roluloj, sed la interago kaj kreemo: Lego transformas la turismojn en "kreanto de enhavo", anstataŭ nur "konsumanto de rakonto".
+
+Kvankam la ŝanhaja Disney-parko ankaŭ lokiĝis, ĝi faras tion ĉefe per aldono de kelkaj ĉinaj elementoj, ekzemple la Sorĉita Rakontolibra Kastelo estas la plej granda en la mondo, kun aldonitaj ĉinaj arkitekturaj elementoj; aŭ la areo Ĝardeno de la Dek Du Amikoj transformis la 12 zodiakajn bestojn. Tamen, la kerno restas "Disney rakontas Disney". La ŝanhaja Lego-parko, aliflanke, uzas Lego kiel ilon por rakonti ĉinajn rakontojn. Vojaĝo al la Okcidento, urboj en suda Ĉinio, Potala Palaco en Xizang... ĉiuj estas konstruitaj per Lego-brikoj. Anstataŭ simple "loka ornamo", Lego-parko elektis lokiĝon sur la nivelo de kerna enhavo.
+
+En Disney-parko, la plejmulto de spertoj devenas de enmergiĝo en la jam ekzistanta Disney-mondo, vizitantoj fariĝis geprincoj, superherooj, aŭ eniras en famaj filmoj, kiujn ili jam konas. En Lego-parko, la sperto devenas de kunkreado kaj ludado, tiuj momentoj kiam gepatroj kaj infanoj kune kunestas, kreas kaj esploras.
+
+Persona perspektivo -- fremda ĵurnalisto inter Lego-brikoj
+
+Kiel vjetnama ĵurnalisto, mi jam longe konis la filmon Vojaĝo al la Okcidento; ĝi estas neforigebla parto de ĉiu vjetnama infano. Mi kredis, ke mi sufiĉe bone komprenis Sun Wukong. Sed kiam mi vidis la Lego-knabon kun ora ĉapelo, portantan Ruyi-bastonon, saltantan sur brila scenejo, mi rimarkis, ke tio estas tute nova maniero rakonti la rakonton.
+
+Potala Palaco
+
+Kompare kun Lego-parko en Eŭropo aŭ Usono, kie la fokuso estas kasteloj, piratoj aŭ okcidentaj superherooj, en Ŝanhajo mi trovis tute alian identecon: Profunde ĉinan, sed samtempe malferman al la tuta mondo. Tio konvinkis min, ke por internaciaj vizitantoj nekonataj kun la ĉina kulturo, Lego-parko de Ŝanhajo povas esti la plej amika pordo por eniri. Ĉar Lego jam estas tutmonde konata, kaj kiam tiuj brikoj rakontas ĉinajn rakontojn, ili fariĝis natura ponto inter kulturoj.
+
+Kiam mi forlasis la parkon posttagmeze, mi retrovis mian rigardon al la bildo de Lego-versia Sun Wukong staranta apud Lego-nubskrapantoj. Tiu vidaĵo resumas la mesaĝon, kiun Lego-parko de Ŝanhajo transdonas: Moderna kaj dinamika Ĉinio, kiu tamen fieras konservi sian propran kulturon. En la mondo plena je ŝanĝoj, kie kulturaj dividoj foje estas tro emfazataj, spertoj kiel Lego-parko de Ŝanhajo rememorigas nin, ke kreivo, imago kaj kulturo povas kunligi homojn translime. Por mi, la parko ne estas nur turisma celloko, sed ankaŭ simbolo -- loko, kie malgrandaj brikoj konstruas grandan ponton, kunligante Orienton kaj Okcidenton, pasintecon kaj nuntempon, miton kaj realecon.
+
+Verkis kaj fotis Bui Hai Mung
+
+<span style="font-family: "times new roman"; font-size: 20px;"><em>Keenon</em> -- Inteligentaj robotoj en Ĉinio: De estonta vizio al hodiaŭa realo - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Xinjiang: 70-jara evoluado favoras ĉiujn etnajn popolamasojn
+
+**Published:** 2025-09-23
+
+**URL:** http://esperanto.china.org.cn/2025-09/23/content_118093396.htm
+
+**Categories:** Plej Freŝaj
+
+Ĉi-jare estas la 70-a datreveno de la fondiĝo de Xinjiang-a Ujgura Aŭtonoma Regiono. Dum la pasintaj 70 jaroj, en Xinjiang okazis grandaj ŝanĝiĝoj. Kiam la regiono estis fondita en 1955, ĝia produktado estis nur 1 231 miliardoj da juanoj, kaj en 2024 ĝi superis 2 duilionojn da juanoj. Hodiaŭ, la popola bonfarto en Xinjiang daŭre pliboniĝas, kaj ĉiuj aferoj kiel dungado, edukado, sanaj servoj kaj socia asekuro disvolviĝas ĝenerale.
+
+En Xinjiang, en la nova epoko, ĉiuj etnoj kunlaboras unuece, antaŭenirante al la celo de la ĉina modernigo.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">De Sun Wukong ĝis nubskrapuloj: Kultura vojaĝo en Lego-parko de Ŝanhajo - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Ĉu bambuo povas anstataŭi plaston? Jes!
+
+**Published:** 2025-09-24
+
+**URL:** http://esperanto.china.org.cn/2025-09/24/content_118095289.htm
+
+**Categories:** Plej Freŝaj
+
+de Shi Hongxia
+
+En la lastaj jaroj Tianquan-gubernio sub Ya'an-urbo de Sichuan-provinco de Ĉinio plene utiligis siajn abundajn bambuajn resursojn kaj ellaboris tutan industri-ĉenon de bambuo. Sekvante la merkaton, subtenate de teknikoj, la gubernio komencis vojon de daŭripova disvolviĝo kun bela medio.
+
+Kiel reprezenta entrepreno pri bambua ekonomio de Tianquan, la Ya'an-a Agrikultura Kompanio Jiarun disvolvis 40 produktojn rilatajn al bambuŝoso, kiuj estas ŝatataj de konsumantoj. Yang Cunbo, estro de la kompanio, diris, ke la kompanio aĉetas de lokanoj pli ol 2 000 tunojn da freŝaj bambuŝosoj en printempo kaj aŭtuno, alportante al ĉiu familio enspezon de pli ol 5 000 juanoj ĉiujare. Krome, la bambufabriko liveras pli ol 60 laborpostenojn al lokanoj, kaj ĉiu laboristo gajnas pli ol 50 000 juanojn ĉiujare.
+
+La disvolviĝo de la bambua industrio ne nur alportas profiton al lokanoj, sed ankaŭ aldonas novan movforton en kamparan revigligon. Disvolvante la bambuan industrion, la gubernio solvis la problemon de malfacila forvendo de bambuŝosoj kaj helpas rilatajn industriojn kiel tiu de prilaborado, transportado kaj turismo. Tio kreis pli da dung-ŝancoj kaj antaŭenigas kamparan ekonomian prosperon.
+
+De manĝeblaj bambuŝosoj ĝis utiligo de bambuaj produktoj, la gubernio adaptiĝas al la mediprotekta tendenco kaj aktive efektivigas la koncepton "bambuo anstataŭ plasto", kreante bambuteknik-bazitan industriparkon. Per investa altiro, la industriparko alvenigis la unuan 100-mil-tunan industribazon ĉi-kampe en Ya'an.
+
+Sichuan-a Bambufibra Teknologia Kompanio Jiancen jam komencis sian projekton pri bambu-plasta muldado. Ĉi tiu verda projekto, kun totala investo de unu miliardo da juanoj kaj areo de 180 mil kvadrataj metroj, estos efektivigita en du fazoj. En la unua fazo, utiligante 80 mil kvadrataj metroj de ekzistantaj normigitaj fabrikaj konstruaĵoj kaj subtenaj instalaĵoj, oni konstruos produktolinion kun jara kapablo je 100-mil-tuna prilaborado por speciala muldado de bambufibro kaj konstruos produktolinion kun 20-mil-tuna jara kapablo por bambufibraj mulditaj produktoj. En la dua fazo oni plivastigos la industrian parkon pri bambubazitaj materialoj en proksima urbeto Shiyang, aldonante 80-mil-tunojn da produkt-kapacito de bambufibraj muld-produktoj, kio establos kompletan industrian ĉenon de bazaj materialoj ĝis finaj produktoj.
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Xinjiang: 70-jara evoluado favoras ĉiujn etnajn popolamasojn - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Xi Jinping vizitis reprezentantojn de diversaj rondoj de Xinjiang
+
+**Published:** 2025-09-24
+
+**URL:** http://esperanto.china.org.cn/2025-09/24/content_118095313.htm
+
+**Categories:** Plej Freŝaj
+
+Posttagmeze de la 23-a de septembro Xi Jinping, ĝenerala sekretario de la Centra Komitato de la Komunista Partio de Ĉinio, ĉina prezidanto kaj prezidanto de la Centra Milita Komisiono, vizitis reprezentantojn de diversaj etnogrupoj de Xinjiang-a Ujgura Aŭtonoma Regiono kaj esprimis sincerajn salutojn kaj bondezirojn al diversetnaj popolanoj de Xinjiang nome de la Centra Komitato de la Komunista Partio de Ĉinio, dezirante, ke ĉiuj solidarece klopodu por pli bone konstrui belan Xinjiang dum la ĉina modernigo.
+
+Xi Jinping salutis al la reprezentantoj kaj afable interparolis kun ili. Krome, li ankaŭ renkontiĝis kun respondeculoj de la aŭtonoma regiono, koncernaj departementoj kaj diversaj urboj, membroj de gvidantaroj de la Xinjiang-a Produkta kaj Konstrua Korpuso, reprezentantoj de kadroj subtenantaj Xinjiang, reprezentantoj de juraj kaj policaj oficistoj, patriaj reprezentantoj de religiaj rondoj kaj reprezentantoj de baznivelaj religiaj laboraj kadroj.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Xinjiang: 70-jara evoluado favoras ĉiujn etnajn popolamasojn - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Xi Jinping atingis Urumĉion kun delegacio por 70-jariĝo de Xinjiang-a Ujgura Aŭtonoma Regiono
+
+**Published:** 2025-09-24
+
+**URL:** http://esperanto.china.org.cn/2025-09/24/content_118095339.htm
+
+**Categories:** Plej Freŝaj
+
+Posttagmeze de la 23-a de septembro, Xi Jinping, ĝenerala sekretario de la Centra Komitato de la Komunista Partio de Ĉinio, ĉina prezidanto kaj prezidanto de la Centra Milita Komisiono, atingis Urumĉion per speciala aviadilo por ĉeesti la festajn eventojn memore al la 70-a datreveno de fondiĝo de la Xinjiang-a Ujgura Aŭtonoma Regiono. Xi Jinping kaj la delegacio estis varme bonvenigataj de diversetnaj popolamasoj de Xinjiang en la flughaveno.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Xinjiang: 70-jara evoluado favoras ĉiujn etnajn popolamasojn - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Xi Jinping aŭskultis laborraporton de partia komitato kaj registaro de Xinjiang
+
+**Published:** 2025-09-25
+
+**URL:** http://esperanto.china.org.cn/2025-09/25/content_118097213.htm
+
+**Categories:** Plej Freŝaj
+
+La 24-an de septembro Xi Jinping, ĝenerala sekretario de la Centra Komitato de la Komunista Partio de Ĉinio, ĉina prezidanto kaj ankaŭ prezidanto de la Centra Milita Komisiono, aŭskultis la laboran raporton de la partia komitato kaj la registaro de la Xinjiang-a Ujgura Aŭtonoma Regiono. Xi Jinping emfazis, ke Xinjiang devas plene kaj precize praktiki la partian strategion por la regado en nova epoko, persisti pri stabila progreso, ekvilibrigi disvolviĝon kaj sekurecon, firme teni la ĝeneralan celon de socia stabileco kaj longdaŭra paco kaj sekureco, daŭrigi plifortigon de la konscio de komunumo de la ĉina nacio kaj antaŭenigi la konstruadon de la komunumo, ankriĝi je la "kvin strategiaj pozicioj" asignitaj de la centra registaro, kunigi fortojn kaj insiste persistadi, klopodi por konstrui socialisman modernigitan Xinjiang, kiu estas unueca kaj harmonia, prospera kaj riĉa, civilizacie progresinta, kie la homoj vivas feliĉe kaj en bona ekologia medio.
+
+Xi Jinping diris, ke dum la 70 jaroj ekde la fondiĝo de la Xinjiang-a Ujgura Aŭtonoma Regiono, sub la gvidado de la Centra Komitato de KPĈ kaj per la forta subteno de la tutlanda popolo, la partia komitato kaj registaro de la regiono, unuigante kaj gvidante la kadrojn kaj popolamason de ĉiuj etnaj grupoj en la regiono, firme defendis nacian unuecon, etnan unuecon kaj socian stabilecon, daŭre antaŭenpuŝis ekonomian kaj socian disvolviĝon. Surbaze de la rimedoj kaj industria fundamento, oni devas aktive esplori altkvalitan disvolvan vojon konforman al la trajtoj de Xinjiang.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Xi Jinping atingis Urumĉion kun delegacio por 70-jariĝo de Xinjiang-a Ujgura Aŭtonoma Regiono - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Xi Jinping vizitis ekspozicion pri atingoj de Xinjiang dum 70 jaroj
+
+**Published:** 2025-09-25
+
+**URL:** http://esperanto.china.org.cn/2025-09/25/content_118097214.htm
+
+**Categories:** Plej Freŝaj
+
+Antaŭtagmeze de la 24-a de septembro Xi Jinping, ĝenerala sekretario de la Centra Komitato de la Komunista Partio de Ĉinio, ĉina prezidanto kaj prezidanto de la Centra Milita Komisiono, vizitis la ekspozicion pri atingoj de la 70-jara datreveno de fondiĝo de la Xinjiang-a Ujgura Aŭtonoma Regiono en la Urumĉia Kultura Centro.
+
+La ekspozicio panorame montras la brilajn atingojn akiritajn de diversaj etnogrupoj en Xinjiang sub firma gvidado de la Komunista Partio de Ĉinio kaj danke al forta subtenado kaj helpado de diversaj lokoj de la lando per unueco, diligenta laborado kaj persistaj klopodoj.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Xi Jinping atingis Urumĉion kun delegacio por 70-jariĝo de Xinjiang-a Ujgura Aŭtonoma Regiono - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Xi Jinping ĉeestis festan ceremonion por 70-a datreveno de fondiĝo de Xinjiang-a Ujgura Aŭtonoma Regiono
+
+**Published:** 2025-09-25
+
+**URL:** http://esperanto.china.org.cn/2025-09/25/content_118097288.htm
+
+**Categories:** Plej Freŝaj
+
+Antaŭtagmeze de la 25-a de septembro Xi Jinping, ĝenerala sekretario de la Centra Komitato de la Komunista Partio de Ĉinio, ĉina prezidanto kaj ankaŭ prezidanto de la Centra Milita Komisiono, ĉeestis la festan ceremonion por la 70-a datreveno de fondiĝo de Xinjiang-a Ujgura Aŭtonoma Regiono. Li ĉeestis kune kun reprezentantoj de diversaj etnoj, rondoj kaj popolamasoj. La partoprenantoj varme celebris la datrevenon.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Xi Jinping atingis Urumĉion kun delegacio por 70-jariĝo de Xinjiang-a Ujgura Aŭtonoma Regiono - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Tutmonda junularo malkovras jangzian basenon
+
+**Published:** 2025-09-25
+
+**URL:** http://esperanto.china.org.cn/2025-09/25/content_118097565.htm
+
+**Categories:** Plej Freŝaj
+
+Kadre de la programo GYLD (Tutmonda Dialogo de Junaj Gvidantoj), lanĉita en 2020 kiel platformo por interŝanĝoj inter la junularoj de Ĉinio kaj aliaj landoj, estis nova evento nomita Jangzia Turneo de GYLD, kun la celo liveri al gejunuloj de la tuta mondo la ŝancon konatiĝi kun la kulturo kaj historio de jangzia baseno.
+
+Junaj talentuloj de GYLD-programo interŝanĝas ideojn kaj spertojn kun wuhan-aj profesoroj kaj studentoj, la 23-an de septembro
+
+La inaŭgura turneo ĉe Jangzio okazis en Hubei-provinco, en la urboj Jingzhou kaj Wuhan, kunorganizita de Akademio de Studoj pri Nuntempa Ĉinio kaj la Mondo, Hubei-a Amaskomunika Grupo kaj la Jangzia Intituto pri Kulturo. Ĝin partoprenis 14 junuloj el Argentino, Brazilo, Egiptio, Hungario, Irano, Italio, Nederlando, Pakistano, Peruo, Rusio kaj Usono, kaj unu el Ĉinio.
+
+Du specialaj gastoj, Ali Samaan, ministro pri povigo de junularo, informado kaj artoj de Maldivoj, kaj Daniel Filmus, direktoro de Iber-Amerika Centro por Esploroj en Scienco, Teknologio kaj Novigo kaj eksa ministro pri scienco, teknologio kaj novigo de Argentino, partoprenis kelkajn aktivaĵojn de la turneo kaj interagis kun la gejunuloj.
+
+Konatiĝo kun Chu-kulturo
+
+Konstruita en 1958, Jingzhou-a Muzeo fariĝis ampleksa historia muzeo klasifikita kiel tutlanda 4A-nivela turismejo. Ĝi konservas pli ol 180 mil kulturajn antikvaĵojn, kaj plejparto el ili kolektitaj per arkeologiaj elfosadoj. Dum vizito al tiu muzeo, la genuloj vidis portempan ekspozicion, kiu unuafoje prezentis al la publiko tre altvalorajn antikajn vestaĵojn, inkluzive de la nura kompleta robo konservita de la Militantaj Regnoj (475-221 a.K.). Ili ankaŭ konatiĝis kun lakaĵoj, jadaĵoj kaj skribaĵoj sur bambuo kaj ligno, fundamentaj elementoj de chu-kulturo.
+
+Vestitaj en tradiciaj vestaĵoj de la Militantaj Regnoj, junaj talentuloj de GYLD-programo pozas por foto antaŭ la antikva pordego de Jingzhou.
+
+Sekvatage, ili vizitis laboratoriojn dediĉitajn al konservado kaj rekuperado de antikvaĵoj, pli specife lakaĵoj, silkaĵoj kaj skribaĵoj sur bambuo, kaj interparolis kun fakuloj, kiuj sin dediĉas pri konservado kaj restaŭro de antikvaĵoj. Sekve ili spertis chu-stilan brodadon, unu el la plej antikvaj brodartaj skoloj de Ĉinio, kaj la arton de skribado sur bambuo. Alia nemaltrafebla aktivaĵo estis vizito al la antikva urbomuro de Jingzhou, konata turismejo de la urbo. Tie la junuloj ankaŭ havis la ŝancon sperti tradiciajn vestaĵojn de la Militantaj Regnoj kaj fotiĝi tiel vestitaj.
+
+Vespere de tiu sama tago, okazis la inaŭgura ceremonio de Chu-Kultura Festivalo, belega spektaklo televide elsendita vive al la tuta provinco Hubei. Krom multaj altnivelaj artprogramoj, la ceremonio ankaŭ havis prezentaĵojn per flugrobotoj kaj finiĝis per belega prezento de artfajraĵoj.
+
+"La longdaŭra heredo de chu-kulturo eble estas pli forte evidenta en la legendaj strategiistoj kaj intelektulojn, kiujn ĝi kreis, kiel Zhuge Liang kaj Guan Yu, kies saĝo daŭre inspiras admiron kaj respekton," resumis la egipto Mehad Moussa, lektoro pri transkulturaj studoj ĉe Nordokcidenta Universitato en Shaanxi-provinco.
+
+Avangardo en scienc-tekniko
+
+Multaj urboj laŭlonge de Jangzio apartenas al avangardo de scienc-teknika disvolvado, kun atingoj en sektoroj kiel konstruado de saĝaj urboj kaj aplikado de avangardaj teknologioj. En Jingzhou, la eksterlandanoj vizitis Lumturan Fabrikon de la ĉina firmao pri hejmaj aparatoj Midea. Lumturaj Fabrikoj estas ne nur aŭtomatigitaj, sed ankaŭ saĝaj, alprenante ciferecajn teknologiojn kiel artefarita intelekto (AI), grandaj datumaroj, Interreto de Aferoj (IoT) kaj robotiko por transformi negocmodelojn, pliigi efikecon, plibonigi daŭripovecon kaj optimumigi proviz-ĉenojn.
+
+La fabriko de Midea entenas altgradan aŭtomatigon, kun robotoj farantaj preskaŭ la tutan laboron kun minimuma homa interveno. AI optimumigas la tutan procezon de produktado kaj antaŭvidas paneojn, kio optimumigas la bontenadan laboron kaj reduktas kostojn. Kameraoj inspektas la produktojn kun multe pli alta precizeco kaj rapido ol la homa okulo por atesti ilian kvaliton. La fabriko ankaŭ aŭtomate ĝustigas produktadon realtempe surbaze de materiala havebleco, mendoj de klientoj kaj problemoj en loĝistika ĉeno. Ĉiu produktadlinio povas fari malsamajn produktojn sen longa interrompo por reordigo. La efiko de tiu noviga modelo rezultas en signifa ŝparado de materialoj kaj elektro.
+
+Konservado de la jangzia delfeno
+
+Survoje al Wuhan, la delegitaro haltis ĉe la Nacia Naturrezervejo por Jangzia Delfeno, en la urbo Shishou. Fondita en 1992, la naturrezervejo estas la unua naturrezervejo en la mondo pri protektado de dolĉakvaj delfenoj. Gravas klarigi, ke la manko de dorsonaĝilo en la jangzia delfeno tute ne rilatas al homa agado, ĝi estas natura trajto de tiu ĉi specio.
+
+Delfenino kaj la bebo estas prizorgataj en la bredejo. Post kelkaj jaroj, kiam la ido estos kapabla memstare sin vivteni, ili estos liberigitaj en riveron.
+
+La rezervejo celas protektadon de la jangziaj delfenoj en la rivera parto de Shishou, translokan protektadon kaj sciencan esploradon pri delfenoj en la malnova riverbranĉo Tian'e-zhou, kaj la provojn de artefarita bredado kaj reproduktado de delfenoj. De kvin delfenoj en 1990, la populacio surloke evoluis al ĉirkaŭ 80 nun, kaj tio signas gravan trarompon en la reproduktado de delfenoj en artefarita bredmedio. Ĝi ankaŭ estas la nacia naturrezervejo, kiu unua liveras delfenidojn al aliaj rezervejoj por transloka protektado.
+
+Wuhan, urbo de pontoj
+
+Konata kiel riverurbo, Wuhan estas plena de riveroj kaj lagoj kaj havas preskaŭ 700 pontojn, kiuj donas al ĝi la kromnomon "pontoĉefurbo". En la Muzeo pri Pontoj de Wuhan, la gejunuloj konis la historion kaj evoluadon de teknikoj por pontokonstruado per modeloj, bildoj, 5D-filmoj kaj VR-teknologio.
+
+"La vizito al la muzeo pri pontoj rememoris min pri tio, ke la programo GYLD temas pri konstruado de pontoj. Pontoj inter foraj landoj kaj popoloj el malsamaj ŝtatoj. Pontoj inter tradicia kulturo de la pasinto kaj la trarompaj teknologioj de la estonteco. Pontoj inter la kortuŝa risko je malapero de biodiverseco kaj la espero alportita de sukcesa iniciato por ĝia protekto," deklaris Nicki Johnson, entreprenanto kaj tradukisto, kiu antaŭ 20 jaroj transloĝiĝis al Ĉinio el Usono.
+
+La unua ponto konstruita sur Jangzio en Wuhan, rigardata el la pinto de Flavgrua Turo
+
+Post vizito al la muzeo, la gejunuloj sukcesis vidi de proksime la unuan ponton sur Jangzio en Wuhan, kiu estas ankaŭ la unua duetaĝa kaj la unua aŭtofervoja ponto super Jangzio, konstruita kunlabore kun Sovetio post la fondiĝo de nova Ĉinio kaj inaŭgurita en 1957, kaj ankaŭ aliajn pontojn, kiuj kune montras la evoluon de pontokonstruado en Ĉinio. En la moderna pendotrajno kun travidebla grundo en la Optika Valo de Wuhan, la gejunuloj spertis la disvolvadon de ĉina teknologio pri urba transporto kaj admiris la panoraman rigardon de la ĉirkaŭaĵoj.
+
+Ili ankaŭ vizitis la Flavgruan Turon, unu el la plej famaj antikvaj konstruaĵoj en la urbo Wuhan kaj samtempe unu el la kvar famaj turoj de Ĉinio. La originala turo estis konstruita dum la Tri Regnoj (220-280), kaj ĝi estis detruita kaj rekonstruita pli ol dekfoje en la historio. La nuna estis finkonstruita en 1985.
+
+La evento finiĝis per debato inter la partoprenantoj de la turneo, kelkaj studentoj el wuhan-aj universitatoj kaj kelkaj profesoroj. En la debato, ili interŝanĝis agrablajn rememorojn kaj interesajn pensojn pri la spertoj kaj scioj alportitaj de la vizito al Hubei.
+
+Raportis kaj fotis: Rafael Henrique Zerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;">Xi Jinping vizitis ekspozicion pri atingoj de Xinjiang dum 70 jaroj - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Mi spertis tradician vestaĵon de Chu-regno!
+
+**Published:** 2025-09-26
+
+**URL:** http://esperanto.china.org.cn/2025-09/26/content_118098873.htm
+
+**Categories:** Plej Freŝaj
+
+Chu-regno (1030-223 a.K.) estis potenca kaj kulture distinga regno ĉe la meza kaj suba fluoj de Jangzio, konata pro siaj misteraj kaj florkreskaj artaj formoj, kiuj influis ankaŭ ĝiajn vestaĵojn.
+
+Dum vizito al la urbo Jingzhou, iama ĉefurbo de Chu-regno, mi havis la ŝancon sperti tradiciajn vestaĵojn de Chu-regno, kaj elektis unu el la periodo Militantaj Regnoj (475-221 a.K.), la lasta fazo de la ekzisto de Chu-regno, konkerita de Qin-dinastio (221-206 a.K.) nur du jarojn antaŭ la fina unuiĝo de Ĉinio en 221 a.K. La vestaĵoj de Chu-regno montris kulturan distingecon kompare kun tiuj de aliaj regnoj de centra Ĉinio en tiu epoko. La stilo de Chu-vestaĵoj estis pli ornam-riĉa, inspirita de mitologio, kaj emfazis molajn kurbojn kaj movon, kun unikaj trajtoj kiel kompleksaj brodaĵoj.
+
+Raportis: Rafael Henrique Zerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;">Xi Jinping ĉeestis festan ceremonion por 70-a datreveno de fondiĝo de Xinjiang-a Ujgura Aŭtonoma Regiono - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Vivo sub la Granda Muro
+
+**Published:** 2025-09-26
+
+**URL:** http://esperanto.china.org.cn/2025-09/26/content_118099033.htm
+
+**Categories:** Specialaj Temoj
+
+
+
+
+---
+
+# Yu Kongjian, patro de spongaj urboj, pereis en akcidento en Brazilo
+
+**Published:** 2025-09-26
+
+**URL:** http://esperanto.china.org.cn/2025-09/26/content_118099436.htm
+
+**Categories:** Novaĵoj
+
+Vespere de la 23-a de septembro laŭ la loka tempo, malgranda aviadilo kraŝis en la urbo Aquidauana, la subŝtato Suda Matogroso en la mezokcidenta regiono de Brazilo. Ĉiuj kvar homoj en la aviadilo pereis, inkluzive de la ĉina arkitekto kaj profesoro ĉe la Pekina Universitato Yu Kongjian. En la sekva tago, brazila prezidento Luiz Inácio Lula da Silva esprimis sian kondolencon al la viktimoj de la akcidento per sociaj retejoj.
+
+La akcidento okazis en la granda marĉejo Pantanalo, fama turismejo de Brazilo. Kun profesoro Yu en la aviadilo ankaŭ estis la brazila kunreĝisoro Luiz Ferraz, la dokumentfilma reĝisoro Rubens Crispino kaj la piloto Marcelo Pereira de Barros. Laŭ informoj, profesoro Yu Kongjian estis en Pantanalo por filmi la dokumentarion "Sponga Planedo".
+
+La 24-an de septembro, brazila prezidento Lula publikigis noton en sociaj retejoj esprimante kondolencon al la viktimoj de la akcidento. Li deklaris, ke en epoko de kreskantaj defioj pro klimatŝanĝiĝo, la koncepto de spongaj urboj proponita de Yu Kongjian fariĝis modelo por la tuta mondo. Li diris, ke ĉi tiu koncepto, kiu egale priatentas vivkvaliton kaj mediprotekton, estas precize tio, kion la homaro deziras kaj bezonas por la estonteco.
+
+La brazila vicprezidento Geraldo Alckmin ankaŭ esprimis profundan bedaŭron pri la viktimoj en sociaj retejoj, kaj diris, ke Yu Kongjian estis konata pro sia propono de la koncepto "spongaj urboj", farante elstaran kontribuon al daŭripova urbanizado kaj protekto de biodiverseco. Li diris, ke la spirita heredaĵo de Yu daŭre inspiros ĉiujn, kiuj dediĉas sin al mediprotektaj aferoj.
+
+Yu Kongjian, naskiĝinta en 1963 en la urbo Jinhua de la provinco Zhejiang, magistriĝis pri pejzaĝa arkitekturo ĉe la Pekina Universitato de Forstado en 1987 kaj doktoriĝis pri dezajno ĉe la usona Universitato Harvardo en 1995. Post reveno al Ĉinio en 1997, li fondis la fakultaton de arkitekturo kaj pejzaĝa dezajno ĉe la Pekina Universitato kaj servis kiel ĝia unua dekano. Li ankaŭ fondis la internacian premiitan revuon "Landscape Architecture Frontiers" (Limoj de Pejzaĝa Dezajno) kaj servis kiel ĝia ĉefredaktoro, kaj fondis la unuaklasan dezajnan institucion Turenscape.
+
+En 2012 li estis elektita kiel Honora Membro de la Usona Societo de Pejzaĝaj Arkitektoj (ASLA Fellow); en 2016 li estis elektita kiel Membro de la Usona Akademio de Artoj kaj Sciencoj; en 2020 li ricevis la plej altan honoron de la Internacia Federacio de Pejzaĝaj Arkitektoj (IFLA), la premion IFLA Sir Geoffrey Jellicoe, agnoskante lian "elstaran kaj profunde signifan kontribuon al la plibonigo de la socia kaj loĝa medio kaj la homa bonfarto, kaj lian potencan antaŭenpuŝon de la disciplino kaj industrio"; en 2021 li ricevis la plej altan premion en la kampoj de mondetiko kaj ekologia civilizo, la premion John Cobb por la Komuna Bono (John Cobb Common Good Award).
+
+En 2023 li ricevis la Usonan Nacian Dezajnan Premion; samjare Yu Kongjian elstaris inter pli ol 300 tutmondaj kandidatoj kaj ricevis la plej altan premion en la mondo de pejzaĝa dezajno kaj ĝarden-arkitekturo, la dujaran premion Oberlander (Oberlander Prize), agnoskante lian "eksterordinaran talenton, kreivon kaj kuraĝon, vizion kaj grandan volumon de realigitaj verkoj en kaj urbaj kaj kamparaj medioj". Li antaŭe estis kunhonorita de la Centra Organiza Fako, la Centra Diskoniga Fako kaj la Centra Unueca Fronta Fako per la premio por Atingo de Studentoj Revenintaj el Eksterlando, kaj ricevis la Unuan Elstaran Entreprenan Premion por Profesiaj Transmaraj Ĉinoj de la Ŝtata Oficejo por Aferoj de Transmaraj Ĉinoj.
+
+Yu Kongjian rigardis urban kaj pejzaĝan dezajnon kiel "arton de vivtenado". Liaj teoria esplorado, instruado kaj praktiko kontribuis al la agnosko de pejzaĝaj arkitektoj kiel formala profesio en Ĉinio kaj antaŭenpuŝis la establon de la disciplino de pejzaĝa dezajno en la lando. Liaj reprezentaj verkoj inkluzivas la parkon Qijiang en la urbo Zhongshan, Guangdong-provinco, la Rubandan Parkon en Qinhuangdao, Hebei-provinco, kaj la Grupli-malsekejan Parkon en Harbino, Heilongjiang-provinco.
+
+Esperantigis: Rafael Henrique Zerbetto
+
+Fonto: 人民网
+
+<span style="font-family: "times new roman"; font-size: 20px;">Mi spertis tradician vestaĵon de Chu-regno! - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Nacia Naturrezervejo por Jangzia Delfeno en Hubei
+
+**Published:** 2025-09-29
+
+**URL:** http://esperanto.china.org.cn/2025-09/29/content_118102214.htm
+
+**Categories:** Plej Freŝaj
+
+La Nacia Naturrezervejo por Jangzi Delfeno en Tian'e-zhou troviĝas en la urbo Shishou de la provinco Hubei en la meza fluo de Jangzio en Ĉinio. En 1992, ĝi estis oficiale establita per la aprobo de la Ŝtata Konsilio, fariĝante la unua naturrezervejo en la mondo por la transloka protektado de jangziaj delfenoj. En 2006 la provinca instituci-aranĝa komitato de Hubei aprobis ĝin kiel institucion de la ĉefa oficeja nivelo, sub rekta administrado de la Buĝeto de Akvaj Produktoj de Hubei. En 2019 ĝi transdoniĝis al la Buĝeto de Forstado de Hubei.
+
+Esploristo manĝigas jangzian delfenon en la rezervejo
+
+La rezervejo kovras 89-kilometran sekcion de Jangzio ĉe Shishou kaj 21-kilometran akvejon de la malnova riverbranĉo Tian’e-zhou, kun totala areo de 217.98 kvadrataj kilometroj. Laŭ rilataj leĝoj kaj regularoj, ĝiaj taskoj inkluzivas la lokan protektadon de jangzia delfeno en la rivera parto de Shishou, la translokan protektadon kaj sciencan esploradon de la delfenoj en la malnova riverbranĉo Tian'e-zhou, kaj la provojn de artefarita bredado kaj reproduktado de delfenoj en kradkaĝoj. Ekde 1990 kvin delfenoj estis enmetitaj tien por provbredado, kaj nuntempe ĉirkaŭ 80 delfenoj vivas tie, kun pli ol 8 junaj naskiĝantaj ĉiujare. Grupo kapabla memsubteni sin kaj reproduktiĝi estas baze establita. Spertuloj el Ĉinio kaj aliaj landoj atestis, ke ĉi tiu estas nuntempe la sola sukcesa ekzemplo en la mondo de transloka protektado de la specio. La 22-an de majo 2016 la rezervejo sukcesis artefarite reprodukti delfenojn bredatajn en kaĝoj, reprezentante la unuan kazon en Ĉinio kaj pioniran atingon tutmonde, kio signas gravan trarompon en la reproduktado de delfenoj en artefarita bredmedio. Samtempe ĝi estas la nacia naturrezervejo, kiu unue liveris delfenajn idojn al aliaj rezervejoj por transloka protektado.
+
+Vizitantoj observas Jangzion en la naturrezervejo. Tiu punkto estas tre favora por observado de jangziaj delfenoj.
+
+La rezervejo montras elstarajn trajtojn en sia laboro, atingis signifajn rezultojn kaj ricevas tre altan takson pri influo kaj taksado, posedante la neanstataŭigeblan "kvarunikecon". Unue, la laboro pri transloka protektado de delfenoj estas laŭdita de spertuloj enlande kaj eksterlande kiel la sola sukcesa ekzemplo de transloka delfen-protektado en la mondo. Due, en la konkreta protektada procezo, la rezervejo fariĝis la sola kompleta esplorbazo en la mondo por studado de dolĉakvaj delfenoj. Trie, laŭ la longjara monitorado de la Instituto de Hidrobiologio de la Ĉina Akademio de Sciencoj, la populacio de delfenoj en la malnova riverbranĉo Tian'e-zhou estas la sola transloke protektata populacio de jangziaj delfenoj, kiu daŭre kreskas. Kvare, la 25-an de aprilo 2023 la rezervejo realigis eksperimentan remeton de transloke protektataj delfenoj reen al Jangzio, fariĝante la sola rezervejo, kiu establis kompletan fermitan ciklon de loka protektado, transloka protektado, artefarita bredado kaj revenigo al la naturo.
+
+Bredejo, kie oni prizorgas kaptitajn delfenojn. Tie oni ĉefe prizorgas delfenojn vunditajn aŭ kun bebo por ilia protektado, por poste redoni ilin al la naturo.
+
+D-ro Hao Yujiang, help-esploristo ĉe la Instituto de Hidrobiologio de la Ĉina Akademio de Sciencoj, dediĉis pli ol 20 jarojn al esplorado kaj konservado de la jangzia delfeno. Liaj esplorkampoj inkluzivas reproduktan fiziologion, populacian ekologion kaj konservobiologion de etaj delfenoj. Li entreprenis profundajn studojn pri la reproduktaj modeloj de la jangzia delfeno, liverante esencan teknikan subtenon por bredado en kaptiteco kaj konservado de sovaĝaj populacioj. Li publikigis pli ol 80 esplorajn artikolojn en diversaj enlandaj kaj internaciaj akademiaj revuoj.
+
+Vizitantoj konas pri la loka biodiverseco en la naturrezervejo.
+
+Krom esplorlaboro, li aktive partoprenas en praktikaj agadoj por protekti la jangzian delfenon, inkluzive de organizado de trejnadoj pri biologio kaj konservado, kunordigado de projektado por transloka protektado, gvidado de sciencaj enketoj, kaj partopreno en habitata protektado kaj rezerveja planado. Krome, li servas kiel plenuma vic-ĝenerala sekretario de la Fonduso por Konservado de Jangzia Delfeno (wuhan-a sekcio), membro de la Ĉina Komitato de Profesiaj Akvarioj, kaj membro de la Kunligita Planado por Konservado de Jangzia Delfeno.
+
+Raportis: Rafael Henrique Zerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;">Tutmonda junularo malkovras jangzian basenon - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Senkontanta vivo en Ĉinio: De poŝ-monujoj ĝis financaj super-aplikaĵoj
+
+**Published:** 2025-09-30
+
+**URL:** http://esperanto.china.org.cn/2025-09/30/content_118104000.htm
+
+**Author:** Bui Hai Mung
+
+**Categories:** Plej Freŝaj
+
+Ĉu en la brilega metropolo Ŝanhajo aŭ en malproksima vilaĝo de Gansu-provinco, la kontanta monujo fariĝis unu el la plej facile forgeseblaj aĵoj? La agoj elpreni biletojn, kalkuli monon aŭ atendi restmonon jam fremdiĝis por cent milionoj da ĉinoj. Anstataŭe, unu simpla ago sufiĉas: Malfermi la aplikaĵon, skani QR-kodon, kaj la transakcio finiĝas en nur kelkaj sekundoj.
+
+De malaperintaj monujoj ĝis fekunda grundo por revolucio
+
+La kultura puŝo, kiu ŝanĝis la ludon
+
+En Ĉinio, la kutimo de "ruĝa koverto" havas historion de jarmiloj -- simbolo de bonŝanco kaj bondeziro pere de brile ruĝaj kovertoj kun mono dum festoj. Tencent-firmao montris genian sentemon transformante tiun tradicion en cifereca epoko.
+
+En la interno de la super-aplikaĵoj -- La konkero de pagoj ĝis financaj imperioj
+
+Alipay, ekde sia origino kiel sekureca ilo por retkomerco, elektis la vojon transformiĝi al mini-financa centro. La plej strategia paŝo estis la lanĉo de Yu'ebao en 2013. Esence, temis pri monfonduso kun tre simpla mesaĝo: "Via neuzata mono en Alipay aŭtomate produktos profiton." La sukceso kuŝis en solvo de antikva paradokso: Uzantoj volis, ke ilia mono generu profitojn, sed ankaŭ restu tuje uzebla por elspezoj. Yu'ebao forigis tiun baron. Ene de malpli ol unu jaro ĝi fariĝis la plej granda monfonduso en la mondo,  atingante ĉe sia pinto 1.69 mil miliardojn da juanoj (ĉirkaŭ 268 miliardoj da usonaj dolaroj), allogante cent milionojn da malgrandaj investantoj, al kiuj la tradicia bank-sistemo neniam povas aliri. La plej alta interezo ĉe sia pinto atingis ĝis 5-6%, kaj nun restas nur ĉirkaŭ 1.25-2%. De tie, Alipay senĉese grandigis siajn limojn. Ant Huabei ebligis "aĉeti nun, pagi poste", funkcianta kiel virtuala kreditkarto por la juna generacio; servoj pri asekuro, investado eĉ rezervoj de kuracaj vizitoj aŭ pagoj de trafikaj monpunoj estis integritaj. Alipay jam ne estas nur monujo, ĝi estas cifereca banko, publika serv-oficejo kaj aktiv-administranto -- ĉio en unu sola aplikaĵo.
+
+Batalo de la jarcento: Super-aplikaĵoj kontraŭ tradiciaj bankoj
+
+Tutmonda rigardo
+
+En Usono, PayPal -- pioniro en retaj pagoj -- restas populara elekto. Tamen ĝi ekzistas kiel aparta aplikaĵo por financaj transakcioj, ne kiel super-aplikaĵo. Usonanoj kutimas uzi WhatsApp por babilado, Amazon por aĉetado kaj PayPal por pagoj. La ĉina modelo, kie unu sola aplikaĵo regas preskaŭ ĉiun agadon, apenaŭ kongruas kun merkato, kiu altvaloras elektoliberecon kaj specialiĝon.
+
+Barato prezentas tute kontraŭan vojon: La modelo de malferma platformo. Anstataŭ permesi al privataj kompanioj konstrui fermitajn ekosistemojn, la Nacia Pag-Konsilio de la lando kreis la Unuigitan Pag-Interfacon (UPI). Tio estas cifereca infrastruktura tavolo, kiu ebligas al pluraj aplikoj -- de Google Pay, PhonePe ĝis bankaj aplikoj -- interligiĝi kaj transakcii sur unu komuna fundamento. Vendejisto bezonas nur unu QR-kodon por akcepti pagojn el ĉiuj UPI-aplikaĵoj. Laŭ la Barata Ministerio pri Financo, en januaro 2025 UPI jam registris 16.99 miliardojn da transakcioj kun totala valoro de 23.48 bilionoj da rupioj, rekordo en unu monato. Nuntempe ĝi prilaboras ĉirkaŭ 80% de ĉiuj podetalaj transakcioj, iĝante kerno de ĉiutaga vivo. Ĝi estas brila pruvo de demokratigita kaj kontraŭ-monopola pagmodelo.
+
+En Sudorienta Azio, teknologiaj unikornoj kiel Grab (Singapuro) kaj Gojek (Indonezio) provas sekvi la ĉinan super-aplikan modelon. Ili vastigis siajn servojn de taksio kaj liverado ĝis GrabPay/GoPay, manĝaĵoj kaj financoj. Tamen, la regiono estas tro fragmenta laŭ kulturo kaj regulado, tiel ke neniu sola firmao povis regadi kiel en Ĉinio.
+
+Leciono pri la supra oportuneco
+
+Sed tiu oportuneco havas prezon: Risko de monopolo kaj troa dependo de unu aŭ du privataj gigantaj firmaoj. Aldone al la avantaĝoj, leviĝas zorgoj pri privateco kaj datum-sekureco. Dum la mondo nun staras ĉe vojkruciĝo inter la ĉina modelo kaj la barata modelo, la plej grava leciono eble kuŝas en ekvilibro: Kiel utiligi privatan novigon sen perdi konkurencan, sanan merkaton, kaj samtempe protekti la fundamentajn rajtojn de konsumantoj.
+
+Verkis: Bui Hai Mung
+
+<span style="font-family: "times new roman"; font-size: 20px;">Nacia Naturrezervejo por Jangzia Delfeno en Hubei - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Aŭtuno de la Interna Mongolio de Ĉinio
+
+**Published:** 2025-09-30
+
+**URL:** http://esperanto.china.org.cn/2025-09/30/content_118104142.htm
+
+**Categories:** Plej Freŝaj
+
+En la Interna Mongolio de Ĉinio, aŭtuno komencis ori herbejon, arbaron kaj sekve la tutan regionon.
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Xi Jinping ĉeestis festan ceremonion por 70-a datreveno de fondiĝo de Xinjiang-a Ujgura Aŭtonoma Regiono - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Xi Jinping omaĝis naciajn heroojn sur Tian'anmen-placo
+
+**Published:** 2025-09-30
+
+**URL:** http://esperanto.china.org.cn/2025-09/30/content_118106554.htm
+
+**Categories:** Plej Freŝaj
+
+En la 30-a de septembro sur Tian'anmen-placo de Pekino Xi Jinping kaj aliaj gvidantoj de la Komunista Partio de Ĉinio, kune kun reprezentantoj el diversaj rondoj de la socio, prezentis florkorbojn al forpasintaj naciaj herooj.
+
+La 30-a de septembro estas la Tago de Martiroj de Ĉinio. Ĉi-jaro markas la 80-an datrevenon de la venko en la Ĉina Popolo Rezistmilito kontraŭ Japana Agreso kaj la Monda Kontraŭfaŝisma Milito.
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Senkontanta vivo en Ĉinio: De poŝ-monujoj ĝis financaj super-aplikaĵoj - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---

@@ -1,0 +1,1296 @@
+---
+source: "El Popola Ĉinio (esperanto.china.org.cn)"
+generated_at: "2026-03-03T10:42:50.429873+00:00"
+generator: "retradio_lib.py"
+time_range: "2025-06-04 – 2025-06-30"
+---
+
+
+# Trezoroj de Shang-dinastio de Ĉinio
+
+**Published:** 2025-06-04
+
+**URL:** http://esperanto.china.org.cn/2025-06/04/content_117908202.htm
+
+**Categories:** Plej Freŝaj
+
+Shang-dinastio (1600 a.K.-1046 a.K.), la unua dinastio de Ĉinio konfirmita per arkeologiaj pruvoj kaj skribaj registroj, estis sinsekve gvidata de 31 reĝoj en pli ol 500 jaroj kaj markis ne nur la pinton de la bronza epoko en Ĉinio, kaj ludis ŝlosilan rolon en formigo de la frua ĉina civilizacio kaj ŝtato. La plej antikvaj praformoj de ĉinaj signoj, gravuritaj sur bronzaĵoj, ostoj kaj testudaj karapacoj, estas de tiu dinastio. Jen kelkaj interesaj antikvaĵoj de Shang-dinastio videblaj en speciala ekspozicio en la pekina Muzeo de la Granda Kanalo (orienta branĉo de la Ĉefurba Muzeo).
+
+Bronza
+
+Zun
+
+(vinujo) en formo de gufo
+
+Kompleto de tri bronzaj sonoriloj
+
+Nao
+
+Antikvaj skribaĵoj sur osto
+
+Antikva bronza
+
+Yue
+
+(ceremonia hakilo) kun ŝablono de besta masko
+
+Raportis kaj fotis: Rafael Henrique Zerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;">Drakboata Festo, la unua tradicia festo de Ĉinio enlistigita kiel monda nemateria kultura heredaĵo - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Shaanxi: Noviga kunlaboro sur sltnivela platformo laŭ Silka Vojo
+
+**Published:** 2025-06-06
+
+**URL:** http://esperanto.china.org.cn/2025-06/06/content_117913919.htm
+
+**Categories:** Plej Freŝaj
+
+De la 21-a ĝis la 25-a de majo, la 9-a Internacia Ekspozicio de la Silka Vojo kaj Foiro de Ĉina Orient-Okcidenta Kunlaboro, Investo kaj Komerco okazis en Xi'an de la provinco Shaanxi. Kun la temo "integriĝo de la Silka Vojo kaj malferma kunlaboro", la ekspozicio altiris 260 eksterlandajn invititojn el pli ol 40 landoj kaj regionoj, inkluzive de Italio, Malajzio, Azerbajĝano, Kataro, Kamboĝo, Alĝerio, invititojn de 29 ministerioj, ŝtataj entreprenoj, asocioj, kaj reprezentantojn de 29 provincoj (aŭtonomaj regionoj kaj municipoj) de Ĉinio. La nombro de vizitantoj al realaj kunvenejoj superis 225 000, kaj la nombro de retejaj klakoj al la ekspozicio superis 8.1 milionojn, kaj la nombro de partoprenantoj kaj la diverseco de eksponaĵoj atingis novan maksimumon.
+
+En la zono de altnivelaj produktoj de la Silka Vojo, rusa mielo, pakistanaj lignomebloj... ĉio ravis la publikon. La zono altiris 158 partoprenantojn el 46 landoj kaj regionoj sur la ses kontinentoj kun miloj da specialaj produktoj, kaj la nombro de partoprenantoj pliiĝis je 116%.
+
+La ekspozicio unuafoje aranĝis zonon pri malalt-altituda ekonomio, kun kvin subzonojn por la novaj atingoj en tiu ĉi kampo. La zono starigis plurajn spertejojn por alporti mergecan sperton al la publiko. En la zono pri transportado, diversaj prezentoj de senŝoforaj veturiloj interesas la publikon. En la zono pri kulturo kaj turismo, la publiko povas ĝui grandskalajn muzikalojn, aŭ spekti artojn de nemateriaj kulturaj heredaĵoj kiel novjaraj pentraĵoj sur lignotabuloj el Fuoshan de Guangdong, porcelanaj gravuraĵoj el Shaanxi, pajlaj pentraĵoj el Pucheng de Shaanxi kaj tiel plu.
+
+Partoprenantoj deziras efektivigi pli da projektoj kaj kunlaboraj kontraktoj, tio estas ankaŭ la celo de la ekspozicio. La datumoj jam atestas la fruktodonajn rezultojn de la ekspozicio: Ekde la okazigo de la ekspozicio, la totala investo de 56.776 miliardoj da usonaj dolaroj estis subskribita en kontraktoj por eksterlande financaj projektoj, kaj la totala investo de 9 713.925 miliardoj da juanoj estis subskribita en kontraktoj por enlandaj kunlaboraj projektoj.
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Trezoroj de Shang-dinastio de Ĉinio - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Infana drakoboata remkonkurso
+
+**Published:** 2025-06-06
+
+**URL:** http://esperanto.china.org.cn/2025-06/06/content_117915029.htm
+
+**Categories:** Plej Freŝaj
+
+Alvenis la Drakoboata Festo en la 31-a de majo, kaj la tradiciaj drakboataj remkonkursoj okazis en multaj lokoj. Lastatempe la video pri infana drakoboata konkurso de iu infanĝardeno en Guangdong-provinco, Ĉinio, fariĝis populara en la interreto.
+
+Ĉi-jare estas jam la tria fojo, ke la infanĝardeno okazigis infanan drakoboatan remkonkurson. Por plenumi la petojn de la infanoj, ĉi-jare oni aldonis novan boateton, kaj estiĝis kvar teamoj (du knabaj kaj du knabinaj). Ankaŭ pliiĝis raŭndoj de konkursoj. Krom tio, estis enkondukitaj ankaŭ duelkonkurso kaj konkurso de miksita konsisto el knaboj kaj knabinoj.
+
+La geknaboj tre ŝatas la aktivecon. Ili ekzercadis sin ĉiutage hejme kaj ĉiam atendis la akvan trejnadon. La partopreno en la konkurso instruis al ili sindediĉon, penadon kaj persiston.
+
+Pri la sekureco, estro de la infanĝardeno diris, la konkurso okazas en naĝejo kun akvoprofundeco de 60 centimetroj. Volontuloj vestataj en flavaj veŝtoj distanciĝis de siaj kolegoj je kelkaj metroj por gardi la sekurecon de la infanoj.
+
+Iuj retanoj diris: "La aktiveco estas signifoplena. La infanoj povas heredi la tradician kulturon kaj samtempe ekzerci siajn korpojn kaj kultivi kiel alfronti defion." Aliaj diris: "La Drakoboata Festo renkontiĝas kun la Internacia Tago de Infanoj, kaj la remkonkurso taŭgas por la infanoj. Ili estas tre amindaj!"
+
+Redaktoro: Liu Zijia
+
+<span style="font-family: "times new roman"; font-size: 20px;">Shaanxi: Noviga kunlaboro sur sltnivela platformo laŭ Silka Vojo - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# LABUBU famiĝis tutmonde
+
+**Published:** 2025-06-09
+
+**URL:** http://esperanto.china.org.cn/2025-06/09/content_117915026.htm
+
+**Categories:** Plej Freŝaj
+
+En la lastaj jaroj, la modludila marko Pop Mart el Ĉinio rapide akiris popularecon en la eŭropa merkato. Fondita en 2010, ĝi kreskis de eta marko ĝis ĉefflua kultura fenomeno fervore sekvata de junuloj. Ĝiaj produktoj, kun treege rekoneblaj dezajnoj, famiĝis tutmonde.
+
+Redaktoro: Liu Zijia
+
+<span style="font-family: "times new roman"; font-size: 20px;">Shaanxi: Noviga kunlaboro sur sltnivela platformo laŭ Silka Vojo - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Agrikulturaj produktoj kaj tarifoj -- Iovaaj farmistoj volas stabilecon
+
+**Published:** 2025-06-10
+
+**URL:** http://esperanto.china.org.cn/2025-06/10/content_117917924.htm
+
+**Categories:** Plej Freŝaj
+
+Lastatempe serio da gravaj interkonsentoj estis atingitaj ĉe la altnivela kunveno inter Ĉinio kaj Usono pri ekonomiaj kaj komercaj aferoj en Ĝenevo, donante mallongan helpon al la iovaaj farmistoj de Usono. Por ili, la malstabileco kaŭzita de jaroj da usonaj komercaj politikoj, kaj la kreskantaj kostoj de importaĵoj kaj velkantaj merkatoj daŭre estas veraj ĉagrenigaj problemoj.
+
+"En ĉi tiu negoco, se vi kultivas ion kaj ĝi ne valoras ion ajn, kion vi povas fari?" LaVon Griffieon, kvarageneracia farmisto, tiel diris al ĉina raportisto.
+
+Sur la bieno de la familio Griffieon norde de Des Moines, printempa plantado preskaŭ finiĝis -- sed nenio alia ŝajnas rutina. La komercaj streĉiĝoj kaŭzitaj de vastaj usonaj tarifoj renversis generaciojn de komercaj ritmoj, kaj la kolapso de eksportaj ŝablonoj transformis abundan rikolton en minacan aferon.
+
+"Se ni ne havas Ĉinion kiel klienton, mi dubas, ke niaj sojfabaj prezoj altiĝos," diris Griffieon.
+
+Ĉinio delonge estis ŝlosila eksporta merkato por usona sojfabo. Kiam tarifoj unue estis enkondukitaj en 2018, ĉi tiu fluado abrupte malrapidiĝis, kaŭzante falon de prezoj.
+
+Eĉ post kiam Usono kaj Ĉinio atingis sian interkonsenton en 2020, la farmistoj de Iovao ankoraŭ ne sukcesis kompensi tiujn perdoj.
+
+Krom la merkata necerteco, tarifoj pliigis kostojn ĝenerale. Julia Balbiani, filino de Griffieon, klarigis, kiel pli altaj importaj impostoj influas terkulturajn ekipaĵojn. "Eble ne temas pri la tuta ekipaĵaro, sed iuj partoj estas importitaj el Ĉinio," ŝi diris. "Kiam tarifoj kreskas, ili levas la prezojn de ĉio."
+
+Por multaj en la terkultura zono de Iovao, la kostoj de komerca konflikto etendiĝis multe preter iliaj propraj kampoj.
+
+25-jaraĝa Cale Pellett reprezentas la sekvan generacion de la agrikulturo de Iovao. "Ĝi estis ventego -- ne nur por farmistoj," li diris, pripensante la efikon de kreskantaj komercaj streĉiĝoj. "Kiam oni parolas pri 125-procentaj aŭ 145-procentaj tarifoj, ĝi certe kreas iom da ŝoko." Ĉi-jare, la familio de Pellett faris kalkulitan riskon -- ŝanĝante al 65 procentoj da maizo kaj nur 35 procentoj da sojfaboj. "Ni estas en malalta periodo por la agrikultura ekonomio nuntempe," diris Pellett. "Sed se ĉi tiu paŭzo donas al ambaŭ landoj ŝancon ellabori longdaŭran solvon, ĝi povus esti turnopunkto."
+
+La kvinageneracia farmisto Rick Kimberly rigardas terkultivadon ne nur kiel komercon, sed ankaŭ kiel ŝancon konstrui internaciajn rilatojn."Ni havis altiĝojn kaj malaltiĝojn. Sed ni volas malferman komercon," li diris. "Kaj ni vere ĝojas, ke ambaŭ flankoj revenis al la intertraktada tablo."
+
+"Vi ne povas simple ŝalti kaj malŝalti komercon kiel ŝaltilon -- temas pri longdaŭro," li diris. "Nia celo ne estas nur vendi produkton, sed konstrui rilatojn. Tiel oni akiras stabilecon."
+
+Randy Renze, duon-emerita farmisto el Manning, Iovao, kaj iama oficisto de John Deere, iam vojaĝis inter Usono kaj Ĉinio dum la jaroj por konstrui rilatojn kun entreprenoj kaj la registaro."Tarifoj kostas al la usona farmisto," diris Renze. Kvankam la 90-taga paŭzo iomete malaltigis la tarifojn, li rimarkigis, ke ili ankoraŭ estas multe super antaŭaj niveloj.
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">LABUBU famiĝis tutmonde - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Malfermeco kaj inkluzivigo pavimas vojon de xinjiang-a disvolvado
+
+**Published:** 2025-06-11
+
+**URL:** http://esperanto.china.org.cn/2025-06/11/content_117919765.htm
+
+**Author:** Rafael Henrique Zerbetto
+
+**Categories:** Plej Freŝaj
+
+Dum mia infaneco kaj adolesko en Brazilo, en lernejo mi studis la falon de Konstantinopolo kaj la sekvan blokadon de la Silka Vojo. En brazilaj lernejoj, pro evidenta kialo, la fokuso estas sur ne la konsekvencoj de tio por Ĉinio, sed sur la esplorado de eŭropanoj pri alternativoj al la Silka Vojo, el kio rezultis la malkovron de Ameriko kaj la estigo de setlejoj en Brazilo.
+
+Virinoj prezentas dancon sur placo en la Internacia Granda Bazaro de Urumĉio.
+
+Nur post mia transloĝiĝo al Ĉinio mi havis la ŝancon koni la historion de la Silka Vojo el alia perspektivo kaj kompreni, ke kvankam estis kreita solvo por daŭrigo de la ĉina eksportado de teo, porcelano kaj silko, tamen la ĉesigo de la surtera itinero kaŭzis grandan ŝanĝiĝon en la landinterno de Ĉinio. En mia unua vizito al Xinjiang-a Ujgura Aŭtonoma Regiono en 2020, mi estis impresita de la kontrasto inter riĉeco kaj prospero spertita de tiu regiono en la ora epoko de la Silka Vojo kaj la manko de ekonomiaj perspektivoj kaŭzita de la dekadenco de la Silka Vojo.
+
+Nova Silka Vojo alportas novan ondon de disvolvado
+
+Martransportado rapide disvolviĝis post la ĉesigo de transkontinenta komerco laŭ la Silka Vojo, kun ŝipoj pli kaj pli grandaj kaj sekuraj transportantaj kargon kontraŭ kosto, kiu ankoraŭ hodiaŭ estas tre bonpreza kompare kun tiu de aliaj transportiloj. Kiam venis la reformado kaj pordmalfermo de Ĉinio, industrio disvolviĝis en ĉemaraj provincoj por faciligi la eksportojn per havenoj, kaj flanka efiko de tio estis kresko de malegaleco inter orienta kaj okcidenta Ĉinio.
+
+Nur kiam Ĉinio atingis pli altan nivelon de disvolvado, Xinjiang sukcesis eniri novan eraon de disvolvado kaj prospero pro du faktoroj. La unua estas la rapida kresko de la averaĝa enspezo de ĉinoj, kio stimulis la enlandan merkaton kaj kreis postulon kaj por konsumado kaj por investoj en infrastrukturoj, kiuj nun kunligas la tutan landon. La dua faktoro estis la kombino de teknologia disvolvado kun la investokapablo de Ĉinio, kio igis la zonon ĉe la antikva Silka Vojo refoje taŭga por transportado de varoj inter landoj de Eŭrazio.
+
+Moderna fabriko en Urumĉio eksportas maŝinojn al la tuta mondo.
+
+Dum vizito al fabriko de maŝinoj por transformado de kotono en teksaĵojn, en Urumĉio, la urbo for de maro, mi estis informita pri tio, ke perŝipa eksportado de tiuj maŝinoj el tie kostus tro kaj postulus tre longan tempon, sekve la fabriko faris maŝinojn nur por kontentigi la lokan postulon. Nuntempe ili eksportas per trajno al pluraj landoj. Inter la pluraj itineroj per trajno kaj kamiono ligantaj Ĉinion al najbaraj landoj, mi substrekas la ĉin-eŭropan kargotrajnon, kiu trairas la Centran Azion kaj igis la eksportadon el Xinjiang pli efika kaj bonpreza, impulsante la rapidan industrian disvolvadon de la regiono.
+
+En miaj lastaj vizitoj al Xinijang, mi vidis kargotrajnojn ekirantajn survoje al Eŭropo kaj ankaŭ kamionojn trairantajn la landlimon kun Kazaĥio, alportante eksterlanden produktojn el malsamaj lokoj de Ĉinio. Ĉina investado en modernigo de infrastrukturoj kaj plurmodalaj itineroj, samkiel loĝistika optimumigo, igis la itinerojn tra Xinijang refoje konkurencivaj. Samkiel okazis en la antikva Silka Vojo, la fluado de produktoj estas dudirekta, la samaj trajnoj, kiuj transportas ĉinajn varojn al Eŭropo, revenas al Ĉinio kun pluraj importaĵoj, kaj tio igas Xinjiang esenca pordo por la plia pordmalfermo de Ĉinio al la mondo.
+
+Moderna industrio
+
+La disvolvado de transportoj en Xinjiang alportis industrian disvolvadon kiel konsekvenco. Malsamspecaj industriaj produktoj estas nun farataj tie, de pakitaj manĝaĵoj al agrikulturaj maŝinoj, de sunpaneloj al ventogeneratoroj, de tradiciaj manartaĵoj al alt-teknikaj produktoj, la industria disvolvado de la regiono estas rapida kaj profunde ligita al distribuado enlande kaj eksterlande.
+
+Ĉin-eŭropa trajno ekiras eksterlanden el Ĥorgos, ĉe la landlimo kun Kazaĥio.
+
+En Hami, orienta Xinjiang, mi vizitis fabrikojn, kiuj faras malsamajn partojn de la ventoturbinoj, inkluzive de unu, kie oni fabrikas la padojn. En alia okazo, en Ĥorgos, okcidenta Xinjiang, mi vidis longegajn kamionojn transportantajn tiajn padegojn, eble fabrikitaj en la sama fabriko vizitita de mi, al Kazaĥio. Kaj tiu ĉi punkto alvokas alian temon: La graveco de Xinjiang por tutmonda energi-transiro. Krom ventoturbinoj, ankaŭ sunpaneloj estas fabrikataj en Xinjiang. Dum vizitoj al la regiono, mi konstatis, ke en Xinjiang oni ne nur muntas la panelojn, sed ankaŭ disvolviĝis kompleta produktad-ĉeno de fotovoltaa energio, de minado de silicio ĝis muntado de la paneloj.
+
+La industria disvolvado de Xinjiang surprizigas tiujn, kiuj kredas je fionidiroj pri la regiono: Enirinte la fabrikon, oni tre probable trovos puran lokon kun tre malmultaj laboristoj inter produktadlinioj aŭtomatigitaj per modernaj teknologioj kiel industria aplikado de 5G-a intereto kaj Intereto de Aferoj (IoT). La relative malalta kosto de produktado en okcidentaj regionoj de Ĉinio, kune kun registaraj investoj por akceli la disvolvadon de la regionoj malpli disvolviĝintaj de la lando, kaj ankaŭ la grandaj atingoj kadre de infrastrukturo kaj proksimeco al pluraj landoj de Suda kaj Centra Azio, igas Xinjiang tre oportuna por investoj de ĉinaj kaj alilandaj firmaoj.
+
+La silkvoja spirito daŭre vivas
+
+Xinjiang estas ankaŭ alloga pro sia spirito de inkluzivigo kaj malfermeco forĝita de la antikva Silka Vojo, tra kiu iris karavanoj el la tuta mondo kunportante vastan aron da varoj. Loka loĝantaro alkutimiĝis bone ricevi la vizitantojn kaj helpi ilin dum vojaĝo, kaj eĉ post la ĉesigo de transportado laŭ la Silka Vojo, Xinjiang tenis fortan komercan rilaton kun la proksimaj landoj, ĉiam surbaze de la ideo de kungajna kunlaboro. Dum miaj vizitoj al Xinjiang, mi aŭskultis plurajn interesajn rakontojn, kiel la regiono brakumis tiujn venintajn el foraj lokoj. Unu el tiuj rakontoj venis de ĉevalbredisto naskiĝinta en la nordaj stepoj, kiu rakontis pri siaj prauloj: Lia avino venis el Kazaĥio kaj lia patro estis inĝeniero sendita al Xinjiang por labori, kiu decidis resti tie porĉiame.
+
+La imamo Ma Jirong en sia moskeo
+
+Alian interesan rakonton mi aŭdis de Ma Jirong, imamo de la moskeo Shaanxi en la Kazaĥa Aŭtonoma Subprovinco de Yili. Ano de hui-etno, Ma rakontis, ke hui-oj vivantaj en Yili descendas de soldatoj senditaj tien de imperiestro Qianlong dum Qing-dinastio por kontroli ribelon. Laŭplane ili devus reveni al Shaanxi, sia hejmloko, sed ili tiom ŝatis Yili, ke ili petis permeson por resti kaj la imperiestro ne nur akceptis, sed ankaŭ ordonis konstruadon de tiu moskeo por ke tiuj islamaj soldatoj havu lokon por preĝi. Pro tio la moskeo havas tiun nomon kaj estis konstruita en arkitektura stilo de centra Ĉinio.
+
+En Xinjiang mi ankaŭ konis familiojn el pluraj etnoj, inkluzive de pluretnaj familioj. Tiu malferma kaj inkluziviga etoso igas Xinjiang tre speciala kaj unika loko, al kies rutino homo veninta el fora loko sukcesas pli facile adaptiĝi. Tio estas alia avantaĝo de Xinjiang kiel celloko por negocoj.
+
+Spirito de la Silka Vojo por plia ekonomia malfermeco
+
+La malnova politiko de reformo kaj pordmalfermo de Ĉinio antaŭenigis la disvolvadon de provincoj laŭlonge de la marbordo. Nun, plia pordmalfermo favoras la disvolvadon de la landinterno, aparte Xinjiang, pro sia centra rolo en la ekonomia zono de la Silka Vojo, la plej grava parto de la iniciato "La Zono kaj Vojo". La Eŭrazia (Ĉina) Ekspozicio pri Komerco kaj Pograndaj Varoj 2025, okazanta ĉimonate en Urumĉio, estas platformo por antaŭenigi kulturajn interŝanĝojn surbaze de la spirito de la Silka Vojo, kies ĉefaj trajtoj estas malfermeco kaj inkluzivigo.
+
+Sur la modernaj vojoj de Xinjiang, trajnoj kaj kamionoj anstataŭas kamelojn kaj ĉevalojn, sed la esenca koncepto realigi interŝanĝojn kun aliaj landoj cele al komuna profito daŭre estas la sama.
+
+Verkis: Rafael Henrique Zerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;">Agrikulturaj produktoj kaj tarifoj -- Iovaaj farmistoj volas stabilecon - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Xi Jinping ricevis aŭdiencon de Panchen Rinpoche
+
+**Published:** 2025-06-11
+
+**URL:** http://esperanto.china.org.cn/2025-06/11/content_117921059.htm
+
+**Categories:** Novaĵoj
+
+La 6-an de junio ĉina prezidanto Xi Jinping ricevis aŭdiencon de Panchen Erdeni Chos-kyi rGyal-po en Zhongnanhai de Pekino. Li alvokis al Panchen Rinpoche fari pli grandajn kontribuojn al la antaŭenigo de nacia unueco kaj religia harmonio, interalie, de stabileco, disvolviĝo kaj progreso en la Xizang-a Aŭtonoma Regiono de sudokcidenta Ĉinio.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Malfermeco kaj inkluzivigo pavimas vojon de xinjiang-a disvolvado - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Xi Jinping telefone konversacias kun Donald Trump
+
+**Published:** 2025-06-11
+
+**URL:** http://esperanto.china.org.cn/2025-06/11/content_117921067.htm
+
+**Categories:** Plej Freŝaj
+
+Ĉina prezidanto Xi Jinping telefone konversaciis kun usona prezidento Donald Trump laŭ lia invito la 5-an de junio.
+
+Xi Jinping atentigis, ke por korekti la vojon de la ĉin-usonaj rilatoj, oni bezonas bone stiri la ŝipon kaj bone difini la direkton, precipe por forigi ĉiajn interferojn aŭ eĉ sabotadon, kio estas aparte grava. Laŭ la propono de la usona flanko, la ekonomiaj kaj komercaj gvidantoj de la du landoj okazigis intertraktadojn en Ĝenevo, farante gravan paŝon por solvi ekonomiajn kaj komercajn problemojn per dialogo kaj konsultado. Ĝi estis vaste bonvenigita de ĉiuj sektoroj de la du landoj kaj la internacia komunumo, kaj ĝi ankaŭ pruvis, ke dialogo kaj kunlaboro estas la solaj ĝustaj elektoj. Ambaŭ flankoj devas bone uzi la establitan ekonomian kaj komercan konsultan mekanismon, subteni egalan sintenon, respekti la zorgojn unu de la alia, kaj strebi al reciproka gajno.
+
+Donald Trump esprimis grandan respekton al prezidanto Xi Jinping kaj diris, ke la uson-ĉinaj rilatoj estas tre gravaj. Usono ĝojas vidi, ke la ĉina ekonomio daŭre forte kreskas. La uson-ĉina kunlaboro povas atingi multajn bonajn rezultojn. Usono daŭre sekvos la politikon de unu Ĉinio. La du landoj akiris sukceson en ĝenevaj ekonomiaj kaj komercaj intertraktadoj. Usono volas kunlabori kun Ĉinio por efektivigi la interkonsenton.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Malfermeco kaj inkluzivigo pavimas vojon de xinjiang-a disvolvado - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Unua kunveno de mekanismo pri ĉin-usona ekonomia kaj komerca interkonsiliĝo malfermiĝis en Londono
+
+**Published:** 2025-06-11
+
+**URL:** http://esperanto.china.org.cn/2025-06/11/content_117921078.htm
+
+**Categories:** Plej Freŝaj
+
+La unua kunveno de la mekanismo pri ĉin-usona ekonomia kaj komerca interkonsiliĝo malfermiĝis la 9-an de junio en Londono, Britio.
+
+Ĉina vicĉefministro He Lifeng, ankaŭ membro de la Politika Buroo de la Centra Komitato de la Komunista Partio de Ĉinio, ĉeestis la kunvenon kun usonaj reprezentantoj.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Malfermeco kaj inkluzivigo pavimas vojon de xinjiang-a disvolvado - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# La Delto de la Flava Rivero en Shandong-provinco de Ĉinio
+
+**Published:** 2025-06-11
+
+**URL:** http://esperanto.china.org.cn/2025-06/11/content_117921202.htm
+
+**Categories:** Plej Freŝaj
+
+La Delto de la Flava Rivero estas grava regiono de la ĉina provinco Shandong, kie la Flava Rivero enfluas Bohai-maron. La renkontiĝo de la flavaj akvoj de la rivero kun la bluaj akvoj de la maro kreas belan spektaklon, kiu allogas turistojn al la regiono. Hisotorie, la loko de la delto ŝanĝiĝis plurfoje rezulte de la fakto, ke la rivero transportas sablon kaj ŝlimon el siaj supra kaj meza fluejoj. Lastatempe, monitorado de la rivero per modernaj teknologioj kaj homaj intervenoj cele al plibonigo de la medio en la regiono kontribuis por mildigi la problemojn kaj signife vigligi la ekomedion en tiu regiono, kiu estas esenca por migrado de pluraj specioj de birdoj.
+
+En Shandong la Centro pri Media Monitorado de la Delto de Flava Rivero
+
+Skribaĵo indikas, ke tie estas la delto de la Flava Rivero.
+
+Ekranego montras realtempan monitoradon de la medio.
+
+Ŝipoj transportas la turistojn al la punkto, kie la rivero renkontas la maron, 23 kilometrojn for de la haveno.
+
+Raportis kaj fotis: Rafael Henrique Zerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;">Malfermeco kaj inkluzivigo pavimas vojon de xinjiang-a disvolvado - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Daŭras unua kunveno de mekanismo pri ĉin-usona ekonomia kaj komerca konsiliĝo
+
+**Published:** 2025-06-11
+
+**URL:** http://esperanto.china.org.cn/2025-06/11/content_117921497.htm
+
+**Categories:** Plej Freŝaj
+
+La unua kunveno de la mekanismo pri ĉin-usona ekonomia kaj komerca konsiliĝo malfermiĝis la 9-an de junio laŭ loka tempo en Londono. La kunveno daŭras ĝis la 11-a de junio.
+
+La kunveno de ĉefaj oficialuloj el la du plej grandaj ekonomioj de la mondo estas vaste rigardata kiel decida paŝo por mildigi la streĉon inter la du landoj, sendante pozitivan signalon al la tutmonda ekonomio.
+
+La tre atendata komerca intertraktado okazas nur kelkajn tagojn post telefona konversacio inter ĉina prezidanto Xi Jinping kaj usona prezidento Donald Trump kaj celas efektivigi la konsenton atingitan de ambaŭ ŝtatestroj kaj plue faciligi dialogon kaj kunlaboron en ekonomia kaj komerca kampoj.
+
+Ĉina vicĉefministro He Lifeng gvidas la ĉinan delegacion en Londono, dum usona ministro pri financo Scott Bessent, komerca ministro Howard Lutnick kaj komerca reprezentanto Jamieson Greer gvidas la usonan teamon.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Malfermeco kaj inkluzivigo pavimas vojon de xinjiang-a disvolvado - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Massoud Amin: Kion signifas la konflikto inter Usono kaj Ĉinio por la mondo?
+
+**Published:** 2025-06-12
+
+**URL:** http://esperanto.china.org.cn/2025-06/12/content_117921243.htm
+
+**Categories:** Plej Freŝaj
+
+de Massoud Amin*
+
+Levilforto sen vojmapo estas premo sen direkto. Kiam Usono antaŭeniras kun sia detrua politiko pri Ĉinio, merkatoj velkas, bretoj maldensiĝas, kaj premo kreskas el interne de la estraranoj de la plej grandaj usonaj kompanioj. Pli ol 10 duilionoj da usonaj dolaroj estis forviŝitaj de la borso, kiam Usono pliintensigis sian politikon. Podetalistoj, fabrikantoj kaj gvidantoj de provizoĉenoj -- de aŭtomobiloj ĝis teknologioj -- avertis, ke kritika inventaro malrapidiĝas. La fondinto de Tesla kaj SpaceX Elon Musk kaj aliaj iam-aliancitaj ĉefoficistoj jam sonigis alarmojn.
+
+Ene de la Blanka Domo estas signoj de realĝustigo. Amaskomunikilaj raportoj konfirmas, ke la usonaj administrantoj reduktis tarifojn, malaltigante la nivelojn de 145% al 30%.
+
+Anstataŭ publika provoko, Ĉinio agis strategie: Prezidanto Xi Jinping pasigis la pasintan monaton turnante al Sud-orienta Azio, profundigante ligojn kun Kamboĝo, Vjetnamio kaj aliaj landoj, samtempe metante la fundamenton por plivastigitaj ekonomiaj partnerecoj en Eŭropo. Ili ne estas simbolaj gestoj, sed strukturaj ŝanĝoj.
+
+Dum la komercaj intertraktadoj inter Ĉinio kaj Usono en Ĝenevo, oni rezultigis provizoran tarifan armisticon, kaj ambaŭ flankoj restas singardaj. Altnivela engaĝiĝo estas ankoraŭ limigita, kun gravaj blokiĝpunktoj, ekzemple kritikaj mineralaj eksportaĵoj kaj teknologiaj limigoj, lasitaj nesolvitaj. Dume, tutmondaj provizoĉenoj restas sub streĉo, inflacia premo daŭras, kaj investanta konfido daŭre ŝanceliĝas pro kreskantaj necertecoj.
+
+Mankas fina celo. Vaŝingtono ne esprimis specifan postulon aŭ postulon krom esprimi larĝajn zorgojn pri protekto de intelektaj proprietrajtoj, la "industria trokapacito" de Ĉinio, kaj la reloĝigo de sentemaj provizoĉenoj. Pekino ne trudis larĝajn kontraŭ-embargojn al Usono, sed ĝi klare deklaris, ke ĝi ne cedos nek permesos al si esti ĉikanata aŭ izolita rilate al la ekonomia fronto.
+
+La ekonomia damaĝo de la usona tarifa politiko jam estas alta. Komence de aprilo, signifaj perdoj estis raportitaj de tutmondaj merkatoj dum mallonga komerca periodo. Inflacia premo kreskas, dum konsumprezoj estas projekciitaj pliiĝi dum la venontaj 18 monatoj. Multaj malgrandaj fabrikantoj en Usono, kiuj konsistigas la plimulton de la fabrikada sektoro de la lando, alfrontas fermojn, kun dungado en la sektoro akre malpliiĝanta, reflektante la pli larĝajn defiojn, kiujn alfrontas la industrio.
+
+La sekva agado estas grava. Ĝi devus esti mezurita, principa kaj inteligenta.
+
+---
+
+*Massoud Amin, el la Instituto de Elektraj kaj Elektronikaj Inĝenieroj kaj la Usona Societo de Mekanikaj Inĝenieroj, estas prezidanto de Asocio pri Energia Politiko kaj Sekuro kaj emerita profesoro ĉe la Universitato de Minesoto, Usono.
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Malfermeco kaj inkluzivigo pavimas vojon de xinjiang-a disvolvado - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Ĉinio kaj Usono konsentis pri kadro por efektivigo de ŝtatestraj konsentoj ‌
+
+**Published:** 2025-06-12
+
+**URL:** http://esperanto.china.org.cn/2025-06/12/content_117923058.htm
+
+**Categories:** Plej Freŝaj
+
+La 10-an de junio ĉina internacia komerca reprezentanto kaj vicministro pri komerco Li Chenggang diris, ke Ĉinio kaj Usono principe konsentis pri la kadro por efektivigo de la konsentoj atingitaj de la du ŝtatestroj dum ilia telefona interparolo la 5-an de junio kaj dum intertraktado en Ĝenevo pasintmonate.
+
+Li faris la rimarkojn en la informado al raportistoj post la unua kunveno de la mekanismo pri ĉin-usona ekonomia kaj komerca konsiliĝo en Londono. Li diris, ke la ĉina kaj usona teamoj faris "profesiajn, raciajn, profundajn kaj sincerajn" diskutojn pri ekonomio kaj komerco.
+
+Li esprimis esperon, ke la progreso de la londona kunveno helpos plifortigi konfidon inter Ĉinio kaj Usono, kaj plu antaŭenigi la stabilan kaj sanan disvolviĝon de ekonomiaj kaj komercaj rilatoj inter la du landoj.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Massoud Amin: Kion signifas la konflikto inter Usono kaj Ĉinio por la mondo? - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Ĉina vicĉefministro urĝas Usonon solvi komercajn disputojn kun Ĉinio per dialogo kaj kunlaboro
+
+**Published:** 2025-06-12
+
+**URL:** http://esperanto.china.org.cn/2025-06/12/content_117923066.htm
+
+**Categories:** Plej Freŝaj
+
+Ĉina vicĉefministro He Lifeng diris, ke Usono devas solvi komercajn disputojn kun Ĉinio per egala dialogo kaj reciprok-profita kunlaboro.
+
+Li diris, ke Ĉinio reasertas, ke Usono devas labori kun Ĉinio por teni siajn vortojn per agoj kaj montri sincerecon en plenumado de promesoj kaj konkretajn klopodojn al efektivigo de konsento, por kune protekti la malfacile gajnitajn rezultojn de la dialogo.
+
+Li faris la rimarkojn en la unua kunveno de la mekanismo pri ĉin-usona ekonomia kaj komerca konsiliĝo okazigita en Londono kun la usona ĉefreprezentanto, ministro pri financo Scott Bessent, usona ministro pri komerco Howard Lutnick kaj usona komerca reprezentanto Jamieson Greer.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Massoud Amin: Kion signifas la konflikto inter Usono kaj Ĉinio por la mondo? - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Kunlaboro inter Ĉinio kaj Centra Azio alportas pli da stabileco al turbula mondo
+
+**Published:** 2025-06-16
+
+**URL:** http://esperanto.china.org.cn/2025-06/16/content_117930393.htm
+
+**Categories:** Plej Freŝaj
+
+La dua Pintkunveno inter Ĉinio kaj Centra Azio alproksimiĝas. Rezulto de enketo de la amaskomunikilo CGTN montras, ke la altnivela kunlaboro inter Ĉinio kaj la kvin centraziaj landoj estas vera enkorpigo de la homara komunumo de komuna estonteco, kio kontinue aldonas stabilecon en ĉiam pli turbulan internacian komunumon.
+
+Ekde la unua Pintkunveno inter Ĉinio kaj Centra Azio, kunlaboro inter Ĉinio kaj la kvin centraziaj landoj en diversaj kampoj eniris "rapidan vojon". Laŭ la enketo, 90.4% de la respondantoj atentigis, ke la mekanismo de la Kunveno de Ŝtatestroj de Ĉinio kaj Centra Azio ludis gravan gvidan rolon. 92% de la respondantoj kredas, ke farante Centran Azion unu el la prioritatoj en sia prinajbara diplomatio, Ĉinio kreis pli da ŝancoj por ke la centraziaj landoj sekvu transformon, disvolviĝon kaj pli grandan regionan influon. Dum la eŭrazia geopolitika situacio rapide ŝanĝiĝas, 88.1% de la respondantoj diris, ke la komunumo de komuna estonteco por Ĉinio kaj Centra Azio estas grava por plifortigi la strategian sendependecon de la centraziaj landoj kaj stabiligi la regionon.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Ĉina vicĉefministro urĝas Usonon solvi komercajn disputojn kun Ĉinio per dialogo kaj kunlaboro - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Importado kaj eksportado de Ĉinio al kvin centraziaj landoj rapide kreskis en kvin monatoj ĉi-jare
+
+**Published:** 2025-06-16
+
+**URL:** http://esperanto.china.org.cn/2025-06/16/content_117930400.htm
+
+**Categories:** Plej Freŝaj
+
+Kiel ekzempla regiono de la naskiĝa loko de la iniciato "La Zono kaj Vojo" kaj altkvalita kunkonstruado de la iniciato, la Centra Azio profundigas sian ekonomian kaj komercan kunligon kun Ĉinio kaj la duflanka komerco stabile grandigis sian skalon.
+
+Laŭ statistiko de doganoj, la importado kaj eksportado de Ĉinio al la kvin centraziaj landoj rapide kreskis de 321.04 miliardoj da juanoj en 2023 al 674.15 miliardoj da juanoj en 2024, pliiĝante je 116%, kaj la jara kreskorapideco atingis 7.3%, pli alta je 2.3% kompare kun la jara kresko de ĝenerala importado kaj eksportado de Ĉinio.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Ĉina vicĉefministro urĝas Usonon solvi komercajn disputojn kun Ĉinio per dialogo kaj kunlaboro - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Somera beleco de Astano
+
+**Published:** 2025-06-16
+
+**URL:** http://esperanto.china.org.cn/2025-06/16/content_117930403.htm
+
+**Categories:** Plej Freŝaj
+
+Astano estas la ĉefurbo de Kazaĥio, kun mirindaj vidindaĵoj kaj pejzaĝoj. Somere Astano havas smeraldan ĉielon, pompajn florojn kaj aparte belan horizonton. Ĉi tie ankaŭ okazos la 2-a Pintkunveno de Ĉinio kaj Centra Azio.
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Ĉina vicĉefministro urĝas Usonon solvi komercajn disputojn kun Ĉinio per dialogo kaj kunlaboro - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Xi Jinping renkontiĝis kun kazaĥa prezidento Tokayev
+
+**Published:** 2025-06-17
+
+**URL:** http://esperanto.china.org.cn/2025-06/17/content_117931985.htm
+
+**Categories:** Plej Freŝaj
+
+La 16-an de junio ĉina prezidanto Xi Jinping interparolis kun kazaĥa prezidento Kassym-Jomart Tokayev en la Prezidenta Palaco de Astano, Kazaĥio.
+
+Xi Jinping diris, ke la rilatoj inter Ĉinio kaj Kazaĥio ĉiam konservas altan nivelon, kio profitas de la geografiaj avantaĝoj kaj la amika historia heredado, kaj estas neevitebla elekto por la komuna disvolviĝo de ambaŭ landoj. Ĉinio ĉiam traktas la rilatojn kun Kazaĥio el strategia alto kaj longtempa perspektivo, kaj volas labori kun la kazaĥa flanko por firme plifortigi la amikecon inter Ĉinio kaj Kazaĥio, kaj kontribui pli multe al regiona kaj eĉ la monda paco kaj disvolviĝo per la stabileco kaj pozitiva energio de tiuj rilatoj. Fronte al tumultaj kaj ŝanĝiĝemaj internaciaj situacioj, Ĉinio kaj Kazaĥio devas firme subteni la internacian sistemon kun la Unuiĝintaj Nacioj kiel la kerno kaj la internacian ordon bazitan sur internacia juro, praktiki veran plurflankismon, kaj protekti la komunajn interesojn de evoluantaj landoj.
+
+Tokajev diris, ke Ĉinio estas amika najbaro, intima amiko kaj fidinda partnero de Kazaĥio. La ĉiama ampleksa strategia partnereco inter Kazaĥio kaj Ĉinio eniras novan oran epokon, subtenante la daŭripovan ekonomian kaj socian disvolviĝon de la du landoj, profitigante la du popolojn, kaj estante inda je modelo de rilatoj inter landoj. Kazaĥio volas labori kun Ĉinio por profundigi strategian reciprokan fidon kaj ĉiuflankan reciproke utilan kunlaboron, levi la duflankajn rilatojn al nova nivelo. La du landoj devas altkvalite kunlabori kadre de "La Zono kaj Vojo" kaj plivastigi kunlaboron en kampoj kiel komerco, investado, industrio, agrikulturo, energio kaj transportado.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Somera beleco de Astano - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Necesas kunlaboroj inter Centra Azio kaj Ĉinio
+
+**Published:** 2025-06-17
+
+**URL:** http://esperanto.china.org.cn/2025-06/17/content_117931988.htm
+
+**Categories:** Plej Freŝaj
+
+de Djoomart Otorbaev*
+
+Centra Azio spertas signifajn ŝanĝiĝojn. La totala loĝantaro, kreskanta je rapideco de ĉirkaŭ 2% jare, atingis 82 milionojn, kun pliiĝo de 40% ekde 2000, kaj la kombinita MEP de la kvin landoj de la regiono atingis 519 miliardojn da usonaj dolaroj en 2024, kun pliiĝo je 400% ekde la jaro 2000. Kaj en la pasintaj kvar jaroj, la kombinita MEP de centraziaj landoj kreskis je 80%.
+
+Dum la pasintaj du jardekoj, Centra Azio konservis averaĝan realan jaran kreskorapidecon de 6.7%. Ekde 2000, la eksterlanda komerco de la centraziaj landoj kreskis preskaŭ naŭoble, dum la rekta eksterlanda investado kreskis 17-oble.
+
+Meze de ĉi tiu evoluo, Ĉinio plifirmigis sian pozicion kiel la ĉefa komerca partnero de centraziaj landoj, kun ilia totala komero atinganta 94.8 miliardojn da dolaroj en 2024 -- de 89.4 miliardoj da dolaroj en 2023. Ĉinaj varoj kaj servoj eksportitaj al Centra Azio sumiĝis al 64.2 miliardoj da dolaroj, kaj la eksportoj de centraziaj landoj al Ĉinio sume atingis 30.6 miliardojn da dolaroj, ĉefe konsistante el nafto, tergaso, terraraj metaloj, valormetaloj kaj mineraloj. Fruktoj kaj aliaj nutraĵproduktoj estis la aliaj signifaj eksportoj de Centra Azio al Ĉinio.
+
+Ĉinaj investoj koncentriĝas en la sektoroj de transportado, infrastrukturo, renovigebla energio kaj elektraj veturiloj. Ekzemple, la ĉina kompanio BYD komencis konstrui grandan produktad-instalaĵon en Uzbekio lastjare. Fakte, ĉinaj kompanioj faris grandajn investojn en centraziaj landoj.
+
+La centraziaj landoj atingis konsenton, ke la kreskigo de laborantaro de specialistoj kaj spertaj homoj, kaj la kreado de novaj laborpostenoj helpos plibonigi la vivnivelon de la homoj tra la regiono. La juna kaj kreskanta loĝantaro de Centra Azio fariĝas pli kunligita en la tutmondan ekonomion, kaj la entreprenema spirito de la junularo verŝajne altiros investojn celantajn diversigi sektorojn kaj ebligi al la regiono grimpi supren laŭ la tutmondaj valorĉenoj.
+
+*Eksa ĉefministro de Kirgizio kaj profesoro ĉe la Lernejo "La Zono kaj Vojo" de la Pekina Instruista Universitato
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Somera beleco de Astano - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Kazaĥio kaj Ĉinio profundigas fidon kaj stabilecon en energia kunlaboro
+
+**Published:** 2025-06-17
+
+**URL:** http://esperanto.china.org.cn/2025-06/17/content_117931996.htm
+
+**Categories:** Plej Freŝaj
+
+de Rafik Tairov*
+
+Meze de la rapidaj ŝanĝoj en la tutmonda energia ordo, energia kunlaboro inter Kazaĥio kaj Ĉinio akiras pli grandan strategian signifon. Kazaĥio, kun siaj vastaj rezervoj de hidrokarbonoj kaj uranio, jam fariĝis ŝlosila partnero de Ĉinio. Siavice, Ĉinio investas en la energian infrastrukturon de Kazaĥio, kio helpos modernigi la energian sektoron.
+
+Grava parto de la ĉin-kazaĥa partnereco kaj kunlaboro estas la disvolviĝo de transportaj kaj loĝistikaj vojoj, integriĝo de duktaj kaj fervojaj infrastrukturoj, modernigo de naftorafinejoj per noviga teknologio, same kiel la disvolviĝo de la kemia industrio, la atomenergia sektoro, inkluzive de la konstruado de la unua atomcentralo en Kazaĥio, la alpreno de verda teknologio kaj la kreado de sekura cifereca energia koridoro.
+
+Kune kun la disvolviĝo de transportaj kaj loĝistikaj koridoroj, Kazaĥio utiligas sian ampleksan reton de ĉefaj duktoj, kiuj etendiĝas je pli ol 23 000 kilometroj, inkluzive de 15 255 kilometroj da gasduktoj kaj 8 015 kilometroj da naftoduktoj. Ĉi tiuj duktoj trapasas industriajn regionojn, ekstraktajn zonojn kaj ankaŭ malproksimajn areojn, kondukante al la limoj de la najbaraj landoj de Kazaĥio. La integriĝo de duktoj kun fervojaj infrastrukturoj plibonigos la proviz-administradon, pliefikigos translimajn energi-interŝanĝojn, plifortigos energian konekteblecon tra la eŭrazia regiono, kaj igos la energi-provizon pli certigita malgraŭ plimalboniĝanta klimatŝanĝiĝo, kreskanta premo de sankcioj kaj geopolitika malstabileco, samtempe plifirmigante la pozicion de Kazaĥio kiel ŝlosila energia centro inter Oriento kaj Okcidento.
+
+La tri ĉefaj naftorafinejoj de Kazaĥio facile kontentigas la enlandan postulon kaj havas la kapaciton liveri energion al landoj de "La Zono kaj Vojo" kiel Uzbekio, Taĝikio, Kirgizio kaj Afganio.
+
+Krome, komunaj teknologiaj iniciatoj inter Kazaĥio kaj Ĉinio profundigas fidon kaj stabilecon en energia kunlaboro sub la kadro de "La Zono kaj Vojo".
+
+Projektoj kadre de la "Cifereca Silka Vojo" celas krei komunan interregionan sekurecan kadron. Antaŭ la dua Ĉin-centrazia Pintkunveno en Astano, partoprenantaj landoj de "La Zono kaj Vojo" eniras novan fazon de strategia kunlaboro. La pintkunveno alportas ŝancojn por landoj, kompanioj kaj regionaj kaj internaciaj organizoj konfirmi sian engaĝiĝon al novigado, sekureco kaj komuna prospero. Aparte, la pintkunveno estas ŝanco enspiri novan energion en la Silkan Vojon.
+
+*Estro de la Cifereciga Centro por Sekurecaj Operacioj ĉe la Speciala Protekta Unu-Servo de KMG-Security en Astano
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Somera beleco de Astano - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Uzbeka klerulo: Gravas interkultura dialogo kaj interhoma interŝanĝo por Uzbekio kaj Ĉinio
+
+**Published:** 2025-06-17
+
+**URL:** http://esperanto.china.org.cn/2025-06/17/content_117931998.htm
+
+**Categories:** Plej Freŝaj
+
+de Gayane Umerova*
+
+Konsiderante, ke tutmonda necerteco markas ĉi tiun epokon, la bezono de vera interkultura dialogo kaj interhoma interŝanĝo neniam estis pli granda ol nun. Uzbekio, strategie situanta sur la Silka Vojo, denove aperas kiel renkontiĝejo por ideoj, artistoj kaj civilizacioj. Kiel prezidanto de la Uzbeka Arta kaj Kultura Disvolva Fonduso, mi mem vidis la eksterordinaran povon, kiu liberiĝas, kiam landoj investas en kultura diplomatio, heredaĵa konservado kaj novigado. Ĉi tio estas precipe videbla en la fruktodona partnereco de Uzbekio kaj Ĉinio, kaj la kreskanta dialogo, kiun la du landoj forĝas kun la mondo.
+
+La aliro de Uzbekio baziĝas sur la kredo, ke kulturo estas ne nur ponto inter popoloj, sed ankaŭ katalizilo por ekonomia disvolviĝo kaj socia progreso. Kun pli ol 60 procentoj de la loĝantaro de Uzbekio aĝanta sub 30 jaroj, kreskigi ekosistemon per kiu junaj uzbekoj povu prosperi kiel artistoj, kuratoroj kaj kulturaj gvidantoj, estas la kerno de nia misio. La nombro de studentoj en altlernejoj de Uzbekio triobliĝis ekde 2017, kun preskaŭ 1.43 milionoj da studentoj nun en universitatoj. Ni volas kontribui por pliigi tiun nombron.
+
+Nia kultura partnereco kun Ĉinio estas aparte grava, ĉar ĝi elstarigas la daŭran spiriton de la Silka Vojo. Lastatempe ni vidis kunlaborojn en kultura heredaĵo kaj arkeologio sub la kadro de la iniciato "La Zono kaj Vojo" ĉe la Palaca Muzeo (Malpermesita Urbo) en Pekino kaj "Kolora Azio: Ekspozicio de Aziaj Kostumoj" en Hangzhou de Ĉinio, prezentante kolekton de 140 pecoj kaj aroj da vestoj reprezentantaj 27 aziajn landojn kaj regionojn. Ni ankaŭ organizis la uzbekan baleton
+
+Lazgi
+
+kun la Nacia Pekina Operkompanio.
+
+Per komunaj ekspozicioj, akademiaj partnerecoj kaj interŝanĝo de plej bonaj praktikoj en heredaĵa administrado, la du landoj estas en bona pozicio por formi pli inkluzivan kaj kreivan estontecon.
+
+*Prezidanto de la Uzbekia Arta kaj Kultura Disvolva Fonduso
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Somera beleco de Astano - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Esplorbazo de Grandaj Pandoj en Chengdu
+
+**Published:** 2025-06-18
+
+**URL:** http://esperanto.china.org.cn/2025-06/18/content_117934167.htm
+
+**Categories:** Plej Freŝaj
+
+Grandaj pandoj estas inter la plej raraj bestoj en la mondo. Konataj kiel "vivantaj fosilioj", ili estas ne nur trezoroj de Ĉinio, sed ankaŭ bestoj tre ŝatataj en la tuta mondo. La Esplorbazo de Grandaj Pandoj en Chengdu, Sichuan-provinco de Ĉinio, estas neprofitocela bredejo de grandaj pandoj financata de la ĉina registaro kaj ankaŭ esplorejo pri grandaj pandoj, malgrandaj pandoj kaj aliaj raraj bestoj. Ĝi troviĝas nur 10 kilometrojn for de la urbocentro de Chengdu kaj estis fondita en 1987 por prizorgado de ses grandaj pandoj savitaj el malsano kaj malsato. Nun en la bazo vivas 237 grandaj pandoj en malsamaj aĝoj.
+
+Raportis kaj fotis: Rafael Henrique Zerbetto
+
+Uzbeka klerulo: Gravas interkultura dialogo kaj interhoma interŝanĝo por Uzbekio kaj Ĉinio - esperanto.china.org.cn
+
+El Popola Chinio
+
+
+---
+
+# Ĉina sperto pri energitransiro: Diskoniginda en COP30
+
+**Published:** 2025-06-18
+
+**URL:** http://esperanto.china.org.cn/2025-06/18/content_117934308.htm
+
+**Categories:** Plej Freŝaj
+
+La Monda Junulara Prienergia Turneo, okazinta por la tria fojo inter la 4-a kaj la 8-a de junio ĉijare en la ĉinaj provincoj Shandong kaj Sichuan, kunigis 14 junajn profesiulojn kaj studentojn el ok landoj. Kreita de partnereco inter Akademio de Studoj pri Nuntempa Ĉinio kaj la Mondo (ACCWS, laŭ anglalingva mallongigo) kaj la kompanio CHN Energy, la turneo alportis gravan novaĵon ĉijare: En ĝi partoprenis ne nur junaj talentuloj vivantaj en Ĉinio, sed ankaŭ kelkaj gastoj el aliaj landoj.
+
+Muntado de sunpanelo por instalado surmare
+
+Kun la celo prezenti kaj diskuti solvojn kadre de energitransiro, temo de ĉi-jara 30-a Konferenco de UN pri Klimatŝanĝiĝo (COP30), kiun Brazilo gastigos en novembro, la turneo prezentis lastatempajn atingojn de Ĉinio en tiu kampo kaj stimulas internacian debaton kaj kunlaboron inter landoj cele al antaŭenigo de energifontoj verdaj kaj kun malpli granda efiko sur medio.
+
+Granda projekto pri sunenergio ĉe la delto de la Flava Rivero
+
+Post naskiĝo en la provinco Qinghai en okcidenta Ĉinio, la Flava Rivero iras sian vojon ĝis renkontiĝo kun la maro ĉe la urbo Dongyin en la orienta provinco Shandong. La sablo kaj ŝlimo alportataj de la akvo donas flavan koloron al la akvoj de tiu ĉi rivero, kiu lulis la ĉinan civilizacion. En la punkto, kie la Flava Rivero renkontas la maron, oni vidas spektaklon similan al tiu de la renkonto de la akvoj de la riveroj Negro kaj Solimões en brazila amazonio: En ambaŭ kazoj, la malsamkoloraj akvoj malrapide miksiĝas, kreante dukoloran spektaklon de la naturo. Laŭlonge de historio, la akumulado de sablo kaj ŝlimo kaŭzis ŝanĝojn en la vojo de la rivero proksime de ĝia delto, sed nuntempe laboro de medimonitorado kune kun homaj intervenoj laŭbezone kontribuis por stabiligo de la rivervojo kaj protekti ĝiajn randojn en areo gravega por trafiko de migrantaj birdoj.
+
+Kaj ĝuste tie, proksime de la loko, kie la Flava Rivero brakumas la maron, CHN Energy disvolvas pioniran projekton pri sunenergio sur la maro, nomita HG14, kun kapablo generi pli ol 1GW da elektro, kiam ĝi estos finkonstruita. Instali sunpanelojn super la maro unuavide ne ŝajnas io tiom komplika, sed fakte tio estas granda defio por inĝenieroj: Krom la tajdoj kaj la efiko de sala akvo kaj humideco sur la aparataro, oni ankaŭ devas konsideri plurajn aliajn eblajn problemojn rilate al marbestoj kaj navigado en la ĉirkaŭaĵoj.
+
+HG14 estas monde la unua surmara projekto pri sunenergio sukcese ligita al la reto de elektrodistribuado surtere, kaj tion oni faris en novembro 2024. Krom tio, HG14 estas la plej granda projekto jam ekkonstruita pri surmara sunenergio. Kiam ĝi estos finkonstruita, ĝi kovros areon de 1.223 hektaroj per 2 934 sunpaneloj. Tiu projekto ankaŭ pioniras en la uzo de grandaj ŝtalaj framoj, ligitaj al solida bazo funde de la maro, kiel bazo por instalado de fotovoltaaj paneloj kaj aliaj aparatoj. La strukturo estis desegnita por mildigi la ĝenon sur maraj vivaĵoj kaj ne malhelpi la birdojn, kiuj tie vivas aŭ transitas. La sunpaneloj uzataj en tiu projekto generas elektron el ambaŭ surfaco, sorbante kaj la lumon rekte el la suno, kaj la lumon reflektitan de la marsurfaco. Tio kreskigas la elektroproduktadon je 3%, kaj la paneloj malrapide moviĝas dum la tago por akompani la movojn de la suno kaj tiel optimumigi la kaptadon de sunlumo.
+
+Sunenergia projekto surmara estas signife pli kompleksa ol tiuj sur forma grundo, sekve, estas pli facile unue surtere munti la sunpanelojn kaj poste ilin transporti per ŝipo ĝis la loko, kie ili estos instalitaj. La partoprenantoj de la turneo havis la unikan ŝancon viziti la lokon, kie oni muntas la panelojn kaj ankaŭ la plaĝon, kie la submaraj kabloj venintaj el la oceano estas konektitaj al la reto pri elektra distribuado.
+
+Sed la plej speciala parto de tiu vizito estis tiu per ŝipo al la parto jam konstruita kaj funkcianta de la surmara sunenergia centralo. La internaciaj talentuloj tie vidis detalojn de la projekto, inkluzive de tensitransformiloj instalitaj ĉe la sunpaneloj, ilia ligo al la submaraj kabloj, kaj la aparatojn pri monitorado, kiuj alprenas 5G-an interreton kaj estis disvolvitaj specife por tiu projekto, partnerece kun Huawei.
+
+Akvocentraloj sur Dadu-rivero en Sichuan
+
+Unu el la plej defiaj momentoj de la Longa Marŝado estis kiam la Ruĝa Armeo bezonis transiri Dadu-riveron en Sichuan-provinco. Tiu rivero serpentumanta inter akraj montoj ne estas tiom larĝa, sed ĝia akvofluo estas tre forta. En la epoko de la Longa Marŝado, estis nur unu ponto super tiu rivero, kaj ĝi estis malmuntita, laŭ ordono de Chiang Kai-Shek, por malebligi la transiron de la rivero faro de la Ruĝa Armeo, restis nur la kabloj super la rivero. Soldatoj kun mitralo estis metitaj aliflanke de la rivero por pafi tiujn, kiuj aŭdacus transiri la riveron per la kabloj. La transiro estis malfacilega, sed la Ruĝa Armeo sukcesis kaj daŭris sian marŝadon, verkante heroecan ĉapitron de la historio de la lando.
+
+Hidrelektra Centralo Pubugou en Sichuan-provinco de Ĉinio (Foto: CHN Energy)
+
+Post la fondiĝo de la Ĉina Popola Respubliko, la lando peze investis en edukado kaj scienc-teknologia disvolvado, estiginte la bazon por kreado de pli bonpagaj postenoj kaj pli bonaj vivkondiĉoj por la popolo. Tio kaŭzis pli grandan postulon pri elektro. En tiu nova fazo de la nacia disvolvado, Dadu-rivero montriĝis tre taŭga por konstruado de hidrelektraj centraloj. La hidrelektra centralo de Pubugou estas ne nur la plej granda sur Dadu-rivero, sed ankaŭ la plej granda kontrolata de firmao sub la grupo CHN Energy. Kun instalita kapacito de 4.49GW, ĝi estas ŝlosila nacia projekto disvolvita kadre de la 10-a kvinjara plano de Ĉinio kaj ekzempla projekto kadre de la disvolva strategio de okcidenta Ĉinio.
+
+La loka geografio faciligas kaj reduktas la koston de konstruado de hidrelektraj centraloj, krom redukti la malbonan efikon de ilia konstruado sur la medio. Krom produktado de elektro, la akvobaraĵo ankaŭ havas du aldonajn rolojn: Regado de akvorimedoj kaj retenado de sablo, ŝtonoj kaj ŝlimo transportitaj de la rivero.
+
+Aliflanke, Sichuan-provinco estas konata pro oftaj tertremoj. Pro tio, la hidrelektraj centraloj sur Dadu-rivero ricevis plifortigitan strukturon, planitan por rezisti al tertremoj fortaj je ok gradoj laŭ Richter-skalo.
+
+Konsistanta el du elektrejoj, Pubugou kaj Shenxigou, la centralo produktas 4.26GW da elektro, al kiuj aldoniĝas aliaj 4.26GW generitaj de sunpaneloj instalitaj proksime de tie. En unu jaro, la centralo produktas ĉirkaŭ 15 miliardojn da kilovathoroj, sufiĉe por kontentigi la kvaronon de la postulo de la urbo Chengdu.
+
+La junaj talentuloj ankaŭ vizitis la kontrolejon de produktado de la elektraj centraloj de Dadu-baseno en Chengdu, kaj tie aŭskultis klarigojn de fakuloj pri administrado, sekureco kaj operaciumado de la hidrelektraj centraloj laŭ Dadu-rivero.
+
+Interŝanĝoj kun ĉinaj fakuloj
+
+La partoprenantoj de la turneo ankaŭ havis la ŝancon viziti operaciumajn instalaĵojn de CHN Energy kaj babili kun fakuloj. En Dongyin, ili havis dialogon kun la ĉefaj fakuloj de la projekto HG14 kaj konis plurajn teknikajn detalojn rilatajn al la disvolvata laboro kadre de tiu projekto. En Sichuan, la dialogo kun fakuloj de la hidrelektra centralo de Pubugou entenis ne nur teknikajn demandojn, sed ankaŭ diskuton inter ĉinoj kaj fakuloj pri daŭripova evoluado, novigo, klimatŝanĝiĝo kaj mediprotektado. La evento finiĝis en Pekino, en la sidejo de CHN Energio, kie la junuloj vizitis ĝiajn studiojn pri amaskomunikado kaj havis dialogon kun gvidantoj kaj manaĝeroj de la firmao. En tiu okazo, la internaciaj talentuloj prezentis siajn impresojn pri la vizitoj kaj sciis la strategian planon de la kompanio.
+
+"Mi kore dankas Ĉinion pro ĝia subteno al ni, kvazaŭ ĝi estas nia pli aĝa frato. Mi estas impresita kaj ĝoja pro la serioza laboro de Ĉinio en gvidado de la mondo kadre de iniciatoj por verda disvolvado," deklaris la pakistano Farooq Sansi, ĝenerala direktoro de la grupo Hunan Sansi.
+
+Kevin Tu, manaĝero de la firmao Agora Energy China, substrekis la kontribuon de la junularo al energitransiro: "Ĉina sperto atestas, ke la junularo ĉefrolas novigon, de la retoj pri distribuado de elektro administrataj de artefarita intelekto ĝis grandskalaj projektoj de ventenergio en la maro."
+
+"Ĉar mi laboras en tiu ĉi kampo, mi tre ŝatis viziti la hidrelektran centralon de Pubugou kaj la projekton pri sunenergio sur la maro," diris la junulino Azarine Raina el Indonezio. "Tiuj strukturoj estas mirinde bone elpensitaj kaj avangardaj. Mi estas bonŝanca pro la oportuno interbabili kun fakuloj de CHN Energy kaj koni de ili, ke la tempo necesa por repago de tiuj investoj estas relative malalta kompare kun la skalo de tiuj projektoj," konkludis ŝi.
+
+Dum la dialogo en Pekino, la partoprenantoj ankaŭ estis informitaj pri la progreso de la plenumado de la Du Karbonaj Celoj de Ĉinio, atingi la pinton de karbonemisiado antaŭ 2030 kaj la karbonneŭtralecon antaŭ 2060. La unua celo estis atingita meze de 2024, ses jaroj antaŭ la limdato. Tio signifas, ke Ĉinio jam atingis la pinton de emisiado de karbono kaj nun malaltigas emisiadon por plenumi la duan celon.
+
+Kombini teknikajn vizitojn kun turismo
+
+Krom vizitoj al prienergiaj instalaĵoj, la gejunuloj ankaŭ havis merĝan sperton pri la ĉina kulturo kaj konis kelkajn atingojn de la lando en aliaj sektoroj, kiel arkeologio, agrikulturo kaj konservado de grandaj pandoj.
+
+Antaŭ la vizito al la hidrelektra centralo, la junaj talentuloj vizitis la distrikton Hanyuan, proksime de la centralo. La averaĝa enspezo de lokanoj 15-obliĝis, depost kiam la centralo estis instalita proksime de tie. Kamparaj familioj de tiu distrikto nun sin dediĉas al plantado de mespilo kaj ĉerizo kaj ilin sendas al klientoj tra tuta Ĉinio. "Antaŭ la konstruado de la hidrelektra centralo de Pubugou, ni kutimis planti maizon, bataton kaj pizon. Depost ĝia konstruado, infrastrukturo pri transportoj en nia distrikto fariĝis multe pli efika, akvo abundas, medio pliboniĝis kaj ni nun plantas mespilon. La vivkvalito de homoj multe pliboniĝis," deklaris la kamparano Li Wanwen.
+
+Enirejo de la bieno de Li Wanwen
+
+Sekvatage, la programo entenis vizitojn al la Esplorbazo de Grandaj Pandoj, la arkeologiejo Jinsha kaj Kuanzhai-aleo, tri gravaj turismejoj de Chengdu. La junaj talentuloj ankaŭ gustumis ĉinan teon, manĝis sichuan-stilan Huoguon kaj spektis prezentaĵon de la Sichuan-a Opero. "Tio estis grava sperto por mi, mi tre dankas la organizantojn pro tio, ke ili venigis nin al la bazo de grandaj pandoj kaj la turisma aleo. Malgraŭ mia plenokupita tagordo, mi havis la oportunon viziti kelkajn turismejojn de Chengdu," diris Azarine, entuziasmiĝinta pri la kulturaj malkovroj dum sia unua vizito al Ĉinio.
+
+Sperto diskoniginda en COP30
+
+Alia partoprenanto de la turneo, la brazilano José Renato Peneluppi Jr., magistro pri publika politiko specialiĝinta pri energitransiro, konsideras gravega la ŝancon por montri al la mondo la atingojn de Ĉinio en tiu ĉi kampo. "La Monda Junulara Prienergia Turneo havas potencialon pozitive efiki sur COP30 en Brazilo per diskonigo de spertoj de Ĉinio pri daŭripovaj teknologioj kiaj elektrogenerado surmare, sunenergio kaj hidrelektra energio. Tiu programo alproksimigas tutmondajn junajn gvidantojn de la ĉinaj solvoj cele al karbonemisiada neŭtraligo," klarigis Renato.
+
+La junaj talentuloj ankaŭ vizitas la Esplorbazon de Grandaj Pandoj en Chengdu.
+
+Vivanta en Ĉinio de pli ol jardeko, Renato kaptis la oportunon liveritan de dialogo kun ĉinaj fakuloj de la hidrelektra centralo de Pubugou por rakonti pri la kunlaboro inter Brazilo kaj Ĉinio en tiu kampo. En la pasinteco, Brazilo estis avangardo en tiu sektoro, kaj ĉinaj fakuloj vizitis la hidrelektran centralon Itaipu -- tiam la plej granda en la mondo -- por koni la laboron de Brazilo en tiu kampo. Nun Ĉinio havas sian propran teknologion kaj altkvalifikitajn fakulojn por konstrui kaj operaciumi hidrelektrajn centralojn.
+
+Antaŭ nelonge, kiam Brazilo inaŭguris la hidrelektran centralon Belo Monte, for de la grandaj urboj, mankis al la lando teknologio por efike transporti elektron tra longega distanco. Tiam Ĉinio alportis al Brazilo la teknologion de ultraaltatensia transmisio, kio signife reduktis perdojn dum la transportado de elektro. Tiu ekzemplo montras, ke duflanka kunlaboro pri energio alportis profiton al ambaŭ landoj. Konsiderante, ke problemoj kiel tutmonda varmiĝo kaj perdo de biodiverseco efikas sur la tuta mondo, estas esence, ke ĉiuj landoj kunlaboru por ilin solvi.
+
+"Dum COP30 en la urbo Belém, tiu ĉi turneo povas kontribui por plifortigi la dialogon inter Brazilo kaj Ĉinio, montrante vojojn por kunlaboro kadre de renovigeblaj energifontoj, novigo kaj mediprotektado, plifortigante strategiajn aliancojn kaj impulsante la priklimatan laboron de la du landoj," konkludis Renato.
+
+Verkis kaj fotis: Rafael Henrique Zerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;">Xi Jinping renkontiĝis kun kazaĥa prezidento Tokayev - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Nanyin
+
+**Published:** 2025-06-19
+
+**URL:** http://esperanto.china.org.cn/2025-06/19/content_117934772.htm
+
+**Categories:** Plej Freŝaj
+
+Tiu ĉi filmeto montras du esencajn perkutilojn uzatajn en Nanyin-muziko. Maldekstre estas perkutilo nomita
+
+Paiban
+
+, kiu konsistas el du aŭ tri lignaj frapiloj tenataj vertikale. Frapado de tiuj perkutiloj rezultas en sono, kiu markas la ritmon de la muziko. Ĝia ludanto kutime ankaŭ rolas kiel ĉefkantisto. Dekstre estas
+
+Shuangzhong
+
+, du malgrandaj porcelanaj tetasoj, kiu estas frapataj kiel cimbaloj. Oni devas teni ilin ĉe la randoj kaj milde ilin frapi por produkti pli klaran kaj altan sonon. La uzo de tetasoj por fari muzikon spegulas la popoldevenon de Nanyin, devenigita el improviza uzo de ordinaraj objektoj kiel muzikiloj.
+
+Nanyin (南音), ankaŭ konata kiel "Nanguan" (南管), estas unu el la plej antikvaj stiloj de tradicia ĉina muziko, kun historio de pli ol mil jaroj. Ĝi originis en la regiono de la urbo Quanzhou, Fujian-provinco de Ĉinio dum la dinastioj Han kaj Tang kaj konservas elementojn de la muziko ludata en la kortegoj de Ĉinio en antikveco. En 2009 Nanyin estis aldonita al la listo de nemateria kultura heredaĵo de UNESKO.
+
+Nanyin estas konsiderata "vivanta fosilio" de la ĉina muzikhistorio. Ĝi estas populara en suda Fujian-provinco laŭ la sudorienta marbordo de Ĉinio. Ekde Han-dinastio (206 a.K.-220 p.K.), migrantoj el la centra regiono de Ĉinio enkondukis muzikon en la sudan regionon de Fujian, centritan ĉirkaŭ Quanzhou, miksante ĝin kun loka popolmuziko. La malrapidaj, simplaj kaj elegantaj melodioj estas ludataj per distingaj instrumentoj kiel bambua fluto nomata
+
+dongxiao
+
+kaj kurbkola liuto ludata horizontale nomata
+
+pipa
+
+, same kiel pli oftaj blovinstrumentoj, kordinstrumentoj kaj frapinstrumentoj. El la tri komponantoj de Nanyin, la unua estas pure instrumenta, la dua inkluzivas voĉon, kaj la tria konsistas el baladoj akompanataj de la ensemblo kaj kantataj en la dialekto de Quanzhou, ĉu de sola kantisto, kiu ankaŭ ludas klakinstrumentojn, ĉu de kvaropo, en kiu ĉiu kantisto ludas laŭvice.
+
+Nanyin estas ludata dum printempaj kaj aŭtunaj ceremonioj por adori la dion de muziko, ĉe geedziĝoj kaj entombigoj, kaj dum ĝojaj festadoj en kortoj, merkatoj kaj stratoj. La riĉa repertuaro de kantoj kaj partituroj konservas antikvan popolmuzikon kaj poemojn kaj influis operon, pupteatron kaj aliajn prezentartajn tradiciojn. Ekzistas ĝis nun pli ol 2 000 instrumentaj kaj voĉaj pecoj de Nanyin, kun kantotekstoj ĉefe el Tang-legendoj, popolaj rakontoj kaj rakontoj pri roluloj el la dinastioj Song, Yuan kaj Ming, tiuj melodioj estas belaj kaj kortuŝaj.
+
+Nanyin havas signifan akademian esplorvaloron en muzikologio, antropologio, lingvistiko, folkloraj studoj kaj la historio de kulturaj interŝanĝoj inter Ĉinio kaj aliaj landoj. Ĝi estas ankaŭ spirita ligo por transmaraj ĉinoj, ludante pozitivan rolon en plifortigo de la nacia identeco.
+
+Redaktoroj: Rafael Henrique Zerbetto kaj Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Ĉina sperto pri energitransiro: Diskoniginda en COP30 - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Meshrep
+
+**Published:** 2025-06-19
+
+**URL:** http://esperanto.china.org.cn/2025-06/19/content_117934841.htm
+
+**Categories:** Plej Freŝaj
+
+Meshrep estis aldonita en la Liston de Nemateria Kultura Heredaĵo de UNESKO antaŭ kelkaj jaroj. Ĝi estas tradicia arto de ujguroj de Xinjiang-a Ujgura Aŭtonoma Regiono de Ĉinio, ujguroj okazigas diversajn specojn de Meshrep en malsamaj eventoj por festi kaj celebri la rikolton de agrikulturo aŭ bredado. Per tio oni celas kreskigi solidajn familiajn, amikajn, najbarajn kaj komunumajn rilatojn, tio ankaŭ estas grava afero por laboro kaj vivo.
+
+Ekzemple, printempo estas la sezono, kiam ujguroj zorgas pri junaj kultivaĵoj, tial ili okazigas Kok-Meshrep por preĝi al promesplena estonteco kaj abunda rikolto. "Kok" estas la ujgura vorto por junaj kultivaĵoj.
+
+En la pasinteco, aliaj komunaj Meshrep-aktivadoj inkludis Huoxalik-Meshrep, por festi geedziĝon, plenaĝecan riton, rikolton kaj aliajn festivalojn; Dolan-Meshrep, por honori la ĉasistan vivon kaj kuraĝon de prapatroj; Namakul-Meshrep, por mediacii konfliktojn aŭ solvi disputojn; Keiyet-Meshrep, por kritiki malmoralan konduton aŭ eduki la publikon; Ketaphan-Meshrep, servanta kiel ia literatur-recenzo.
+
+Ĉi tiuj malsamaj specoj de Meshrep traktas diversajn aspektojn de laboro kaj vivo, transdonante artojn, kulturon, sciojn kaj vivspertojn, kun ĝojo kaj plezuro. Por ujguroj, tri homgrupoj estas ŝlosilaj por Meshrep: La eventprezentanto, la invititaj popolartistoj kaj la partoprenantoj. La prezentanto devas esti majstro de la tradicioj kaj kapable regi ĉiun aspekton de la agadoj, certigante, ke la evento iru glate kaj plaĉe.
+
+Por pli bone protekti ĉi tiun tradicion, laborrenkontiĝoj estis establitaj por protekti kaj trejni Meshrep-prezentantojn kaj popolartistojn. Modernaj sonregistraĵoj kaj videaĵoj estis produktitaj, akademiaj konferencoj estis kunvokitaj por antaŭenigi esploradon, kaj universitataj studentoj specialiĝantaj pri Meshrep estis trejnitaj por iĝi profesiuloj, kontribuante al ĝia daŭripova disvolviĝo.
+
+Oni povas diri, ke Meshrepo konsistigas la plej gravan portanton de ujguraj kulturaj tradicioj. Kompleta evento de Meshrep entenas riĉajn elementojn de tradicioj kaj spektaklaj artoj, kiel muziko, danco, dramo, popolartoj, akrobataĵoj, parola literaturo, manĝkutimoj kaj ludoj. Tradicia ujgura muziko estas la plej ampleksa arta formo inkludita en la evento, integrante kanton, dancon kaj distron. Meshrep funkcias kiel "klasĉambro", en kiu homoj povas lerni pri siaj tradiciaj kutimoj.
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Ĉina sperto pri energitransiro: Diskoniginda en COP30 - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Prezidanto Xi Jinping: Ĉinio kunlaboros kun Centra Azio por protekti internacian justecon
+
+**Published:** 2025-06-19
+
+**URL:** http://esperanto.china.org.cn/2025-06/19/content_117936346.htm
+
+**Categories:** Plej Freŝaj
+
+La 17-an de junio en la dua Ĉin-Centrazia Pintkunveno en Astano, kazaĥa ĉefurbo, ĉina prezidanto Xi Jinping diris, ke Ĉinio pretas kunlabori kun centraziaj landoj por protekti internacian justecon kaj kontraŭstari hegemonismon kaj potencpolitikon.
+
+Li diris: "Ĉinio kaj la kvin centraziaj landoj kune formis la ĉin-entrazian spiriton, kiun karakterizas reciproka respekto, reciproka fido, reciproka profito, reciproka helpo kaj strebado al komuna modernigo per altkvalita disvolviĝo."
+
+Li ankaŭ diris, ke ne ekzistas gajnintoj en tarifaj kaj komercaj militoj, kaj ke unuflankismo kaj protektismo damaĝas ĉiujn.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Esplorbazo de Grandaj Pandoj en Chengdu - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# La arkeologiejo Jinsha en Chengdu
+
+**Published:** 2025-06-20
+
+**URL:** http://esperanto.china.org.cn/2025-06/20/content_117936368.htm
+
+**Categories:** Plej Freŝaj
+
+La arkeologiejo Jinsha estas la centro de la antikva regno Shu, kies civilizacio disvolviĝis ĉe la alta parto de la baseno de Jangzio de la 12-a jarcento a.K. ĝis la 7-a jarcento p.K., alivorte, antaŭ ĉ. 3 200-3 600 jaroj. Tiu arkeologiejo, kune kun tiu de Sanxingdui, reprezentas la kulminon de la disvolvado de Shu-regno.
+
+Ornamaĵo de Senmortaj Birdoj Ĉirkaŭ la Suno, elfosita en Jinsha
+
+Konsiderata la ĉefa arkeologia malkovro de Ĉinio en la 21-a jarcento, la arkeologiejo Jinsha rivelis la plej densan kolekton da eburaĵoj kaj la plej grandan kvanton da oraĵoj kaj jadaĵoj jam trovitaj en arkeologiejoj de tiu periodo. La plej fama el tiuj antikvaĵoj estas la Ornamaĵo de Senmortaj Birdoj Ĉirkaŭ la Suno, unu el la ĉefaj ŝablonoj de la ĉina kultura heredaĵo kaj simbolo de la urbo Chengdu.
+
+Jada ĉeno skulptita antaŭ pli ol 3 000 jaroj impresas pro la elstara prilaborado.
+
+Testuda karapaco uzita por divenado
+
+La malkovro de tiuj trezoroj pruvas, ke Chengdu havas urban historion de pli ol 3 000 jaroj, kaj Jinsha nun estas konsiderata la komenca punkto de chengdu-a urba historio. En 2007, tiu arkeologiejo fariĝis naci-nivele protektita kultura heredaĵo kaj eniris la liston de naci-nivelaj arkeologiejoj. En la sama jaro, muzeo estis inaŭgurita en tiu loko, kun areo de 300 mil kvadrataj metroj kaj konstruita areo de proksimume 40 mil kvadrataj metroj.
+
+Bronzaĵo en formo de homa korpo kun ronda truo en la kolo
+
+Kiel la plej reprezenta eksponejo pri antikva Shu-civilizacio, la Muzeo de Jinsha-Arkeologiejo miksas tradiciajn metodojn de eksponado kun novigaj konceptoj por prezenti la kulturon de Shu-regno. Ĝi estas agnoskata kiel ĉina 4A-nivela turismejo, nacia unuaklasa muzeo, nacia bazo por popularigo de scienco, nacia bazo por esplorado kaj praktika edukado por lernantoj de bazaj kaj mezlernejoj, kaj bazo por praktiko de post-doktora novigo en la provinco Sichuan.
+
+Raportis kaj fotis: Rafael Henrique Zerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;">Ĉina sperto pri energitransiro: Diskoniginda en COP30 - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Malfermiĝis 9-a Ĉina kaj Sud-Azia Ekspozicio en Kunming
+
+**Published:** 2025-06-20
+
+**URL:** http://esperanto.china.org.cn/2025-06/20/content_117938742.htm
+
+**Categories:** Plej Freŝaj
+
+La 19-an de junio malfermiĝis la 9-a Ĉina kaj Sud-Azia Ekspozicio en Kunming, ĉefurbo de la provinco Yunnan en sudokcidenta Ĉinio. Ĝi altiras reprezentantojn de pli ol 2 500 entreprenoj el 73 landoj, regionoj kaj internaciaj organizoj.
+
+La sestaga evento kunigas ĉiujn sud- kaj sudorientaziajn landojn, okupante 16 ekspoziciejojn, el kiuj preskaŭ 70% estas dediĉitaj al profesiaj sektoroj kiel fabrikado, verda energio, kafindustrio kaj tradicia medicino.
+
+Du sudaziaj pavilonoj kun preskaŭ 800 budoj estis starigitaj, inkluzive de tiuj de Barato kaj Pakistano -- ĉiu el la du landoj gastigas 140 budojn.
+
+Preskaŭ 40 ekonomiaj kaj komercaj eventoj estas planitaj dum la ekspozicio, inkluzive de forumoj kaj aĉet-kunigoj celantaj profundigi regionan kunlaboron.
+
+La unua ekspozicio okazis en Kunming en 2013, la saman jaron kiam Ĉinio prezentis la iniciaton "La Zono kaj Vojo". Ĝi de tiam faciligis pli ol 110 miliardojn da usonaj dolaroj en eksterlandaj komercaj transakcioj kaj servis pli ol 20 mil entreprenojn. En 2024, komercado inter Ĉinio kaj sudaziaj landoj atingis preskaŭ 200 miliardojn da usonaj dolaroj, duobliĝante en la pasinta jardeko kun averaĝa jara kreskorapideco de 6.3%.
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">La arkeologiejo Jinsha en Chengdu - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Artistoj riĉigas noktovivon en Kuanzhai-aleo de Chengdu
+
+**Published:** 2025-06-23
+
+**URL:** http://esperanto.china.org.cn/2025-06/23/content_117936377.htm
+
+**Categories:** Plej Freŝaj
+
+Kuanzhai-aleo estas fama turismejo de la urbo Chengdu en la okcident provinco Sichuan, Ĉinio. Tie estas la nuraj postrestaĵoj de Shaocheng-kulturo de antaŭ 3 000 jaroj kaj de la 300-jara Mancheng-kulturo. Ĝia arkitektura stilo kombinas la kulturon de hutong de norda Ĉinio kun la tradiciaj kortoj de Sichuan. Tiu renovigita historia loko estas tre ŝatata de turistoj kaj lokanoj, kun multaj restoracioj, vendejoj kaj bunta noktovivo. La ĉeesto de artistoj surloke donas al vizitantoj pli intiman sperton de sichuan-a kulturo kaj igas la viziton al tiu loko pli speciala kaj memorinda. Jen kelkaj ekzemploj:
+
+Juna muzikisto prezentas nuntempan ĉinan popolmuzikon en drinkejo.
+
+Artistino prezentas tradiciajn kantojn kaj dancojn sur podio.
+
+Artisto prezentas sian lertecon fari kompleksajn korpajn movojn ekvilibrante bovlon kun brulanta kandelo sur sia kapo.
+
+Post prezento de la tradicia maskoŝanĝado de Sichuan-a Opero, artisto salutas klientojn en drinkejo.
+
+Raportis kaj fotis: Rafael Henrique Zerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;">Ĉina sperto pri energitransiro: Diskoniginda en COP30 - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Guĉino
+
+**Published:** 2025-06-23
+
+**URL:** http://esperanto.china.org.cn/2025-06/23/content_117939007.htm
+
+**Categories:** Plej Freŝaj
+
+Guĉino estas ĉina sepkorda pluk-instrumento. Ĝi estas ludata ekde antikveco, kaj tradicie estas ŝatata de akademiuloj kaj literaturistoj kiel instrumento de granda subtileco kaj rafineco, kaj ankaŭ asociita kun la antikva filozofo Konfuceo. Ĝi estas foje nomata de ĉinoj "la patro de ĉina muziko" aŭ "la instrumento de saĝuloj". Guĉino en la koncepto de ĉinoj estas la plej respektata el ĉiuj ĉinaj muzikinstrumentoj. Ĝi havas historion de ĉirkaŭ 5 000 jaroj, kaj ĝiaj legendaj figuroj rilataj al la ĉina prahistorio estas dieca Fuxi, Shennong kaj Huang Di, la Flava Imperiestro. Ĝi estas menciita en ĉinaj skribaĵoj antaŭ preskaŭ 3 000 jarojn, kaj instrumentoj estis trovitaj en tomboj antaŭ ĉirkaŭ 2 500 jaroj.
+
+Guĉino estas kvieteca instrumento, kun gamo de ĉirkaŭ kvar oktavoj, kaj ĝiaj malfermaj kordoj estas agorditaj en la basa registro. Ĝia plej malalta tonalo estas ĉirkaŭ du oktavoj sub meza C, aŭ la plej malalta noto sur violonĉelo. Sonoj estas produktitaj per plukado de malfermaj kordoj, haltigitaj kordoj kaj harmonikoj. Laŭ tradicio, guĉino origine havis kvin kordojn de la antikva ĉina muziksistemo, sed oni trovis similajn antikvajn instrumentojn kun nur unu aŭ pluraj kordoj. Ĝia moderna versio havas sep kordojn.
+
+Ekzistas pli ol 3 360 konataj kaj daŭre ludataj muzikaĵoj de guĉina muziko el antikveco kaj imperiaj dinastioj. La 7-an de novembro 2003, UNESKO anoncis, ke la ĉina guĉino estis elektita kiel nemateria kultura heredaĵo. En 2006 guĉino estis enlistigita en la listo de nacia nemateria kultura heredaĵo de Ĉinio. En 1977 registraĵo de guĉina muziko"Fluanta Akvo" estis elektita por Voyager Golden Record, orumita longdiska registraĵo enhavanta muzikon el la tuta mondo, kiu estis sendita en la kosmon de NASA per la kosmoŝipoj Voyager 1 kaj Voyager 2. Ĝi estas la dua plej longa eltiraĵo inkludita sur la disko. La kialo elekti verkon luditan per ĉi tiu specifa instrumento estas: La tona strukturo de la instrumento, ĝia muzika gamo, devenas de fundamentaj fizikaj leĝoj rilataj al vibrado kaj suprotonoj, reprezentante la intelektan kapablon de homoj pri ĉi tiu temo.
+
+Kiel unu el la muzikaj tradicioj, ekzistas diferencaj skoloj de ludarto de guĉino. La diferencoj ofte estas en la interpretado de la muziko. Nordaj skoloj emas esti pli viglaj laŭ tekniko ol sudaj skoloj. Sed en modernaj terminoj, la distingo inter skoloj kaj stiloj ofte estas malklara, ĉar ununura ludanto povas lerni de multaj malsamaj ludantoj de malsamaj skoloj kaj absorbi ĉiun el iliaj stiloj. Cetere, homoj el la sama lernejo trejnitaj sub la sama majstro povas havi malsamajn individuajn stilojn.
+
+Antikvaj guĉinoj estis faritaj el ligno kaj kordoj el tordita silko. Ornamaĵoj inkluzivis inkrustitajn punktojn el perlamoto aŭ aliaj similaj materialoj. En 2010 guĉino el Song-dinastio estis vendita kontraŭ 22 milionoj da usonaj dolaroj, fariĝinte la plej multekosta muzikinstrumento iam vendita.
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Malfermiĝis 9-a Ĉina kaj Sud-Azia Ekspozicio en Kunming - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Vjetnama klerulo: Usono ne povos venki en komerca milito
+
+**Published:** 2025-06-23
+
+**URL:** http://esperanto.china.org.cn/2025-06/23/content_117944767.htm
+
+**Categories:** Plej Freŝaj
+
+de Quang Thanh Phan*
+
+Usona prezidento Donald Trump duobligis sian doganpolitikon en sia dua oficperiodo, sed li devas kompreni, ke la tutmonda geopolitika kaj ekonomia situacio jam ŝanĝiĝis en la pasinta duonjardeko malavantaĝe al Usono. Kvankam Trump projekciis la komercan militon kiel manieron por montri forton, kiu profitigas la usonan ekonomion, tamen faktoj indikas, ke la komerca milito alportas nur katastrofon.
+
+Dum jardeko, per la iniciato "La Zono kaj Vojo", Ĉinio fariĝis multe malpli dependa de la usona merkato ol ĝi estis antaŭ jardeko: ASEAN nun estas la plej granda komerca partnero de Ĉinio, kaj la ekonomiaj ligoj de Ĉinio kun Eŭropa Unio kaj afrikaj kaj mezorientaj landoj pligrandiĝas. Rezulte, kiam alfrontite al revivigitaj usonaj doganoj, Ĉinio respondis per forta sed modera averto, postulante, ke ĉiuj pluaj intertraktadoj estu bazitaj sur "reciproka respekto", movo, kiu reflektas ĝian kreskantan diplomatian povon kaj kapablon rezisti ekonomian devigon.
+
+Pli grave, la ekonomiaj malfortoj de Usono fariĝas pli videblaj. Fabrikado malkreskis al nur 10% de MEP, dum konsumo konsistigas preskaŭ 70% de la ekonomia agado. Kaj kun kreskanta importado, la komerca deficito restas granda.
+
+Krome, plimulto de usonanoj nun rigardas la eksteran komercan politikon de Trump kiel malkonsekvencan kaj neklaran, kaj la indico de necerteco pri usona komerca politiko signife altiĝis kompare kun la pasinta jaro.
+
+Sen kredinda strategio, la komerca milito de la usona prezidento riskas subfosi la ekonomian stabilecon de Usono kaj doni avantaĝon al Ĉinio.
+
+*Quang Thanh Phan, el Vjetnama Nacia Universitato en Ho-Ĉi-Min-urbo de Vjetnamio
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Okazis lanĉ-ceremonio de libro de islanda esperantisto - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Kunĉju-opero
+
+**Published:** 2025-06-24
+
+**URL:** http://esperanto.china.org.cn/2025-06/24/content_117942374.htm
+
+**Categories:** Plej Freŝaj
+
+Kunĉju-opero (aŭ Kunqu) estas unu el la plej malnovaj ekzistantaj ĉinaj operoj. Ĝi evoluis el muzika stilo de Kunshan, parto de la kultura areo Wu, kaj poste furoris en ĉinaj teatrejo de la 16-a ĝis la 18-a jarcentoj. Konataj verkoj de tia opero inkluzivas
+
+La Peonian Pavilonon
+
+en la dinastio Ming.
+
+Prezentado de La Peonia Pavilono
+
+Ĝia melodio estas unu el la kvar grandaj karakterizaj melodioj en la ĉina opero. Ĝi estas konata pro la eleganta kantoteksto, gracia stilo kaj delikata prezentado. Ĝi estas unu el la operoj grupigitaj sub suda operaro, kaj ĝi estas konata kiel la "prapatro de cent operoj". Kunĉju-opero uzas fluton, tamburon kaj tabulon kaj tiel plu kiel ĉefaj akompanaj instrumentoj. En 2001 Kunĉju-opero estis proklamita unu el la majstraĵoj de la buŝa kaj nemateria heredaĵo de la homaro fare de UNESKO, kaj ĝi estis enskribita en la liston de nemateria kultura heredaĵo de UNESKO en 2008.
+
+Kunĉju-opero rilatas al kunshan-a melodio (昆山腔, Kūnshān qiāng). Oni ĝenerale kredas, ke la melodio estis evoluigita en la Ming-dinastio (1368-1644). La plej fama kunĉju-operaĵo estas
+
+La Peonia Pavilono
+
+verkita de Tang Xianzu en Ming-dinastio. Aliaj gravaj verkoj inkluzivas La Palacon de Eterna Vivo, verkita de Hong Sheng, kajLa Persikfloran Ventumilon de Kong Shangren, verkitan en frua Qing-dinastio (1616-1911). La operoj povas esti prezentitaj kiel eltiraĵoj aŭ kulminaĵoj nomitaj zhézixì (折子戲), kiuj fariĝis la normo antaŭ la 1760-aj jaroj kaj pli ol 400 pecoj de ĉi tiuj estis konataj. Kunĉju-opera prezentado influis la prezentadon de multaj aliaj stiloj de la ĉina muzika teatro, inkluzive de la Pekina Opero, kiu enhavas multon el kunĉju-repertuaro.
+
+Komence de la 20-a jarcento, la kultura elito provis restarigi Kunĉju-operon, kaj akademio estis fondita en 1921 por trejni geaktorojn. Ekde 1949 ĝi estas subvenciita de la registaro, kaj komencis reviviĝi meze de la 1990-aj jaroj.
+
+Hodiaŭ, Kunĉju-opero estas profesie prezentita en sep gravaj urboj de Ĉinio: Pekino, Ŝanhajo, Suzhou, Nankino, Chenzhou, Wenzhou kaj Hangzhou, kaj ankaŭ en Taibei de Taiwan de la lando. Neprofesiaj operaj societoj estas aktivaj en multaj aliaj urboj en Ĉinio kaj eksterlande, kaj operkompanioj foje turneas.
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Guĉino - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Okazis lanĉ-ceremonio de libro de islanda esperantisto
+
+**Published:** 2025-06-24
+
+**URL:** http://esperanto.china.org.cn/2025-06/24/content_117942964.htm
+
+**Categories:** Plej Freŝaj
+
+La 19-an de junio okazis lanĉ-ceremonio de la dulingva (ĉina kaj islanda) libro
+
+Danco de glacio kaj fajro
+
+dum la Pekina Internacia Librofoiro okazigata en la Ŝtata Konferenca Centro en Pekino.
+
+La libro el 40 poemoj estas kunlaborita de Ragnar Baldursson, eksa konsilisto de islanda ambasadorejo en Ĉinio kaj konata ĉina poeto Zhao Lihong. Ambaŭ verkis20 poemojn en la ĉina lingvo, kaj Ragnar ilin tradukis al la islanda lingvo. Ragnar, filo de fama islanda Esperanta poeto, aldonis Esperantan poemon Espera sonĝo al la libro.
+
+Thorir Ibsen, ambasadoro de Islando en Ĉinio, parolis en la ceremonio. Li diris, ke la libro estas eldonata ĉe la 30-jariĝo de la fondiĝo de islanda ambasadorejo en Ĉinio kaj atestas la kulturajn interŝanĝojn inter la du landoj.
+
+En la lanĉ-ceremonio, Ragnar prezentis al la partoprenantoj la ideon de Esperanto. Li klarigis al
+
+El Popola Ĉini
+
+o, kial li speciale aldonas Esperantan poemon:
+
+"Mi volas tiumaniere esprimi la esperon de esperantistoj pri kunlaboro inter diversaj kulturoj. Tio estas sama kun la ideo de la libro surbaze de la konfuceisma idealismo -- Oni povas harmonie kunlabori konservante sian unikecon". Li kredas, ke la ideo helpas homojn solvi la konfliktojn de la nuntempa mondo kaj kontribuas por estigo de la paca mondo.
+
+En la libro, estas kunpentraĵa manuskripto de Zhao Lihong kaj 17 pentraĵoj de la artisto Eirdis, filino de Ragnar. Ĝi spegulas la ĉinan kutimon, ke poeto kaj pentraĵo ofte akompanas unu la alian.
+
+"Komence mi volis krei blank-nigrajn pentraĵojn por la libro, tamen kiam mi finlegis la poemojn, mi estis kortuŝita kaj sentis, ke fakte ili havas saman temon kun miaj originalaj pentraĵoj, do mi elektis ilin el miaj antaŭaj libroj," klarigis Eirdis.
+
+Kun patro el Islando kaj patrino el Ĉinio, Eirdis kreskis sub la du kulturoj kaj estas atesto de la amikeco inter Islando kaj Ĉinio. Pri la simileco inter la du kulturoj, ŝi diris: "Fakte, estas granda malsameco inter la islanda kaj ĉina kulturoj, kaj foje tiu malsameco konfuzas min. Per arto mi provas kompreni la kulturojn, trovi similecojn inter ili kaj kuraci min mem."
+
+Redaktoro: Gao Shuyuan
+
+<span style="font-family: "times new roman"; font-size: 20px;">Artistoj riĉigas noktovivon en Kuanzhai-aleo de Chengdu - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Wang Shengjuan: fiŝforma lanterno en Anhui-provinco de Ĉinio
+
+**Published:** 2025-06-25
+
+**URL:** http://esperanto.china.org.cn/2025-06/25/content_117942391.htm
+
+**Categories:** Plej Freŝaj
+
+En la loka vilaĝo Wangmantian, 62-jaraĝa Wang Shengjuan sin tenas al sia identeco kiel heredanto de nemateria kultura heredaĵo kaj zorge konservas tradician metiarton -- la fiŝforman lanternan faradon. Ŝi komencis tion ekde sia 22-jaraĝo kaj fariĝis heredanto de sia familio.
+
+Ĉiu lanterno, kiun ŝi faris propramane, ne nur lumigas la nokton en la kamparo, sed ankaŭ prilumas la estontecon de tradicia kulturo. Wang Shengjuan diris ameme: "Mi esperas, ke ĉi tiuj tradiciaj artoj povos esti komprenataj kaj ŝatataj de pli da homoj, kaj kion mi povas fari estas heredigi kaj diskonigi ĝian ĉarmon kaj valoron."
+
+Wang Shengjuan dediĉas sin al heredado de la tekniko. Ŝi estis dungita kiel eksterkampusa instruistino ĉe Daguyun-lernejo por instrui al lernejanoj kiel fari malgrandajn fiŝformajn lanternojn, kuraĝigante ilin partopreni en la heredado de tradicia kulturo. Vidante tiom da infanoj ŝatantaj la lanternojn, Wang Shengjuan sentas, ke abundas espero pri la heredado de tiu tekniko.
+
+Wang Shengjuan ankaŭ menciis, ke kiam ŝia edzo Wang Zailang estis grave malsana, li havis la ideon verki libron nomitan "La legendo de fiŝforma lanterno", ĉar la fiŝforma lanterno en la vilaĝo Wang Mantian havas historion de centoj da jaroj, sed ankoraŭ ne ekzistas skriba registro pri ĝi. Wang Shengjuan subtenis sian edzon kaj helpis lin kolektis informojn kaj demandis lokajn maljunulojn pri la historio. En 2021 ŝia edzo forpasis. Wang Shengjuan diris sincere: "En mia vivo mi daŭre esploros la kulturon de fiŝforma lanterno de Wang Mantian kaj perfektigos la nefinitan libron de mia edzo, por ke ĝi fariĝu nia heredaĵo kaj trezoro de la vilaĝo."
+
+La rakonto de Wang Shengjuan montras al ni la malfacilaĵojn kaj belecon de nemateria kultura heredaĵo, kaj ni estas profunde kortuŝitaj de ŝiaj persisto kaj sindediĉo.
+
+Redaktoro: Sheng Min
+
+<span style="font-family: "times new roman"; font-size: 20px;">Guĉino - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Han Meilin: Kial mi verkis "Ĉielan Libron"?
+
+**Published:** 2025-06-26
+
+**URL:** http://esperanto.china.org.cn/2025-06/26/content_117942396.htm
+
+**Categories:** Plej Freŝaj
+
+En pli ol 30 jaroj, la pentristo Han Meilin okupis sin pri nekonata sed signifoplena afero: Li kolektis antikvajn simbolojn kaj skribsignojn -- kelkajn ĝis nun ne deĉifritajn -- el diversaj historiaj objektoj kiel surostaj skribaĵoj, ŝtonaj gravuraĵoj, rokpentraĵoj, antikvaj argilaĵoj, bronzaĵoj, brik-enskriboj, ŝtonaj tamburoj ktp. Per tradicia ĉina peniko li kopiis ilin en kaligrafia formo kaj kompilis ilin en verkon nomitan "Ĉiela Libro".
+
+Ĉina kaligrafio akompanas la estiĝon kaj evoluadon de ĉinaj skribaĵoj. Ĝi disvolviĝis dum pli ol 3 000 jaroj kaj fariĝis reprezenta simbolo de la ĉina kulturo. En 2009 ĉina kaligrafio estis enlistigita en la liston de nemateriaj kulturaj heredaĵoj de Unesko.
+
+Kia estas "Ĉiela Libro"?
+
+La libro enhavas pli ol 10 000 skribsignojn, kiujn neniu rekonas aŭ scias kiel prononci. Por lingvistoj, ĝi estas kvazaŭ "rifuĝejo de perditaj skribsignoj", sed por Han Meilin, tiuj nekompreneblaj "ĉielaj skribsignoj" posedas ne nur formon, sed ankaŭ emocion, kaj donas novan inspiron al lia arta kreado.
+
+Beleco de skribaĵoj per pentrado
+
+Kiel pentristo, Han Meilin kontaktiĝis kun kaligrafio pli frue ol pentrado. En infanaĝo, li unue konis
+
+li
+
+-kaligrafion. Antaŭ pli ol 30 jaroj, dum promenado surstrate li hazarde vidis amason da malnovaj libroj. Li sentis, ke tiuj antikvaj skribsignoj "manskuis", "ridetis" kaj "palpebrumis" al li -- li tuj enamiĝis en antikvajn skribaĵojn kaj komencis sian kredadon de "Ĉiela Libro".
+
+Kolekto de antikvaj skribsignoj
+
+"Mi studis kaligrafion por pentrado," Han Meilin diris. "La strukturoj de niaj antikvaj skribaĵoj estas eksterordinare belaj. Eĉ se ni ne povas ilin deĉifri, ni ne devas forĵeti ilin." La plursignifeco, plurformeco kaj libera variado de fruaj ĉinaj skribaĵoj fascinis lin. La "libera kaj kaprica" naturo de antikvaj skribaĵoj inspiris lian artan esploradon de formoj kaj strukturoj. Li ne volis unuformigi ilin kiel ni faras hodiaŭ. Li klopodis arte redoni la grandan kreemon kaj imagpovon de antikvuloj.
+
+Han Meilin diris: "En muziko, modalo C-minora aŭ F-maĵora povas esti nomita kiel 'sentitola'. Se la antikvaj skribsignoj, kiuj restas nedeĉifritaj, ne montriĝus al la mondo, estus granda bedaŭro. Ili estas trezoroj de la ĉina nacio."
+
+Kultura interpreto de skribaĵoj
+
+La ĉina verkisto kaj pentristo Feng Jicai diris: "Kvankam la ĉinaj skribaĵoj senĉese evoluas, ilia kvadrata formo konservas videblan pentr-genon. Tio estas la kaŭzo, kial la ĉinaj ideogramoj povas transformiĝi en unikan kaligrafian arton." Li laŭdis: "Danke al la amo de la artisto, la preskaŭ mortintaj antikvaj skribsignoj reviviĝas. Ili estas fremdaj kaj familiaraj, misteraj kaj intimaj, profundaj kaj proksimaj, bizaraj kaj belaj. Per lia majstra tuŝo, ili ricevis belan renaskiĝon."
+
+Redaktoro: Liu Zijia
+
+<span style="font-family: "times new roman"; font-size: 20px;">Guĉino - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Malfermiĝis Somera Davos-Forumo en Tianjin
+
+**Published:** 2025-06-26
+
+**URL:** http://esperanto.china.org.cn/2025-06/26/content_117949020.htm
+
+**Categories:** Plej Freŝaj
+
+Inter la 24-a kaj la 26-a de junio okazis la Somera Davos-Forumo en la urbego Tianjin de Ĉinio. La forumo estas ankaŭ konata kiel la 16-a Jarkunveno de la Novaj Ĉampionoj de la Monda Ekonomia Forumo kun la temo "entreprenado en la nova epoko", fokusante sur kvin ŝlosilajn flankojn: Monda ekonomio, perspektivo de Ĉinio, industrioj disrompitaj, investoj en popola bonfarto kaj konservado de la Tero, kaj novtipaj energifontoj kaj materialoj.
+
+Al la malferma ceremonio ĉeestis ĉina ĉefministro Li Qiang. Li diris, ke Ĉinio estas memfida pri la kapablo teni rapidan ekonomian kreskon. Li menciis, ke la malneta enlanda produkto de Ĉinio kreskis je 5.4% en la unua trimestro de 2025 malgraŭ signifaj pliiĝantaj eksteraj ŝokoj. Ĉina ekonomia disvolvo ne estas mallongtempa ŝpruco, sed daŭra progreso al longtempaj celoj. Li alvokis, ke la internacia komunumo faru konstruemajn agojn en internacia ekonomia kaj komerca kunlaboro.
+
+(el ĈRI)
+
+Redaktoro: Xie Ruifeng
+
+<span style="font-family: "times new roman"; font-size: 20px;">Han Meilin: Kial mi verkis "Ĉielan Libron"? - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Sukcesa brazila Junia Festo en Pekino
+
+**Published:** 2025-06-27
+
+**URL:** http://esperanto.china.org.cn/2025-06/27/content_117949029.htm
+
+**Author:** Rafael Henrique Zerbetto
+
+**Categories:** Plej Freŝaj
+
+Centoj da homoj amasiĝis la 21-an de junio por partopreni la Junian Feston organizitan de la Konsilio de Brazilaj Civitanoj de Pekino partnerece kun la ĉinaj firmaoj OTH kaj Action Bar. Samkiel en la pasintjara evento, ĉiuj biletoj estis disvenditaj tre rapide. Laŭplane, oni okazigos la venontjaran feston en pli granda loko. Kun la celo diskonigi la kulturon de la Junia Festo kaj tipajn produktojn de Brazilo, la festo ĉijare donis al ĉiu biletaĉetinto kuponon por gustumi brazilan kafon kaj partopreni la tradiciajn ludojn de la festo.
+
+Homoj ĝuas la Junian Feston en Pekino.
+
+Profitante la popularecon de kapibaroj en Ĉinio, la organizantoj de ĉijara festo ne nur aldonis tiun beston vestitan kiel brazila kamparano al la dekoracio kaj reklamoj pri la festo, sed ankaŭ preparis specialajn premiojn por la gajnintoj de la konkursoj: Ludilo en formo de kapibaro portanta pajlan ĉapelon sur la kapo. Pajla ĉapelo, uzata de kamparanoj kaj en Brazilo kaj en Ĉinio, estas grava elemento de la Junia Festo.
+
+Junia Festo kaj ĉinaj festoj
+
+Samkiel okazas en plejparto de la tradiciaj ĉinaj festoj, la Junia Festo originas de antikvaj popoltradicioj profunde ligitaj al agrikulturo. Kiel landoj, kiuj nur antaŭ nelonge spertis amasmigradon al urboj, Brazilo kaj Ĉinio kundividas pasinton tre ligitan al kamparo. Antaŭ jarmiloj, kaj eŭropanoj kaj ĉinoj, rimarkinte la sezonojn de la jaro kaj la efikon de astronomiaj fenomenoj sur agrikulturo, ekdisvolvis kulturajn tradiciojn ligitajn al specialaj datoj, kiel solsticoj kaj ekvinoksoj.
+
+En antikveco, populariĝis antikvaj paganaj festoj en Eŭropo, kun ritoj kiel danci ĉirkaŭ fajrego por atentigi la diojn pri tio, ke la temperaturo estis tre alta (somera solstico) aŭ tre malalta (vintra solstico). Kiam eŭropaj popoloj konvertiĝis al kristanismo, tiuj popolaj tradicioj ricevis novajn signifojn, sin ligantaj al la festoj de Kristnasko kaj Tago de Sankta Johano. Enkondukita de portugaloj en Brazilo, festo de Sankta Johano fariĝis unu el tiuj raraj okazoj, kiam homoj disigitaj tra pluraj bienegoj for de urboj irus al la proksima urbo por aŭskulti meson kaj renkontiĝi. Laŭ tempopaso, paralele al la religia festo kreiĝis popola tradicio feste al la kampara kulturo.
+
+En Ĉinio, astronomia observado rezultis en la disvolvado de la 24 sunperiodoj, aro da scioj rilatante ĉiun duonmonaton al periodo taŭga por specifaj agrikulturaj aktivaĵoj, kiel plantado, kresko de grenoj kaj rikolto, kaj utila por antaŭvidi epokojn de varmego aŭ malvarmego, pluvo aŭ sekeco. Ĉefaj popolaj festoj de Ĉinio, kiel Printempa Festo, Qingming, Drakboata Festo kaj la Mezaŭtuna Festo estas ligitaj al aparte gravaj sunperiodoj.
+
+Celebrata meze de brazila vintro, la Junia Festo havas similaĵojn kun ĉina Printempa Festo, kiu ankaŭ okazas en malvarma sezono. Krom la populareco de petardoj kaj artfajraĵoj en la du festoj, ankaŭ estas granda similaĵo inter ĉinaj lanternoj kaj brazilaj juniaj balonoj. Post la Printempa Festo, en Ĉinio okazas templa foiro, kermeso kun budoj, kie oni povas aĉeti manĝaĵon, rigardi prezentaĵojn de muziko kaj danco, kaj trovi ankaŭ ludojn similajn al tiuj de brazila Junia Festo.
+
+La Mezaŭtuna Festo anoncas temperaturan malkreskon antaŭ la vintro kaj celebras la lastan rikolton de la jaro. Ĝia simileco al la brazila Junia Festo estas en la profunda rilato de ambaŭ festoj kun kampara vivo kaj agrikulturo. Tiu similaĵo ne estas koincido, konsiderante, ke multaj elementoj de la ĉina kulturo populariĝis en kolonia Brazilo, laŭ pioniraj studoj de la antropologo Gilberto Freyre pri tio, kiuj inspiris aliajn aŭtorojn pli profunde esplori tiun temon poste, ekzemple la profesoro pri artoj José Roberto Teixeira Leite, kies esploroj pri la ĉina influo en la brazila arto estas elstaraj.
+
+Kaj ni ankaŭ ne povas forgesi la faman verkiston João Guimarães Rosa, kiu cetere estis esperantisto, kiu metis ĉinon inter la roloj de sia ĉefa romano, pri vivo en brazila kamparo antaŭ jarcento, kvazaŭ postulante agnoskon de la kontribuo de ĉinoj al brazila kampara kulturo. Rosa vojaĝis dum jaroj tra brazila kamparo kolektante informojn por verkado de la libro, kaj tre probable aŭskultis interesajn rakontojn pri ĉinoj en brazila landinterno.
+
+Kvadrilo, foroo kaj tipaj manĝaĵoj
+
+Alia koincido (aŭ ne) inter la Junia Festo kaj la tradicia ĉina festo rilatas al la zorgo de kamparanoj pri venenaj bestoj. En la kvadrilo, tradicia danco de la Junia Festo, la dancistoj turnas post kiam oni rakontas pri serpento ĉe la vojo. La ĉina Drakboata Festo koincidas kun la pinta aktivado de araneoj, skorpioj kaj serpentoj, kaj ligiĝas al tradicioj kiel pendigo de aromaj plantoj ĉe pordoj de domoj kaj uzo de aroma saketo ĉe la kolo por forpeli danĝerajn bestojn.
+
+Sed la simileco estas nur en tiu punkto. Kvadrilo originas de la franca aristokrata danco quadrille, enkondukita en Brazilon en 1822, kiam la portugala reĝo kun sia kortumo migris al Brazilo, fuĝantaj de Napoleono, kaj tiu danco populariĝis en festoj de la elito. Iom post iom, laŭ tiu danco populariĝis ekster aristokrataj rondoj, ĝi estis adaptita al la realo de kampara vivo kaj fariĝis tradicio de la Junia Festo.
+
+Homoj dancas kvadrilon.
+
+Kaj en la pasinta jaro, kaj en tiu ĉi jaro, kvadrilo estis tre sukcesa, kun entuziasma partopreno de ĉeestantoj. Sed estas interesa kultura detalo: Dum en Brazilo nekonataj viroj kaj virinoj vidas la dancon kiel ŝancon por interkonatiĝi, ĉinaj virinoj, kiuj volas danci kutime pariĝas kun alia virino, kaj tio rivelas gravan diferencon kadre de socia interagado de ambaŭ popoloj. Foroo, muzik-stilo tipa de la Junia Festo, aparte en nordorienta Brazilo, ankaŭ estis sukceso inter la ĉeestantoj. "Aŭskultinte foroon mi sentis min hejme," rakontis la brazila junulino Nara Arruda, kiu venis al Pekino por turismo kaj informiĝis pri la festo pere de amikoj vivantaj en Ĉinio.
+
+Kun la celo antaŭenigi la kulturan interŝanĝon inter Brazilo kaj Ĉinio, Action Bar, kiu gastigis la eventon, liveris al la ĉeestantoj kelkajn manĝetojn tre popularajn en la du landoj, inkluzive de arakido kaj rostita viando, substrekante la kulturajn similaĵojn inter la du landoj. La brazila restoracio Latina preparis specialan menuon por la festo, kun du tipe brazilaj sandviĉoj -- farĉitaj de bovaĵo aŭ kolbaso; boligita maizo, tipa manĝaĵo de la Junia Festo kaj ankaŭ tre populara en Ĉinio; kaj porciojn de brazilaj manĝetoj. La dolĉaĵoj disponeblaj, kokoskuko, kanĵiko, kuraŭo kaj kokosaĵo, ankaŭ estas tipaj de la Junia Festo kaj preparitaj speciale por la festo.
+
+La malfacilo trovi certajn tipe brazilajn produktojn en Ĉinio malebligas kuiradon de kelkaj tipaj pladoj de tiu festo aŭ postulas adapton de la recepto, dum la ekzisto de malmultaj restoracioj kaj bufedaj firmaoj pri brazila manĝaĵo en Ĉinio malfaciligas pli grandan diversecon de la pladoj kaj kuir-stiloj. Tiu konstato ankoraŭ pli evidentigas la gravecon de eventoj kiel la Junia Festo en Ĉinio. Per gustumado de tipe brazilaj manĝaĵoj, kreiĝas oportuno por ilin popularigi en la lando.
+
+Adaptoj al ĉina somero
+
+La tago de la festo ĉijare ankaŭ koincidis kun la komenco de unu el la plej varmaj sunperiodoj de la tradicia ĉina lunkalendaro, kun prognozo de temperaturoj super 36 celsiaj gradoj de la tuta semajno. La altaj temperaturoj de pekina somero malebligas konsumadon de tradiciaj drinkaĵoj de la Junia Festo, kiel Kentao (kies nomo signifas "varmega", drinkaĵo el zengibro) kaj varma vino kun spicaĵoj. Kiel somera alternativo, la brazila refreŝiga somera drinkaĵo Kajpirinjo estis sukceso en la festo.
+
+Fajrego, artfajraĵoj, petardoj kaj balonoj, tradicioj de la Junia Festo en Brazilo, ne estis en la pekina festo, kaj pro leĝaj limigoj pri ilia uzo (pro mediprotektaj kaj sekurecaj kialoj), kaj pro la nekonveno esti proksime de varmiga fajro en somero. Momente tiuj tradicioj restas ekster la festo, sed en ontaj eldonoj eble estos trovita maniero ilin simboli alimaniere.
+
+La dekoracio estis tipa de la Junia Festo, kun bildoj de fajrego kaj balonoj kaj kantotekstoj de tipaj kantoj de la Junia Festo. En tiu ĉi punkto, evidentiĝas alia similaĵo inter Brazilo kaj Ĉinio: La koloraj banderoloj tipaj de la Junia Festo ankaŭ estas ofte troveblaj en Azio. Laŭ studoj, la banderoloj de la Junia Festo originas de antikva portugala tradicio uzi kolorajn restaĵojn de teksaĵoj por dekoracio de religiaj festoj. En Brazilo, la banderoloj origine estis faritaj de teksaĵo, nur poste populariĝis tiuj el papero. En Azio, koloraj banderoloj estas daŭre faritaj el teksaĵo kaj uzataj ĉefe en dekoracio de temploj kaj tradiciaj festoj. En tibeta budhismo ekzistas la tradicio pendigi banderoloj kun stampitaj preĝoj, por ke la preĝo estu dissendata de la vento.
+
+Inter koloraj banderoloj, homoj amuziĝas kaj gustumas brazilan manĝaĵon.
+
+Kvankam estas tiuj similaĵoj inter banderoloj troveblaj en Brazilo kaj Azio, inkluzive de tradicioj pri ilia farado kaj uzo, tamen ne estas pruvo de rekta historia rilato, nur hipotezo, ke la antikva Silka Vojo eble iom kontribuis por tiuj similaĵoj. Sed plej verŝajne ambaŭ tradicioj evoluis sendepende kaj similaĵoj estas klarigitaj de la universala kutimo plenigi monotonajn spacojn per koloroj por krei plaĉan etoson.
+
+Malgraŭ tio, estas tre interese rimarki, ke en Brazilo kaj en Ĉinio, tiu tradicio havas originon kaj simbolojn, kiuj rilatas al religio kaj popola kulturo, krom esti maniero utiligi restaĵojn de teksaĵoj por estigi festan etoson. Estas ankaŭ esenca diferenco inter ambaŭ tradicioj: Dum ĉinaj banderoloj, aparte la ruĝaj, uzataj en Printempa Festo, celas allogi bonon kaj forpeli malbonon, dum la kolordiverseco de la Junia Festo reprezentas abundan rikolton.
+
+Instigo al kulturaj interŝanĝoj inter Ĉinio kaj Brazilo
+
+La iniciato de la Konsilio de Brazilaj Civitanoj de Pekino ĉiujare organizi publikan Junian Feston en la urbo montriĝis promesplena por plifortigi la identecon de la brazila komunumo kaj antaŭenigi kulturajn interŝanĝojn inter Brazilo kaj Ĉinio. Ankaŭ tre grava estas la rolo de tiu festo en diskonigo de elementoj de la brazila kulturo malpli konataj en aliaj landoj, montrante, ke la brazila kulturo estas multe pli riĉa kaj bunta ol futbalo, sambo kaj rostita viando.
+
+Angela Zhang (maldekstre) kaj André Quemé (centre) gvidas la inaŭguron de la festo. João Batista Magalhães (dekstre) salutparolas nome de la brazila ambasadorejo en Pekino.
+
+"Mi estis impresita de la ĝoja etoso de la festivalo, mi vere gustumis tradiciajn brazilajn manĝaĵojn kaj trinkaĵojn – ili estis bongustaj. Unu el la plej interesaj momentoj estis la tradicia danco de Brazilo, kiun mi povis ne nur spekti, sed ankaŭ partopreni – tre gaja kaj kolora etoso. Krome, mi havis la ŝancon konatiĝi kaj amikiĝi kun novaj homoj el Brazilo kaj Ĉinio, kiuj estis tre afablaj kaj amikemaj. Per tiu evento mi vere sentis la belecon de kultura interŝanĝo kaj internacia amikeco," klarigis la vjetnama samideanino Mung Bui.
+
+La festo ankaŭ estis speciala por Zhang Chengcheng, kiu uzas la nomon Angela Zhang en la portugala. Ŝi estas la nura ĉino, kiu volontule laboris en la organizado de festo. "La Junia Festo estis mirinda sperto kaj elstara montrofenestro por montri la brazilan kulturon. Mi sentas min ĝoja kaj honorigita pro mia kontribuo al ĝia sukceso, ĉar mi ne nur partoprenis, sed ankaŭ rolis kiel ponto en kultura interŝanĝo, helpante pliajn ĉinojn malkovri Brazilon kaj enamiĝi de ĝi. Mi ege volas partopreni en la preparado kaj celebrado de la ĉin-brazila kultura jaro."
+
+João Batista Magalhães, ministro-konsilanto ĉe la brazila ambasadorejo en Pekino, inaŭguris la feston per mallonga parolo, alpreninte la ŝancon por laŭdi la iniciaton de la konsilio organizi la eventon, substrekante la gravecon profundigi kulturajn interŝanĝojn inter Brazilo kaj Ĉinio. "Ni dankas la Konsilion de Brazilaj Civitanoj pro tia agado, ni aparte subtenas tiajn eventojn, ĉar ili diskonigas la brazilan kulturon," deklaris João.
+
+Verkis: Rafael Henrique Zerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;">Han Meilin: Kial mi verkis "Ĉielan Libron"? - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# 111-a UK okazos en Graco
+
+**Published:** 2025-06-30
+
+**URL:** http://esperanto.china.org.cn/2025-06/30/content_117954508.htm
+
+**Categories:** Novaĵoj
+
+Por la 111-a Universala Kongreso de Esperanto (UK) la Estraro de UEA elektis Aŭstrion kiel kongreslandon. La bela Graz (Graco) estos la kongresurbo.
+
+Graz estas la ĉefurbo de la lando Stirio – de la Aŭstria Federacia Respubliko. Ĝia nomo devenas de la slovena vorto Gradec, kiu signifas “kasteleto”. Ĝi estas la dua plej granda urbo en Aŭstrio (post Vieno) kaj havas kvar universitatojn kun ĉirkaŭ 40 mil studentoj. Kun pli ol 900 jaroj de ekzisto, en 2003 Graz estis la Eŭropa Kultura Ĉefurbo. Ĝi estas listigita kiel Monda Heredaĵo de Unesko kaj Urbo de Dezajno, proponante al vizitantoj fascinan mikson de tradicio kaj novigado. Pro sia eventoplena jarkalendaro, turismaj vizitindaĵoj kaj larĝa oferto de notinda gastronomia diverseco ĝi ankaŭ estas konata kiel la Ĉefurbo de Ĝojo. Graciplena urbo.
+
+Jam komence de 20-a jarcento estis komerca lernejo en Graz, kie oni instruis Esperanton. De tiam gastiĝis en la urbo pluraj Esperanto-eventoj, inter ili la Aŭstria Esperanto-Kongreso de 1913, 1926, 1949 (okaze de kiu la Aŭstria Poŝto eldonis poŝtmarkon kun verda stelo kaj la vorto "Esperanto") kaj 2024. Ankaŭ la Internacia Junulara Kongreso de 1970 kaj la Jubilea Esperanto-Konferenco de 1987 (dum kiu Ivo Lapenna proklamis la malfondon de Neŭtrala Esperanto-Movado). Intertempe la Esperanto-klubo de Graz estas inter la plej aktivaj de Eŭropo. En 2023 aperis oficiala 42-paĝa gvidilo de la urbo en Esperanto. Tiu gvidilo estas internacie senpage mendebla ĉe la Turisma Oficejo de la regiono Graz, pri kio raportis UEA.facila (https://uea.facila.org/loke/graz-r75). Graz havas Zamenhof-Esperanto-Objekton (ZEO-n), placon nomitan laŭ Esperanto: Esperantoplatz.
+
+Entute vigla kaj turisma urbo, kun unika strukturo por vizitantoj kaj tradicia kaj aktuala Esperanto-movado. Tial UEA decidis akcepti la inviton de Aŭstria Esperanto-Federacio (AEF) kaj de la loka klubo por kongresi en Graz en 2026 – pro kies invito UEA ankaŭ kore dankas.
+
+Ĉu ankaŭ vi partoprenos? La 111-a UK estas planata por okazi de la 1-a ĝis la 8-a de aŭgusto 2026. UEA rezervos specialan rabatitan kotizon por tiuj, kiuj aliĝos dum la 110-a UK tre baldaŭ okazonta en Brno, Ĉeĥio.
+
+(el UEA.org)
+
+<span style="font-family: "times new roman"; font-size: 20px;">Sukcesa brazila Junia Festo en Pekino - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Movebla presado per lignopecoj
+
+**Published:** 2025-06-30
+
+**URL:** http://esperanto.china.org.cn/2025-06/30/content_117954518.htm
+
+**Categories:** Plej Freŝaj
+
+Inventita de Bi Sheng ĉirkaŭ la jaro 1040, dum la dinastio Norda Song (960-1127), la tekniko de movebla presado per lignopecoj estas unu el la kvar grandaj inventoj de Ĉinio, kune kun pulvo, papero kaj kompaso. Kompare kun la malnova prestekniko de Tang-dinastio (618-907), kio postulis unu tutan lignoblokon por ĉiu paĝo, la tekniko de moveblaj pecoj ebligas redaktadon de la teksto presota kaj post presado oni povas reuzi la tipojn. La vilaĝo Dongyuan de la urbo Ruian en la provinco Zhejiang de Ĉinio, estas la nura loko, kie la tekniko de presado per lignaj moveblaj tipoj daŭre estas heredata pro sia historia kaj kultura graveco. En 2011 tiu tekniko estis sukcese enmetita en la liston de Unesko pri Nemateria Kultura Heredaĵo Bezonanta Urĝan Protekton.
+
+Verkis kaj fotis: Rafael Zeerbetto
+
+<span style="font-family: "times new roman"; font-size: 20px;">Sukcesa brazila Junia Festo en Pekino - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Nanxi-opero de Ruian en Zhejiang-provinco
+
+**Published:** 2025-06-30
+
+**URL:** http://esperanto.china.org.cn/2025-06/30/content_117954567.htm
+
+**Categories:** Plej Freŝaj
+
+Sur la strato Zhongyi de la urbo Ruian, Ĉinio, la aktoroj de Nanxi-opero prezentis "La rakonton de bivo". Nanxi-opero de Wenzhou estas ŝtat-nivela nemateria kultura heredaĵo de Ĉinio. Kaj "La rakonton de bivo" estas konata kiel la "prapatro de la teatraĵoj de Nanxi-opero".
+
+Redaktoro: Sheng Min
+
+<span style="font-family: "times new roman"; font-size: 20px;">111-a UK okazos en Graco - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
+
+# Farado de papera rondventumilo de Wenzhou
+
+**Published:** 2025-06-30
+
+**URL:** http://esperanto.china.org.cn/2025-06/30/content_117954587.htm
+
+**Categories:** Plej Freŝaj
+
+La farado de papera rondventumilo de Wenzhou estas tradicia ĉina metiarto, kiu kombinas paperfaradon kaj presteknikojn. Ĝia produkttekniko estas nemateria kultura heredaĵo de la urbo Wenzhou. La papero farita el pura morusŝelo havas unikan teksturon, donante al la ventumilo artan belecon kiel murpentraĵo.
+
+Redaktoro: Sheng Min
+
+<span style="font-family: "times new roman"; font-size: 20px;">111-a UK okazos en Graco - esperanto.china.org.cn</span>
+
+El Popola Chinio
+
+
+---
