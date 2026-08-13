@@ -13,3 +13,7 @@ output/
 *Zone.Identifier
 logs/
 fuyou/
+
+# 収集した記事本文は著作権保護のため git 管理・GitHub 公開しない
+# (各フォルダの内容は同フォルダ内 MANIFEST.md を参照)
+取得文書*/
