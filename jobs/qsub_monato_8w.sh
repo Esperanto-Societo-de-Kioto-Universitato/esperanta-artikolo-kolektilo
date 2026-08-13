@@ -26,7 +26,7 @@ mkdir -p "$OUT_DIR" "$(dirname "$LOG_PREFIX")"
   --start "$START" \
   --end "$END" \
   --workers 8 \
-  --method feed \
+  --method both \
   --throttle 1.0 \
   --split-by year \
   --out "$OUT_DIR" \

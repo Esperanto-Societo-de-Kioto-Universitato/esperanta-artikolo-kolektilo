@@ -74,9 +74,13 @@ def parse_args() -> argparse.Namespace:
     )
     p.add_argument(
         "--method",
-        default="feed",
+        default="both",
         choices=["auto", "rest", "both", "feed", "archive"],
-        help="URL収集方法（Monato は feed 推奨）",
+        help=(
+            "URL収集方法。feed/auto=Nova!ページのみ（直近約2か月分）。"
+            "archive/both=Nova!+ID連番プローブ（直近2年の年別インデックスが"
+            "購読者専用のため、過去分まで確実に取るなら both 推奨・既定値）"
+        ),
     )
     p.add_argument(
         "--throttle",
@@ -151,8 +155,13 @@ def worker_task(args: WorkerArgs) -> WorkerResult:
     for url in args.urls:
         try:
             article = fetch_article(url, cfg, session)
-            if article.published and not (cfg.start_date <= article.published.date() <= cfg.end_date):
-                continue
+            if article.published:
+                pub = article.published.date()
+                # 号日付 (YYYY/MM→月初正規化、常に day=1) は月粒度なので、
+                # 開始日が月の途中でも開始月を落とさないよう月初で比較する。
+                start_cmp = cfg.start_date.replace(day=1) if pub.day == 1 else cfg.start_date
+                if not (start_cmp <= pub <= cfg.end_date):
+                    continue
             articles.append(article)
         except Exception as exc:  # noqa: BLE001
             failures.append(f"{url} ({exc})")

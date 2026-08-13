@@ -33,7 +33,7 @@ def parse_args():
     p.add_argument("--days", type=int, help="終了日から遡った直近N日間を収集（--end 未指定時は今日を終了日にします）")
     p.add_argument("--out", default="output", help="書き出し先ディレクトリ")
     p.add_argument("--base-url", default=DEFAULT_BASE_URL, help="対象サイトのベース URL")
-    p.add_argument("--method", default="feed", choices=["auto","rest","both","feed","archive"], help="URL収集方法（Monato は feed 推奨）")
+    p.add_argument("--method", default="both", choices=["auto","rest","both","feed","archive"], help="URL収集方法。feed/auto=Nova!ページのみ（直近約2か月分）。archive/both=Nova!+ID連番プローブ（過去分まで確実に取るなら both 推奨・既定値）")
     p.add_argument("--throttle", type=float, default=1.0, help="1リクエスト毎の遅延秒数")
     p.add_argument("--max-pages", type=int, default=None, help="ページ送りの最大回数（Noneは制限なし）")
     p.add_argument("--include-audio", action="store_true", help="本文メタに MP3 等の音声リンクも含める")
@@ -131,9 +131,13 @@ def main():
         try:
             print(f"[{i}/{len(urls)}] Fetch: {u}")
             a = fetch_article(u, cfg, s)
-            if a.published and not (cfg.start_date <= a.published.date() <= cfg.end_date):
-                print(f"  -> skip (date {a.published.date()} is out of range)")
-                continue
+            if a.published:
+                pub = a.published.date()
+                # 号日付 (常に day=1 の月粒度) は開始月を落とさないよう月初で比較
+                start_cmp = cfg.start_date.replace(day=1) if pub.day == 1 else cfg.start_date
+                if not (start_cmp <= pub <= cfg.end_date):
+                    print(f"  -> skip (date {pub} is out of range)")
+                    continue
             arts.append(a)
         except Exception as e:
             print(f"[WARN] 取得失敗: {u} ({e})")
