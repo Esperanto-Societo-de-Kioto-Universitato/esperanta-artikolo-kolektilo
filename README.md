@@ -940,8 +940,9 @@ rm retradio_cache.sqlite*
 
 ### リポジトリの方針 (2026-08-13〜)
 
-著作権保護のため、**収集した記事本文 (`取得文書*/`) は git 管理せず、GitHub にはアップロードしません** (`.gitignore` で除外)。各取得フォルダの内容(サイト×月の記事数・既知の注意点)は、フォルダ内に生成される `MANIFEST.md`(`gen_manifest.py` で作成)にのみ記録します。
-なお 2026-03-04 以前にコミットされた記事群は git 履歴には残っています。履歴からの完全削除が必要になった場合は `git filter-repo` 等での書き換えを別途検討してください。
+著作権保護のため、**収集した記事本文 (`取得文書*/`) はこの公開リポジトリには置きません** (`.gitignore` で除外)。記事本文は**プライベートリポジトリ** [`esperanta-artikolo-korpuso`](https://github.com/Esperanto-Societo-de-Kioto-Universitato/esperanta-artikolo-korpuso) に保管します(取得後に `./sync_korpuso.sh` で同期。プライベート運用が前提のため、korpuso 側は公開設定にしないこと)。
+各取得フォルダの内容(サイト×月の記事数・既知の注意点)はフォルダ内の `MANIFEST.md`(`gen_manifest.py` で生成)に記録されており、korpuso 側にも同梱されます。
+なお 2026-03-04 以前にコミットされた記事群はこの公開リポジトリの git 履歴には残っています。履歴からの完全削除が必要になった場合は `git filter-repo` 等での書き換えを別途検討してください。
 
 ---
 
