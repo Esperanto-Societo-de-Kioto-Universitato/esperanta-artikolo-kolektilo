@@ -1055,6 +1055,16 @@ monato.be の年別インデックス `/<年>/index.php?p` は **2024年以前�
 
 ## 変更履歴
 
+### v1.2.1 (2026年8月23日)
+
+v1.2.0 の修正自体への退行レビュー (確定6件) を反映:
+
+- **retradio_lib (REST)**: published のタイムゾーンは cfg.timezone を貼らず、WP の date/date_gmt の差から**サイトの実オフセットを導出**して付与 (Libera Folio は通年 UTC+1 固定のため、Warsaw ラベルだと夏時間期間の時刻が実時刻から1時間ずれていた。日時の指す瞬間は date_gmt と等価で、期間フィルタはサイト現地日付基準を維持)
+- **retradio_lib (feed)**: paged=N を無視しつつ毎回変わるリンクを返すサーバーで無限ループしないよう、max_pages 未指定時のページ送りに上限200頁を設定。エクスポート失敗時に *.tmp を残さないよう後始末を追加 (sync_korpuso.sh も *.tmp を除外)
+- **backfill_publika_probe**: origin_labels を最初のファイル優先 (setdefault) にし、stale な monato_unknown.jsonl が手動配置済みの月ラベルを上書きしないように
+- **UEA Facila**: 認証情報未設定時に匿名収集である旨を明示的に警告。ランブックのログイン記述と環境変数の使い方を更新
+- MANIFEST (取得文書ekde20260401) の r385 注記を実態に合わせ修正 (再掲取得時にリアクション数「1」が本文に1行混入。連結時の重複除去は初出側を残す)
+
 ### v1.2.0 (2026年8月23日)
 
 - **セキュリティ**: `Uea_Facila/uea_facila_lib.py` にハードコードされていたログイン認証情報を削除 (環境変数 `UEA_FACILA_USER` / `UEA_FACILA_PASS` のみ受付。**当該パスワードは漏洩済みとして要ローテーション**)

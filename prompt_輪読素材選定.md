@@ -233,8 +233,10 @@
 6. **Pola Retradio** の記事はラジオ放送の書き起こしが多く、短い（200〜300語）。
    輪読素材には分量不足の場合がある。テーマが優れている場合のみ候補にする。
    `--include-audio` を指定すると記事メタにMP3等の音声リンクが含まれる。
-7. **UEA Facila** のスクレイパーはログイン認証を試みるが、認証に失敗した場合は
+7. **UEA Facila** のスクレイパーは環境変数 `UEA_FACILA_USER` / `UEA_FACILA_PASS` が
+   設定されている場合のみログイン認証を試み、未設定・認証失敗時は警告を出して
    public session で続行する。この場合、会員限定記事（約10%）が取得できない。
+   qsub 経由で使う場合は環境変数を export してから投入する（ジョブは `-V` で引き継ぐ）。
    stderr に `WARNING: UEA Facila login credentials were rejected` と出力される。
 
 ### オプション: CRI Esperanto（8番目のサイト）

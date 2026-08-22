@@ -186,7 +186,13 @@ def _ensure_logged_in(session: requests.Session, cfg: ScrapeConfig) -> None:
     authentication failures as non-fatal and continue with a public session.
     """
     global _LOGGED_IN, _LOGIN_ATTEMPTED
-    if _LOGGED_IN or _LOGIN_ATTEMPTED or not LOGIN_USER or not LOGIN_PASS:
+    if _LOGGED_IN or _LOGIN_ATTEMPTED:
+        return
+    if not LOGIN_USER or not LOGIN_PASS:
+        _LOGIN_ATTEMPTED = True
+        logging.warning(
+            "UEA_FACILA_USER/UEA_FACILA_PASS 未設定のため匿名 (公開) セッションで収集します。"
+            "会員限定記事は取得されません。")
         return
     if session.cookies.get("ips4_member_id"):
         _LOGGED_IN = True

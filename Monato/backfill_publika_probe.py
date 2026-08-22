@@ -94,7 +94,10 @@ def load_existing(existing_dir: Optional[str]) -> Tuple[List[Article], set, Dict
                 m = re.search(r"/publika/(\d+)p\.php", r["url"])
                 if m:
                     ids.add(int(m.group(1)))
-                origin_labels[r["url"]] = label
+                # 同一URLが複数ファイルにある場合は最初のファイルを優先する
+                # (マージ側の seen.setdefault と同じ規則。月ファイルは unknown より
+                # 先にソートされるため、手動配置済みの月ラベルが必ず勝つ)
+                origin_labels.setdefault(r["url"], label)
     return articles, ids, origin_labels
 
 

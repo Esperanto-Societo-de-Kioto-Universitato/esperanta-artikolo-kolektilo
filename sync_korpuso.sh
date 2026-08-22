@@ -21,7 +21,7 @@ for d in 取得文書*/; do
     *_staging/) echo "スキップ (作業用staging): $d"; continue ;;
   esac
   echo "同期: $d -> $KORPUSO_DIR/$d"
-  rsync -a --delete "$d" "$KORPUSO_DIR/$d"
+  rsync -a --delete --exclude='*.tmp' "$d" "$KORPUSO_DIR/$d"
   synced=$((synced + 1))
 done
 

@@ -39,7 +39,7 @@ from bs4 import BeautifulSoup
 import feedparser
 import dateparser
 from dateutil import tz
-from datetime import datetime, timedelta, date
+from datetime import datetime, timedelta, date, timezone as dt_timezone
 
 __all__ = [
     "ScrapeConfig", "Article", "URLCollectionResult", "collect_urls",
@@ -425,8 +425,12 @@ def collect_from_feed(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
 
     page = 1
     _progress("[FEED] 取得開始")
+    # paged=N を無視して毎回内容の変わるリンクを返すサーバーで無限ループしないよう、
+    # max_pages 未指定時もページ送りに有限の上限を置く (10件/頁 × 200頁 = 2000件相当)
+    feed_page_cap = cfg.max_pages or 200
     while True:
-        if cfg.max_pages and page > cfg.max_pages:
+        if page > feed_page_cap:
+            _progress(f"[FEED] ページ上限 {feed_page_cap} に達したため終了します")
             break
         if page > 1 and not supports_paging:
             break
@@ -642,13 +646,26 @@ def collect_from_rest(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
             if not link or link in seen:
                 continue
             # after/before クエリは WordPress がサイト現地時刻で解釈するため、期間フィルタも
-            # 同じ基準の date (現地時刻) を優先する。date_gmt を優先して別タイムゾーンに
+            # 同じ基準の date (現地時刻) を使う。date_gmt を優先して別タイムゾーンに
             # 変換すると、日付境界の記事がクエリ窓とフィルタ窓の食い違いで脱落しうる。
-            dt = _parse_wp_datetime(item.get("date"), cfg.timezone) or _parse_wp_datetime(item.get("date_gmt"), "UTC")
-            if dt and dt.tzinfo and cfg.timezone:
-                tzinfo = tz.gettz(cfg.timezone)
-                if tzinfo:
-                    dt = dt.astimezone(tzinfo)
+            # ただしタイムゾーンラベルは cfg.timezone を貼らず、date と date_gmt の差から
+            # サイトの実オフセットを導出する (例: Libera Folio は通年 UTC+1 固定。
+            # ここに Europe/Warsaw を貼ると夏時間期間の時刻が実時刻から1時間ずれる)。
+            dt_local = _parse_wp_datetime(item.get("date"), None)
+            dt_gmt = _parse_wp_datetime(item.get("date_gmt"), "UTC")
+            if dt_local and dt_gmt:
+                offset_min = round(
+                    (dt_local.replace(tzinfo=None) - dt_gmt.replace(tzinfo=None)).total_seconds() / 60
+                )
+                offset_min = 15 * round(offset_min / 15)  # 秒単位のクロックずれを丸める
+                dt = dt_local.replace(tzinfo=dt_timezone(timedelta(minutes=offset_min)))
+            elif dt_gmt:
+                tzinfo = tz.gettz(cfg.timezone) if cfg.timezone else None
+                dt = dt_gmt.astimezone(tzinfo) if tzinfo else dt_gmt
+            elif dt_local:
+                dt = dt_local.replace(tzinfo=tz.gettz(cfg.timezone)) if cfg.timezone else dt_local
+            else:
+                dt = None
             title_raw = item.get("title", {}).get("rendered", "")
             title = html.unescape(title_raw).strip() or None
             content_html = item.get("content", {}).get("rendered")
@@ -1133,9 +1150,16 @@ def export_all(articles: List[Article], cfg: ScrapeConfig, out_dir: str, basenam
         # 書き込み途中でジョブが kill されても既存ファイルを壊さない。
         p = os.path.join(out_dir, name)
         tmp = p + ".tmp"
-        with open(tmp, "w", encoding="utf-8") as f:
-            f.write(data)
-        os.replace(tmp, p)
+        try:
+            with open(tmp, "w", encoding="utf-8") as f:
+                f.write(data)
+            os.replace(tmp, p)
+        except BaseException:
+            try:
+                os.unlink(tmp)
+            except OSError:
+                pass
+            raise
         return p
 
     paths["md"] = write(basename + ".md", md)
