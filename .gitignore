@@ -6,12 +6,13 @@ venv/
 env/
 .env
 *.log
-retradio_cache.sqlite
+retradio_cache.sqlite*
 output/
 *.zip
 *.Zone.Identifier
 *Zone.Identifier
-logs/
+logs/*
+!logs/.gitkeep
 fuyou/
 
 # 収集した記事本文は著作権保護のため git 管理・GitHub 公開しない

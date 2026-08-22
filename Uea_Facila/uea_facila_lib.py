@@ -9,7 +9,9 @@ stream (https://uea.facila.org/malkovri/) and fetch individual article pages.
 """
 from __future__ import annotations
 
+import json
 import logging
+import re
 import time
 import os
 from dataclasses import dataclass
@@ -39,8 +41,10 @@ VALID_PATH_SEGMENTS = (
     "/loke/",
 )
 CATEGORY_PATHS = VALID_PATH_SEGMENTS
-LOGIN_USER = os.environ.get("UEA_FACILA_USER", "MontaInterno")
-LOGIN_PASS = os.environ.get("UEA_FACILA_PASS", "Takashi12345")
+# 認証情報は環境変数からのみ受け取る (ソースへの直書き禁止)。
+# 未設定なら _ensure_logged_in はログインを試みず公開セッションで収集する。
+LOGIN_USER = os.environ.get("UEA_FACILA_USER", "")
+LOGIN_PASS = os.environ.get("UEA_FACILA_PASS", "")
 _LOGGED_IN = False
 _LOGIN_ATTEMPTED = False
 
@@ -85,11 +89,34 @@ def _parse_iso_datetime(value: str) -> Optional[datetime]:
         return None
     if text.endswith("Z"):
         text = text[:-1] + "+00:00"
+    # "+0000" 形式 (JSON-LD で使用) は fromisoformat が受け付けないので ":" を補う
+    text = re.sub(r"([+-]\d{2})(\d{2})$", r"\1:\2", text)
     try:
         return datetime.fromisoformat(text)
     except Exception:  # noqa: BLE001
         logging.getLogger(__name__).debug("iso parse failed for %s", value, exc_info=True)
         return None
+
+
+def _extract_json_ld_date(soup: BeautifulSoup) -> Optional[datetime]:
+    for script in soup.find_all("script", type="application/ld+json"):
+        try:
+            data = json.loads(script.string or "")
+        except Exception:  # noqa: BLE001
+            continue
+        items = data if isinstance(data, list) else [data]
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            for node in [item] + list(item.get("@graph") or []):
+                if not isinstance(node, dict):
+                    continue
+                value = node.get("datePublished") or node.get("dateCreated")
+                if value:
+                    dt = _parse_iso_datetime(str(value))
+                    if dt:
+                        return dt
+    return None
 
 
 def _fetch_listing_page(session: requests.Session, url: str, cfg: ScrapeConfig) -> BeautifulSoup:
@@ -362,8 +389,19 @@ def _extract_audio_links(article: BeautifulSoup) -> List[str]:
 def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Session] = None) -> Article:
     cfg.normalize()
     sess = session or _session(cfg)
-    resp = sess.get(url, timeout=cfg.timeout_sec)
-    resp.raise_for_status()
+    # サイトは連続アクセスで接続を切ることがある (RemoteDisconnected)。
+    # _fetch_listing_page と同様に cfg.max_retries 回まで再試行する。
+    attempt = 1
+    while True:
+        try:
+            resp = sess.get(url, timeout=cfg.timeout_sec)
+            resp.raise_for_status()
+            break
+        except requests.RequestException:
+            if attempt >= cfg.max_retries:
+                raise
+            time.sleep(min(5.0 * attempt, 30.0))
+            attempt += 1
     soup = BeautifulSoup(resp.content, "lxml")
 
     title_el = soup.find("h1", class_="ipsType_pageTitle")
@@ -383,6 +421,10 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
     meta_time = soup.find("time", attrs={"itemprop": "datePublished"}) or soup.find("time")
     if meta_time and meta_time.get("datetime"):
         published = _parse_iso_datetime(meta_time["datetime"])
+    if not published:
+        # filmetoj 等のページは <time> 要素を持たないことがあるが、
+        # JSON-LD (application/ld+json) には datePublished が入っている
+        published = _extract_json_ld_date(soup)
     if not published:
         cached = UEA_META.get(url, {}).get("published")
         if isinstance(cached, datetime):

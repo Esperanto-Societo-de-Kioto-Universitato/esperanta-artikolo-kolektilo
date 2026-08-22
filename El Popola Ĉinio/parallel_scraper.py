@@ -281,7 +281,9 @@ def main() -> None:
         chunk_end = max(dates) if dates else end_d
         cfg_chunk = replace(cfg, start_date=chunk_start, end_date=chunk_end)
         if args.split_by == "none":
-            basename = f"{PREFIX}_{cfg_chunk.start_date.isoformat()}_{cfg_chunk.end_date.isoformat()}"
+            # ファイル名は指定期間から決める。取得できた記事の min/max 日付を使うと
+            # 再実行のたびに別名ファイルが増え、同じ記事が重複して残る。
+            basename = f"{PREFIX}_{start_d.isoformat()}_{end_d.isoformat()}"
         else:
             basename = f"{PREFIX}_{label.replace('/', '-')}"
         paths = export_all(subset, cfg_chunk, args.out, basename=basename)

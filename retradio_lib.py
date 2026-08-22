@@ -200,8 +200,17 @@ def _parse_date_any(s: str) -> Optional[datetime]:
     s = s.strip()
     if not s:
         return None
-    # まず数字だけのパターン ex) 15.10.2025, 2025-10-15 など
-    m = re.search(r'(\d{1,2})[.\-/](\d{1,2})[.\-/](\d{2,4})', s)
+    # ISO (YYYY-MM-DD) を最優先で解釈する。下の DMY パターンは境界ガードなしだと
+    # "2026-04-12" の内部 "26-04-12" に一致して 2012-04-26 と誤読する。
+    m = re.search(r'(?<!\d)(\d{4})-(\d{1,2})-(\d{1,2})(?!\d)', s)
+    if m:
+        yyyy, mm, dd = m.groups()
+        try:
+            return datetime(int(yyyy), int(mm), int(dd))
+        except Exception:
+            pass
+    # まず数字だけのパターン ex) 15.10.2025 など
+    m = re.search(r'(?<!\d)(\d{1,2})[.\-/](\d{1,2})[.\-/](\d{2,4})(?!\d)', s)
     if m:
         dd, mm, yyyy = m.groups()
         yyyy = int(yyyy) if len(yyyy) == 4 else int("20" + yyyy)
@@ -430,10 +439,13 @@ def collect_from_feed(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
             break
         stop_due_to_date = False
         added_this_page = 0
+        new_links_this_page = 0
         for e in parsed.entries:
             link = html.unescape(e.get("link") or e.get("id") or "").strip()
             if not link or link in seen:
                 continue
+            seen.add(link)
+            new_links_this_page += 1
             # 日付
             dt = None
             if e.get("published"):
@@ -449,7 +461,9 @@ def collect_from_feed(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
                     stop_due_to_date = True
                     # ただし現在ページ内の他エントリが範囲内かもしれないので、breakせず続行
                 if d > cfg.end_date:
-                    # 未来や範囲外上限はスキップ
+                    # end_date より新しいエントリは採用しないが、ページ送りの終了判定には
+                    # 使わない (1ページ目が全部「新しすぎる」だけで古い期間の収集を
+                    # 打ち切らないよう、終了判定は「新規URLゼロ」で行う)
                     continue
             title = html.unescape(e.get("title", "")).strip() or None
             content_html = None
@@ -487,10 +501,9 @@ def collect_from_feed(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
                 summary_html=summary_html,
             )
             results.append((link, dt))
-            seen.add(link)
             added_this_page += 1
         _progress(f"[FEED] page {page}: 取得 {added_this_page} 件 (累計 {len(results)})")
-        if added_this_page == 0:
+        if new_links_this_page == 0:
             _progress("[FEED] 新規URLが得られなかったため終了します")
             break
         # 範囲外まで到達したと判断できる場合は終了
@@ -628,7 +641,10 @@ def collect_from_rest(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
             link = html.unescape(item.get("link") or "").strip()
             if not link or link in seen:
                 continue
-            dt = _parse_wp_datetime(item.get("date_gmt"), "UTC") or _parse_wp_datetime(item.get("date"), cfg.timezone)
+            # after/before クエリは WordPress がサイト現地時刻で解釈するため、期間フィルタも
+            # 同じ基準の date (現地時刻) を優先する。date_gmt を優先して別タイムゾーンに
+            # 変換すると、日付境界の記事がクエリ窓とフィルタ窓の食い違いで脱落しうる。
+            dt = _parse_wp_datetime(item.get("date"), cfg.timezone) or _parse_wp_datetime(item.get("date_gmt"), "UTC")
             if dt and dt.tzinfo and cfg.timezone:
                 tzinfo = tz.gettz(cfg.timezone)
                 if tzinfo:
@@ -815,6 +831,18 @@ def _clean_text(s: str) -> str:
     return s.strip()
 
 
+def _has_emitted_ancestor(node, container, names=("p", "li", "blockquote")) -> bool:
+    """node の祖先 (container まで) に names のタグがあるか。
+    find_all は入れ子要素 (blockquote>p, li>p, 入れ子リスト) を親子両方で列挙するため、
+    親側だけをテキスト化しないと同じ段落が二重に出力される。"""
+    parent = node.parent
+    while parent is not None and parent is not container:
+        if getattr(parent, "name", None) in names:
+            return True
+        parent = parent.parent
+    return False
+
+
 def _extract_main_content(soup: BeautifulSoup) -> str:
     """
     WordPress + Elegant Themes(Divi系) を想定しつつ、汎用的に本文を抽出。
@@ -851,6 +879,8 @@ def _extract_main_content(soup: BeautifulSoup) -> str:
 
     # タイトル直下の著者・カテゴリ・コメント案内などを緩くスキップ
     for h in node.select("h1, h2, h3, h4, p, li"):
+        if _has_emitted_ancestor(h, node, names=("p", "li")):
+            continue
         t = h.get_text(" ", strip=True)
         # 余計なラベルを含む段落は回避
         low = t.lower()
@@ -921,6 +951,8 @@ def _article_from_feed_entry(entry: FeedEntryData, cfg: ScrapeConfig) -> Optiona
 
     blocks: List[str] = []
     for node in soup.find_all(["h1", "h2", "h3", "h4", "p", "li", "blockquote"]):
+        if _has_emitted_ancestor(node, soup):
+            continue
         text = node.get_text(" ", strip=True)
         if text:
             blocks.append(text)
@@ -1097,9 +1129,13 @@ def export_all(articles: List[Article], cfg: ScrapeConfig, out_dir: str, basenam
     jsonl = to_jsonl(articles)
 
     def write(name, data):
+        # 一時ファイル経由で書き込み、os.replace でアトミックに差し替える。
+        # 書き込み途中でジョブが kill されても既存ファイルを壊さない。
         p = os.path.join(out_dir, name)
-        with open(p, "w", encoding="utf-8") as f:
+        tmp = p + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
             f.write(data)
+        os.replace(tmp, p)
         return p
 
     paths["md"] = write(basename + ".md", md)

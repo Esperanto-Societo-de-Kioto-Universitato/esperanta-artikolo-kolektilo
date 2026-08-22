@@ -34,9 +34,8 @@ import json  # noqa: E402
 
 import requests  # noqa: E402
 
-from retradio_lib import Article, ScrapeConfig, export_all  # noqa: E402
+from retradio_lib import Article, ScrapeConfig, export_all, _get as retry_get  # noqa: E402
 from Monato.monato_lib import USER_AGENT, fetch_article  # noqa: E402
-from Monato.scraper import _group_articles  # type: ignore  # noqa: E402
 
 DEFAULT_BASE_URL = "https://www.monato.be"
 SOURCE_LABEL = "MONATO (monato.be)"
@@ -53,17 +52,25 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--throttle", type=float, default=1.0)
     p.add_argument("--existing", default=None,
                    help="既存 monato_*.jsonl のあるディレクトリ（合流とスキップに使用）")
+    p.add_argument("--include-undated", action="store_true",
+                   help="新規プローブで日付を判定できなかった記事も採用する "
+                        "(既定では一覧表示のみで除外。期間外の可能性があるため)")
     p.add_argument("--out", required=True, help="書き出し先ディレクトリ")
     p.add_argument("--base-url", default=DEFAULT_BASE_URL)
     return p.parse_args()
 
 
-def load_existing(existing_dir: Optional[str]) -> Tuple[List[Article], set]:
+def load_existing(existing_dir: Optional[str]) -> Tuple[List[Article], set, Dict[str, str]]:
+    """既存記事・既知IDに加えて、URL→出所ファイルの月ラベルの対応を返す。
+    日付不明記事は手動で適切な月ファイルに配置してあることがあるため、
+    マージ時に published だけで再グループ化するとその配置が巻き戻ってしまう。"""
     articles: List[Article] = []
     ids: set = set()
+    origin_labels: Dict[str, str] = {}
     if not existing_dir:
-        return articles, ids
+        return articles, ids, origin_labels
     for path in sorted(glob(os.path.join(existing_dir, f"{PREFIX}_*.jsonl"))):
+        label = os.path.basename(path)[len(PREFIX) + 1:-len(".jsonl")]
         with open(path, encoding="utf-8") as f:
             for line in f:
                 line = line.strip()
@@ -87,7 +94,8 @@ def load_existing(existing_dir: Optional[str]) -> Tuple[List[Article], set]:
                 m = re.search(r"/publika/(\d+)p\.php", r["url"])
                 if m:
                     ids.add(int(m.group(1)))
-    return articles, ids
+                origin_labels[r["url"]] = label
+    return articles, ids, origin_labels
 
 
 def probe_one(article_id: int, cfg: ScrapeConfig) -> Tuple[int, str, Optional[Article], str]:
@@ -96,8 +104,13 @@ def probe_one(article_id: int, cfg: ScrapeConfig) -> Tuple[int, str, Optional[Ar
     session = requests.Session()
     session.headers.update({"User-Agent": USER_AGENT})
     try:
-        resp = session.get(url, timeout=cfg.timeout_sec)
+        # retry_get は 5xx・例外を cfg.max_retries 回まで再試行する。
+        # 一時的なサーバーエラーを「非公開・不存在 (miss)」と誤分類すると
+        # 実在記事が黙って欠落するため、429・5xx は error として報告する。
+        resp = retry_get(session, url, cfg)
         time.sleep(cfg.throttle_sec)
+        if resp.status_code == 429 or resp.status_code >= 500:
+            return article_id, "error", None, f"HTTP {resp.status_code}"
         if resp.status_code != 200:
             return article_id, "miss", None, f"HTTP {resp.status_code}"
         text = resp.text
@@ -128,7 +141,7 @@ def main() -> None:
     )
     cfg.normalize()
 
-    existing_articles, existing_ids = load_existing(args.existing)
+    existing_articles, existing_ids, origin_labels = load_existing(args.existing)
     print(f"[INFO] 既存記事: {len(existing_articles)} 本 (ID {len(existing_ids)} 個をスキップ)")
 
     candidates = [i for i in range(args.id_start, args.id_end + 1) if i not in existing_ids]
@@ -136,6 +149,7 @@ def main() -> None:
           f"(workers={args.workers}, throttle={args.throttle}s)")
 
     kept: List[Article] = []
+    undated_hits: List[Tuple[int, Article]] = []
     out_of_range: List[Tuple[int, str, str]] = []
     misses = 0
     errors: List[Tuple[int, str]] = []
@@ -145,24 +159,38 @@ def main() -> None:
         for fut in as_completed(futures):
             article_id, status, article, note = fut.result()
             if status == "hit" and article is not None:
-                if article.published and not (start_d <= article.published.date() <= end_d):
+                if article.published is None:
+                    # 日付不明の新規記事は期間判定ができないため無条件採用しない
+                    undated_hits.append((article_id, article))
+                    print(f"[HIT?] {article_id:06d} 日付不明 {article.title}")
+                elif not (start_d <= article.published.date() <= end_d):
                     out_of_range.append(
                         (article_id, article.published.date().isoformat(), article.title)
                     )
                 else:
                     kept.append(article)
-                    pub = article.published.date().isoformat() if article.published else "????-??-??"
-                    print(f"[HIT ] {article_id:06d} {pub} {article.title}")
+                    print(f"[HIT ] {article_id:06d} {article.published.date().isoformat()} {article.title}")
             elif status == "miss":
                 misses += 1
             else:
                 errors.append((article_id, note))
                 print(f"[ERR ] {article_id:06d} {note}")
 
-    print(f"[INFO] プローブ結果: 採用 {len(kept)} / 期間外 {len(out_of_range)} / "
-          f"非公開・不存在 {misses} / エラー {len(errors)}")
+    print(f"[INFO] プローブ結果: 採用 {len(kept)} / 日付不明 {len(undated_hits)} / "
+          f"期間外 {len(out_of_range)} / 非公開・不存在 {misses} / エラー {len(errors)}")
     for article_id, pub, title in sorted(out_of_range):
         print(f"[SKIP] 期間外: {article_id:06d} {pub} {title}")
+    if undated_hits:
+        if args.include_undated:
+            print(f"[INFO] --include-undated 指定のため日付不明 {len(undated_hits)} 本を採用します")
+            kept.extend(article for _, article in sorted(undated_hits, key=lambda t: t[0]))
+        else:
+            print("[INFO] 日付不明の新規記事は採用しませんでした。前後IDの日付を確認のうえ、"
+                  "採用するなら --include-undated を付けて再実行してください:")
+            for article_id, article in sorted(undated_hits, key=lambda t: t[0]):
+                print(f"  - {article_id:06d} {article.url} {article.title}")
+    if errors:
+        print("[WARN] エラーが発生した ID は取得漏れの可能性があります。同じ ID 帯で再実行してください。")
 
     merged = existing_articles + kept
     seen: Dict[str, Article] = {}
@@ -178,7 +206,18 @@ def main() -> None:
     all_articles = sorted(seen.values(), key=sort_key)
     print(f"[INFO] 合流後合計: {len(all_articles)} 本")
 
-    groups = _group_articles(all_articles, "month")
+    # 月別グループ化。日付不明の記事は published からラベルを決められないため、
+    # 既存ファイル由来のもの (前後IDから月を判定して手動配置済み) は
+    # 元ファイルの月ラベルを維持する。
+    groups_map: Dict[str, List[Article]] = {}
+    for art in all_articles:
+        if art.published:
+            d = art.published.date()
+            label = f"{d.year}-{d.month:02d}"
+        else:
+            label = origin_labels.get(art.url, "unknown")
+        groups_map.setdefault(label, []).append(art)
+    groups = sorted(groups_map.items())
     os.makedirs(args.out, exist_ok=True)
     for label, subset in groups:
         if not subset:

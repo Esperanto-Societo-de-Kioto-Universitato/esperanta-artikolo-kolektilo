@@ -34,19 +34,22 @@
 |---|------------------|--------------------------------------------------|--------------|------------|-----------------------------------------|
 | 1 | Global Voices    | "Global Voices en Esperanto/parallel_scraper.py"  | auto         | 1.0        | （全引数対応）                          |
 | 2 | Libera Folio     | "Libera Folio/parallel_scraper.py"                | rest         | 0.5        | --include-audio                         |
-| 3 | Monato           | "Monato/parallel_scraper.py"                      | feed ※1※4    | 1.0        | （全引数対応）                          |
+| 3 | Monato           | "Monato/parallel_scraper.py"                      | both ※1※4    | 1.0        | （全引数対応）                          |
 | 4 | Scivolemo        | "Scivolemo/parallel_scraper.py"                   | feed         | 1.0        | （全引数対応）                          |
 | 5 | Pola Retradio    | "Pola Retradio/parallel_scraper.py"               | auto ※3      | 1.0        | --feed-url                              |
 | 6 | UEA Facila       | "Uea_Facila/parallel_scraper.py"                  | （指定不可） | 0.5 ※2     | --method, --include-audio, --feed-url   |
 | 7 | El Popola Ĉinio  | "El Popola Ĉinio/parallel_scraper.py"            | feed ※1      | 1.0        | --feed-url                              |
 
 ※1 Monato と El Popola Ĉinio は独自ライブラリ（monato_lib / elpopola_lib）を使用。
-   --method の値は内部では実質無視されるが、コードのデフォルトに合わせて feed を指定する。
+   El Popola Ĉinio では --method の値は内部で実質無視される（feed を指定しておく）。
+   Monato は 2026-08-13 から --method both が既定で、feed（Nova!ページ）に加えて
+   publika 連番 ID プローブでの回収を併用する。feed 単独指定は禁物（下記※4）。
 ※2 UEA Facila のコードデフォルトは 0.5 秒。サーバー負荷を下げたい場合は --throttle 1.0 に上げてもよい。
 ※3 Pola Retradio では `--include-audio` を付けるとラジオ音声リンクが記事メタに含まれる。
    輪読素材選定では任意だが、音声併用の場合は推奨。
-※4 Monato のフィード（RSS）は直近1〜2ヶ月分のみ収録。1年分の期間を指定しても
-   全期間はカバーされない（年間約20本程度の取得にとどまる）。
+※4 Monato のフィード（Nova!ページ）は直近1〜2ヶ月分のみ収録。--method feed 単独だと
+   1年分を指定しても年間約20本しか取れない。--method both なら ID プローブが過去分を
+   回収し、publika 記事を月あたり約15〜30本取得できる（年間150〜250本程度）。
 
 【通常サイト（#1〜#5, #7）の実行コマンド】
 
@@ -96,7 +99,8 @@
   - UEA Facila: ~100本
   - Libera Folio: ~80本
   - Global Voices: ~30本（月によっては0本の月もある）
-  - Monato: ~20本（フィードが直近1〜2ヶ月分のみのため。※4参照）
+  - Monato: 月あたり~15〜30本（--method both の場合。年間150〜250本程度。
+    ~20本/年しか取れていなければ feed 単独で走っている兆候なので※4を確認）
   - Scivolemo: 0本（2024年以降休止中）
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -213,8 +217,9 @@
 2. **Monato** の大半の記事はペイウォール（有料購読者限定）。
    本文が「La cetero de la artikolo estas konsultebla en la sekcio por abonantoj」
    で終わる記事はプレビューのみ。全文公開記事のみ選定対象とする。
-   また、フィード（RSS）は直近1〜2ヶ月分しか収録されないため、
-   1年分を指定しても全期間の記事は取得できない（年間約20本程度）。
+   また、フィード（Nova!ページ）は直近1〜2ヶ月分しか収録されない。
+   過去分は --method both（既定）の ID プローブが回収するので、年間150〜250本程度
+   取れているはず。約20本/年しか無い場合は取得側の設定を疑うこと。
 3. **Global Voices** のスクレイピング結果には段落の重複（スクレイピングアーティファクト）が
    含まれることがある。語数カウント時は重複を除外すること。
    なお、エスペラント版は記事数が少なく（年間約30本）、月によっては0本の月もある。

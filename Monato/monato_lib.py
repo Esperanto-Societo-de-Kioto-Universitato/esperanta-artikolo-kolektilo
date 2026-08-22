@@ -544,7 +544,9 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
     cfg.normalize()
     s = session or shared_session(cfg)
     s.headers.update({"User-Agent": USER_AGENT})
-    resp = s.get(url, timeout=cfg.timeout_sec)
+    # 収集系と同じく retry_get で一時的な 5xx・切断を再試行する
+    # (単発 s.get だと一過性エラーの記事がそのまま欠落する)
+    resp = retry_get(s, url, cfg)
     if resp.status_code == 404:
         archived = _fetch_archived_copy(url, s, cfg.timeout_sec)
         if archived is not None:

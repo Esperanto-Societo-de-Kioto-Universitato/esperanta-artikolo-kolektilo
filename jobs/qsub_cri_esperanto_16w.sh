@@ -88,6 +88,7 @@ run_legacy_range() {
   echo "[CRI] Legacy range ${start_date} -> ${end_date}"
   if CRI_CMD "$start_date" "$end_date" "$tmp_dir"; then
     for file in "$tmp_dir"/*.jsonl; do
+      [ -e "$file" ] || continue
       year="$(basename "$file" .jsonl)"
       mv "$file" "${OUT_DIR}/${year}.jsonl"
       echo "  - Updated ${year}.jsonl (${start_date}〜${end_date})"

@@ -320,6 +320,12 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
             published = _parse_explicit_date(date_str) or _parse_date_from_url(url)
         raw_lines = [line for line in content_node.get_text("\n").split("\n")]
         paragraphs = _clean_paragraphs(raw_lines)
+        if not paragraphs:
+            # 動画・写真特設ページは本文セルが Flash 案内などのノイズだけで空になる。
+            # 全文フォールバックはナビゲーションを本文として拾ってしまうため行わず、
+            # 警告を出して空のまま出力する (実例: 2025-09-26 動画ページ等)。
+            logging.getLogger(__name__).warning(
+                "本文が空のまま出力します (動画・写真のみのページ?): %s", url)
     else:
         title = base_clean_text(meta.get("title") or _fallback_title(soup)) or url
         if not published:
