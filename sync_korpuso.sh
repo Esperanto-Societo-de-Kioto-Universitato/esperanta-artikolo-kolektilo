@@ -1,9 +1,9 @@
 #!/bin/sh
 set -eu
 
-# 取得文書フォルダをプライベートのコーパスリポジトリへ同期し、commit & push する。
+# 取得文書フォルダをコーパスリポジトリへ同期し、commit & push する。
 # コーパスリポジトリ: git@github.com:Esperanto-Societo-de-Kioto-Universitato/esperanta-artikolo-korpuso.git
-# (記事本文は著作権保護のため公開リポジトリには置かない。詳細は README の「リポジトリの方針」参照)
+# (記事本文はコード用リポジトリ kolektilo には置かない。詳細は README の「リポジトリの方針」参照)
 
 KORPUSO_DIR="${KORPUSO_DIR:-$HOME/esperanta-artikolo-korpuso}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"

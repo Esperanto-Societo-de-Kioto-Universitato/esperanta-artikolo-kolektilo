@@ -6,7 +6,10 @@ dateparser>=1.2.0
 python-dateutil>=2.9.0
 tqdm>=4.66.4
 # Streamlit UI 用（CLIのみなら不要）
-streamlit>=1.37.0
+streamlit>=1.50.0
+# このクラスタ (CentOS 7, glibc 2.17) の Python 3.9 では pyarrow 21 以降に使える配布パッケージが無く
+# (manylinux_2_28 のみ)、ソースビルド (CMake 3.25 以上が必要) に進んで失敗する
+pyarrow<21; python_version < "3.10"
 pandas>=2.2.2
 # キャッシュは任意
 requests-cache>=1.2.0

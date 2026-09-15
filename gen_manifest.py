@@ -3,9 +3,10 @@
 gen_manifest.py
 
 取得文書フォルダ (*.jsonl 群) を走査して MANIFEST.md を生成する。
-記事本文は著作権保護のため git 管理しない (取得文書*/ ごと ignore) ので、
-「何がどれだけ入っているか」は各フォルダ内のこの MANIFEST.md がローカルの
-記録になる。フォルダの内容を変更したら再生成すること。
+記事本文はコード用リポジトリ (kolektilo) には含めず (取得文書*/ ごと ignore)、
+sync_korpuso.sh でコーパスリポジトリ (esperanta-artikolo-korpuso) に同期する。
+「何がどれだけ入っているか」は各フォルダ内のこの MANIFEST.md に記録する。
+フォルダの内容を変更したら再生成すること。
 
 使い方:
     python gen_manifest.py 取得文書ekde20260401 [--notes notes.md]
@@ -76,7 +77,8 @@ def main() -> None:
     lines.append(f"- 生成日: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     lines.append(f"- 総記事数: **{total}**")
     lines.append("- 各記事は md / txt / csv / jsonl の4形式で保存（記事数は jsonl 行数）")
-    lines.append("- 記事本文は著作権保護のため git 管理外（このマニフェストのみ記録用）")
+    lines.append("- 記事本文はコーパスリポジトリ esperanta-artikolo-korpuso で管理（コード用リポジトリ kolektilo には含めない）")
+    lines.append("- 各記事の著作権は掲載サイト・著者に帰属する（出典 URL は各記事に記載）")
     lines.append("")
     lines.append("## サイト × 月 記事数")
     lines.append("")

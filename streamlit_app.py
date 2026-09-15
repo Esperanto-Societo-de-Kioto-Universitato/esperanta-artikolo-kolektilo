@@ -299,8 +299,8 @@ def _build_sources(lang: str):
             "fetch": monato_fetch_article,
             "session": monato_session,
             "set_progress": monato_set_progress,
-            "methods": ["feed"],
-            "default_method": "feed",
+            "methods": ["both", "feed", "archive"],
+            "default_method": "both",
             "supports_max_pages": False,
             "include_audio_option": False,
             "throttle_default": 1.0,
@@ -548,7 +548,7 @@ def run_app(lang: str = "ja") -> None:
                 for a in arts
             ]
         )
-        st.dataframe(df, use_container_width=True, hide_index=True)
+        st.dataframe(df, width="stretch", hide_index=True)
 
         slug = re.sub(r"[^a-z0-9]+", "_", state["source_name"].lower()).strip("_") or "export"
         start_date = state["start"]

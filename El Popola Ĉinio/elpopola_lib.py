@@ -280,7 +280,10 @@ def _clean_paragraphs(lines: Iterable[str]) -> List[str]:
         text = line.strip()
         if not text:
             continue
-        if any(noise in text for noise in NOISE_SNIPPETS):
+        # NOISE_SNIPPETS は NBSP 区切りで定義されているが、現行ページは通常の空白
+        # (「Ĉina Fokuso / China Focus - Esperanto」) なので、空白を揃えてから照合する
+        probe = text.replace("\xa0", " ")
+        if any(noise.replace("\xa0", " ") in probe for noise in NOISE_SNIPPETS):
             continue
         cleaned.append(base_clean_text(text))
     return cleaned
@@ -302,6 +305,13 @@ def _extract_author(html: str) -> Optional[str]:
     return None
 
 
+def _strip_embedded_markup(node: BeautifulSoup) -> None:
+    # 他ページの HTML ごと貼り込まれた記事では本文セル内に <title>/<style> があり、
+    # 関連記事のタイトル (エスケープ済みの <span> タグ付き) が本文末尾に混入する
+    for bad in node.find_all(["title", "style", "script", "noscript"]):
+        bad.decompose()
+
+
 def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Session] = None) -> Article:
     cfg.normalize()
     s = session or _session(cfg)
@@ -318,6 +328,7 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
         title, date_str, content_node = legacy
         if not published:
             published = _parse_explicit_date(date_str) or _parse_date_from_url(url)
+        _strip_embedded_markup(content_node)
         raw_lines = [line for line in content_node.get_text("\n").split("\n")]
         paragraphs = _clean_paragraphs(raw_lines)
         if not paragraphs:
@@ -331,6 +342,7 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
         if not published:
             published = _extract_date_from_document(soup) or _parse_date_from_url(url)
         content_node = _fallback_article_root(soup)
+        _strip_embedded_markup(content_node)
         raw_lines = [line for line in content_node.get_text("\n").split("\n")]
         paragraphs = _clean_paragraphs(raw_lines)
         if not paragraphs:

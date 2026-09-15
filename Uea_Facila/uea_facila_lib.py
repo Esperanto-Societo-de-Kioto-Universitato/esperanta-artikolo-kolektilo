@@ -416,6 +416,10 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
     article_el = soup.select_one("article.artikolo") or soup.select_one("article")
     if not article_el:
         raise ValueError(f"article content not found: {url}")
+    # リアクション数 (「6」「1」等の数字だけの行) と filmetoj の難易度投票欄は
+    # 記事要素の内側にあるため、本文として拾わないよう先に取り除く
+    for widget in article_el.select(".ipsItemControls, .ipsItemControls_right, .ipsReact, .filmeto-taksado"):
+        widget.decompose()
 
     paragraphs = _extract_article_paragraphs(article_el)
     content_text = "\n\n".join(paragraphs)

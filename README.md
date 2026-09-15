@@ -213,7 +213,7 @@ https://example.com/article
 ### コア技術スタック
 
 #### フロントエンド
-- **Streamlit** (v1.37.0+): インタラクティブなWebアプリケーションフレームワーク
+- **Streamlit** (v1.50.0+): インタラクティブなWebアプリケーションフレームワーク
 - **Pandas** (v2.2.2+): データ表示とDataFrame操作
 
 #### バックエンド
@@ -603,9 +603,10 @@ def _extract_main_content(soup: BeautifulSoup) -> str:
 #### HTTP キャッシュ（`requests-cache`）
 
 - **有効期間**: 12時間
-- **バックエンド**: SQLite (`retradio_cache.sqlite`)
-- **対象**: 全てのHTTP GET リクエスト
+- **バックエンド**: SQLite。保存先は OS の一時フォルダ (Linux では `/tmp/retradio_cache_<ユーザー名>.sqlite`)。環境変数 `RETRADIO_CACHE_DIR` で変更できる
+- **対象**: 全てのHTTP GET リクエスト (並列実行時の本文取得ワーカーはキャッシュを使わない)
 - **メリット**: 開発時の再実行が高速、サーバー負荷軽減
+- **注意**: 作業フォルダ (クラスタでは共有ディスク) には置かないこと。別ノードで同時に走る各サイトのジョブが同じ SQLite を読み書きすると、ロック競合や破損読み出し (`database disk image is malformed`) でジョブが落ちる (2026-09-15 に UEA Facila で発生し、保存先を一時フォルダへ移した)
 
 #### メタデータキャッシュ（インメモリ）
 
@@ -821,7 +822,7 @@ I18N: Dict[str, Dict[str, str]] = {
 
 **解決策**:
 ```bash
-pip install streamlit>=1.37.0
+pip install streamlit>=1.50.0
 ```
 
 #### 4. モジュールのインポートエラー
@@ -855,8 +856,8 @@ pip install streamlit>=1.37.0
 
 **解決策**:
 ```bash
-# キャッシュファイルを削除
-rm retradio_cache.sqlite*
+# キャッシュファイルを削除 (RETRADIO_CACHE_DIR を指定している場合はそのフォルダ内)
+rm -f /tmp/retradio_cache_$(whoami).sqlite*
 ```
 
 または、`ScrapeConfig.use_cache = False` に設定
@@ -939,11 +940,12 @@ rm retradio_cache.sqlite*
 
 **重要**: 収集した記事を再配布または商用利用する場合は、必ず各サイトのライセンスと利用規約を確認してください。
 
-### リポジトリの方針 (2026-08-13〜)
+### リポジトリの方針 (2026-09 更新)
 
-著作権保護のため、**収集した記事本文 (`取得文書*/`) はこの公開リポジトリには置きません** (`.gitignore` で除外)。記事本文は**プライベートリポジトリ** [`esperanta-artikolo-korpuso`](https://github.com/Esperanto-Societo-de-Kioto-Universitato/esperanta-artikolo-korpuso) に保管します(取得後に `./sync_korpuso.sh` で同期。プライベート運用が前提のため、korpuso 側は公開設定にしないこと)。
-各取得フォルダの内容(サイト×月の記事数・既知の注意点)はフォルダ内の `MANIFEST.md`(`gen_manifest.py` で生成)に記録されており、korpuso 側にも同梱されます。
-なお 2026-03-04 以前にコミットされた記事群はこの公開リポジトリの git 履歴には残っています。履歴からの完全削除が必要になった場合は `git filter-repo` 等での書き換えを別途検討してください。
+- コードと収集した記事本文を別のリポジトリで管理する。記事本文 (`取得文書*/`) はこのリポジトリには置かず (`.gitignore` で除外)、コーパスリポジトリ [`esperanta-artikolo-korpuso`](https://github.com/Esperanto-Societo-de-Kioto-Universitato/esperanta-artikolo-korpuso) に保管する (取得後に `./sync_korpuso.sh` で同期)。
+- korpuso は当初プライベートで運用したが、2026-09 から所有者の判断で**公開**にしている。各記事の著作権は掲載サイト・著者に帰属し、各記事に出典 URL を記載している (上記「収集した記事のライセンス」参照)。
+- 各取得フォルダの内容 (サイト×月の記事数・既知の注意点) はフォルダ内の `MANIFEST.md` (`gen_manifest.py` で生成) に記録され、korpuso 側にも同梱される。
+- 2026-03-04 のコミットで入れた旧コーパスの記事ファイルがこのリポジトリの git 履歴に残っているが、同じ内容を korpuso で公開しているため、履歴を書き換える必要はない。
 
 ---
 
@@ -1021,14 +1023,16 @@ logging.basicConfig(level=logging.DEBUG)
 
 ## 記事コレクションの運用記録
 
-### コレクションの状態 (2026-08-13 時点)
+### コレクションの状態 (2026-09-15 時点)
 
 | フォルダ | 期間 | 記事数 | 備考 |
 |---|---|---|---|
-| `取得文書ekde20260303/` | 2025-03-03〜2026-03-03 | 1197 | 7サイト。Monato の欠落 (2025-03〜12ほか) は 2026-08-13 に ID プローブで補完済み (21→195本) |
-| `取得文書ekde20260401/` | 2026-03-04〜2026-08-13 | 369 | 6サイト (Pola Retradio 除外)。2026年3月ギャップも全サイト補完済みで、前コーパスから切れ目なし。UEA Facila の取得失敗 6 本は 2026-08-23 に回収 |
+| `取得文書ekde20260303/` | 2025-03-03〜2026-03-03 | 1198 | 7サイト。Monato の欠落 (2025-03〜12ほか) は 2026-08-13 に ID プローブで補完済み (21→195本)。2026-09-15 に本文の雑音を除去し、取りこぼしていた Global Voices 1 本を追加 |
+| `取得文書ekde20260401/` | 2026-03-04〜2026-08-13 | 366 | 6サイト (Pola Retradio 除外)。2026年3月ギャップも全サイト補完済み。UEA Facila の取得失敗 6 本は 2026-08-23 に回収。前フォルダと重複していた UEA Facila の再掲 3 本は 2026-09-15 に除去 (369→366) |
+| `取得文書ekde20260814/` | 2026-08-14〜2026-09-14 | 86 | 6サイト (Pola Retradio 除外)。Global Voices の更新再開分 4 本を含む |
 
-詳細は各フォルダ内の `MANIFEST.md` を参照。git 管理外のため、フォルダを再取得・変更したら `python gen_manifest.py <フォルダ> --notes <備考md>` で再生成すること。
+- 3 フォルダ計 **1650 本**。2025-03-03〜2026-09-14 が切れ目なく、フォルダ間で同じ URL は重複しない
+- 詳細は各フォルダ内の `MANIFEST.md` を参照。フォルダを再取得・変更したら `python gen_manifest.py <フォルダ> --notes <備考md>` で再生成し、`./sync_korpuso.sh` で korpuso に反映すること
 
 ### Monato 収集の仕様と対策 (重要)
 
@@ -1036,7 +1040,7 @@ monato.be の年別インデックス `/<年>/index.php?p` は **2024年以前�
 
 対策として `Monato/parallel_scraper.py` に ID 連番プローブ (`/publika/NNNNNNp.php` を降順走査) を実装済み:
 
-- `--method both`(**既定値**): Nova! ページ + プローブ。定期取得はこれでよい
+- `--method both`(**既定値**): Nova! ページ + プローブ。定期取得はこれでよい (Streamlit アプリも v1.3.0 から `both` が既定)
 - `--method archive`: 同上 (過去ギャップの穴埋め用途)
 - `--method feed`: 旧来どおり Nova! のみ (取りこぼしの可能性がある場合は警告が出る)
 - プローブは安全上限 `PROBE_MAX_PAGES=500` ページ、公開年インデックスで取得済みの範囲には踏み込まない。日付のないページ (一部の書評) は published 空欄のまま `_unknown` グループに出るので人手で確認する
@@ -1047,13 +1051,27 @@ monato.be の年別インデックス `/<年>/index.php?p` は **2024年以前�
 ### 定期取得の手順
 
 1. 「完成YYMMDD」フォルダをコピーして作業フォルダを作る
-2. `jobs/qsub_<site>_<start>_<end>_8w.sh` を日付を変えて複製 (8ワーカー並列が最速)
-3. `qsub` で投入し、`logs/` と出力フォルダを確認
-4. `gen_manifest.py` でマニフェスト生成
+2. `jobs/qsub_<site>_<start>_<end>_8w.sh` を日付を変えて複製する (8ワーカー並列が最速。例: `jobs/qsub_*_20260701_20260914_8w.sh`)。開始日は前回の終了日の約1か月半前にして重複区間を設け、出力先は `取得文書ekde<新期間の開始日>_staging` にする (前回実行後に遅れて公開された記事の回収と、既存記事との突合のため)
+3. `qsub` で投入する。完了待ちはジョブ ID で行う (`qstat -j <ID>`。`qstat` の一覧はジョブ名を 10 文字で切るので、名前で判定しない)
+4. `logs/` の `.err` を確認する。サイトに接続できずに落ちたジョブ (2026-09-15 の Global Voices の `No route to host` など) は、時間をおいて再投入するか、ログインノードで同じコマンドを実行する
+5. staging の記事を既存フォルダと URL 単位で突合し、新期間分を `取得文書ekde<開始日>/` に、既存フォルダの期間に入る未収録の記事はそのフォルダに振り分ける。重複区間で本文が変わっていればサイト側の修正なので、修正後の本文に更新してよい
+6. `gen_manifest.py` でマニフェストを作り、`./sync_korpuso.sh` で korpuso に反映する
 
 ---
 
 ## 変更履歴
+
+### v1.3.0 (2026年9月15日)
+
+- **El Popola Ĉinio**: 他ページの HTML ごと貼り込まれた記事で、本文セル内の `<title>`/`<style>` が本文として拾われ、関連記事のタイトルが `<span style=…>` タグ付きで本文末尾に混入していた (2025-03〜11 の 320 本) → 抽出前に除去
+- **El Popola Ĉinio**: 記事末尾のリンク文言「Ĉina Fokuso / China Focus - Esperanto」を除くための `NOISE_SNIPPETS` が NBSP 区切りで定義されていて、通常の空白の現行ページと一致せず素通りしていた (2026-05 以降の 163 本に混入) → 空白を揃えて照合
+- **UEA Facila**: 記事要素の内側にあるリアクション数 (「6」「1」等の数字だけの行) と、filmetoj の難易度投票欄の文言が本文に混入していた → 抽出前に除去
+- **retradio_lib**: PowerPress の操作文言「Podkasto: Ludu en nova fenestro | Elŝutu」を本文から除去 (音声リンクは従来どおり取得)
+- **retradio_lib (キャッシュ)**: HTTP キャッシュ (SQLite) を作業フォルダに置いていたため、クラスタで各サイトのジョブを同時に投入すると、共有ディスク上の同じファイルを別ノードから読み書きしてロック競合や破損読み出しが起き、ジョブが落ちていた (2026-09-15 に UEA Facila で発生) → 保存先を OS の一時フォルダに変更 (`RETRADIO_CACHE_DIR` で変更可)
+- **Streamlit アプリ**: Monato は収集方法が feed (Nova! ページ) 固定で、直近約2か月より前を指定すると記事を取りこぼしていた → `both` (既定)・`feed`・`archive` を選べるように。削除予定の `use_container_width` を `width="stretch"` に置き換え (Streamlit 1.50 と 1.63 で動作確認)
+- **requirements.txt**: `streamlit>=1.50.0` に更新。このクラスタ (CentOS 7, glibc 2.17) の Python 3.9 では `pip install -r requirements.txt` が pyarrow のソースビルドで失敗するため、`pyarrow<21` を指定
+- **gen_manifest.py**: MANIFEST の「git 管理外」の記述を現在の運用 (記事は korpuso で管理) に合わせて修正
+- **コーパス**: 修正後のコードで既存記事を取り直して照合し、雑音を除去 (El Popola Ĉinio の関連記事タイトル 320 本とリンク文言 163 本、UEA Facila 135 本、Pola Retradio 76 本、Global Voices の段落重複 19 本)。取り直しで判明したサイト側の修正 6 本を反映し、Libera Folio の published をサイト本来の UTC+1 表記に統一。フォルダ間で重複していた UEA Facila の再掲 3 本を除去し、取りこぼしていた Global Voices 1 本を追加。新フォルダ `取得文書ekde20260814` (2026-08-14〜09-14、86 本) を追加
 
 ### v1.2.1 (2026年8月23日)
 

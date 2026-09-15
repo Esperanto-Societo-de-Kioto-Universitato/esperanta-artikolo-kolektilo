@@ -38,6 +38,8 @@ import requests
 from bs4 import BeautifulSoup
 import feedparser
 import dateparser
+import getpass
+import tempfile
 from dateutil import tz
 from datetime import datetime, timedelta, date, timezone as dt_timezone
 
@@ -162,10 +164,21 @@ class URLCollectionResult:
     def __getitem__(self, item):
         return self.urls[item]
 
+def _cache_path() -> str:
+    # 作業フォルダ (クラスタでは NFS 共有) に置くと、別ノードで同時に走る各サイトのジョブが
+    # 同じ SQLite を読み書きし、ロック競合や破損読み出し (database disk image is malformed) で落ちる
+    base = os.environ.get("RETRADIO_CACHE_DIR") or tempfile.gettempdir()
+    try:
+        user = getpass.getuser()
+    except Exception:
+        user = "user"
+    return os.path.join(base, f"retradio_cache_{user}")
+
+
 def _session(cfg: ScrapeConfig) -> requests.Session:
     if _HAS_REQUESTS_CACHE and cfg.use_cache:
         s = requests_cache.CachedSession(
-            cache_name="retradio_cache",
+            cache_name=_cache_path(),
             backend="sqlite",
             expire_after=timedelta(hours=12),
         )
@@ -860,6 +873,13 @@ def _has_emitted_ancestor(node, container, names=("p", "li", "blockquote")) -> b
     return False
 
 
+def _drop_player_widgets(node: BeautifulSoup) -> None:
+    # PowerPress の操作文言「Podkasto: Ludu en nova fenestro | Elŝutu」は本文ではない。
+    # 音声リンクはこの中の <a> から取るので、音声リンクを抽出した後に呼ぶこと
+    for bad in node.select(".powerpress_links, .powerpress_player"):
+        bad.decompose()
+
+
 def _extract_main_content(soup: BeautifulSoup) -> str:
     """
     WordPress + Elegant Themes(Divi系) を想定しつつ、汎用的に本文を抽出。
@@ -887,6 +907,7 @@ def _extract_main_content(soup: BeautifulSoup) -> str:
     # 不要な要素を除去
     for bad in node.select("script, style, nav, header, footer, aside, noscript, form, iframe, figure.share, .post-meta, .et_post_meta_wrapper"):
         bad.decompose()
+    _drop_player_widgets(node)
 
     texts: List[str] = []
     def push(line: str):
@@ -966,19 +987,6 @@ def _article_from_feed_entry(entry: FeedEntryData, cfg: ScrapeConfig) -> Optiona
     for bad in soup.select("script, style, nav, header, footer, aside, noscript"):
         bad.decompose()
 
-    blocks: List[str] = []
-    for node in soup.find_all(["h1", "h2", "h3", "h4", "p", "li", "blockquote"]):
-        if _has_emitted_ancestor(node, soup):
-            continue
-        text = node.get_text(" ", strip=True)
-        if text:
-            blocks.append(text)
-    if not blocks:
-        blocks.append(soup.get_text(" ", strip=True))
-    content_text = _clean_text("\n\n".join(blocks))
-    if not content_text:
-        return None
-
     audio_links: Optional[List[str]] = None
     if cfg.include_audio_links:
         links = set()
@@ -991,6 +999,20 @@ def _article_from_feed_entry(entry: FeedEntryData, cfg: ScrapeConfig) -> Optiona
                 links.add(href)
         if links:
             audio_links = sorted(links)
+    _drop_player_widgets(soup)
+
+    blocks: List[str] = []
+    for node in soup.find_all(["h1", "h2", "h3", "h4", "p", "li", "blockquote"]):
+        if _has_emitted_ancestor(node, soup):
+            continue
+        text = node.get_text(" ", strip=True)
+        if text:
+            blocks.append(text)
+    if not blocks:
+        blocks.append(soup.get_text(" ", strip=True))
+    content_text = _clean_text("\n\n".join(blocks))
+    if not content_text:
+        return None
 
     categories = sorted({c for c in entry.categories if c}) if entry.categories else None
     return Article(
@@ -1037,9 +1059,10 @@ def fetch_article(url: str, cfg: ScrapeConfig, s: Optional[requests.Session] = N
     if not dt:
         dt = _extract_date_from_url_or_title(url, title)
 
+    # _extract_main_content は soup からプレーヤー等を取り除くため、音声リンクを先に拾う
+    audio_links = _extract_audio_links(soup) if cfg.include_audio_links else []
     content_text = _extract_main_content(soup)
     author, cats = _extract_author_and_categories(soup)
-    audio_links = _extract_audio_links(soup) if cfg.include_audio_links else []
 
     return Article(
         url=url,
