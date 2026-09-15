@@ -420,6 +420,10 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
     # 記事要素の内側にあるため、本文として拾わないよう先に取り除く
     for widget in article_el.select(".ipsItemControls, .ipsItemControls_right, .ipsReact, .filmeto-taksado"):
         widget.decompose()
+    # 練習問題への案内 <p class="edukado"> は閉じタグが無いことがあり、lxml では記事本体の
+    # <section> がこの段落の中に入れ子になって本文が二重に抽出される。枠だけ外し、案内文は本文にしない
+    for edukado in article_el.select("p.edukado"):
+        edukado.unwrap()
 
     paragraphs = _extract_article_paragraphs(article_el)
     content_text = "\n\n".join(paragraphs)
