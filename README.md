@@ -11,8 +11,8 @@
 1. **El Popola Ĉinio** (esperanto.china.org.cn) - 中国政府系ポータルのエスペラント版
 2. **Global Voices en Esperanto** (eo.globalvoices.org) - 多言語市民メディアのエスペラント版
 3. **Monato** (monato.be) - エスペラント月刊誌の公開記事
-4. **Scivolemo** (scivolemo.wordpress.com) - 科学読み物ブログ
-5. **Pola Retradio** (pola-retradio.org) - ポーランドのエスペラント放送
+4. **Scivolemo** (scivolemo.wordpress.com) - 科学読み物ブログ Scivolemo (WordPress.com)。2024 年以降ほぼ更新がなく、期間内の記事が 0 件のことが多い
+5. **Pola Retradio** (pola-retradio.org) - ポーランドのエスペラント放送 (アプリ・CLI では収集できるが、記事コーパスへの新規収集は方針により行っていない。「記事コレクションの運用記録」参照)
 6. **UEA Facila** (uea.facila.org) - 世界エスペラント協会の記事・動画プラットフォーム
 7. **Libera Folio** (liberafolio.org) - エスペラント界のニュースサイト
 
@@ -75,13 +75,25 @@ UIの言語は、アプリケーション内のセレクトボックスで動的
 
 | 収集方法 | 説明 |
 |---------|------|
-| `auto` | 自動選択（REST API → Feed → Archive の順で試行） |
+| `auto` | REST API を試し、使えなければ Feed と Archive を併用（Global Voices・Pola Retradio） |
 | `rest` | WordPress REST API を使用（高速・正確） |
-| `feed` | RSS/Atom フィードから収集 |
-| `archive` | 月別アーカイブページをクロール |
-| `both` | Feed と Archive を併用 |
+| `feed` | RSS/Atom フィードから収集（Monato では Nova! ページのみ） |
+| `archive` | 月別アーカイブページをクロール（Monato では publika 記事の ID 連番プローブ） |
+| `both` | Feed と Archive を併用（Monato では Nova! ページ + ID 連番プローブ） |
 
-**注意**: サイトによっては固定の収集方法のみ対応している場合があります。El Popola ĈinioとMonatoは独自の収集方式（それぞれnode_*.htmページ、年次インデックスページからの収集）を使用し、Scivolemoは `feed` のみに対応しています。
+アプリでサイトごとに選べる方法と既定値:
+
+| サイト | 選べる方法 | 既定 |
+|-------|-----------|------|
+| Global Voices | `auto` / `rest` / `feed` / `archive` / `both` | `auto` |
+| Pola Retradio | `auto` / `rest` / `both` / `feed` / `archive` | `auto` |
+| Monato | `both` / `feed` / `archive` | `both` |
+| Libera Folio | `rest` のみ | `rest` |
+| Scivolemo | `feed` のみ | `feed` |
+| El Popola Ĉinio | `feed` のみ（独自の node_*.htm ページ収集） | `feed` |
+| UEA Facila | `feed` のみ（独自の活動ストリーム収集） | `feed` |
+
+**注意**: Monato の年別インデックス（`/<年>/index.php?p`）は 2024 年以前だけ公開で、直近約 2 年分は購読者専用（HTTP 401）です。そのため直近の Monato は Nova! ページ + ID 連番プローブで集めます。`feed` を選ぶと Nova! ページだけになり、直近約 2 か月より前の記事を取りこぼします（「Monato 収集の仕様と対策」参照）。
 
 ### 5. 詳細オプション
 
@@ -99,12 +111,15 @@ UIの言語は、アプリケーション内のセレクトボックスで動的
 
 #### ページ送りの上限
 
-一部のサイトでは、フィードやアーカイブのページ送り回数を制限できます：
+一覧ページ（フィード・月別アーカイブ・El Popola Ĉinio のノードページ・UEA Facila の活動ストリーム）を何ページまでたどるかを制限できます：
 
-- 0を指定すると無制限（デフォルト）
-- 1以上を指定すると、その回数までページをクロール
+- **0 = サイトごとの標準値**: El Popola Ĉinio は 80 ページ（ノードごと）、UEA Facila は 400 ページ。Global Voices・Pola Retradio はライブラリの既定（フィードのページ送りは最大 200 ページ、月別アーカイブは上限なし）。無制限ではありません
+- 1以上を指定すると、その回数までページをクロール（テストで少なくしたいときなど）
+- 入力欄の初期値は El Popola Ĉinio 80、UEA Facila 400、Global Voices・Pola Retradio 0
+- REST API での収集（`rest`、および `auto` で REST が使えたとき）にはこの設定は効きません
+- CLI（`parallel_scraper.py` の `--max-pages`）を省いたときはライブラリの既定（フィード最大 200 ページ、El Popola Ĉinio はノードごと 20 ページ、UEA Facila は 50 ページ）
 
-**対応サイト**: Global Voices、Pola Retradio、UEA Facila、El Popola Ĉinio、Libera Folio
+**対応サイト**: Global Voices、Pola Retradio、UEA Facila、El Popola Ĉinio（Libera Folio・Monato・Scivolemo では入力欄は出ません。Libera Folio は REST API のみ、Monato は独自の収集方式のため。Scivolemo は Global Voices などと同じ retradio_lib のフィード収集ですが、記事が少ないのでライブラリの既定〔フィード最大 200 ページ〕で固定です）
 
 #### 音声・埋め込みリンクの取得
 
@@ -123,7 +138,7 @@ UIの言語は、アプリケーション内のセレクトボックスで動的
 
 2. **本文取得フェーズ**:
    - 収集したURLから記事本文を取得
-   - プログレスバーで進捗を表示（例: `記事を取得中... 15/42`）
+   - プログレスバーで進捗を表示（例: `本文を取得中... 15/42`）
    - 取得失敗したURLは別途記録
 
 3. **結果表示**:
@@ -174,13 +189,21 @@ https://example.com/article
 
 | url | title | published | author | categories | audio_links |
 |-----|-------|-----------|--------|------------|-------------|
-| https://... | タイトル | 2025-01-15T10:00:00 | 著者 | cat1,cat2 | url1,url2 |
+| https://... | タイトル | 2025-01-15T10:00:00+01:00 | 著者 | cat1,cat2 | url1,url2 |
 
 #### JSONL形式 (`.jsonl`)
 
 ```jsonl
-{"url": "https://...", "title": "タイトル", "published": "2025-01-15T10:00:00", "content_text": "...", "author": "著者", "categories": ["cat1", "cat2"], "audio_links": null}
+{"url": "https://...", "title": "タイトル", "published": "2025-01-15 10:00:00+01:00", "content_text": "...", "author": "著者", "categories": ["cat1", "cat2"], "audio_links": null}
 ```
+
+**published の書式**: JSONL は `str(datetime)` なので日付と時刻の間が空白、CSV は `isoformat()` なので `T` です。UTC オフセット（`+01:00` など）が付くかどうかは、サイトではなく日付の取り方で決まります。
+
+- retradio_lib のサイト（Global Voices・Libera Folio・Pola Retradio・Scivolemo）: REST API と RSS フィードから取った日付には付きます。記事ページや URL から取った日付には付きません（例: `2025-01-15 00:00:00`）。そのため同じサイトでも、`feed`・`archive`・`both` で集めたときや、`auto` で REST が使えなかったときは、付くものと付かないものが混ざることがあります
+- UEA Facila: 記事ページ・一覧ページの日付がオフセット付きの形式なので付きます
+- El Popola Ĉinio・Monato: 日付しか取らないので付きません
+
+現在のコーパスでは Global Voices・Libera Folio・Pola Retradio・UEA Facila に付き、El Popola Ĉinio・Monato には付いていません。日付が取れなかった記事は JSONL で `null`、CSV で空欄です。
 
 #### 一括ダウンロード
 
@@ -199,16 +222,31 @@ https://example.com/article
 ├── streamlit_app_eo.py        # エスペラントラッパー
 ├── retradio_lib.py            # 共通スクレイピングライブラリ
 ├── requirements.txt           # Python依存パッケージ
+├── gen_manifest.py            # 取得文書フォルダの MANIFEST.md を生成
+├── sync_korpuso.sh            # 取得文書フォルダをコーパスリポジトリへ同期
+├── prompt_輪読素材選定.md       # 記事収集・輪読素材選定のランブック（AI エージェント向け）
+├── submit_all_sites_*.sh      # 全サイトのジョブを qsub で一括投入
+├── jobs/                      # サイト×期間ごとの qsub ジョブ
+├── logs/                      # qsub ジョブのログ（中身は git 管理外）
 ├── El Popola Ĉinio/
-│   └── elpopola_lib.py       # El Popola Ĉinio専用スクレイパー
+│   ├── elpopola_lib.py       # El Popola Ĉinio専用スクレイパー
+│   └── parallel_scraper.py, scraper.py
 ├── Monato/
-│   └── monato_lib.py         # Monato専用スクレイパー
+│   ├── monato_lib.py         # Monato専用スクレイパー
+│   ├── backfill_publika_probe.py  # 任意の ID 帯を直接プローブ
+│   └── parallel_scraper.py, scraper.py
 ├── Uea_Facila/
-│   └── uea_facila_lib.py     # UEA Facila専用スクレイパー
-├── Global Voices en Esperanto/  # retradio_libを使用
-├── Scivolemo/                   # retradio_libを使用
-└── Pola Retradio/              # retradio_libを使用
+│   ├── uea_facila_lib.py     # UEA Facila専用スクレイパー
+│   └── parallel_scraper.py, scraper.py
+├── Global Voices en Esperanto/  # parallel_scraper.py, scraper.py（retradio_libを使用）
+├── Scivolemo/                   # parallel_scraper.py, scraper.py（retradio_libを使用）
+├── Pola Retradio/               # parallel_scraper.py, scraper.py（retradio_libを使用）
+├── Libera Folio/                # parallel_scraper.py（retradio_libを使用）
+├── cri_esperanto/               # CRI Esperanto（中国国際放送）用の別系統スクレイパー（アプリ非対応）
+└── 取得文書ekde*/                # 収集した記事（git 管理外。コーパスリポジトリに同期）
 ```
+
+各サイトの `parallel_scraper.py` は期間を分けて並列に取得する CLI、`scraper.py` は単体版です。
 
 ### コア技術スタック
 
@@ -283,7 +321,7 @@ st.session_state["last_result"]  # 最後の収集結果（再描画時に再利
 #### 2. `retradio_lib.py` - 共通スクレイピングライブラリ
 
 **責務**:
-- WordPress系サイト（Global Voices、Scivolemo、Pola Retradio）の汎用スクレイパー
+- WordPress系サイト（Global Voices、Scivolemo、Pola Retradio、Libera Folio）の汎用スクレイパー
 - 3つの収集方法（REST API、Feed、Archive）の実装
 - 記事本文の抽出とクリーニング
 - エクスポート機能（Markdown、TXT、CSV、JSONL）
@@ -297,7 +335,7 @@ class ScrapeConfig:
     start_date: date                   # 収集開始日
     end_date: date                     # 収集終了日
     throttle_sec: float                # リクエスト間隔（秒）
-    max_pages: Optional[int]           # ページ送り上限（None で無制限）
+    max_pages: Optional[int]           # ページ送り上限（None は既定: フィード 200 ページまで・アーカイブは無制限。REST では不使用）
     method: str                        # "auto" | "rest" | "feed" | "archive" | "both"
     categories: Optional[List[str]]    # カテゴリフィルタ（現在未使用、将来の拡張用）
     timezone: str                      # タイムゾーン（デフォルト: "Europe/Warsaw"）
@@ -408,12 +446,14 @@ def _discover_feed_url(cfg, s) -> Optional[str]:
 
 **特徴**:
 - 独自CMS（WordPress以前）
-- 年次インデックスページ（`/YYYY/index.php?p`）から収集
+- 年別インデックス（`/YYYY/index.php?p`）は 2024 年以前だけ公開。直近約 2 年分は購読者専用（HTTP 401）なので、Nova! ページと publika 記事の ID 連番プローブ（`/publika/NNNNNNp.php` を降順に走査）で集める（「Monato 収集の仕様と対策」参照）
 - セクション別の記事リスト
 
 **主要関数**:
-- `_collect_from_year(year, cfg, session)`: 年次ページから記事一覧を取得
-- `collect_urls(cfg)`: 期間内の全年次ページを走査
+- `_collect_from_year(year, cfg, session)`: 年別インデックスから記事一覧を取得（公開されている年のみ）
+- `_collect_from_current(cfg, session)`: Nova! ページ（直近約 2 か月の publika 記事）から記事一覧を取得
+- `_collect_from_probe(cfg, session, anchor_ids, probe_floor)`: ID 連番プローブ（`archive` / `both` のときだけ）
+- `collect_urls(cfg)`: 期間内の年別インデックスを走査し、読めない直近の年は Nova! ページ（`archive` / `both` ではプローブも）で補う。`feed` / `auto` は Nova! ページのみ
 - `fetch_article(url, cfg, session)`: Monato固有のHTML構造を解析
 
 ##### `uea_facila_lib.py` - UEA Facila
@@ -477,16 +517,16 @@ streamlit run streamlit_app_eo.py
    - 開始日をカレンダーで選択
    - 終了日をカレンダーで選択
 
-4. **収集方法の選択**（サイトによって選択肢が異なります）:
-   - `auto`: 自動選択（推奨）
-   - `rest`: REST API（高速）
-   - `feed`: RSS/Atomフィード
+4. **収集方法の選択**（サイトによって選択肢と既定値が異なります。通常は既定のままでよい。「4. 収集方法の選択」の表参照）:
+   - `auto`: REST API を優先し、使えなければ Feed+Archive（Global Voices・Pola Retradio のみ。両サイトの既定）
+   - `rest`: REST API（高速。Libera Folio はこれのみ）
+   - `feed`: RSS/Atomフィード（Monato では Nova! ページのみで、直近約 2 か月分しか取れない）
    - `archive`: 月別アーカイブ
-   - `both`: FeedとArchiveを併用
+   - `both`: FeedとArchiveを併用（Monato の既定）
 
 5. **オプション設定**:
    - **リクエスト間隔**: サーバー負荷を考慮して調整（デフォルト推奨）
-   - **ページ送り上限**: 必要に応じて制限（0で無制限）
+   - **ページ送り上限**: 必要に応じて制限（0 = サイトごとの標準値。無制限ではない）
    - **音声リンク取得**: 必要な場合はチェック（Pola Retradio、UEA Facila のみ）
 
 6. **収集実行**: 「収集を実行する」ボタンをクリック
@@ -507,7 +547,7 @@ streamlit run streamlit_app_eo.py
 1. サイト選択: **Global Voices en Esperanto**
 2. 開始日: `2025-01-01`
 3. 終了日: `2025-01-31`
-4. 収集方法: `rest`（または `auto`）
+4. 収集方法: `auto`（既定。REST API を優先し、使えなければ Feed+Archive）
 5. リクエスト間隔: `0.5` 秒（デフォルト）
 6. 「収集を実行する」をクリック
 7. 結果をMarkdown形式でダウンロード
@@ -550,7 +590,7 @@ def _extract_main_content(soup: BeautifulSoup) -> str:
     6. article タグ
     """
     # 不要要素の除去: script, style, nav, header, footer, aside
-    # 見出し(H1-H4)、段落(P)、リスト(LI)を抽出
+    # 見出し(H1-H4)、段落(P)、リスト(LI)、写真の説明文(FIGCAPTION)を抽出
 ```
 
 #### El Popola Ĉinio
@@ -655,7 +695,8 @@ def _get(s: requests.Session, url: str, cfg: ScrapeConfig) -> requests.Response:
 try:
     result = source_cfg["collect"](cfg)
 except Exception as exc:
-    st.error(_t(current_lang, "error_collect_fmt", exc=exc))
+    # ライブラリの例外は日本語なので、FetchError・URLCollectionError・requests の例外を表示言語で説明し直す
+    st.error(_t(current_lang, "error_collect_fmt", exc=_describe_exc(current_lang, exc)))
     st.stop()
 ```
 
@@ -870,12 +911,13 @@ rm -f /tmp/retradio_cache_$(whoami).sqlite*
 
 | サイト | 推奨方法 | 理由 |
 |-------|---------|------|
-| Global Voices | `rest` | REST APIが高速・正確 |
-| Pola Retradio | `auto` | REST APIが利用可能（自動選択が最適） |
-| Scivolemo | `feed` | RSSのみ提供 |
-| Monato | `feed` | 独自実装（年次インデックスページから収集） |
-| El Popola Ĉinio | `feed` | 独自実装（node_*.htmページから収集） |
-| UEA Facila | `feed` | Invision Community固有の活動ストリームから収集 |
+| Global Voices | `auto`（既定） | REST API を優先し、使えなければ Feed+Archive に切り替わる（CLI・定期取得ジョブと同じ） |
+| Pola Retradio | `auto`（既定） | REST APIが利用可能（自動選択が最適）。記事コーパスへの新規収集は方針により行っていない |
+| Libera Folio | `rest`（固定） | WordPress REST API のみ対応（2016年以降の WordPress 版） |
+| Scivolemo | `feed`（固定） | RSSのみ提供 |
+| Monato | `both`（既定） | 年別インデックス（2024年以前のみ公開）+ Nova! ページ + ID 連番プローブ。`feed` は Nova! ページのみで直近約2か月分しか取れない（「Monato 収集の仕様と対策」参照） |
+| El Popola Ĉinio | `feed`（固定） | 独自実装（node_*.htmページから収集） |
+| UEA Facila | `feed`（固定） | Invision Community固有の活動ストリームから収集 |
 
 ### サーバー負荷の軽減
 
@@ -885,7 +927,7 @@ rm -f /tmp/retradio_cache_$(whoami).sqlite*
 
 2. **ページ送り上限の設定**:
    - テスト時: `max_pages=2`（最初の2ページのみ）
-   - 本番: `max_pages=0`（無制限）または適切な値
+   - 本番: アプリでは `0`（サイトごとの標準値）、CLI では `--max-pages` を省略（ライブラリの既定）
 
 3. **キャッシュの活用**:
    - 開発・デバッグ時は `use_cache=True`（デフォルト）
@@ -937,6 +979,7 @@ rm -f /tmp/retradio_cache_$(whoami).sqlite*
 - **El Popola Ĉinio**: 政府系メディア（利用規約を確認）
 - **Scivolemo**: ブログ記事（著者に確認）
 - **UEA Facila**: UEA のライセンスを確認
+- **Libera Folio**: 記事に別の表示がなければ CC BY 4.0（サイトのフッターの表示による。2026-09-16 確認）
 
 **重要**: 収集した記事を再配布または商用利用する場合は、必ず各サイトのライセンスと利用規約を確認してください。
 
@@ -1023,17 +1066,17 @@ logging.basicConfig(level=logging.DEBUG)
 
 ## 記事コレクションの運用記録
 
-### コレクションの状態 (2026-09-15 時点)
+### コレクションの状態 (2026-09-16 時点)
 
 | フォルダ | 期間 | 記事数 | 備考 |
 |---|---|---|---|
-| `取得文書ekde20260303/` | 2025-03-03〜2026-03-03 | 1198 | 7サイト。Monato の欠落 (2025-03〜12ほか) は 2026-08-13 に ID プローブで補完済み (21→195本)。2026-09-15 に本文の雑音を除去し、取りこぼしていた Global Voices 1 本を追加 |
+| `取得文書ekde20260303/` | 2025-03-03〜2026-03-03 | 1199 | 7サイト。Monato の欠落 (2025-03〜12ほか) は 2026-08-13 に ID プローブで補完済み (21→195本)。2026-09-15 に本文の雑音を除去し、取りこぼしていた Global Voices 1 本を追加。2026-09-16 に取りこぼしていた UEA Facila 1 本を追加 |
 | `取得文書ekde20260401/` | 2026-03-04〜2026-08-13 | 366 | 6サイト (Pola Retradio 除外)。2026年3月ギャップも全サイト補完済み。UEA Facila の取得失敗 6 本は 2026-08-23 に回収。前フォルダと重複していた UEA Facila の再掲 3 本は 2026-09-15 に除去 (369→366) |
 | `取得文書ekde20260814/` | 2026-08-14〜2026-09-14 | 86 | 6サイト (Pola Retradio 除外)。Global Voices の更新再開分 4 本を含む |
 
-- 3 フォルダ計 **1650 本**。2025-03-03〜2026-09-14 が切れ目なく、フォルダ間で同じ URL は重複しない
-- 輪読候補リスト: `取得文書ekde20260814/rondolegado_kandidatoj_202609.md` (3 フォルダから選んだ 50 本。日本語タイトル・短い紹介・語数・難しさつき)
-- 詳細は各フォルダ内の `MANIFEST.md` を参照。フォルダを再取得・変更したら `python gen_manifest.py <フォルダ> --notes <備考md>` で再生成し、`./sync_korpuso.sh` で korpuso に反映すること
+- 3 フォルダ計 **1651 本**。2025-03-03〜2026-09-14 が切れ目なく、フォルダ間で同じ URL は重複しない
+- 輪読候補リスト: `取得文書ekde20260814/rondolegado_kandidatoj_202609.md` (3 フォルダから選んだ 50 本。日本語タイトル・短い紹介・語数・難しさつき)。各記事の抽出 md は `rondolegado_kandidatoj_202609/`、ルビ付き HTML の Netlify Drop 用フォルダは `rondolegado_kandidatoj_202609_ruby/`
+- 詳細は各フォルダ内の `MANIFEST.md` を参照。フォルダを再取得・変更したら `python gen_manifest.py <フォルダ>` で再生成し、`./sync_korpuso.sh` で korpuso に反映すること。備考（`## 備考` 節）の原本は MANIFEST.md 自身で、`--notes` を省くと既存の備考をそのまま引き継ぐ。備考を書き換えるときは、節の本文を別ファイルに切り出して編集し `--notes <備考md>` で渡す
 
 ### Monato 収集の仕様と対策 (重要)
 
@@ -1056,11 +1099,25 @@ monato.be の年別インデックス `/<年>/index.php?p` は **2024年以前�
 3. `qsub` で投入する。完了待ちはジョブ ID で行う (`qstat -j <ID>`。`qstat` の一覧はジョブ名を 10 文字で切るので、名前で判定しない)
 4. `logs/` の `.err` を確認する。サイトに接続できずに落ちたジョブ (2026-09-15 の Global Voices の `No route to host` など) は、時間をおいて再投入するか、ログインノードで同じコマンドを実行する
 5. staging の記事を既存フォルダと URL 単位で突合し、新期間分を `取得文書ekde<開始日>/` に、既存フォルダの期間に入る未収録の記事はそのフォルダに振り分ける。重複区間で本文が変わっていればサイト側の修正なので、修正後の本文に更新してよい
-6. `gen_manifest.py` でマニフェストを作り、`./sync_korpuso.sh` で korpuso に反映する
+6. 記事を入れたフォルダごとに `python gen_manifest.py <フォルダ>` でマニフェストを作り直し（既存フォルダの備考は引き継がれる。新しいフォルダの備考や追記は `--notes <備考md>` で渡す）、`./sync_korpuso.sh` で korpuso に反映する
 
 ---
 
 ## 変更履歴
+
+### v1.3.2 (2026年9月16日)
+
+- **retradio_lib (本文の文字列化)**: 本文・題名の文字列化を `_inline_text` にまとめ、リンク・太字などインライン要素の境目に空白を挟まずブラウザの表示どおりにつなぐ (「Kore , la」→「Kore, la」)。`<br>` と入れ子のブロックの境目は空白、数字の直後の `<sup>` は `^` (「2^6」)、NBSP を含む空白の並びは 1 つに
+- **retradio_lib (写真の説明文)**: figcaption を本文に含める。これまでは WordPress REST の本文断片から取ったときだけ (lxml が `<figure>` を暗黙の `<p>` で包むため) 説明文が入り、記事ページから取ったときは入らなかった。記事ページから取ったときに Jetpack の共有欄・関連記事 (「Konigi ĉi tion:」「Rilataj」) が本文に混入していたのも除去し、REST とページで本文が一致することを Libera Folio・Pola Retradio で確認
+- **retradio_lib (メタデータ)**: REST の `_embedded.author` がエラーになるサイト (Pola Retradio) では、author ID ごとに記事ページのバイラインから著者名を補う (Libera Folio は共有アカウント名しか無いので空欄のまま)。音声リンクからプレーヤー用の `?_=N` 付きの重複を除く。記事ページの公開日はフッターの「最近の投稿」欄やコメントの日付を拾わない
+- **失敗の扱い**: フィード・月別アーカイブの 1 ページ目が取れないときは「期間内 0 件」と区別して例外にする。取得の失敗は `FetchError` (URL と HTTP ステータス付き)、どの経路でも URL を集められなかったときは `URLCollectionError` (経路ごとの例外付き) とし、El Popola Ĉinio・UEA Facila の一覧の失敗も同じ形にした。各 `scraper.py`・`parallel_scraper.py` は、一部の記事の取得に失敗しても取れた分を書き出して終了コード 1 で知らせる (0 件のときは空のファイルを作らない)
+- **Monato**: 本文を h1 以降の段落と小見出し (h3〜h6) の文書順で読み、欠けていた小見出しと、段落の外に置かれた太字のリード文・書誌の行を補った。著者名の文字間に入っていた空白 (「Filip I VANČIĆ」) を解消
+- **El Popola Ĉinio**: 本文末尾の署名 (「Raportis:」「Verkis kaj fotis:」「Verkita de」など) から著者を取る
+- **UEA Facila**: 題名が `<br>` で 2 行のときは記号を足さずに空白でつなぐ (2 行目は副題のことも 1 行目の続きのこともある)。カテゴリにパンくず末尾の記事自身の題名が入っていたのを除去。カテゴリ一覧 (loke・niaj-legantoj のカード形式) からの収集と、`<p>` を使わず `<div dir="ltr">` だけで書かれた読者投稿の本文の取りこぼしを修正。`include_audio_links=False` のときは音声リンクを取らない
+- **Streamlit アプリ**: 表示言語やサイトを切り替えても入力が既定値に戻らないようにした (ウィジェットの key をラベルに依存させない)。「ページ送りの上限」の 0 はサイトごとの標準値 (El Popola Ĉinio 80、UEA Facila 400)。Global Voices の既定の収集方法を `auto` に。収集の失敗理由 (接続できない・時間切れ・HTTP ステータスなど) と、取得できなかった記事の理由を表示言語で出す (これまでライブラリの日本語の文言が韓国語版・エスペラント版の画面に混ざっていた)。キャッシュから読んだ記事では待たない。Streamlit 1.50 (Python 3.9) と 1.63 (Python 3.11) で、日本語版・韓国語版・エスペラント版それぞれ 7 サイトの収集と言語切替を確認
+- **コーパス**: 修正後のコードで 6 サイトの全記事を取り直して照合し、反映した (Global Voices は 2026-09-16 に一時的に接続できた間に)。空白の違いのほか、Libera Folio の写真の説明文 (105 本)、Monato の小見出し・リード文 (130 本)、著者の補完 (Pola Retradio 335 本、El Popola Ĉinio 120 本、Monato 71 本)、Pola Retradio の音声リンクの重複 (257 本) を反映。取りこぼしていた UEA Facila 1 本 (`…r510`) を追加 (計 1651 本)。詳細は各フォルダの MANIFEST.md の備考
+- **輪読候補**: 見直しで 3 本を差し替え、紹介文・難しさの表記を一部直し、本文の語数を載せた。抽出 md とルビ付き HTML を取り直した本文で作り直した
+- **既知の制限**: Global Voices は、2026-09-16 の取り直しで REST から著者とプロジェクト名 (The Bridge など) のカテゴリが取れなかった (既存の値を残した)。その後ふたたび接続できなくなり、原因は確かめられていない
 
 ### v1.3.1 (2026年9月15日)
 
@@ -1068,7 +1125,7 @@ monato.be の年別インデックス `/<年>/index.php?p` は **2024年以前�
 - **El Popola Ĉinio**: 本文を `get_text("\n")` で文字列の切れ目ごとに改行していたため、段落の途中にインライン要素 (`<span>`・`<em>`・`<strong>` など) があると 1 段落が細切れになっていた (708 本中 107 本) → ブロック要素と `<br>` の境目だけで区切るよう修正。雑音除去 (`NOISE_SNIPPETS`) は 80 字以下の行だけを対象にし、「WeChat」「Facebook」を含む本文の段落まで消していた問題 (13 本) を解消。ページ下部のフォロー欄の残骸行「El Popola Chinio」も出なくなった
 - **Streamlit アプリ**: 韓国語版ラッパの説明文の日韓混在を修正。日本語版・韓国語版・エスペラント版のそれぞれで、7 サイトの実収集、言語切替、画面への他言語の混入がないことを Streamlit 1.50 (Python 3.9) と 1.63 (Python 3.11) で確認
 - **コーパス**: Libera Folio 全 120 本を修正後のコードで取り直して照合し、古いコードで引用部分が二重になっていた 3 本を差し替え (写真説明文を含む既存 7 本はそのまま)。El Popola Ĉinio 全 708 本を修正後のコードで取り直して反映 (段落数 8,374→6,855、本文の文字列は一致、消えていた段落 13 本分を復元)
-- **輪読候補**: 京大エス研の例会向けに 50 本を選び、日本語タイトルと短い紹介を付けた一覧を `取得文書ekde20260814/rondolegado_kandidatoj_202609.md` に追加
+- **輪読候補**: 京大エス研の例会向けに 50 本を選び、日本語タイトルと短い紹介を付けた一覧を `取得文書ekde20260814/rondolegado_kandidatoj_202609.md` に追加。1 記事 1 ファイルの抽出 md (`rondolegado_kandidatoj_202609/`、注釈ルビツール esperanto-radiko-cjk-annotator にそのまま読み込める題名+本文のみの形式) と、50 本を同ツールの注釈ルビモードで変換したルビ付き HTML に一覧・投票ページを添えた Netlify Drop 用フォルダ (`rondolegado_kandidatoj_202609_ruby/` と同名の zip) も同梱
 
 ### v1.3.0 (2026年9月15日)
 

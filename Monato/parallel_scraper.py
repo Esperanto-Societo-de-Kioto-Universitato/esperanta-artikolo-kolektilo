@@ -215,7 +215,11 @@ def main() -> None:
     set_progress_callback(None)
 
     timer_collect_start = time.perf_counter()
-    url_result = collect_urls(cfg_base)
+    try:
+        url_result = collect_urls(cfg_base)
+    except Exception as exc:  # noqa: BLE001
+        print(f"[ERROR] URL 収集に失敗しました: {exc}", file=sys.stderr)
+        raise SystemExit(1)
     total_collect = time.perf_counter() - timer_collect_start
 
     urls = url_result.urls
@@ -264,8 +268,16 @@ def main() -> None:
         total_fetch = 0.0
         overall_failures = []
 
+        def record_worker_failure(worker: WorkerArgs, exc: BaseException) -> None:
+            # 他のワーカーの取得分は書き出すため止めない。担当 URL を失敗一覧に載せて再取得できるようにする
+            print(f"[ERROR] ワーカー #{worker.index} が失敗: {exc}", file=sys.stderr)
+            overall_failures.extend(f"{url} (ワーカー #{worker.index} が失敗: {exc})" for url in worker.urls)
+
         if actual_workers == 1:
-            results.append(worker_task(workers[0]))
+            try:
+                results.append(worker_task(workers[0]))
+            except Exception as exc:  # noqa: BLE001
+                record_worker_failure(workers[0], exc)
         else:
             with ProcessPoolExecutor(max_workers=actual_workers) as executor:
                 future_map = {executor.submit(worker_task, worker): worker for worker in workers}
@@ -275,8 +287,7 @@ def main() -> None:
                         result = future.result()
                         results.append(result)
                     except Exception as exc:  # noqa: BLE001
-                        print(f"[ERROR] ワーカー #{worker.index} が失敗: {exc}")
-                        raise
+                        record_worker_failure(worker, exc)
 
         results.sort(key=lambda r: r.index)
         all_articles = []
@@ -307,10 +318,18 @@ def main() -> None:
     )
     print(f"[INFO] 累計時間: URL収集 {total_collect:.1f}s / 本文取得 {total_fetch:.1f}s")
 
-    if total_urls > 0 and overall_failures:
-        print("[WARN] 取得失敗一覧:")
+    if url_result.errors:
+        print("[ERROR] URL 収集の一部に失敗しました（記事の取りこぼしがあり得ます）:", file=sys.stderr)
+        for msg in url_result.errors:
+            print(f"  - {msg}", file=sys.stderr)
+    if overall_failures:
+        print(f"[ERROR] 本文の取得失敗 {len(overall_failures)} 件:", file=sys.stderr)
         for fail in overall_failures:
-            print(f"  - {fail}")
+            print(f"  - {fail}", file=sys.stderr)
+    failed = bool(url_result.errors or overall_failures)
+    if failed and not all_articles:
+        print("[ERROR] 取得できた記事がないため、ファイルを書き出さずに終了します。", file=sys.stderr)
+        raise SystemExit(1)
 
     groups = _group_articles(all_articles, args.split_by)
     os.makedirs(args.out, exist_ok=True)
@@ -339,6 +358,10 @@ def main() -> None:
                 print(f"[DONE] {kind.upper()}: {path}")
             else:
                 print(f"[DONE] {label} {kind.upper()}: {path}")
+
+    if failed:
+        print("[ERROR] 失敗があったため終了コード 1 で終了します（取得できた分は書き出しました）。", file=sys.stderr)
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

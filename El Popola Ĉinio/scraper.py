@@ -113,9 +113,15 @@ def main():
     set_progress_callback(lambda msg: print(msg))
     print(f"[INFO] URL 収集中: {cfg.start_date} ～ {cfg.end_date} ({cfg.method})")
     timer_start = time.perf_counter()
-    result = collect_urls(cfg)
+    try:
+        result = collect_urls(cfg)
+    except Exception as e:
+        # 接続できないときに空のファイルを書き出して正常終了しない
+        print(f"[ERROR] URL 収集に失敗しました: {e}", file=sys.stderr)
+        sys.exit(1)
     timer_after_collect = time.perf_counter()
     urls = result.urls
+    collect_failures: List[str] = list(getattr(result, "load_failures", []))
     print(
         "[INFO] 候補 URL: {total} 件 "
         "(rest {rest_used}/{rest_initial}, feed {feed_used}/{feed_initial}, archive {archive_used}/{archive_initial}, "
@@ -160,14 +166,12 @@ def main():
     print(f"[INFO] 抽出完了: {len(arts)} 本")
     timer_after_fetch = time.perf_counter()
     print(f"[INFO] 処理時間: URL収集 {timer_after_collect - timer_start:.1f}s / 本文取得 {timer_after_fetch - timer_after_collect:.1f}s / 合計 {timer_after_fetch - timer_start:.1f}s")
-    if failures:
-        print("[WARN] 取得失敗一覧:")
-        for failed in failures:
-            print(f"  - {failed}")
 
     groups = _group_articles(arts, args.split_by)
     os.makedirs(args.out, exist_ok=True)
-    if args.split_by == "none":
+    if not arts:
+        print("[INFO] 記事 0 本のため書き出しません")
+    elif args.split_by == "none":
         basename = f"{PREFIX}_{cfg.start_date.isoformat()}_{cfg.end_date.isoformat()}"
         paths = export_all(arts, cfg, args.out, basename=basename)
         for k, p in paths.items():
@@ -186,6 +190,19 @@ def main():
             paths = export_all(subset, chunk_cfg, args.out, basename=basename)
             for k, p in paths.items():
                 print(f"[DONE] {label} {k.upper()}: {p}")
+
+    # 失敗は取得できた分を書き出した後で stderr に出し、終了コードでも分かるようにする
+    if collect_failures:
+        print("[WARN] URL 収集で読み込めなかったページ (この先の記事を取りこぼした可能性があります):", file=sys.stderr)
+        for failed in collect_failures:
+            print(f"  - {failed}", file=sys.stderr)
+    if failures:
+        print("[WARN] 取得失敗一覧:", file=sys.stderr)
+        for failed in failures:
+            print(f"  - {failed}", file=sys.stderr)
+    if collect_failures or failures:
+        print(f"[WARN] 失敗 {len(collect_failures) + len(failures)} 件 (一覧は stderr)")
+        sys.exit(1)
 
 
 if __name__ == "__main__":

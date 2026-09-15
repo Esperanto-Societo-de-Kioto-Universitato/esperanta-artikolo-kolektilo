@@ -25,7 +25,7 @@ import html
 import logging
 from dataclasses import dataclass, asdict
 from typing import Iterable, List, Optional, Dict, Tuple, Set, Callable
-from urllib.parse import urljoin, urlparse, urlencode
+from urllib.parse import urljoin, urlparse, urlencode, urlsplit, urlunsplit, parse_qsl
 
 # --- third-party ---
 try:
@@ -36,6 +36,7 @@ except Exception:
 
 import requests
 from bs4 import BeautifulSoup
+from bs4.element import CData, NavigableString
 import feedparser
 import dateparser
 import getpass
@@ -188,12 +189,32 @@ def _session(cfg: ScrapeConfig) -> requests.Session:
     return s
 
 
+class FetchError(RuntimeError):
+    """HTTP で一覧・記事を取得できなかったとき。アプリが表示言語で説明できるよう URL と HTTP ステータスを持つ
+    (status が None なら、応答はあったがフィードではなかった)。"""
+
+    def __init__(self, message: str, url: str, status: Optional[int] = None):
+        super().__init__(message)
+        self.url = url
+        self.status = status
+
+
+class URLCollectionError(RuntimeError):
+    """どの経路でも URL を集められなかったとき。errors は (経路名, 例外) の組。"""
+
+    def __init__(self, message: str, errors: List[Tuple[str, BaseException]]):
+        super().__init__(message)
+        self.errors = errors
+
+
 def _get(s: requests.Session, url: str, cfg: ScrapeConfig) -> requests.Response:
     last_exc = None
+    last_status = None
     for i in range(cfg.max_retries):
         try:
             resp = s.get(url, timeout=cfg.timeout_sec)
             if resp.status_code >= 500:
+                last_status = resp.status_code
                 time.sleep(min(cfg.throttle_sec * (i + 1), 5))
                 continue
             return resp
@@ -202,7 +223,7 @@ def _get(s: requests.Session, url: str, cfg: ScrapeConfig) -> requests.Response:
             time.sleep(min(cfg.throttle_sec * (i + 1), 5))
     if last_exc:
         raise last_exc
-    raise RuntimeError(f"GET 失敗: {url}")
+    raise FetchError(f"GET 失敗 (HTTP {last_status}): {url}", url, last_status)
 
 
 def _parse_date_any(s: str) -> Optional[datetime]:
@@ -245,8 +266,8 @@ def _parse_date_any(s: str) -> Optional[datetime]:
         return None
 
 
-def _extract_date_from_url_or_title(url: str, title: str) -> Optional[datetime]:
-    # URLに /YYYY/MM/ が含まれていれば年月は確定
+def _url_date(url: str, title: str) -> Tuple[Optional[datetime], bool]:
+    """URL の /YYYY/MM/ から日付を推定する。2 つ目の値は日まで分かったか (分からなければ 1 日にしてある)。"""
     pu = urlparse(url)
     parts = [p for p in pu.path.split("/") if p]
     yyyy = mm = dd = None
@@ -255,10 +276,13 @@ def _extract_date_from_url_or_title(url: str, title: str) -> Optional[datetime]:
             yyyy = int(p)
             if i + 1 < len(parts) and re.fullmatch(r"\d{2}", parts[i+1]):
                 mm = int(parts[i+1])
-                # 次のセグメントやタイトルから日を推定
-                m = re.search(r'(\d{1,2})[.\-/](\d{1,2})[.\-/](\d{4})', title)
-                if m:
-                    dd = int(m.group(1))
+                # /YYYY/MM/DD/ (Libera Folio・Global Voices) の日、なければタイトルから日を推定
+                if i + 2 < len(parts) and re.fullmatch(r"\d{2}", parts[i+2]):
+                    dd = int(parts[i+2])
+                else:
+                    m = re.search(r'(\d{1,2})[.\-/](\d{1,2})[.\-/](\d{4})', title)
+                    if m:
+                        dd = int(m.group(1))
                 break
     if yyyy and mm:
         if not dd:
@@ -267,12 +291,19 @@ def _extract_date_from_url_or_title(url: str, title: str) -> Optional[datetime]:
             if m and int(m.group(2)) == mm and int(m.group(3)) == yyyy:
                 dd = int(m.group(1))
         try:
-            return datetime(yyyy, mm, dd or 1)
+            return datetime(yyyy, mm, dd or 1), dd is not None
         except Exception:
             pass
+    return None, False
+
+
+def _extract_date_from_url_or_title(url: str, title: str) -> Optional[datetime]:
+    # URLに /YYYY/MM/ が含まれていれば年月は確定
+    dt, _day_known = _url_date(url, title)
+    if dt:
+        return dt
     # タイトル側からの推定
-    dt = _parse_date_any(title)
-    return dt
+    return _parse_date_any(title)
 
 
 def _normalize_url(url: str) -> str:
@@ -450,9 +481,14 @@ def collect_from_feed(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
         url = page_url(page)
         resp = _get(s, url, cfg)
         if resp.status_code != 200:
+            if page == 1:
+                # 1 ページ目が取れないのはフィードが無いか拒否されたとき。期間内 0 件と区別するため例外にする
+                raise FetchError(f"フィードを取得できません (HTTP {resp.status_code}): {url}", url, resp.status_code)
             break
         parsed = feedparser.parse(resp.content)
         if not parsed.entries:
+            if page == 1 and not _is_feed_content(resp.content):
+                raise FetchError(f"フィードではない応答です: {url}", url)
             break
         stop_due_to_date = False
         added_this_page = 0
@@ -574,6 +610,9 @@ def collect_from_archives(cfg: ScrapeConfig, s: Optional[requests.Session] = Non
                 break
             resp = _get(s, page_url, cfg)
             if resp.status_code != 200:
+                # 投稿の無い月のアーカイブは 404。それ以外 (403・429 など) で月の 1 ページ目が取れないのは収集の失敗
+                if page_idx == 1 and resp.status_code not in (404, 410):
+                    raise FetchError(f"月別アーカイブを取得できません (HTTP {resp.status_code}): {page_url}", page_url, resp.status_code)
                 break
             soup = BeautifulSoup(resp.content, "lxml")
             # 記事リンク候補を列挙（WordPressの一般的な構造）
@@ -592,7 +631,11 @@ def collect_from_archives(cfg: ScrapeConfig, s: Optional[requests.Session] = Non
             for link in sorted(candidates):
                 if link in seen:
                     continue
-                dt = _extract_date_from_url_or_title(link, (a.get_text() if (a:=soup.find('a', href=link)) else ""))
+                dt, day_known = _url_date(link, (a.get_text() if (a:=soup.find('a', href=link)) else ""))
+                if not day_known:
+                    # /YYYY/MM/slug のように日が分からない URL を 1 日扱いで期間に当てはめると、月の途中で
+                    # 区切ったワーカーでは記事が落ちる。日付なしで渡し、記事ページの公開日で絞らせる
+                    dt = None
                 # 月の範囲に入っているか一応確認（後で厳密フィルタ）
                 out.append((link, dt))
                 seen.add(link)
@@ -628,6 +671,7 @@ def collect_from_rest(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
     seen: Set[str] = set()
     total_pages_reported: Optional[int] = None
     total_items_reported: Optional[int] = None
+    pending_authors: Dict[int, List[str]] = {}
     _progress(f"[REST] 取得開始: {params['after']} ～ {params['before']}")
     page = 1
     while True:
@@ -690,6 +734,9 @@ def collect_from_rest(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
                 if name:
                     author_name = name
                     break
+            author_id = item.get("author")
+            if author_name is None and isinstance(author_id, int) and author_id > 0:
+                pending_authors.setdefault(author_id, []).append(link)
             categories: List[str] = []
             for term_group in embedded.get("wp:term") or []:
                 if not term_group:
@@ -718,7 +765,40 @@ def collect_from_rest(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
             break
         page += 1
         time.sleep(cfg.throttle_sec)
+    if pending_authors:
+        _fill_authors_from_pages(cfg, s, pending_authors)
     return results
+
+
+# (サイト, REST の author ID) → 記事ページのバイラインから得た著者名 (サイト名しか無ければ None)
+_REST_AUTHOR_NAMES: Dict[Tuple[str, int], Optional[str]] = {}
+
+
+def _fill_authors_from_pages(cfg: ScrapeConfig, s: requests.Session, pending: Dict[int, List[str]]) -> None:
+    """_embedded.author がエラー (Libera Folio は 401、Pola Retradio は 404) で名前の無い記事に著者名を補う。
+    同じ author ID の記事は同じ著者なので、ID ごとに 1 記事だけページを取得してバイラインから名前を読む
+    (記事ごとの追加リクエストはしない)。"""
+    base = cfg.base_url.rstrip("/")
+    for author_id, links in pending.items():
+        key = (base, author_id)
+        if key not in _REST_AUTHOR_NAMES:
+            time.sleep(cfg.throttle_sec)
+            try:
+                resp = _get(s, links[0], cfg)
+                resp.raise_for_status()
+                _REST_AUTHOR_NAMES[key] = _extract_page_author(BeautifulSoup(resp.content, "lxml"))
+            except Exception as exc:  # noqa: BLE001
+                # 著者はメタデータなので、取れなくても URL 収集は止めない
+                logging.getLogger(__name__).warning("著者名を取得できませんでした (%s): %s", links[0], exc)
+                continue
+            _progress(f"[REST] author {author_id} = {_REST_AUTHOR_NAMES[key] or '(サイト名のみ・空欄)'}")
+        name = _REST_AUTHOR_NAMES[key]
+        if not name:
+            continue
+        for link in links:
+            entry = _FEED_ENTRY_CACHE.get(link)
+            if entry and not entry.author:
+                entry.author = name
 
 
 def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
@@ -735,6 +815,7 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
     archive_items: List[Tuple[str, Optional[datetime]]] = []
     rest_items: List[Tuple[str, Optional[datetime]]] = []
     rest_success = False
+    rest_error: Optional[Exception] = None
 
     if cfg.method in ("rest", "auto"):
         try:
@@ -745,6 +826,7 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
             _progress(f"[WARN] REST API 取得失敗: {exc}")
             if cfg.method == "rest":
                 raise
+            rest_error = exc
 
     if cfg.method == "rest":
         feed_items = []
@@ -753,10 +835,28 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
         feed_items = []
         archive_items = []
     else:
-        if cfg.method in ("feed", "both", "auto"):
-            feed_items = collect_from_feed(cfg, s)
-        if cfg.method in ("archive", "both", "auto"):
-            archive_items = collect_from_archives(cfg, s)
+        sources = [(name, func) for name, func in (("feed", collect_from_feed), ("archive", collect_from_archives))
+                   if cfg.method in (name, "both", "auto")]
+        collected: Dict[str, List[Tuple[str, Optional[datetime]]]] = {}
+        errors: List[Tuple[str, Exception]] = []
+        for name, func in sources:
+            if len(sources) == 1:
+                collected[name] = func(cfg, s)
+                continue
+            # auto (REST 失敗時) と both ではフィードと月別アーカイブが互いの代わりになるので、片方の失敗では止めない
+            try:
+                collected[name] = func(cfg, s)
+            except Exception as exc:
+                logging.getLogger(__name__).warning("%s 取得に失敗しました: %s", name, exc, exc_info=True)
+                _progress(f"[WARN] {name} 取得失敗 (残りの経路で続けます): {exc}")
+                errors.append((name, exc))
+        # 失敗した経路があって残りが 0 件なら、期間内 0 件とは言い切れない (途中で落ちたフィードの分が消える) ので失敗にする
+        if errors and not any(collected.values()):
+            route_errors = ([("REST", rest_error)] if rest_error else []) + errors
+            detail = "; ".join(f"{name}: {exc}" for name, exc in route_errors)
+            raise URLCollectionError(f"URL を収集できませんでした ({detail})", route_errors) from errors[-1][1]
+        feed_items = collected.get("feed", [])
+        archive_items = collected.get("archive", [])
 
     combined: List[Tuple[str, Optional[datetime], str]] = []
     combined.extend((u, dt, "rest") for u, dt in rest_items)
@@ -873,6 +973,50 @@ def _has_emitted_ancestor(node, container, names=("p", "li", "blockquote")) -> b
     return False
 
 
+_INLINE_BLOCKS = {"p", "div", "li", "ul", "ol", "dl", "dd", "dt", "blockquote", "h1", "h2", "h3", "h4", "h5", "h6",
+                  "table", "caption", "thead", "tbody", "tfoot", "tr", "td", "th", "section", "article", "main",
+                  "header", "footer", "nav", "aside", "address", "figure", "figcaption", "details", "summary",
+                  "fieldset", "legend", "form", "hgroup", "hr", "pre", "center"}
+
+# ASCII の空白の並びは 1 つの空白に。NBSP を含む空白の並び (「Hangulo&nbsp; en」) も 1 つにするが、
+# 単独の NBSP (「Ralph&nbsp;Schmeits」) は書き手が入れた語間なので残す (get_text 時代と同じ)
+_WS_RUN_RE = re.compile(r"[ \t\r\n\f\v\xa0]{2,}|[\t\r\n\f\v]")
+
+
+def _inline_text(node) -> str:
+    """ブロック要素 1 つ分のテキストを、ブラウザの表示に近い形で返す。
+    get_text(" ") はインライン要素 (<span>・<a>・<em> など) の境目ごとに空白を入れるため、句読点の前の
+    空白 (「enigmo .」) や語の分断 (「Esperant o」) が起きる。文字列はそのままつなぎ、ソースの空白だけを
+    1 つにまとめる。<br> と入れ子のブロック要素 (<hr> を含む) は空白として扱う。数字の直後の <sup> は
+    指数として ^ を付ける (2^6)。"""
+    if isinstance(node, NavigableString):
+        return _WS_RUN_RE.sub(" ", str(node)).strip()
+    out: List[str] = []
+
+    def walk(n) -> None:
+        for ch in n.children:
+            if isinstance(ch, NavigableString):
+                if type(ch) in (NavigableString, CData):
+                    out.append(str(ch))
+            elif ch.name == "br":
+                out.append(" ")
+            elif ch.name in ("script", "style", "noscript", "template"):
+                continue
+            elif ch.name == "sup":
+                prev = "".join(out).rstrip()
+                out.append("^" if prev[-1:].isdigit() and not "".join(out)[-1:].isspace() else " ")
+                walk(ch)
+            elif ch.name in _INLINE_BLOCKS:
+                out.append(" ")
+                walk(ch)
+                out.append(" ")
+            else:
+                walk(ch)
+
+    walk(node)
+    return _WS_RUN_RE.sub(" ", "".join(out)).strip()
+
+
 def _drop_player_widgets(node: BeautifulSoup) -> None:
     # PowerPress の操作文言「Podkasto: Ludu en nova fenestro | Elŝutu」は本文ではない。
     # 音声リンクはこの中の <a> から取るので、音声リンクを抽出した後に呼ぶこと
@@ -880,10 +1024,39 @@ def _drop_player_widgets(node: BeautifulSoup) -> None:
         bad.decompose()
 
 
+# 記事の外側 (サイドバー・フッターの「最近の投稿」欄・コメント欄・関連記事) を示す class / id
+_NOISE_AREA_RE = re.compile(r"widget|sidebar|comment|related", re.I)
+
+
+def _in_noise_area(el) -> bool:
+    """el がサイドバー・フッター・コメント欄などの中にあるか。
+    ページ全体から日付や著者を探すと、「最近の投稿」欄の他記事の日付やコメントの投稿者名を拾う。"""
+    for parent in el.parents:
+        name = getattr(parent, "name", None)
+        if name in (None, "html", "body", "[document]"):
+            return False
+        ident = " ".join(parent.get("class") or []) + " " + (parent.get("id") or "")
+        if name in ("aside", "nav") or _NOISE_AREA_RE.search(ident):
+            return True
+        # 記事自身の <footer class="entry-footer"> (カテゴリ欄を置くテーマがある) は記事の一部として扱う
+        if (name == "footer" or "footer" in ident.lower()) and parent.find_parent("article") is None:
+            return True
+    return False
+
+
+# 本文ノードに残ったメタ行。本文中の普通の語 (kategorio・komentario・enretigita) を含む段落まで
+# 捨てないよう、ラベルで始まる行だけを対象にする
+_META_LINE_RE = re.compile(
+    r"^(enretigita de\b|posted in\b|kategorioj?\s*:|etikedoj?\s*:|skribu komenton|lasu komenton"
+    r"|vi devas ensaluti|ensalutu\b|\d+\s+komento)",
+    re.I,
+)
+
+
 def _extract_main_content(soup: BeautifulSoup) -> str:
     """
     WordPress + Elegant Themes(Divi系) を想定しつつ、汎用的に本文を抽出。
-    見出し(H2-H4)と段落(P)、リスト(LI)をテキスト化。
+    見出し(H1-H4)と段落(P)、リスト(LI)、写真の説明文(FIGCAPTION)をテキスト化。
     """
     # 最有力候補
     candidates = [
@@ -905,7 +1078,9 @@ def _extract_main_content(soup: BeautifulSoup) -> str:
         node = soup.body or soup
 
     # 不要な要素を除去
-    for bad in node.select("script, style, nav, header, footer, aside, noscript, form, iframe, figure.share, .post-meta, .et_post_meta_wrapper"):
+    for bad in node.select("script, style, nav, header, footer, aside, noscript, form, iframe, figure.share, .post-meta, .et_post_meta_wrapper, "
+                           ".et_pb_title_meta_container, #comment-wrap, #comments, #respond, .commentlist, .comments-area, "
+                           ".sharedaddy, .jp-relatedposts, #jp-relatedposts"):
         bad.decompose()
     _drop_player_widgets(node)
 
@@ -916,19 +1091,19 @@ def _extract_main_content(soup: BeautifulSoup) -> str:
             texts.append(line)
 
     # タイトル直下の著者・カテゴリ・コメント案内などを緩くスキップ
-    for h in node.select("h1, h2, h3, h4, p, li"):
-        if _has_emitted_ancestor(h, node, names=("p", "li")):
+    # 写真の説明文 (figcaption) も本文に含める。REST の本文断片では lxml が <figure> を暗黙の <p> で包むため
+    # 説明文が段落として出るので、ページから取ったときも同じ本文になるよう明示的に拾う
+    for h in node.select("h1, h2, h3, h4, p, li, figcaption"):
+        if _has_emitted_ancestor(h, node, names=("p", "li", "figcaption")):
             continue
-        t = h.get_text(" ", strip=True)
-        # 余計なラベルを含む段落は回避
-        low = t.lower()
-        if any(key in low for key in ["ensaluti", "komenta", "skribu komenton", "posted in", "kategori", "enretigita de"]):
+        t = _inline_text(h)
+        if _META_LINE_RE.match(t):
             continue
         push(t)
 
     # 最低限、空なら全文テキスト
     if not texts:
-        push(node.get_text(" ", strip=True))
+        push(_inline_text(node))
     return _clean_text("\n\n".join(texts))
 
 
@@ -936,46 +1111,97 @@ def _extract_title(soup: BeautifulSoup) -> str:
     for sel in ["h1.entry-title", "h1.post-title", "article h1", "h1"]:
         el = soup.select_one(sel)
         if el:
-            return el.get_text(" ", strip=True)
+            return _inline_text(el)
     # <title> からサイト名を取り除く
-    title = (soup.title.get_text(" ", strip=True) if soup.title else "").strip()
+    title = _inline_text(soup.title) if soup.title else ""
     return re.sub(r"\s*\|\s*Pola Retradio.*$", "", title).strip()
 
 
+_EO_MONTH_DATE_RE = re.compile(
+    r"(Januaro|Februaro|Marto|Aprilo|Majo|Junio|Julio|Aŭgusto|Septembro|Oktobro|Novembro|Decembro)\s+\d{1,2},\s+\d{4}",
+    re.I,
+)
+
+
+def _extract_page_published(soup: BeautifulSoup) -> Optional[datetime]:
+    """記事ページから公開日を取る。Pola Retradio のページには <time> が無く、ページ全体を探すとフッターの
+    「最近の投稿」欄 (span.post-date) やコメントの日付を拾うので、それらの中は見ない。"""
+    times = [t for t in soup.find_all("time") if not _in_noise_area(t)]
+    times.sort(key=lambda t: "published" not in (t.get("class") or []))
+    for t in times:
+        dt = _parse_date_any(t.get("datetime") or _inline_text(t))
+        if dt:
+            return dt
+    meta = soup.select_one("meta[property='article:published_time']")
+    if meta and meta.get("content"):
+        dt = _parse_date_any(meta["content"])
+        if dt:
+            return dt
+    # Divi のメタ行: <span class="published">Mar 5, 2025</span>
+    for el in soup.select(".published"):
+        if el.name != "time" and not _in_noise_area(el):
+            dt = _parse_date_any(_inline_text(el))
+            if dt:
+                return dt
+    scopes = [m for m in soup.select(".post-meta, .et_pb_title_meta_container, .entry-meta") if not _in_noise_area(m)]
+    if not scopes:
+        scopes = [a for a in soup.find_all("article") if not _in_noise_area(a)][:1]
+    for scope in scopes:
+        m = _EO_MONTH_DATE_RE.search(_inline_text(scope))
+        if m:
+            dt = _parse_date_any(m.group(0))
+            if dt:
+                return dt
+    return None
+
+
+def _extract_page_author(soup: BeautifulSoup) -> Optional[str]:
+    """記事ページのバイライン (.author.vcard / rel=author) から著者名を取る。"""
+    site = soup.select_one("meta[property='og:site_name']")
+    site_name = (site.get("content") or "").strip() if site else ""
+    for el in soup.select(".author.vcard a, a[rel~='author'], .author.vcard"):
+        if _in_noise_area(el):
+            continue
+        name = _inline_text(el)
+        if not name:
+            continue
+        # Libera Folio は全記事が共有アカウント「Libera Folio」(= サイト名) で、実際の執筆者は本文末尾の
+        # 署名にしかない。サイト名を著者欄に入れても情報にならないので空にする
+        if site_name and name.casefold() == site_name.casefold():
+            return None
+        return name
+    return None
+
+
 def _extract_author_and_categories(soup: BeautifulSoup) -> Tuple[Optional[str], List[str]]:
-    author = None
-    cats: List[str] = []
-    # 典型的なメタ情報
-    meta = soup.find(class_=re.compile(r"(post-meta|et_post_meta_wrapper|entry-meta)"))
-    if meta:
-        # 著者
-        by = meta.find(text=re.compile(r"Enretigita de|By|Autor", re.I))
-        if by and hasattr(by, "parent"):
-            author = by.parent.get_text(" ", strip=True)
-            author = re.sub(r".*?:", "", author).strip()
-        # カテゴリ
-        for a in meta.find_all("a"):
-            tt = a.get_text(" ", strip=True)
-            if tt and tt.lower() not in ["facebook", "x", "instagram"]:
-                cats.append(tt)
-    # 予備：パンくずやタグブロック
-    for a in soup.select(".post-meta a, .entry-meta a, .et_post_meta_wrapper a[rel='category tag']"):
-        tt = a.get_text(" ", strip=True)
-        if tt and tt.lower() not in ["facebook", "x", "instagram"]:
-            cats.append(tt)
-    # 正規化
-    cats = sorted(set(cats))
-    return author, cats
+    # メタ行 (「Enretigita de: X | 日付 | カテゴリ | Skribu komenton」) の全文やそこのリンク全部を拾うと、
+    # 日付やコメント数まで著者・カテゴリに入る。著者リンクとカテゴリリンク (rel="category tag") だけを見る
+    author = _extract_page_author(soup)
+    cats = {_inline_text(a) for a in soup.select("a[rel~='category']") if not _in_noise_area(a)}
+    return author, sorted(c for c in cats if c)
+
+
+def _normalize_audio_href(href: str) -> str:
+    # WordPress は同じ mp3 を <audio><source src="….mp3?_=N"> と <a href="….mp3"> の両方で出す。N はページ内の
+    # プレーヤーの通し番号で取得のたびに変わるので、"_" パラメータだけを落として同じ URL にそろえる
+    href = href.strip()
+    parts = urlsplit(href)
+    if not parts.query:
+        return href
+    query = [(k, v) for k, v in parse_qsl(parts.query, keep_blank_values=True) if k != "_"]
+    return urlunsplit(parts._replace(query=urlencode(query)))
 
 
 def _extract_audio_links(soup: BeautifulSoup) -> List[str]:
     links = set()
     # audio / mp3 / source
-    for sel in ["audio source", "audio", "a"]:
-        for el in soup.select(sel):
-            href = el.get("src") or el.get("href")
-            if href and ("mp3" in href or "audio" in href):
-                links.add(href)
+    for el in soup.find_all(["a", "audio", "source"]):
+        href = el.get("href") or el.get("src")
+        if not href:
+            continue
+        lower = href.lower()
+        if "mp3" in lower or "audio" in lower:
+            links.add(_normalize_audio_href(href))
     return sorted(links)
 
 
@@ -989,27 +1215,18 @@ def _article_from_feed_entry(entry: FeedEntryData, cfg: ScrapeConfig) -> Optiona
 
     audio_links: Optional[List[str]] = None
     if cfg.include_audio_links:
-        links = set()
-        for el in soup.find_all(["a", "audio", "source"]):
-            href = el.get("href") or el.get("src")
-            if not href:
-                continue
-            lower = href.lower()
-            if "mp3" in lower or "audio" in lower:
-                links.add(href)
-        if links:
-            audio_links = sorted(links)
+        audio_links = _extract_audio_links(soup) or None
     _drop_player_widgets(soup)
 
     blocks: List[str] = []
-    for node in soup.find_all(["h1", "h2", "h3", "h4", "p", "li", "blockquote"]):
-        if _has_emitted_ancestor(node, soup):
+    for node in soup.find_all(["h1", "h2", "h3", "h4", "p", "li", "blockquote", "figcaption"]):
+        if _has_emitted_ancestor(node, soup, names=("p", "li", "blockquote", "figcaption")):
             continue
-        text = node.get_text(" ", strip=True)
+        text = _inline_text(node)
         if text:
             blocks.append(text)
     if not blocks:
-        blocks.append(soup.get_text(" ", strip=True))
+        blocks.append(_inline_text(soup))
     content_text = _clean_text("\n\n".join(blocks))
     if not content_text:
         return None
@@ -1043,26 +1260,18 @@ def fetch_article(url: str, cfg: ScrapeConfig, s: Optional[requests.Session] = N
 
     title = _extract_title(soup)
     # 公開日：time要素 or メタ or URL/タイトルから推定
-    dt: Optional[datetime] = None
-    t_el = soup.find("time")
-    if t_el:
-        # datetime属性 or テキスト
-        val = (t_el.get("datetime") or t_el.get_text(" ", strip=True) or "").strip()
-        dt = _parse_date_any(val)
-    if not dt:
-        # ページ内のメタから
-        txt = soup.get_text(" ", strip=True)
-        # 例: Oktobro 5, 2025 | など
-        m = re.search(r"(Januaro|Februaro|Marto|Aprilo|Majo|Junio|Julio|Aŭgusto|Septembro|Oktobro|Novembro|Decembro)\s+\d{1,2},\s+\d{4}", txt, flags=re.I)
-        if m:
-            dt = _parse_date_any(m.group(0))
+    dt = _extract_page_published(soup)
+    url_dt, _day_known = _url_date(url, title)
+    if dt and url_dt and (dt.year, dt.month) != (url_dt.year, url_dt.month):
+        # パーマリンクの年月は公開日から作られる。食い違うのはページ内の別の日付を拾ったとき
+        dt = None
     if not dt:
         dt = _extract_date_from_url_or_title(url, title)
 
-    # _extract_main_content は soup からプレーヤー等を取り除くため、音声リンクを先に拾う
+    # _extract_main_content は soup からメタ行・プレーヤー等を取り除くため、著者・音声リンクを先に拾う
+    author, cats = _extract_author_and_categories(soup)
     audio_links = _extract_audio_links(soup) if cfg.include_audio_links else []
     content_text = _extract_main_content(soup)
-    author, cats = _extract_author_and_categories(soup)
 
     return Article(
         url=url,

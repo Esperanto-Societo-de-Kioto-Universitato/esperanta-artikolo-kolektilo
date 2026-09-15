@@ -103,7 +103,11 @@ def main():
     set_progress_callback(lambda msg: print(msg))
     print(f"[INFO] URL 収集中: {cfg.start_date} ～ {cfg.end_date} ({cfg.method})")
     timer_start = time.perf_counter()
-    result = collect_urls(cfg)
+    try:
+        result = collect_urls(cfg)
+    except Exception as exc:  # noqa: BLE001
+        print(f"[ERROR] URL 収集に失敗しました: {exc}", file=sys.stderr)
+        raise SystemExit(1)
     timer_after_collect = time.perf_counter()
     urls = result.urls
     print(
@@ -140,7 +144,7 @@ def main():
                     continue
             arts.append(a)
         except Exception as e:
-            print(f"[WARN] 取得失敗: {u} ({e})")
+            print(f"[WARN] 取得失敗: {u} ({e})", file=sys.stderr)
             failures.append(f"{u} ({e})")
         finally:
             time.sleep(cfg.throttle_sec)
@@ -154,10 +158,19 @@ def main():
     print(f"[INFO] 抽出完了: {len(arts)} 本")
     timer_after_fetch = time.perf_counter()
     print(f"[INFO] 処理時間: URL収集 {timer_after_collect - timer_start:.1f}s / 本文取得 {timer_after_fetch - timer_after_collect:.1f}s / 合計 {timer_after_fetch - timer_start:.1f}s")
+    if result.errors:
+        print("[ERROR] URL 収集の一部に失敗しました（記事の取りこぼしがあり得ます）:", file=sys.stderr)
+        for msg in result.errors:
+            print(f"  - {msg}", file=sys.stderr)
     if failures:
-        print("[WARN] 取得失敗一覧:")
-        for failed in failures:
-            print(f"  - {failed}")
+        print(f"[ERROR] 本文の取得失敗 {len(failures)} 件:", file=sys.stderr)
+        for failed_url in failures:
+            print(f"  - {failed_url}", file=sys.stderr)
+    failed = bool(result.errors or failures)
+    if failed and not arts:
+        # 接続できなかったときに空ファイルで既存の出力を上書きしない
+        print("[ERROR] 取得できた記事がないため、ファイルを書き出さずに終了します。", file=sys.stderr)
+        raise SystemExit(1)
 
     groups = _group_articles(arts, args.split_by)
     os.makedirs(args.out, exist_ok=True)
@@ -180,6 +193,10 @@ def main():
             paths = export_all(subset, chunk_cfg, args.out, basename=basename)
             for k, p in paths.items():
                 print(f"[DONE] {label} {k.upper()}: {p}")
+
+    if failed:
+        print("[ERROR] 失敗があったため終了コード 1 で終了します（取得できた分は書き出しました）。", file=sys.stderr)
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

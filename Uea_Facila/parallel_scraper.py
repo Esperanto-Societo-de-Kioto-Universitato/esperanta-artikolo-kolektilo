@@ -26,6 +26,7 @@ if ROOT not in sys.path:
 
 from retradio_lib import ScrapeConfig, Article, export_all  # noqa: E402
 from Uea_Facila.uea_facila_lib import (  # noqa: E402
+    COLLECT_ERRORS,
     collect_urls,
     fetch_article,
     shared_session as _session,
@@ -209,7 +210,16 @@ def main() -> None:
     set_progress_callback(None)
 
     timer_collect_start = time.perf_counter()
-    url_result = collect_urls(cfg_base)
+    try:
+        url_result = collect_urls(cfg_base)
+    except Exception as exc:  # noqa: BLE001
+        print(f"[ERROR] URL 収集に失敗しました: {exc}", file=sys.stderr)
+        sys.exit(1)
+    collect_errors = list(COLLECT_ERRORS)
+    if collect_errors:
+        print("[WARN] 一部の一覧ページから記事 URL を集められませんでした (URL が欠けている可能性があります):", file=sys.stderr)
+        for err in collect_errors:
+            print(f"  - {err}", file=sys.stderr)
     total_collect = time.perf_counter() - timer_collect_start
     urls = url_result.urls
     total_urls = len(urls)
@@ -254,8 +264,11 @@ def main() -> None:
                         result = future.result()
                         results.append(result)
                     except Exception as exc:  # noqa: BLE001
-                        print(f"[ERROR] ワーカー #{worker.index} が失敗: {exc}")
-                        raise
+                        # 1 ワーカーの異常終了で他のワーカーの取得分まで捨てない。担当 URL はすべて失敗として扱う
+                        print(f"[ERROR] ワーカー #{worker.index} が失敗: {exc}", file=sys.stderr)
+                        overall_failures.extend(
+                            f"{url} (ワーカー #{worker.index} が異常終了: {exc})" for url in worker.urls
+                        )
 
         results.sort(key=lambda r: r.index)
         all_articles = []
@@ -278,9 +291,9 @@ def main() -> None:
         f"[INFO] 累計時間: URL収集 {total_collect:.1f}s / 本文取得 {total_fetch:.1f}s"
     )
     if total_urls > 0 and overall_failures:
-        print("[WARN] 取得失敗一覧:")
+        print("[WARN] 取得失敗一覧:", file=sys.stderr)
         for fail in overall_failures:
-            print(f"  - {fail}")
+            print(f"  - {fail}", file=sys.stderr)
 
     # 出力
     def _group_articles(articles: Iterable[Article], mode: str):
@@ -319,6 +332,14 @@ def main() -> None:
                 print(f"[DONE] {kind.upper()}: {path}")
             else:
                 print(f"[DONE] {label} {kind.upper()}: {path}")
+
+    if overall_failures or collect_errors:
+        written = "取得できた分だけ書き出しました。" if all_articles else "本文を 1 本も取得できなかったため、ファイルは書き出していません。"
+        print(
+            f"[ERROR] 失敗あり (本文 {len(overall_failures)} 件 / 一覧ページ {len(collect_errors)} 件)。{written}",
+            file=sys.stderr,
+        )
+        sys.exit(1)
 
 
 if __name__ == "__main__":

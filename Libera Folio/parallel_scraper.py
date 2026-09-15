@@ -9,6 +9,7 @@ import argparse
 import os
 import sys
 import time
+import traceback
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from dataclasses import dataclass, replace
 from datetime import date, datetime, timedelta
@@ -184,6 +185,29 @@ def _sort_articles(articles: Iterable[Article]) -> List[Article]:
     return sorted(articles, key=sort_key)
 
 
+def _report_worker_failure(w: WorkerArgs, exc: Exception) -> None:
+    print(f"[ERROR] ワーカー #{w.index} ({w.cfg.start_date}～{w.cfg.end_date}) が失敗: {exc}", file=sys.stderr)
+    traceback.print_exception(type(exc), exc, exc.__traceback__, file=sys.stderr)
+
+
+def _report_failures(failed_chunks: List[Tuple[WorkerArgs, Exception]], article_failures: List[str]) -> None:
+    if not failed_chunks and not article_failures:
+        return
+    print(f"[WARN] 失敗: 期間 {len(failed_chunks)} 件 / 記事 {len(article_failures)} 件（詳細は標準エラー出力）")
+    if failed_chunks:
+        print(
+            "[ERROR] 次の期間は取得できませんでした（出力にこの期間の記事は入っていません）。"
+            "この期間だけを別の --out に再実行して結合してください（同じ --out だと同じ月のファイルを上書きします）:",
+            file=sys.stderr,
+        )
+        for w, exc in sorted(failed_chunks, key=lambda item: item[0].index):
+            print(f"  - --start {w.cfg.start_date} --end {w.cfg.end_date}  ({type(exc).__name__}: {exc})", file=sys.stderr)
+    if article_failures:
+        print("[ERROR] 本文の取得に失敗した記事:", file=sys.stderr)
+        for fail in article_failures:
+            print(f"  - {fail}", file=sys.stderr)
+
+
 def main() -> None:
     args = parse_args()
     start_d, end_d = resolve_date_range(args)
@@ -240,9 +264,13 @@ def main() -> None:
     earliest_dates: List[date] = []
     latest_dates: List[date] = []
 
+    failed_chunks: List[Tuple[WorkerArgs, Exception]] = []
     if actual_workers == 1:
-        result = worker_task(workers[0])
-        results.append(result)
+        try:
+            results.append(worker_task(workers[0]))
+        except Exception as exc:  # noqa: BLE001
+            _report_worker_failure(workers[0], exc)
+            failed_chunks.append((workers[0], exc))
     else:
         with ProcessPoolExecutor(max_workers=actual_workers) as executor:
             future_map = {executor.submit(worker_task, w): w for w in workers}
@@ -252,8 +280,9 @@ def main() -> None:
                     result = fut.result()
                     results.append(result)
                 except Exception as exc:  # noqa: BLE001
-                    print(f"[ERROR] ワーカー #{w.index} ({w.cfg.start_date}～{w.cfg.end_date}) が失敗: {exc}")
-                    raise
+                    # 1 区間の失敗で、ほかの区間で取れた記事まで捨てない。失敗した区間は最後に報告して非 0 で終える
+                    _report_worker_failure(w, exc)
+                    failed_chunks.append((w, exc))
 
     results.sort(key=lambda r: r["index"]) 
 
@@ -296,6 +325,11 @@ def main() -> None:
     )
     print(f"[INFO] 累計時間: URL収集 {total_collect:.1f}s / 本文取得 {total_fetch:.1f}s")
 
+    _report_failures(failed_chunks, overall_failures)
+    if not results:
+        print("[ERROR] 成功したワーカーが無いため、ファイルを書き出さずに終了します。", file=sys.stderr)
+        sys.exit(1)
+
     groups = _group_articles(all_articles, args.split_by)
     os.makedirs(args.out, exist_ok=True)
     for label, subset in groups:
@@ -318,6 +352,9 @@ def main() -> None:
                 print(f"[DONE] {kind.upper()}: {path}")
             else:
                 print(f"[DONE] {label} {kind.upper()}: {path}")
+
+    if failed_chunks or overall_failures:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

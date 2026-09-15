@@ -18,7 +18,7 @@ if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
 from retradio_lib import ScrapeConfig, export_all, set_progress_callback, _session  # noqa: E402
-from Uea_Facila.uea_facila_lib import collect_urls, fetch_article  # noqa: E402
+from Uea_Facila.uea_facila_lib import COLLECT_ERRORS, collect_urls, fetch_article  # noqa: E402
 
 DEFAULT_BASE_URL = "https://uea.facila.org"
 SOURCE_LABEL = "UEA Facila (uea.facila.org)"
@@ -97,7 +97,16 @@ def main():
     set_progress_callback(lambda msg: print(msg))
     print(f"[INFO] URL 収集中: {cfg.start_date} ～ {cfg.end_date}")
     timer_start = time.perf_counter()
-    result = collect_urls(cfg)
+    try:
+        result = collect_urls(cfg)
+    except Exception as exc:  # noqa: BLE001
+        print(f"[ERROR] URL 収集に失敗しました: {exc}", file=sys.stderr)
+        sys.exit(1)
+    collect_errors = list(COLLECT_ERRORS)
+    if collect_errors:
+        print("[WARN] 一部の一覧ページから記事 URL を集められませんでした (URL が欠けている可能性があります):", file=sys.stderr)
+        for err in collect_errors:
+            print(f"  - {err}", file=sys.stderr)
     timer_after_collect = time.perf_counter()
     urls = result.urls
     print(
@@ -123,7 +132,7 @@ def main():
                 continue
             articles.append(article)
         except Exception as exc:  # noqa: BLE001
-            print(f"[WARN] 取得失敗: {url} ({exc})")
+            print(f"[WARN] 取得失敗: {url} ({exc})", file=sys.stderr)
             failures.append(f"{url} ({exc})")
         finally:
             time.sleep(cfg.throttle_sec)
@@ -140,9 +149,13 @@ def main():
     print(f"[INFO] 処理時間: URL収集 {timer_after_collect - timer_start:.1f}s / 本文取得 {timer_after_fetch - timer_after_collect:.1f}s / 合計 {timer_after_fetch - timer_start:.1f}s")
 
     if failures:
-        print("[WARN] 取得失敗一覧:")
+        print("[WARN] 取得失敗一覧:", file=sys.stderr)
         for failed in failures:
-            print(f"  - {failed}")
+            print(f"  - {failed}", file=sys.stderr)
+    if not articles and (failures or collect_errors):
+        # 接続失敗で 0 本のときに空ファイルを書くと、「期間内 0 本」の正常な結果と区別できない
+        print("[ERROR] 本文を 1 本も取得できなかったため、ファイルは書き出しません。", file=sys.stderr)
+        sys.exit(1)
 
     groups = _group_articles(articles, args.split_by)
     os.makedirs(args.out, exist_ok=True)
@@ -165,6 +178,14 @@ def main():
             paths = export_all(subset, chunk_cfg, args.out, basename=basename)
             for key, path in paths.items():
                 print(f"[DONE] {label} {key.upper()}: {path}")
+
+    if failures or collect_errors:
+        print(
+            f"[ERROR] 失敗あり (本文 {len(failures)} 件 / 一覧ページ {len(collect_errors)} 件)。"
+            "取得できた分だけ書き出しました。",
+            file=sys.stderr,
+        )
+        sys.exit(1)
 
 
 if __name__ == "__main__":

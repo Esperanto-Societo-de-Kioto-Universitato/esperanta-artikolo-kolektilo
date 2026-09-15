@@ -16,18 +16,22 @@ import time
 import os
 from dataclasses import dataclass
 from datetime import datetime, timezone, date
-from typing import Dict, Iterable, List, Optional
+from typing import Dict, Iterable, List, Optional, Tuple
 from urllib.parse import urljoin, urlsplit, urlunsplit
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 import dateparser
 
 from retradio_lib import (  # type: ignore
     Article,
+    FetchError,
     ScrapeConfig,
+    URLCollectionError,
     URLCollectionResult,
     _clean_text as base_clean_text,
+    _has_emitted_ancestor,
+    _inline_text,
     _session as shared_session,
     set_progress_callback,
 )
@@ -49,6 +53,13 @@ _LOGGED_IN = False
 _LOGIN_ATTEMPTED = False
 
 UEA_META: Dict[str, Dict[str, object]] = {}
+# 直近の collect_urls で取得できなかった、または記事を 1 件も抽出できなかった一覧ページ。
+# CLI が import して終了コードの判定に使うので、再代入せず clear する
+COLLECT_ERRORS: List[str] = []
+
+
+class _EmptyListingError(FetchError):
+    """一覧の 1 ページ目は取得できたが項目を 1 件も抽出できなかった (ページ構造の変化・メンテナンス画面など)。"""
 
 
 def _session(cfg: ScrapeConfig) -> requests.Session:
@@ -157,8 +168,11 @@ def _extract_listing_items(container: BeautifulSoup) -> List[tuple[str, Optional
         cards = container.select(".ipsStreamItem")
     if not cards:
         cards = container.select("article.cCmsRecord, li.cCmsRecord")
+    if not cards:
+        # カテゴリ一覧: artikoloj・filmetoj は div.SG_card、loke・niaj-legantoj は article.cCmsCategoryFeaturedEntry
+        cards = container.select("div.SG_card, article.cCmsCategoryFeaturedEntry")
     for card in cards:
-        title_el = card.select_one(".ipsDataItem_title a, .ipsStreamItem_title a")
+        title_el = card.select_one(".ipsDataItem_title a, .ipsStreamItem_title a") or card.select_one("h2 a[href]")
         if not title_el or not title_el.get("href"):
             continue
         href = title_el["href"]
@@ -172,9 +186,7 @@ def _extract_listing_items(container: BeautifulSoup) -> List[tuple[str, Optional
             date_el = card.select_one("[data-role='recordDate'], .cCmsRecord_meta time")
             if date_el:
                 dt = dateparser.parse(date_el.get_text(" ", strip=True), languages=["eo", "en"])
-        if not dt:
-            text = card.get_text(" ", strip=True)
-            dt = dateparser.parse(text, languages=["eo", "en"])
+        # カード全体の文字列は dateparser にかけない (著者名やコメント日時など無関係な日付を記事の日付にしてしまう)
         items.append((href, dt))
     return items
 
@@ -232,9 +244,15 @@ def _ensure_logged_in(session: requests.Session, cfg: ScrapeConfig) -> None:
 
 def _collect_from_stream(cfg: ScrapeConfig, session: requests.Session, aggregated: Dict[str, datetime]) -> None:
     reached_older_than_start = False
-    for soup in _stream_page_urls(cfg, session):
+    for page_no, soup in enumerate(_stream_page_urls(cfg, session), 1):
         stream_items = soup.select(".ipsStreamItem")
         if not stream_items:
+            # 1 ページ目には期間に関係なく必ず項目が並ぶので、0 件は収集の失敗。2 ページ目以降の 0 件は終わりの合図
+            if page_no == 1:
+                raise _EmptyListingError(
+                    "活動ストリームから項目を抽出できませんでした (ページ構造が変わった可能性があります)",
+                    cfg.base_url.rstrip("/") + STREAM_PATH,
+                )
             break
 
         min_timestamp_on_page: Optional[datetime] = None
@@ -261,43 +279,56 @@ def _collect_from_stream(cfg: ScrapeConfig, session: requests.Session, aggregate
             break
 
 
-def _collect_from_categories(cfg: ScrapeConfig, session: requests.Session, aggregated: Dict[str, datetime]) -> None:
+def _collect_from_category(cfg: ScrapeConfig, session: requests.Session, path: str, aggregated: Dict[str, datetime]) -> None:
     base = cfg.base_url.rstrip("/")
     max_pages = cfg.max_pages or 50
-    for path in CATEGORY_PATHS:
-        reached_older_than_start = False
-        for page in range(1, max_pages + 1):
-            url = f"{base}{path}"
-            if page > 1:
-                url = f"{url}?page={page}"
-            soup = _fetch_listing_page(session, url, cfg)
-            items = _extract_listing_items(soup)
+    last_page = max_pages
+    seen: set = set()
+    reached_older_than_start = False
+    page = 1
+    while page <= last_page:
+        url = f"{base}{path}"
+        if page > 1:
+            url = f"{url}page/{page}/"
+        if cfg.throttle_sec:
+            time.sleep(cfg.throttle_sec)
+        soup = _fetch_listing_page(session, url, cfg)
+        items = _extract_listing_items(soup)
+        if page == 1:
             if not items:
-                break
-            min_timestamp_on_page: Optional[datetime] = None
-            for href, dt in items:
-                canonical = _canonicalize_url(cfg.base_url, href)
-                if not canonical:
-                    continue
-                if not dt:
-                    continue
-                dt = dt.astimezone(timezone.utc)
-                item_date = dt.date()
-                if item_date > cfg.end_date:
-                    continue
-                if min_timestamp_on_page is None or dt < min_timestamp_on_page:
-                    min_timestamp_on_page = dt
-                if item_date < cfg.start_date:
-                    reached_older_than_start = True
-                    continue
-                existing = aggregated.get(canonical)
-                if existing and existing >= dt:
-                    continue
-                aggregated[canonical] = dt
-            if reached_older_than_start and min_timestamp_on_page and min_timestamp_on_page.date() < cfg.start_date:
-                break
-            if cfg.throttle_sec:
-                time.sleep(cfg.throttle_sec)
+                # 1 ページ目には必ず記事が並ぶので、0 件は正常な「期間内 0 件」ではなく収集の失敗
+                raise _EmptyListingError("カテゴリ一覧から記事を抽出できませんでした (ページ構造が変わった可能性があります)", url)
+            # 範囲外のページ番号は 1 ページ目に転送され同じ記事が並ぶ (/loke/ はページ送りなし) ので、総ページ数で止める
+            pagination = soup.select_one("ul.ipsPagination[data-pages]")
+            pages = pagination.get("data-pages", "") if pagination else ""
+            last_page = min(max_pages, int(pages)) if pages.isdigit() else 1
+        new_items = [(href, dt) for href, dt in items if href not in seen]
+        if not new_items:
+            break
+        seen.update(href for href, _ in new_items)
+        min_timestamp_on_page: Optional[datetime] = None
+        for href, dt in new_items:
+            canonical = _canonicalize_url(cfg.base_url, href)
+            if not canonical:
+                continue
+            if not dt:
+                continue
+            dt = dt.astimezone(timezone.utc)
+            item_date = dt.date()
+            if item_date > cfg.end_date:
+                continue
+            if min_timestamp_on_page is None or dt < min_timestamp_on_page:
+                min_timestamp_on_page = dt
+            if item_date < cfg.start_date:
+                reached_older_than_start = True
+                continue
+            existing = aggregated.get(canonical)
+            if existing and existing >= dt:
+                continue
+            aggregated[canonical] = dt
+        if reached_older_than_start and min_timestamp_on_page and min_timestamp_on_page.date() < cfg.start_date:
+            break
+        page += 1
 
 
 def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
@@ -305,9 +336,29 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
     session = _session(cfg)
 
     aggregated: Dict[str, datetime] = {}
+    COLLECT_ERRORS.clear()
     _ensure_logged_in(session, cfg)
-    _collect_from_stream(cfg, session, aggregated)
-    _collect_from_categories(cfg, session, aggregated)
+    # ストリームとカテゴリ一覧は同じ 4 区分を別経路でたどるので、一部の一覧ページが落ちても残りで集める。
+    # 落ちたページと 1 ページ目から項目を抽出できなかった経路は COLLECT_ERRORS に残し、すべて失敗したときだけ例外にする
+    base = cfg.base_url.rstrip("/")
+    route_errors: List[Tuple[str, BaseException]] = []
+    try:
+        _collect_from_stream(cfg, session, aggregated)
+    except (requests.RequestException, _EmptyListingError) as exc:
+        COLLECT_ERRORS.append(f"{base}{STREAM_PATH} ({exc})")
+        route_errors.append((f"{base}{STREAM_PATH}", exc))
+    for path in CATEGORY_PATHS:
+        try:
+            _collect_from_category(cfg, session, path, aggregated)
+        except (requests.RequestException, _EmptyListingError) as exc:
+            COLLECT_ERRORS.append(f"{base}{path} ({exc})")
+            route_errors.append((f"{base}{path}", exc))
+    for err in COLLECT_ERRORS:
+        logging.warning("UEA Facila: 一覧ページから記事 URL を集められませんでした: %s", err)
+    if len(COLLECT_ERRORS) == 1 + len(CATEGORY_PATHS):
+        raise URLCollectionError(
+            "UEA Facila のすべての一覧ページで記事 URL を集められませんでした: " + "; ".join(COLLECT_ERRORS), route_errors
+        )
 
     entries = sorted(aggregated.items(), key=lambda pair: (pair[1], pair[0]))
 
@@ -339,14 +390,60 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
     )
 
 
+_BODY_BLOCKS = ["p", "li", "blockquote", "h2", "h3"]
+_PARAGRAPH_TAGS = _BODY_BLOCKS + ["div"]
+
+
+def _wrap_loose_runs(section: Tag, article: Tag) -> None:
+    """section と、その中で段落になる子孫を持つ要素について、直下のテキスト・インライン要素の並びを
+    子ブロックの境目ごとに div で包む (記事要素を書き換える)。"""
+    # Gmail で書いた読者投稿の <div dir="ltr">1 行目<div>2 行目</div></div> や <div><h2>見出し</h2>本文</div> では、
+    # 親の直下のテキストがどの段落にも入らず黙って消える。包んだ div は下の text_divs として 1 段落になる
+    containers = [section] + [
+        el for el in section.find_all(True)
+        if el.name not in _BODY_BLOCKS and el.find(_PARAGRAPH_TAGS) is not None
+    ]
+    for container in containers:
+        # p・li などの内側は、その要素ごと 1 段落として出るので包まない
+        if _has_emitted_ancestor(container, article, names=tuple(_BODY_BLOCKS)):
+            continue
+        run: list = []
+        for child in list(container.children) + [None]:
+            if child is not None and not (
+                isinstance(child, Tag) and (child.name in _PARAGRAPH_TAGS or child.find(_PARAGRAPH_TAGS) is not None)
+            ):
+                run.append(child)
+                continue
+            if any((n.get_text() if isinstance(n, Tag) else n).strip() for n in run):
+                wrapper = Tag(name="div")
+                run[0].insert_before(wrapper)
+                for n in run:
+                    wrapper.append(n)
+            run = []
+
+
 def _extract_article_paragraphs(article: BeautifulSoup) -> List[str]:
     paragraphs: List[str] = []
     for iframe in article.find_all("iframe"):
         src = iframe.get("src")
         if src:
             paragraphs.append(f"[Embed] {src}")
-    for node in article.find_all(["p", "li", "blockquote", "h2", "h3"]):
-        text = base_clean_text(node.get_text(" ", strip=True))
+    for section in article.select("section.ipsType_richText"):
+        _wrap_loose_runs(section, article)
+    # 読者投稿などは本文を <p> でなく <div dir="ltr"> だけで書くことがある (niaj-legantoj/barry-friedman-r79)。
+    # 本文 section 内で段落要素も div も含まない div は、<p> と同じく 1 段落として扱う
+    text_divs = {
+        id(div)
+        for section in article.select("section.ipsType_richText")
+        for div in section.find_all("div")
+        if div.find(_PARAGRAPH_TAGS) is None
+    }
+    for node in article.find_all(_PARAGRAPH_TAGS):
+        if node.name == "div" and id(node) not in text_divs:
+            continue
+        if _has_emitted_ancestor(node, article):
+            continue
+        text = base_clean_text(_inline_text(node))
         if not text:
             continue
         paragraphs.append(text)
@@ -354,7 +451,13 @@ def _extract_article_paragraphs(article: BeautifulSoup) -> List[str]:
 
 
 def _extract_categories(soup: BeautifulSoup) -> List[str]:
-    crumbs = [base_clean_text(li.get_text(" ", strip=True)) for li in soup.select("nav.ipsBreadcrumb li")]
+    # パンくず末尾の記事自身の項目はリンクを持たない。題名の <br> 以降に副題がある記事ではパンくずが 1 行目だけで
+    # 題名と一致しないため、リンクの無い項目を除く
+    crumbs = [
+        base_clean_text(li.get_text(" ", strip=True))
+        for li in soup.select("nav.ipsBreadcrumb li")
+        if li.find("a", href=True)
+    ]
     filtered: List[str] = []
     skip_tokens = {"Hejmo", "Ĉiu aktivado", "Artikoloj", "Artikola fluo", ""}
     title_el = soup.find("h1", class_="ipsType_pageTitle")
@@ -367,6 +470,15 @@ def _extract_categories(soup: BeautifulSoup) -> List[str]:
         if crumb not in filtered:
             filtered.append(crumb)
     return filtered
+
+
+def _extract_title(soup: BeautifulSoup, url: str) -> str:
+    title_el = soup.find("h1", class_="ipsType_pageTitle")
+    if not title_el:
+        return base_clean_text(url)
+    # h1 は「題名 <br> 副題」の 2 行のことがある (og:title とパンくずは 1 行目だけ)。2 行目は副題のこともあれば
+    # 1 行目の続き (「…Universala Kongreso <br>de Esperanto en Burno」) のこともあるので、記号は足さずに空白でつなぐ
+    return base_clean_text(_inline_text(title_el))
 
 
 def _extract_author(soup: BeautifulSoup) -> Optional[str]:
@@ -410,8 +522,7 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
             attempt += 1
     soup = BeautifulSoup(resp.content, "lxml")
 
-    title_el = soup.find("h1", class_="ipsType_pageTitle")
-    title = base_clean_text(title_el.get_text(" ", strip=True) if title_el else url)
+    title = _extract_title(soup, url)
 
     article_el = soup.select_one("article.artikolo") or soup.select_one("article")
     if not article_el:
@@ -428,7 +539,7 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
     paragraphs = _extract_article_paragraphs(article_el)
     content_text = "\n\n".join(paragraphs)
     if not content_text:
-        fallback = base_clean_text(article_el.get_text(" ", strip=True))
+        fallback = base_clean_text(_inline_text(article_el))
         content_text = fallback
 
     published: Optional[datetime] = None
@@ -446,7 +557,7 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
 
     author = _extract_author(soup)
     categories = _extract_categories(soup) or None
-    audio_links = _extract_audio_links(article_el)
+    audio_links = _extract_audio_links(article_el) if cfg.include_audio_links else []
 
     return Article(
         url=url,

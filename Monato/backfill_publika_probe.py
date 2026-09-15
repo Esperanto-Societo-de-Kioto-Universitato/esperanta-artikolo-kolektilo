@@ -177,7 +177,7 @@ def main() -> None:
                 misses += 1
             else:
                 errors.append((article_id, note))
-                print(f"[ERR ] {article_id:06d} {note}")
+                print(f"[ERR ] {article_id:06d} {note}", file=sys.stderr)
 
     print(f"[INFO] プローブ結果: 採用 {len(kept)} / 日付不明 {len(undated_hits)} / "
           f"期間外 {len(out_of_range)} / 非公開・不存在 {misses} / エラー {len(errors)}")
@@ -193,7 +193,8 @@ def main() -> None:
             for article_id, article in sorted(undated_hits, key=lambda t: t[0]):
                 print(f"  - {article_id:06d} {article.url} {article.title}")
     if errors:
-        print("[WARN] エラーが発生した ID は取得漏れの可能性があります。同じ ID 帯で再実行してください。")
+        print("[ERROR] エラーが発生した ID は取得漏れの可能性があります。同じ ID 帯で再実行してください: "
+              + ", ".join(f"{article_id:06d}" for article_id, _ in sorted(errors)), file=sys.stderr)
 
     merged = existing_articles + kept
     seen: Dict[str, Article] = {}
@@ -233,6 +234,9 @@ def main() -> None:
         paths = export_all(subset, cfg_chunk, args.out, basename=f"{PREFIX}_{safe_label}")
         for kind, path in paths.items():
             print(f"[DONE] {label} {kind.upper()}: {path}")
+
+    if errors:
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

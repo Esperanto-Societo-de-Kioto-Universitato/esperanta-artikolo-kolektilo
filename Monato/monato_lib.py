@@ -10,23 +10,27 @@ CLI flow keeps working.
 """
 from __future__ import annotations
 
+import copy
 import re
 import logging
 import time
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime, date, timedelta
 from typing import Dict, Iterable, List, Optional, Tuple
 from urllib.parse import urljoin
 
 import requests
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup, NavigableString, Tag
 
 from retradio_lib import (  # type: ignore
     Article,
     ScrapeConfig,
     URLCollectionResult,
+    _INLINE_BLOCKS,
     _clean_text as base_clean_text,
     _get as retry_get,
+    _has_emitted_ancestor,
+    _inline_text,
     _session as shared_session,
     set_progress_callback,
 )
@@ -57,6 +61,13 @@ class _CollectedEntry:
     section: Optional[str]
     author_hint: Optional[str]
     source: str = "feed"  # "feed"=年別インデックス・Nova! / "archive"=IDプローブ
+
+
+@dataclass
+class MonatoCollectionResult(URLCollectionResult):
+    # 取りこぼしにつながる収集の失敗。0 件は正常なこともあるため、失敗はここで区別する
+    # (CLI はこれが空でなければ終了コードを非 0 にする)
+    errors: List[str] = field(default_factory=list)
 
 
 def _clean_space(text: str) -> str:
@@ -278,7 +289,7 @@ def _probe_article(
         return "miss", None
     soup = BeautifulSoup(resp.content, "lxml")
     h1 = soup.find("h1")
-    title = _clean_space(h1.get_text(" ", strip=True)) if h1 else url
+    title = _inline_text(h1) if h1 else url
     published = _extract_last_adapto(soup.find("table"))
     return "hit", _CollectedEntry(
         url=url,
@@ -296,7 +307,7 @@ def _collect_from_probe(
     session: requests.Session,
     anchor_ids: List[int],
     probe_floor: Optional[date] = None,
-) -> Tuple[List[_CollectedEntry], int, int]:
+) -> Tuple[List[_CollectedEntry], int, int, Optional[str]]:
     """
     Nova! ページ最大 ID から連番を降順に走査し、期間内の publika 記事を集める。
     直近約 2 年の年別インデックスが HTTP 401 (購読者専用) のときの補完経路。
@@ -310,14 +321,15 @@ def _collect_from_probe(
     - 日付なしページ: 直近に見た日付付きページが期間±余裕内にある場合のみ収集
       (published は空のまま出力の unknown グループに現れるので人手で確認する)。
     - ネットワーク障害: PROBE_MAX_ERRORS 回連続で走査中断 (収集は不完全になる)。
+    - PROBE_MAX_PAGES に達して実効下限まで届かなかったときも収集は不完全。
 
-    戻り値: (収集エントリ, 期間外スキップ数, 日付なしスキップ数)
+    戻り値: (収集エントリ, 期間外スキップ数, 日付なしスキップ数, 走査が不完全に終わったときのエラー文)
     """
     if not anchor_ids:
         logging.warning(
             "MONATO probo: ne estas ankra ID (ĉu la Nova!-paĝo malplenas?); probado ne eblas."
         )
-        return [], 0, 0
+        return [], 0, 0, None
     anchor_set = set(anchor_ids)
     min_anchor = min(anchor_set)
     floor_date = max(cfg.start_date, probe_floor) if probe_floor else cfg.start_date
@@ -376,18 +388,30 @@ def _collect_from_probe(
                         entry.url,
                     )
         article_id -= 1
+    error: Optional[str] = None
     if consecutive_errors >= PROBE_MAX_ERRORS:
-        logging.warning(
-            "MONATO probo ĉesigita post %s sinsekvaj retaj eraroj; la kolektado estas nekompleta.",
-            PROBE_MAX_ERRORS,
+        error = (
+            f"MONATO probo ĉesigita ĉe ID {article_id + 1} post {PROBE_MAX_ERRORS} sinsekvaj "
+            "retaj eraroj; la kolektado estas nekompleta."
         )
+        logging.warning(error)
     elif probed >= PROBE_MAX_PAGES and consecutive_older < PROBE_STOP_OLDER:
-        logging.warning(
-            "MONATO probo: atingis PROBE_MAX_PAGES=%s antaŭ la komenco de la periodo; "
-            "artikoloj pli fruaj (post %s) povas manki.",
-            PROBE_MAX_PAGES,
-            floor_date,
-        )
+        if last_dated is None or last_dated >= stop_threshold:
+            # 実効下限 - 余裕まで届いていない (期間の始まり側が丸ごと欠け得る)
+            error = (
+                f"MONATO probo: atingis PROBE_MAX_PAGES={PROBE_MAX_PAGES} ĉe ID {article_id + 1}, "
+                f"sed la plej frua probita dato estas {last_dated or 'nekonata'} (bezonata: antaŭ "
+                f"{stop_threshold}); artikoloj de {floor_date} ĝis tiam povas manki; "
+                "la kolektado estas nekompleta."
+            )
+            logging.warning(error)
+        else:
+            logging.warning(
+                "MONATO probo: atingis PROBE_MAX_PAGES=%s post %s; la komenco de la periodo "
+                "verŝajne estas kovrita, sed ne konfirmita.",
+                PROBE_MAX_PAGES,
+                last_dated,
+            )
     logging.info(
         "MONATO probo: %s paĝoj probitaj, %s artikoloj en la periodo, "
         "%s ekster ĝi, %s sen dato preterlasitaj.",
@@ -396,7 +420,7 @@ def _collect_from_probe(
         out_of_range,
         skipped_undated,
     )
-    return entries, out_of_range, skipped_undated
+    return entries, out_of_range, skipped_undated, error
 
 
 def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
@@ -412,6 +436,9 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
     fallback_needed = False
     out_of_range_skipped = 0
     last_ok_year: Optional[int] = None
+    errors: List[str] = []
+    # 年別インデックスが読めなかった年と、その状態 ("unauthorized" | "unavailable")
+    missing_years: List[Tuple[int, str]] = []
 
     for year in range(year_start, year_end + 1):
         batch, year_skipped, status = _collect_from_year(year, cfg, session)
@@ -419,16 +446,26 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
         if status == "ok":
             last_ok_year = year
             aggregated.extend(batch)
-        # 年別インデックスが読めなかった (401/障害)、または直近年のページが
-        # 完全に空だった場合のみ Nova! / プローブへフォールバックする。
-        if year >= date.today().year - 1 and (
-            status != "ok" or (not batch and year_skipped == 0)
+        else:
+            missing_years.append((year, status))
+        # 購読者専用 (401) の範囲は年とともに後ろへずれるので、401 は年を問わず
+        # Nova! / プローブへフォールバックする。直近年は障害や空ページでも補う。
+        if status == "unauthorized" or (
+            year >= date.today().year - 1
+            and (status != "ok" or (not batch and year_skipped == 0))
         ):
             fallback_needed = True
 
     probe_entries: List[_CollectedEntry] = []
+    probe_ran = False
+    probe_floor: Optional[date] = None
     if fallback_needed:
         current_entries = _collect_from_current(cfg, session)
+        if not current_entries:
+            # Nova! は常に直近の約 20 本を載せるので、0 件は取得・解析の失敗 (プローブの起点もなくなる)
+            errors.append(
+                "MONATO: neniu artikolo trovita en la Nova!-paĝo; ĉu la paĝa strukturo ŝanĝiĝis?"
+            )
         # アンカー ID はフィルタ前の全 Nova! エントリから取る (要求期間が古く
         # 全件期間外でも、プローブの起点は必要)。
         anchor_ids = _publika_ids(entry.url for entry in current_entries)
@@ -442,12 +479,15 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
             else:
                 aggregated.append(entry)
         if method in ("archive", "both"):
+            probe_ran = True
             probe_floor = date(last_ok_year + 1, 1, 1) if last_ok_year else None
-            probe_entries, probe_skipped, _undated_skipped = _collect_from_probe(
+            probe_entries, probe_skipped, _undated_skipped, probe_error = _collect_from_probe(
                 cfg, session, anchor_ids, probe_floor
             )
             out_of_range_skipped += probe_skipped
             aggregated.extend(probe_entries)
+            if probe_error:
+                errors.append(probe_error)
         else:
             # Nova! ページはおよそ直近 2 か月の publika 記事しか載せないため、
             # それより前に及ぶ範囲指定では取りこぼしが起こり得る。
@@ -458,6 +498,23 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
                 "por ID-proba kolektado.",
                 cfg.start_date,
             )
+
+    for year, status in missing_years:
+        # プローブの範囲内なら補えている (打ち切り・中断は probe_error で報告済み)。
+        # 直近年は購読者専用・未作成が普通で、Nova! で補う (method feed/auto は警告のみ)。
+        # それ以外は 1 年分が丸ごと欠ける
+        if probe_ran and (probe_floor is None or year >= probe_floor.year):
+            continue
+        if fallback_needed and year >= date.today().year - 1:
+            continue
+        if status == "unauthorized":
+            hint = "" if probe_ran else " (uzu --method archive aŭ both)"
+            errors.append(
+                f"MONATO: la jarindekso {year} postulas abonon (HTTP 401) kaj la ID-probo ne kovris "
+                f"ĝin; artikoloj de {year} mankas{hint}."
+            )
+        else:
+            errors.append(f"MONATO: la jarindekso {year} ne atingeblis; artikoloj de {year} mankas.")
 
     unique: Dict[str, _CollectedEntry] = {}
     for entry in aggregated:
@@ -500,7 +557,7 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
     archive_used = sum(1 for entry in sorted_entries if entry.source == "archive")
     feed_used = len(sorted_entries) - archive_used
 
-    return URLCollectionResult(
+    return MonatoCollectionResult(
         urls=urls,
         feed_initial=len(aggregated) - len(probe_entries),
         archive_initial=len(probe_entries),
@@ -512,24 +569,103 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
         out_of_range_skipped=out_of_range_skipped,
         earliest_date=earliest,
         latest_date=latest,
+        errors=errors,
     )
 
 
+def _inside(node: Tag, container: Tag) -> bool:
+    return any(parent is container for parent in node.parents)
+
+
+_BODY_BLOCKS = ("p", "h3", "h4", "h5", "h6")
+
+
+def _run_text(nodes: List[object]) -> str:
+    # 元の木は筆者・日付の抽出にも使うので動かさず、写しを 1 つの要素にまとめて _inline_text にかける
+    wrapper = BeautifulSoup("", "lxml").new_tag("span")
+    for node in nodes:
+        wrapper.append(copy.copy(node))
+    return _inline_text(wrapper)
+
+
 def _extract_paragraphs(container: Tag) -> List[str]:
+    h1 = container.find("h1")
+    texts: List[str] = []
+    if h1 is not None:
+        # h1 より前の h3 は欄名 (Politiko など)。本文の小見出し (h3〜h6) は h1 以降に p と並ぶので文書順に読む。
+        # 導入段落が p で包まれず容器直下に <b> などで書かれたページがあるので、容器直下の文字列・
+        # インライン要素の連なりもブロック要素で区切って 1 段落にする。右寄せの筆者 div は読まない
+        run: List[object] = []
+
+        def flush() -> None:
+            if run:
+                texts.append(_run_text(run))
+                run.clear()
+
+        for node in h1.next_elements:
+            if not _inside(node, container):
+                break
+            if isinstance(node, Tag) and node.name in _BODY_BLOCKS:
+                if not _has_emitted_ancestor(node, container, names=_BODY_BLOCKS):
+                    flush()
+                    texts.append(_inline_text(node))
+                continue
+            if node.parent is not container:
+                continue
+            if type(node) is NavigableString or (
+                isinstance(node, Tag)
+                and node.name not in _INLINE_BLOCKS
+                and node.find(_BODY_BLOCKS) is None
+            ):
+                run.append(node)
+            elif isinstance(node, Tag):
+                flush()
+        flush()
+    else:
+        texts = [
+            _inline_text(block)
+            for block in container.find_all("p")
+            if not _has_emitted_ancestor(block, container, names=("p", "h3", "h4"))
+        ]
     paragraphs: List[str] = []
-    for p in container.find_all("p"):
-        text = _clean_space(p.get_text(" ", strip=True))
+    for text in texts:
         if not text:
             continue
-        if "sekcio por abonantoj" in text.lower():
-            paragraphs.append(text)
-            break
         paragraphs.append(text)
+        if "sekcio por abonantoj" in text.lower():
+            break
     if not paragraphs:
-        text = _clean_space(container.get_text(" ", strip=True))
+        text = _inline_text(container)
         if text:
             paragraphs.append(text)
     return [base_clean_text(p) for p in paragraphs if p]
+
+
+def _extract_categories(container: Tag, meta: Dict[str, Optional[object]]) -> List[str]:
+    # ページの欄名 (h1 直前の h3) と主題 (h2.tem) を先に置き、収集経路 (Nova!・年別インデックス・
+    # プローブ) で並びが変わらないようにする。h1 以降の h3 は本文の小見出しなので使わない。
+    # Nova! の主題ラベルはページの h2 と大小文字だけ違うことがある (RELIGIO / Religio) ので大小文字を無視して重複を除く
+    h1 = container.find("h1")
+    if h1 is not None:
+        heads = [el for el in h1.find_all_previous(["h2", "h3"]) if _inside(el, container)]
+        h3 = next((el for el in heads if el.name == "h3"), None)
+        h2 = next((el for el in heads if el.name == "h2"), None)
+    else:
+        h3 = container.find("h3")
+        h2 = container.find("h2")
+    categories: List[str] = []
+    seen = set()
+    for candidate in [
+        _inline_text(h3) if h3 else None,
+        _inline_text(h2) if h2 else None,
+        meta.get("section"),
+        meta.get("category"),
+    ]:
+        cleaned = str(candidate).strip() if candidate else ""
+        if cleaned and cleaned.casefold() not in seen:
+            seen.add(cleaned.casefold())
+            categories.append(cleaned)
+    return categories
 
 
 def _find_article_container(soup: BeautifulSoup) -> Tag:
@@ -556,7 +692,7 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
 
     container = _find_article_container(soup)
     title_tag = container.find("h1") or soup.find("h1")
-    title = base_clean_text(title_tag.get_text(" ", strip=True) if title_tag else url)
+    title = base_clean_text(_inline_text(title_tag) if title_tag else url)
 
     meta = MONATO_META.get(url, {})
     published_dt = meta.get("published")
@@ -568,20 +704,18 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
     footer_divs = container.find_all(
         "div", attrs={"style": re.compile(r"text-align\s*:\s*right", re.I)}
     )
+    # 筆者写真のある記事は最初の右寄せ div が <img> だけなので、文字のある最初の div を筆者名とする。
+    # 姓は小型大文字 B<span class="mm">AK</span> で書かれるため、_inline_text で境目に空白を入れずにつなぐ
     author: Optional[str] = None
-    if footer_divs:
-        author = _clean_space(footer_divs[0].get_text(" ", strip=True))
+    for div in footer_divs:
+        text = _inline_text(div)
+        if text:
+            author = text
+            break
     if not author and author_hint:
         author = author_hint
 
-    h2 = container.find("h2")
-    h3 = container.find("h3")
-    categories: List[str] = []
-    for candidate in [meta.get("section"), meta.get("category"), h3.get_text(" ", strip=True) if h3 else None, h2.get_text(" ", strip=True) if h2 else None]:
-        if candidate:
-            cleaned = _clean_space(str(candidate))
-            if cleaned and cleaned not in categories:
-                categories.append(cleaned)
+    categories = _extract_categories(container, meta)
 
     body_paragraphs = _extract_paragraphs(container)
     content_text = "\n\n".join(body_paragraphs)

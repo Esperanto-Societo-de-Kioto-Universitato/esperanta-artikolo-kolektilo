@@ -186,20 +186,26 @@ def main() -> None:
     set_progress_callback(None)
 
     timer_collect_start = time.perf_counter()
-    url_result = collect_urls(cfg)
+    try:
+        url_result = collect_urls(cfg)
+    except Exception as exc:  # noqa: BLE001
+        # 接続できないときに「URL が見つかりませんでした」(期間内に記事なし) と同じ終わり方をしない
+        print(f"[ERROR] URL 収集に失敗しました: {exc}", file=sys.stderr)
+        sys.exit(1)
     timer_collect = time.perf_counter() - timer_collect_start
 
     urls = url_result.urls
     total_urls = len(urls)
+    collect_failures: List[str] = list(getattr(url_result, "load_failures", []))
+    overall_failures: List[str] = []
+    total_fetch = 0.0
+    all_articles: List[Article] = []
 
     if total_urls == 0:
         print(
             f"[INFO] 並列スクレイプ開始: {start_d} ～ {end_d} (workers=0, method={cfg.method})"
         )
         print("[INFO] URL が見つかりませんでした。")
-        overall_failures: List[str] = []
-        total_fetch = 0.0
-        all_articles: List[Article] = []
     else:
         actual_workers = min(args.workers, total_urls)
         if actual_workers < args.workers:
@@ -221,11 +227,13 @@ def main() -> None:
         ]
 
         results: List[WorkerResult] = []
-        overall_failures = []
-        total_fetch = 0.0
 
+        # ワーカーが落ちても他のワーカーの取得分は書き出すため、そのワーカーの URL を失敗として続ける
         if actual_workers == 1:
-            results.append(worker_task(workers[0]))
+            try:
+                results.append(worker_task(workers[0]))
+            except Exception as exc:  # noqa: BLE001
+                overall_failures.extend(_worker_failures(workers[0], exc))
         else:
             with ProcessPoolExecutor(max_workers=actual_workers) as executor:
                 future_map = {executor.submit(worker_task, worker): worker for worker in workers}
@@ -235,11 +243,9 @@ def main() -> None:
                         result = future.result()
                         results.append(result)
                     except Exception as exc:  # noqa: BLE001
-                        print(f"[ERROR] ワーカー #{worker.index} が失敗: {exc}")
-                        raise
+                        overall_failures.extend(_worker_failures(worker, exc))
 
         results.sort(key=lambda r: r.index)
-        all_articles = []
         for result in results:
             total_fetch += result.timer_fetch
             overall_failures.extend(result.failures)
@@ -266,13 +272,10 @@ def main() -> None:
     )
     print(f"[INFO] 累計時間: URL収集 {timer_collect:.1f}s / 本文取得 {total_fetch:.1f}s")
 
-    if total_urls > 0 and overall_failures:
-        print("[WARN] 取得失敗一覧:")
-        for fail in overall_failures:
-            print(f"  - {fail}")
-
     groups = _group_articles(all_articles, args.split_by)
     os.makedirs(args.out, exist_ok=True)
+    if not all_articles:
+        print("[INFO] 記事 0 本のため書き出しません")
     for label, subset in groups:
         if not subset:
             continue
@@ -292,6 +295,24 @@ def main() -> None:
                 print(f"[DONE] {kind.upper()}: {path}")
             else:
                 print(f"[DONE] {label} {kind.upper()}: {path}")
+
+    # 失敗は取得できた分を書き出した後で stderr (qsub の .err) に出し、ジョブの終了状態でも分かるようにする
+    if collect_failures:
+        print("[WARN] URL 収集で読み込めなかったページ (この先の記事を取りこぼした可能性があります):", file=sys.stderr)
+        for fail in collect_failures:
+            print(f"  - {fail}", file=sys.stderr)
+    if overall_failures:
+        print("[WARN] 取得失敗一覧:", file=sys.stderr)
+        for fail in overall_failures:
+            print(f"  - {fail}", file=sys.stderr)
+    if collect_failures or overall_failures:
+        print(f"[WARN] 失敗 {len(collect_failures) + len(overall_failures)} 件 (一覧は stderr)")
+        sys.exit(1)
+
+
+def _worker_failures(worker: WorkerArgs, exc: BaseException) -> List[str]:
+    print(f"[ERROR] ワーカー #{worker.index} が失敗: {exc}", file=sys.stderr)
+    return [f"{url} (ワーカー #{worker.index} が失敗: {exc})" for url in worker.urls]
 
 
 def _group_articles(articles: Iterable[Article], mode: str):

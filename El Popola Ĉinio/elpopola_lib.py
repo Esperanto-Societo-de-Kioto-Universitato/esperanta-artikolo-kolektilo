@@ -11,7 +11,7 @@ from __future__ import annotations
 import logging
 import copy
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import date, datetime
 from typing import Dict, Iterable, List, Optional, Tuple
 from urllib.parse import urljoin, urlparse
@@ -21,9 +21,12 @@ from bs4 import BeautifulSoup
 
 from retradio_lib import (  # type: ignore
     Article,
+    FetchError,
     ScrapeConfig,
+    URLCollectionError,
     URLCollectionResult,
     _clean_text as base_clean_text,
+    _get as retry_get,
     _session as shared_session,
     set_progress_callback,
 )
@@ -104,14 +107,23 @@ def _extract_section_name(soup: BeautifulSoup) -> Optional[str]:
     return None
 
 
+@dataclass
+class EPCURLCollectionResult(URLCollectionResult):
+    # 読み込めなかった一覧ページ。その先の記事は URL 候補にも本文の失敗一覧にも出ないので、CLI が失敗として報告する
+    load_failures: List[str] = field(default_factory=list)
+
+
 def _collect_from_node(
     node_id: str,
     cfg: ScrapeConfig,
     session: requests.Session,
     base_url: str,
     base_host: str,
-) -> List[_CollectedEntry]:
+) -> Tuple[List[_CollectedEntry], List[Tuple[str, BaseException]], bool]:
+    """(記事, 読み込めなかったページとその例外, 1 ページでも読めたか) を返す。"""
     entries: List[_CollectedEntry] = []
+    failures: List[Tuple[str, BaseException]] = []
+    loaded = False
     seen_on_node: set[str] = set()
     max_pages = cfg.max_pages or MAX_NODE_PAGES
 
@@ -121,12 +133,18 @@ def _collect_from_node(
         else:
             page_url = f"{base_url}/node_{node_id}_{page}.htm"
         try:
-            resp = session.get(page_url, timeout=cfg.timeout_sec)
+            resp = retry_get(session, page_url, cfg)
         except Exception as exc:  # noqa: BLE001
             logging.getLogger(__name__).warning("failed to load node page %s: %s", page_url, exc)
+            failures.append((page_url, exc))
+            break
+        # 最終ページの次のページは 404 になる (正常な終わり)
+        if resp.status_code == 404:
             break
         if resp.status_code != 200:
+            failures.append((page_url, FetchError(f"HTTP {resp.status_code}", page_url, resp.status_code)))
             break
+        loaded = True
         soup = BeautifulSoup(resp.content, "lxml")
         section_name = _extract_section_name(soup)
         links = soup.select("a[href*='content_']")
@@ -170,32 +188,44 @@ def _collect_from_node(
             if latest < cfg.start_date:
                 break
 
-    return entries
+    return entries, failures, loaded
 
 
-def _discover_nodes(cfg: ScrapeConfig, session: requests.Session, base_url: str) -> List[str]:
+def _discover_nodes(
+    cfg: ScrapeConfig, session: requests.Session, base_url: str
+) -> Tuple[List[str], Optional[Tuple[str, BaseException]]]:
+    """(node ID の一覧, トップページを読めなかったときはその URL と例外) を返す。"""
     nodes = set(DEFAULT_NODE_IDS)
+    failure: Optional[Tuple[str, BaseException]] = None
     try:
-        resp = session.get(base_url, timeout=cfg.timeout_sec)
+        resp = retry_get(session, base_url, cfg)
         resp.raise_for_status()
         matches = re.findall(r"node_(\d+)\.htm", resp.text)
         nodes.update(matches)
-    except Exception:  # noqa: BLE001
+    except Exception as exc:  # noqa: BLE001
         logging.getLogger(__name__).warning("failed to discover nodes dynamically", exc_info=True)
-    return sorted(nodes)
+        failure = (base_url, exc)
+    return sorted(nodes), failure
 
 
-def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
+def collect_urls(cfg: ScrapeConfig) -> EPCURLCollectionResult:
     cfg.normalize()
     base_url = _normalize_base(cfg.base_url)
     session = _session(cfg)
 
     aggregated: Dict[str, _CollectedEntry] = {}
-    nodes = _discover_nodes(cfg, session, base_url)
+    nodes, discover_failure = _discover_nodes(cfg, session, base_url)
     base_host = urlparse(base_url).netloc
+    load_errors: List[Tuple[str, BaseException]] = [discover_failure] if discover_failure else []
+    loaded_any = False
 
     for node_id in nodes:
-        node_entries = _collect_from_node(node_id, cfg, session, base_url, base_host)
+        node_entries, node_failures, node_loaded = _collect_from_node(node_id, cfg, session, base_url, base_host)
+        load_errors.extend(node_failures)
+        loaded_any = loaded_any or node_loaded
+        # サイト全体に接続できないときに、残りの全ノードで再試行を繰り返さない
+        if not loaded_any and len(load_errors) >= 3:
+            break
         for entry in node_entries:
             existing = aggregated.get(entry.url)
             if existing:
@@ -207,6 +237,14 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
                     aggregated[entry.url] = entry
                 continue
             aggregated[entry.url] = entry
+
+    load_failures = [f"{page_url} ({exc})" for page_url, exc in load_errors]
+    if not loaded_any:
+        # 0 件で返すと「期間内に記事なし」と区別できないため、例外にして CLI・アプリに失敗として伝える
+        if not load_errors:
+            load_errors = [(base_url, FetchError("どのノードページも 404 (サイトの構成が変わった可能性)", base_url, 404))]
+        detail = "; ".join(f"{page_url} ({exc})" for page_url, exc in load_errors[:3])
+        raise URLCollectionError(f"El Popola Ĉinio の一覧ページを 1 つも読み込めませんでした: {detail}", load_errors[:3])
 
     urls = []
     earliest: Optional[date] = None
@@ -231,7 +269,7 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
                 latest = d
 
     total = len(urls)
-    return URLCollectionResult(
+    return EPCURLCollectionResult(
         urls=urls,
         feed_initial=total,
         archive_initial=0,
@@ -243,19 +281,19 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
         out_of_range_skipped=0,
         earliest_date=earliest,
         latest_date=latest,
+        load_failures=load_failures,
     )
 
 
-NOISE_SNIPPETS = [
+# ページ下部のフォロー欄と動画プレーヤーの定型行。本文中で WeChat などに触れた行を捨てないよう、行全体で照合する
+NOISE_LINES = {
     "视频播放位置",
     "下载安装Flash播放器",
-    "Facebook",
-    "Twitter",
-    "WeChat",
-    "Ĉina Fokuso",
-    "China Focus",
-    "Skani la du-dimensian kodon",
-]
+    "Ĉina Fokuso / China Focus - Esperanto",
+}
+NOISE_LINE_RE = re.compile(
+    r"^(?:Facebook|Twitter|WeChat)\s*[:：]\s*(?:Ĉina Fokuso|China Focus|El Popola|Skani la du-dimensian kodon|$)"
+)
 
 FALLBACK_SELECTORS = (
     "#content",
@@ -281,28 +319,40 @@ def _clean_paragraphs(lines: Iterable[str]) -> List[str]:
         text = line.strip()
         if not text:
             continue
-        # NOISE_SNIPPETS は NBSP 区切りで定義されているが、現行ページは通常の空白なので空白を揃えて照合する。
-        # 対象はページ下部のフォロー欄 (「Twitter: El Popola Chinio」など) の短い行だけで、
-        # 本文中で Facebook などに触れた段落まで捨てないよう長い行は照合しない
-        probe = text.replace("\xa0", " ")
-        if len(probe) <= 80 and any(noise.replace("\xa0", " ") in probe for noise in NOISE_SNIPPETS):
+        # フォロー欄は NBSP 区切りのページと通常の空白のページがあるので、空白を揃えて照合する
+        probe = re.sub(r"\s+", " ", text)
+        if probe in NOISE_LINES or NOISE_LINE_RE.match(probe):
             continue
         cleaned.append(base_clean_text(text))
     return cleaned
 
 
-def _extract_author(html: str) -> Optional[str]:
-    patterns = [
-        r"Verkis[:：]\s*([^\n<]+)",
-        r"Verkinto[:：]\s*([^\n<]+)",
-        r"Aŭtoro[:：]\s*([^\n<]+)",
-        r"Teksto[:：]\s*([^\n<]+)",
-    ]
-    for pattern in patterns:
-        m = re.search(pattern, html, flags=re.IGNORECASE)
-        if m:
-            author = base_clean_text(m.group(1))
-            if author:
+# 署名行。Tradukis・Esperantigis・Redaktoro は翻訳者・編集者なので author にしない
+_AUTHOR_PATTERNS = [
+    re.compile(r"^(?:Verkis|Raportis)(?:\s+kaj\s+fot(?:is|oj))?(?:\s*\([^()]*\))?\s*[:：]\s*(.+)$"),
+    # コロンのない「Verkis Bui Hai Mung」。本文の文 (「Verkis li ...」) を拾わないよう、大文字で始まり文末記号のないものに限る
+    re.compile(r"^(?:Verkis|Raportis)(?:\s+kaj\s+fot(?:is|oj))?\s+([A-ZĈĜĤĴŜŬ][^.!?]*)$"),
+    re.compile(r"^(?:Verkita|Raportita)\s+de\s+(.+)$"),
+    re.compile(r"^(?:Verkinto|Aŭtoro|Teksto(?:\s+kaj\s+fotoj)?)\s*[:：]\s*(.+)$"),
+]
+
+
+def _extract_author(paragraphs: List[str]) -> Optional[str]:
+    # 署名は本文の末尾 (まれに冒頭) の独立した行にある。本文中の文を拾わないよう、両端の数行の短い行だけを見る
+    n = len(paragraphs)
+    candidates = list(range(n - 1, max(n - 4, -1), -1)) + list(range(min(3, n)))
+    for i in dict.fromkeys(candidates):
+        line = re.sub(r"\s+", " ", paragraphs[i]).strip()
+        if len(line) > 200:
+            continue
+        for pattern in _AUTHOR_PATTERNS:
+            m = pattern.match(line)
+            if not m:
+                continue
+            author = re.split(r"[,;]?\s*\b(?:Tradukis|Esperantigis|Redaktis|Redaktoro|Fotis|Fotoj|Foto)\s*[:：]", m.group(1))[0]
+            # 名前の後の肩書き「(Profesoro de ... Universitato)」は除く。「(Jado)」のような 1 語の別名や国名は残す
+            author = re.sub(r"\s*\([^()]*\s[^()]*\)$", "", author.strip()).strip(" ,;.")
+            if author and len(author) <= 60:
                 return author
     return None
 
@@ -336,7 +386,7 @@ def _strip_embedded_markup(node: BeautifulSoup) -> None:
 def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Session] = None) -> Article:
     cfg.normalize()
     s = session or _session(cfg)
-    resp = s.get(url, timeout=cfg.timeout_sec)
+    resp = retry_get(s, url, cfg)
     resp.raise_for_status()
     html = resp.text
     soup = BeautifulSoup(html, "lxml")
@@ -371,7 +421,7 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
 
     content_text = "\n\n".join(paragraphs)
 
-    author = _extract_author(html)
+    author = _extract_author(paragraphs)
     section = base_clean_text(meta.get("section") or "") or None
 
     categories = [section] if section else None

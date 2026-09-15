@@ -12,6 +12,9 @@ sync_korpuso.sh でコーパスリポジトリ (esperanta-artikolo-korpuso) に�
     python gen_manifest.py 取得文書ekde20260401 [--notes notes.md]
 
 --notes で渡した Markdown 断片は「備考」節としてそのまま埋め込まれる。
+--notes を省くと、既存の MANIFEST.md の「備考」節をそのまま引き継ぐ
+(備考の原本は MANIFEST.md 自身。書き換えるときは節の本文を別ファイルに切り出して
+編集し --notes で渡す。空のファイルを渡すと備考節を消す)。
 """
 from __future__ import annotations
 
@@ -24,13 +27,41 @@ from datetime import datetime
 from glob import glob
 
 FILE_RE = re.compile(r"^(?P<site>.+?)_(?P<label>\d{4}-\d{2}|\d{4}|unknown)\.jsonl$")
+NOTES_HEADING_RE = re.compile(r"^## 備考[ \t]*\n", re.M)
+
+
+def existing_notes(manifest_path: str) -> str:
+    """既存 MANIFEST.md の「備考」節の本文を返す (ファイルや節がなければ空文字)。"""
+    if not os.path.isfile(manifest_path):
+        return ""
+    with open(manifest_path, encoding="utf-8") as f:
+        text = f.read()
+    m = NOTES_HEADING_RE.search(text)
+    if not m:
+        return ""
+    # 備考は常に最後の節として書くので、見出し以降をすべて備考とみなす
+    # (備考の中に ### や ## の見出しがあってもそのまま引き継ぐ)
+    return text[m.end():].lstrip("\n").rstrip()
 
 
 def main() -> None:
     p = argparse.ArgumentParser(description="取得文書フォルダの MANIFEST.md を生成")
     p.add_argument("folder", help="対象フォルダ")
-    p.add_argument("--notes", default=None, help="備考として埋め込む Markdown ファイル")
+    p.add_argument(
+        "--notes",
+        default=None,
+        help="備考として埋め込む Markdown ファイル (省略時は既存 MANIFEST.md の備考を引き継ぐ)",
+    )
     args = p.parse_args()
+
+    out_path = os.path.join(args.folder, "MANIFEST.md")
+    if args.notes is not None:
+        with open(args.notes, encoding="utf-8") as f:
+            notes = f.read().rstrip()
+    else:
+        notes = existing_notes(out_path)
+        if notes:
+            print(f"[INFO] 既存の {out_path} の備考を引き継ぎます")
 
     counts: dict = defaultdict(dict)      # site -> label -> n
     date_range: dict = {}                 # site -> [min, max]
@@ -99,13 +130,12 @@ def main() -> None:
         for name in extra_files:
             lines.append(f"- {name}")
         lines.append("")
-    if args.notes:
+    if notes:
         lines.append("## 備考")
         lines.append("")
-        lines.append(open(args.notes, encoding="utf-8").read().rstrip())
+        lines.append(notes)
         lines.append("")
 
-    out_path = os.path.join(args.folder, "MANIFEST.md")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
     print(f"[DONE] {out_path} ({total} 記事)")

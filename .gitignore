@@ -15,6 +15,7 @@ logs/*
 !logs/.gitkeep
 fuyou/
 
-# 収集した記事本文は著作権保護のため git 管理・GitHub 公開しない
+# 収集した記事本文 (取得文書*/) はこのコード用リポジトリには置かず、公開のコーパスリポジトリ
+# esperanta-artikolo-korpuso で管理する (./sync_korpuso.sh で同期。README「リポジトリの方針」参照)
 # (各フォルダの内容は同フォルダ内 MANIFEST.md を参照)
 取得文書*/

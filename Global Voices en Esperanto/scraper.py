@@ -7,6 +7,7 @@ import argparse
 import os
 import sys
 import time
+import traceback
 from collections import OrderedDict
 from dataclasses import replace
 from datetime import datetime, date, timedelta
@@ -102,7 +103,13 @@ def main():
     set_progress_callback(lambda msg: print(msg))
     print(f"[INFO] URL 収集中: {cfg.start_date} ～ {cfg.end_date} ({cfg.method})")
     timer_start = time.perf_counter()
-    result = collect_urls(cfg)
+    try:
+        result = collect_urls(cfg)
+    except Exception as exc:  # noqa: BLE001
+        # 接続できないときに空のファイルを書くと、期間内 0 件と区別できない
+        print(f"[ERROR] URL 収集に失敗しました: {exc}", file=sys.stderr)
+        traceback.print_exc()
+        sys.exit(1)
     timer_after_collect = time.perf_counter()
     urls = result.urls
     print(
@@ -135,7 +142,7 @@ def main():
                 continue
             arts.append(a)
         except Exception as e:
-            print(f"[WARN] 取得失敗: {u} ({e})")
+            print(f"[WARN] 取得失敗: {u} ({e})", file=sys.stderr)
             failures.append(f"{u} ({e})")
         finally:
             time.sleep(cfg.throttle_sec)
@@ -150,9 +157,12 @@ def main():
     timer_after_fetch = time.perf_counter()
     print(f"[INFO] 処理時間: URL収集 {timer_after_collect - timer_start:.1f}s / 本文取得 {timer_after_fetch - timer_after_collect:.1f}s / 合計 {timer_after_fetch - timer_start:.1f}s")
     if failures:
-        print("[WARN] 取得失敗一覧:")
+        print("[ERROR] 本文の取得に失敗した記事:", file=sys.stderr)
         for failed in failures:
-            print(f"  - {failed}")
+            print(f"  - {failed}", file=sys.stderr)
+        if not arts:
+            print("[ERROR] 記事を 1 本も取得できなかったため、ファイルを書き出さずに終了します。", file=sys.stderr)
+            sys.exit(1)
 
     groups = _group_articles(arts, args.split_by)
     os.makedirs(args.out, exist_ok=True)
@@ -175,6 +185,9 @@ def main():
             paths = export_all(subset, chunk_cfg, args.out, basename=basename)
             for k, p in paths.items():
                 print(f"[DONE] {label} {k.upper()}: {p}")
+
+    if failures:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
