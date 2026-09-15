@@ -9,6 +9,7 @@ pages. Articles live at URLs like `/YYYY-MM/DD/content_<id>.htm`.
 from __future__ import annotations
 
 import logging
+import copy
 import re
 from dataclasses import dataclass
 from datetime import date, datetime
@@ -280,10 +281,11 @@ def _clean_paragraphs(lines: Iterable[str]) -> List[str]:
         text = line.strip()
         if not text:
             continue
-        # NOISE_SNIPPETS は NBSP 区切りで定義されているが、現行ページは通常の空白
-        # (「Ĉina Fokuso / China Focus - Esperanto」) なので、空白を揃えてから照合する
+        # NOISE_SNIPPETS は NBSP 区切りで定義されているが、現行ページは通常の空白なので空白を揃えて照合する。
+        # 対象はページ下部のフォロー欄 (「Twitter: El Popola Chinio」など) の短い行だけで、
+        # 本文中で Facebook などに触れた段落まで捨てないよう長い行は照合しない
         probe = text.replace("\xa0", " ")
-        if any(noise.replace("\xa0", " ") in probe for noise in NOISE_SNIPPETS):
+        if len(probe) <= 80 and any(noise.replace("\xa0", " ") in probe for noise in NOISE_SNIPPETS):
             continue
         cleaned.append(base_clean_text(text))
     return cleaned
@@ -303,6 +305,25 @@ def _extract_author(html: str) -> Optional[str]:
             if author:
                 return author
     return None
+
+
+_PARA_BREAK = "\u2029"
+_BLOCK_TAGS = ["p", "div", "br", "h1", "h2", "h3", "h4", "h5", "h6", "li", "ul", "ol", "table", "tr", "td", "th",
+               "blockquote", "section", "article", "center", "figure", "figcaption", "dd", "dt"]
+
+
+def _block_lines(node: BeautifulSoup) -> List[str]:
+    # get_text("\n") はインライン要素 (<span>・<em>・<strong> など) の境目でも改行するため、段落の途中に
+    # 装飾があると 1 段落が細切れになる。ブロック要素と <br> の境目だけで区切り、ソース中の改行は空白として扱う
+    work = copy.copy(node)
+    for el in work.find_all(_BLOCK_TAGS):
+        if el.name == "br":
+            el.replace_with(_PARA_BREAK)
+        else:
+            el.insert_before(_PARA_BREAK)
+            el.insert_after(_PARA_BREAK)
+    text = re.sub(r"[ \t\r\n\f\v]+", " ", work.get_text(""))
+    return text.split(_PARA_BREAK)
 
 
 def _strip_embedded_markup(node: BeautifulSoup) -> None:
@@ -329,7 +350,7 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
         if not published:
             published = _parse_explicit_date(date_str) or _parse_date_from_url(url)
         _strip_embedded_markup(content_node)
-        raw_lines = [line for line in content_node.get_text("\n").split("\n")]
+        raw_lines = _block_lines(content_node)
         paragraphs = _clean_paragraphs(raw_lines)
         if not paragraphs:
             # 動画・写真特設ページは本文セルが Flash 案内などのノイズだけで空になる。
@@ -343,7 +364,7 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
             published = _extract_date_from_document(soup) or _parse_date_from_url(url)
         content_node = _fallback_article_root(soup)
         _strip_embedded_markup(content_node)
-        raw_lines = [line for line in content_node.get_text("\n").split("\n")]
+        raw_lines = _block_lines(content_node)
         paragraphs = _clean_paragraphs(raw_lines)
         if not paragraphs:
             paragraphs = [base_clean_text(content_node.get_text(" ", strip=True))]
