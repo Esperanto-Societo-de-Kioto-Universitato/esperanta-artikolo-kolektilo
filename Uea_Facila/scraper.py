@@ -33,7 +33,7 @@ def parse_args():
     parser.add_argument("--out", default="output", help="書き出し先ディレクトリ")
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL, help="対象サイトのベース URL")
     parser.add_argument("--throttle", type=float, default=1.0, help="1リクエスト毎の遅延秒数")
-    parser.add_argument("--max-pages", type=int, default=None, help="ストリームの最大ページ数（None は制限なし）")
+    parser.add_argument("--max-pages", type=int, default=None, help="活動ストリーム・カテゴリ一覧の最大ページ数（省略・0 は 50。2020 年以前まで遡るときは 400 などを指定）")
     parser.add_argument("--no-cache", action="store_true", help="requests-cache を使わない")
     parser.add_argument(
         "--split-by",
@@ -42,6 +42,13 @@ def parse_args():
         help="大きな期間を扱う際に出力ファイルを年別または月別で分割",
     )
     return parser.parse_args()
+
+
+def _parse_day(s: str, name: str) -> date:
+    try:
+        return date.fromisoformat(s)
+    except ValueError:
+        raise SystemExit(f"{name} は YYYY-MM-DD 形式で指定してください。") from None
 
 
 def _group_articles(articles, mode: str) -> List[Tuple[str, list]]:
@@ -72,15 +79,17 @@ def main():
     if args.start:
         if not args.end:
             raise SystemExit("--start を指定する場合は --end も指定してください。")
-        start_d = datetime.fromisoformat(args.start).date()
-        end_d = datetime.fromisoformat(args.end).date()
+        start_d = _parse_day(args.start, "--start")
+        end_d = _parse_day(args.end, "--end")
     else:
         end_raw = args.end or date.today().isoformat()
-        end_d = datetime.fromisoformat(end_raw).date()
+        end_d = _parse_day(end_raw, "--end")
         days = args.days if args.days is not None else 30
         if days <= 0:
             raise SystemExit("--days は正の整数で指定してください。")
         start_d = end_d - timedelta(days=days - 1)
+    if end_d < start_d:
+        raise SystemExit("終了日は開始日以降である必要があります。")
 
     cfg = ScrapeConfig(
         base_url=args.base_url,

@@ -12,7 +12,7 @@ import logging
 import copy
 import re
 from dataclasses import dataclass, field
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from typing import Dict, Iterable, List, Optional, Tuple
 from urllib.parse import urljoin, urlparse
 
@@ -25,11 +25,18 @@ from retradio_lib import (  # type: ignore
     ScrapeConfig,
     URLCollectionError,
     URLCollectionResult,
+    _WS_RUN_RE,
     _clean_text as base_clean_text,
     _get as retry_get,
     _session as shared_session,
     set_progress_callback,
 )
+
+try:
+    from retradio_lib import _norm_title  # type: ignore
+except ImportError:  # 共通ライブラリが古いとき
+    def _norm_title(t: str) -> str:
+        return _WS_RUN_RE.sub(" ", t).strip()
 
 USER_AGENT = "Mozilla/5.0 (compatible; ElPopolaScraper/1.0; +http://esperanto.china.org.cn)"
 DEFAULT_NODE_IDS = [
@@ -54,11 +61,15 @@ DEFAULT_NODE_IDS = [
     "8007437",
     "8019218",
     "8019350",
-    "8022718",
-    "8028194",
-    "9003653",
 ]
 MAX_NODE_PAGES = 20
+
+# 最新記事を節に関係なく並べる集約一覧 (Plej Freŝaj・Novaĵoj・Aktuala temo・新闻中心)。記事の分類を表さない
+AGGREGATE_NODE_IDS = {"7117770", "7117772", "7117776", "7122182"}
+LATEST_NODE_ID = "7117770"
+VIDEO_NODE_ID = "7117771"
+# サイトの一覧はノードあたり 10 ページで古い記事から消える。最終ページの日付は厳密な降順ではないので余裕を見る
+LIST_DEPTH_MARGIN_DAYS = 14
 
 EPC_META: Dict[str, Dict[str, object]] = {}
 
@@ -69,6 +80,21 @@ class _CollectedEntry:
     title: str
     published: Optional[datetime]
     section: Optional[str]
+    node_id: str = ""
+    # (節名, node ID) を読んだ順に重複なしで持つ
+    sections: List[Tuple[str, str]] = field(default_factory=list)
+
+
+@dataclass
+class _NodeResult:
+    entries: List[_CollectedEntry] = field(default_factory=list)
+    failures: List[Tuple[str, BaseException]] = field(default_factory=list)
+    loaded: bool = False
+    # 404 かリンク無しで一覧の終わりに達したか、とその直前のページの最古日
+    reached_end: bool = False
+    last_page_oldest: Optional[date] = None
+    # 期間内の他ホストの記事 (url, 題名, node ID)
+    other_host: List[Tuple[str, str, str]] = field(default_factory=list)
 
 
 def _normalize_base(base_url: str) -> str:
@@ -95,12 +121,16 @@ def _parse_date_from_url(url: str) -> Optional[datetime]:
         return None
 
 
+# 一覧ページの <title> は「節名-esperanto.china.org.cn」(区切りの前後に空白なし)。節名自体にも「-」がある (E-movado・UK-oj)
+_SECTION_SUFFIX_RE = re.compile(
+    r"\s*(?:-\s*(?:esperanto\.china\.org\.cn|El Popola Ĉinio)|_\s*China\.org\.cn)\s*$", re.I
+)
+
+
 def _extract_section_name(soup: BeautifulSoup) -> Optional[str]:
     if soup.title and soup.title.string:
         title = soup.title.string.strip()
-        if "-" in title:
-            return title.split("-", 1)[0].strip()
-        return title
+        return _SECTION_SUFFIX_RE.sub("", title).strip() or title
     heading = soup.find(["h1", "h2"])
     if heading:
         return heading.get_text(" ", strip=True)
@@ -111,6 +141,12 @@ def _extract_section_name(soup: BeautifulSoup) -> Optional[str]:
 class EPCURLCollectionResult(URLCollectionResult):
     # 読み込めなかった一覧ページ。その先の記事は URL 候補にも本文の失敗一覧にも出ないので、CLI が失敗として報告する
     load_failures: List[str] = field(default_factory=list)
+    # load_failures と同じページを例外のまま (表示言語に合わせて説明を作るため)
+    load_errors: List[Tuple[str, BaseException]] = field(default_factory=list)
+    # 失敗ではないが結果が不完全かもしれないことの注意
+    warnings: List[str] = field(default_factory=list)
+    # 期間内だが他ホスト (espero.chinareports.org.cn など) にあるため集めなかった記事。動画ページと本ホストの複製は除く
+    skipped_other_host: List[str] = field(default_factory=list)
 
 
 def _collect_from_node(
@@ -119,12 +155,11 @@ def _collect_from_node(
     session: requests.Session,
     base_url: str,
     base_host: str,
-) -> Tuple[List[_CollectedEntry], List[Tuple[str, BaseException]], bool]:
-    """(記事, 読み込めなかったページとその例外, 1 ページでも読めたか) を返す。"""
-    entries: List[_CollectedEntry] = []
-    failures: List[Tuple[str, BaseException]] = []
-    loaded = False
+) -> _NodeResult:
+    result = _NodeResult()
     seen_on_node: set[str] = set()
+    seen_other: set[str] = set()
+    prev_page_links: Dict[str, date] = {}
     max_pages = cfg.max_pages or MAX_NODE_PAGES
 
     for page in range(1, max_pages + 1):
@@ -136,22 +171,25 @@ def _collect_from_node(
             resp = retry_get(session, page_url, cfg)
         except Exception as exc:  # noqa: BLE001
             logging.getLogger(__name__).warning("failed to load node page %s: %s", page_url, exc)
-            failures.append((page_url, exc))
+            result.failures.append((page_url, exc))
             break
         # 最終ページの次のページは 404 になる (正常な終わり)
         if resp.status_code == 404:
+            result.reached_end = True
             break
         if resp.status_code != 200:
-            failures.append((page_url, FetchError(f"HTTP {resp.status_code}", page_url, resp.status_code)))
+            result.failures.append((page_url, FetchError(f"HTTP {resp.status_code}", page_url, resp.status_code)))
             break
-        loaded = True
+        result.loaded = True
         soup = BeautifulSoup(resp.content, "lxml")
         section_name = _extract_section_name(soup)
         links = soup.select("a[href*='content_']")
         if not links:
+            result.reached_end = True
             break
 
-        page_dates: List[date] = []
+        # 記事リンクとその日付 (他ホスト・期間外・既出を含む。Videoj の一覧は他ホストのリンクだけ)
+        page_links: Dict[str, date] = {}
         page_added = False
 
         for link in links:
@@ -160,13 +198,13 @@ def _collect_from_node(
                 continue
             url = urljoin(base_url + "/", href)
             parsed = urlparse(url)
-            if parsed.netloc and parsed.netloc != base_host:
-                continue
-            if url in seen_on_node:
-                continue
+            other_host = bool(parsed.netloc and parsed.netloc != base_host)
             dt = _parse_date_from_url(url)
             if dt:
-                page_dates.append(dt.date())
+                page_links[url] = dt.date()
+            if not other_host and url in seen_on_node:
+                continue
+            if dt:
                 if dt.date() > cfg.end_date:
                     continue
                 if dt.date() < cfg.start_date:
@@ -175,20 +213,33 @@ def _collect_from_node(
                 # Skip items that do not follow the standard pattern.
                 continue
 
-            title = link.get_text(" ", strip=True)
+            title = _norm_title(link.get_text(" ", strip=True))
+            if other_host:
+                if url not in seen_other or title:
+                    result.other_host.append((url, title, node_id))
+                    seen_other.add(url)
+                continue
             if not title:
                 continue
 
-            entries.append(_CollectedEntry(url=url, title=title, published=dt, section=section_name))
+            result.entries.append(_CollectedEntry(url=url, title=title, published=dt, section=section_name,
+                                                  node_id=node_id))
             seen_on_node.add(url)
             page_added = True
 
-        if not page_added and page_dates:
-            latest = max(page_dates)
-            if latest < cfg.start_date:
-                break
+        # どのページにも同じ新着欄 (最新記事) と固定記事 (古い記事) が載る。前のページにもあったリンクを除いた
+        # 残りが一覧の本体。1 ページ目では見分けられないので、打ち切りは 2 ページ目から判定する
+        list_dates = [d for u, d in page_links.items() if u not in prev_page_links]
+        if list_dates:
+            result.last_page_oldest = min(list_dates)
+        if page > 1 and not page_added and list_dates and max(list_dates) < cfg.start_date:
+            break
+        prev_page_links = page_links
 
-    return entries, failures, loaded
+    return result
+
+
+_NODE_PATH_RE = re.compile(r"^/node_(\d+)\.htm$")
 
 
 def _discover_nodes(
@@ -197,15 +248,26 @@ def _discover_nodes(
     """(node ID の一覧, トップページを読めなかったときはその URL と例外) を返す。"""
     nodes = set(DEFAULT_NODE_IDS)
     failure: Optional[Tuple[str, BaseException]] = None
+    base_host = urlparse(base_url).netloc
     try:
         resp = retry_get(session, base_url, cfg)
         resp.raise_for_status()
-        matches = re.findall(r"node_(\d+)\.htm", resp.text)
-        nodes.update(matches)
+        soup = BeautifulSoup(resp.text, "lxml")
+        # 他ホスト (www.espero.com.cn など) の node ID は本ホストでは 404。iframe で読み込む本ホストのノードもある
+        for tag, attr in (("a", "href"), ("iframe", "src")):
+            for el in soup.find_all(tag, **{attr: True}):
+                parsed = urlparse(urljoin(base_url + "/", el[attr].strip()))
+                m = _NODE_PATH_RE.match(parsed.path)
+                if m and parsed.netloc == base_host:
+                    nodes.add(m.group(1))
     except Exception as exc:  # noqa: BLE001
         logging.getLogger(__name__).warning("failed to discover nodes dynamically", exc_info=True)
         failure = (base_url, exc)
     return sorted(nodes), failure
+
+
+def _title_key(title: str) -> str:
+    return _norm_title(title).lstrip("•· ").strip().casefold()
 
 
 def collect_urls(cfg: ScrapeConfig) -> EPCURLCollectionResult:
@@ -218,25 +280,35 @@ def collect_urls(cfg: ScrapeConfig) -> EPCURLCollectionResult:
     base_host = urlparse(base_url).netloc
     load_errors: List[Tuple[str, BaseException]] = [discover_failure] if discover_failure else []
     loaded_any = False
+    other_host: Dict[str, Tuple[List[str], List[str]]] = {}
+    warnings: List[str] = []
 
     for node_id in nodes:
-        node_entries, node_failures, node_loaded = _collect_from_node(node_id, cfg, session, base_url, base_host)
-        load_errors.extend(node_failures)
-        loaded_any = loaded_any or node_loaded
+        node = _collect_from_node(node_id, cfg, session, base_url, base_host)
+        load_errors.extend(node.failures)
+        loaded_any = loaded_any or node.loaded
         # サイト全体に接続できないときに、残りの全ノードで再試行を繰り返さない
         if not loaded_any and len(load_errors) >= 3:
             break
-        for entry in node_entries:
+        if (node_id == LATEST_NODE_ID and node.reached_end and node.last_page_oldest
+                and cfg.start_date < node.last_page_oldest - timedelta(days=LIST_DEPTH_MARGIN_DAYS)):
+            warnings.append(
+                f"El Popola Ĉinio: {node.last_page_oldest.isoformat()} より前はトピック別ノードに載った記事しか"
+                "一覧から見つからない (不完全)"
+            )
+        for entry in node.entries:
             existing = aggregated.get(entry.url)
-            if existing:
-                # Prefer entry with earlier publication (more precise metadata)
-                if existing.published and entry.published:
-                    if entry.published < existing.published:
-                        aggregated[entry.url] = entry
-                elif entry.published and not existing.published:
-                    aggregated[entry.url] = entry
+            if existing is None:
+                entry.sections = [(entry.section, entry.node_id)] if entry.section else []
+                aggregated[entry.url] = entry
                 continue
-            aggregated[entry.url] = entry
+            if entry.section and all(name != entry.section for name, _ in existing.sections):
+                existing.sections.append((entry.section, entry.node_id))
+        for url, title, node_id_ in node.other_host:
+            titles, node_ids = other_host.setdefault(url, ([], []))
+            if title:
+                titles.append(title)
+            node_ids.append(node_id_)
 
     load_failures = [f"{page_url} ({exc})" for page_url, exc in load_errors]
     if not loaded_any:
@@ -245,6 +317,18 @@ def collect_urls(cfg: ScrapeConfig) -> EPCURLCollectionResult:
             load_errors = [(base_url, FetchError("どのノードページも 404 (サイトの構成が変わった可能性)", base_url, 404))]
         detail = "; ".join(f"{page_url} ({exc})" for page_url, exc in load_errors[:3])
         raise URLCollectionError(f"El Popola Ĉinio の一覧ページを 1 つも読み込めませんでした: {detail}", load_errors[:3])
+
+    # 他ホストの記事は大半が動画ページ (Videoj に載り、UK-oj などにも載ることがある) か本ホスト記事の複製なので、
+    # それ以外だけを知らせる
+    own_titles = {_title_key(e.title) for e in aggregated.values()}
+    skipped_other_host: List[str] = []
+    for url, (titles, node_ids) in sorted(other_host.items()):
+        if VIDEO_NODE_ID in node_ids:
+            continue
+        if any(_title_key(t) in own_titles for t in titles):
+            continue
+        logging.getLogger(__name__).warning("skipped article on another host: %s", url)
+        skipped_other_host.append(url)
 
     urls = []
     earliest: Optional[date] = None
@@ -259,6 +343,8 @@ def collect_urls(cfg: ScrapeConfig) -> EPCURLCollectionResult:
         EPC_META[url] = {
             "published": entry.published,
             "section": entry.section,
+            "sections": [name for name, _ in entry.sections],
+            "section_nodes": [nid for _, nid in entry.sections],
             "title": entry.title,
         }
         if entry.published:
@@ -282,6 +368,9 @@ def collect_urls(cfg: ScrapeConfig) -> EPCURLCollectionResult:
         earliest_date=earliest,
         latest_date=latest,
         load_failures=load_failures,
+        load_errors=load_errors,
+        warnings=warnings,
+        skipped_other_host=skipped_other_host,
     )
 
 
@@ -335,6 +424,21 @@ _AUTHOR_PATTERNS = [
     re.compile(r"^(?:Verkita|Raportita)\s+de\s+(.+)$"),
     re.compile(r"^(?:Verkinto|Aŭtoro|Teksto(?:\s+kaj\s+fotoj)?)\s*[:：]\s*(.+)$"),
 ]
+# 寄稿記事の冒頭の右寄せ署名「de Anthony Moretti*」「de Guo Qingyang kaj Chai Ying」(* は文末の著者紹介への印) と
+# 「John Magesa (Tanzanio)」。本文の小見出し「De Britio al Pekino」を拾わないよう、1 段落目の大文字で始まる語の並びに限る
+_LEAD_AUTHOR_PATTERNS = [
+    re.compile(r"^[dD]e\s+(?:d-ro\s+)?([A-ZĈĜĤĴŜŬ][^\s,:.!?*]*(?:(?:,\s*|\s+kaj\s+|\s+)[A-ZĈĜĤĴŜŬ][^\s,:.!?*]*)*)\*?$"),
+    re.compile(r"^([A-ZĈĜĤĴŜŬ][^\s:.!?()]*(?:\s+[A-ZĈĜĤĴŜŬ][^\s:.!?()]*){1,3}\s*\([A-ZĈĜĤĴŜŬ][^():.!?]{1,40}\))$"),
+]
+
+
+def _clean_author(raw: str) -> Optional[str]:
+    author = re.split(r"[,;]?\s*\b(?:Tradukis|Esperantigis|Redaktis|Redaktoro|Fotis|Fotoj|Foto)\s*[:：]", raw)[0]
+    # 名前の後の肩書き「(Profesoro de ... Universitato)」は除く。「(Jado)」のような 1 語の別名や国名は残す
+    author = re.sub(r"\s*\([^()]*\s[^()]*\)$", "", author.strip()).strip(" ,;.")
+    if author and len(author) <= 60:
+        return author
+    return None
 
 
 def _extract_author(paragraphs: List[str]) -> Optional[str]:
@@ -349,11 +453,17 @@ def _extract_author(paragraphs: List[str]) -> Optional[str]:
             m = pattern.match(line)
             if not m:
                 continue
-            author = re.split(r"[,;]?\s*\b(?:Tradukis|Esperantigis|Redaktis|Redaktoro|Fotis|Fotoj|Foto)\s*[:：]", m.group(1))[0]
-            # 名前の後の肩書き「(Profesoro de ... Universitato)」は除く。「(Jado)」のような 1 語の別名や国名は残す
-            author = re.sub(r"\s*\([^()]*\s[^()]*\)$", "", author.strip()).strip(" ,;.")
-            if author and len(author) <= 60:
+            author = _clean_author(m.group(1))
+            if author:
                 return author
+    if n:
+        line = re.sub(r"\s+", " ", paragraphs[0]).strip()
+        for pattern in _LEAD_AUTHOR_PATTERNS:
+            m = pattern.match(line)
+            if m:
+                author = _clean_author(m.group(1))
+                if author:
+                    return author
     return None
 
 
@@ -372,8 +482,8 @@ def _block_lines(node: BeautifulSoup) -> List[str]:
         else:
             el.insert_before(_PARA_BREAK)
             el.insert_after(_PARA_BREAK)
-    text = re.sub(r"[ \t\r\n\f\v]+", " ", work.get_text(""))
-    return text.split(_PARA_BREAK)
+    # _WS_RUN_RE が段落区切り文字を空白に畳むことがあるので、区切ってから正規化する
+    return [_WS_RUN_RE.sub(" ", part) for part in work.get_text("").split(_PARA_BREAK)]
 
 
 def _strip_embedded_markup(node: BeautifulSoup) -> None:
@@ -422,9 +532,8 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
     content_text = "\n\n".join(paragraphs)
 
     author = _extract_author(paragraphs)
-    section = base_clean_text(meta.get("section") or "") or None
-
-    categories = [section] if section else None
+    title = _norm_title(title)
+    categories = _categories_from_meta(meta)
 
     return Article(
         url=url,
@@ -437,6 +546,18 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
     )
 
 
+def _categories_from_meta(meta: Dict[str, object]) -> Optional[List[str]]:
+    names = meta.get("sections")
+    if names is None:
+        names = [meta["section"]] if meta.get("section") else []
+    node_ids = list(meta.get("section_nodes") or [])
+    pairs = [(base_clean_text(str(name)), node_ids[i] if i < len(node_ids) else "") for i, name in enumerate(names)]
+    pairs = [(name, nid) for name, nid in pairs if name]
+    specific = [name for name, nid in pairs if nid not in AGGREGATE_NODE_IDS]
+    categories = specific or [name for name, _ in pairs]
+    return categories or None
+
+
 def _extract_legacy_article(soup: BeautifulSoup) -> Optional[tuple[str, str, BeautifulSoup]]:
     first_table = soup.find("table")
     if not first_table:
@@ -444,7 +565,7 @@ def _extract_legacy_article(soup: BeautifulSoup) -> Optional[tuple[str, str, Bea
     rows = first_table.find_all("tr")
     if len(rows) < 2:
         return None
-    title = base_clean_text(rows[0].get_text(" ", strip=True))
+    title = base_clean_text(_norm_title(rows[0].get_text(" ", strip=True)))
     date_str = rows[1].get_text(" ", strip=True)
     content_td = rows[3].find("td") if len(rows) > 3 else rows[-1].find("td")
     if not content_td:
@@ -485,9 +606,9 @@ def _fallback_article_root(soup: BeautifulSoup) -> BeautifulSoup:
 def _fallback_title(soup: BeautifulSoup) -> str:
     h1 = soup.find("h1")
     if h1:
-        return h1.get_text(" ", strip=True)
+        return _norm_title(h1.get_text(" ", strip=True))
     if soup.title:
-        return soup.title.get_text(" ", strip=True)
+        return _norm_title(soup.title.get_text(" ", strip=True))
     return ""
 
 

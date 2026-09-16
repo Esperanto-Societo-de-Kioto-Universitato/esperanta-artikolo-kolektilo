@@ -48,10 +48,10 @@ Pola Retradio は方針により新規収集しない（誤字脱字が多く整
 |---|------------------|--------------------------------------------------|--------------|------------|-----------------------------------------|
 | 1 | Global Voices    | "Global Voices en Esperanto/parallel_scraper.py"  | auto         | 1.0        | （全引数対応）                          |
 | 2 | Libera Folio     | "Libera Folio/parallel_scraper.py"                | rest         | 0.5        | --include-audio                         |
-| 3 | Monato           | "Monato/parallel_scraper.py"                      | both ※1※3    | 1.0        | （全引数対応）                          |
+| 3 | Monato           | "Monato/parallel_scraper.py"                      | both ※1※3    | 1.0        | --feed-url (--max-pages/--include-audio は無効) |
 | 4 | Scivolemo        | "Scivolemo/parallel_scraper.py"                   | feed         | 1.0        | （全引数対応）                          |
 | 5 | UEA Facila       | "Uea_Facila/parallel_scraper.py"                  | （指定不可） | 0.5 ※2     | --method, --include-audio, --feed-url   |
-| 6 | El Popola Ĉinio  | "El Popola Ĉinio/parallel_scraper.py"            | feed ※1      | 1.0        | --feed-url                              |
+| 6 | El Popola Ĉinio  | "El Popola Ĉinio/parallel_scraper.py"            | feed ※1      | 1.0        | --feed-url (--include-audio は無効)     |
 
 ※1 Monato と El Popola Ĉinio は独自ライブラリ（monato_lib / elpopola_lib）を使用。
    El Popola Ĉinio では --method の値は内部で実質無視される（feed を指定しておく）。
@@ -139,11 +139,13 @@ README「定期取得の手順」5〜6 に従う：
 {{SELECT_START}} 〜 {{SELECT_END}} の記事を全サイト分読み込み、各記事について以下を抽出する：
   - タイトル / 公開日 / URL / 著者
   - 本文の概要（2〜3文）
-  - おおよその語数
+  - おおよその語数（本文だけで数える。語注・朗読案内・写真説明・クレジット・URL は除いた概数）
   - テーマ・ジャンル（文化、社会、科学、言語、政治、環境、文学 等）
   - 全文が利用可能か（ペイウォールや切り詰めがないか）
 
 Pola Retradio の既存データ（取得文書ekde20260303 の pola_retradio_*）は候補にしない（方針により除外）。
+過去の輪読素材（取得文書ekde*/rondolegada_materialoj_*.md）と輪読候補リスト
+（取得文書ekde*/rondolegado_kandidatoj_*.md）に載った記事は、URL で照合して候補にしない。
 
 【効率化のための並列処理】
 記事数が多いため、サイトごとに並列で読み込むこと（サブエージェント等を活用）。
@@ -206,6 +208,7 @@ Pola Retradio の既存データ（取得文書ekde20260303 の pola_retradio_*�
 
 全文の抽出元は 取得文書ekde*/（_staging は除く）内の月別 .md ファイル。
 各記事は見出し（## 第N位: タイトル）で区切り、出典・URL・公開日を明記する。
+（別形式: 2026-09 は投票用に候補 50 本の一覧・抽出 md・ルビ HTML を作った。tools/rondolegado/ と README 参照）
 ```
 
 ---
@@ -286,7 +289,7 @@ CLI 体系が他のサイトと完全に異なる（`--since`/`--until` 方式�
 必要に応じて追加収集できるが、El Popola Ĉinio と内容が重複する可能性がある。
 コーパス（取得文書ekde*/）には入れていないので、出力先は取得文書* 以外の作業フォルダにする。
 
-  .venv/bin/python "cri_esperanto/parallel_scraper.py" \
+  .venv/bin/python -m cri_esperanto.parallel_scraper \
     --since {{START_DATE}} --until {{END_DATE}} \
     --workers {{WORKERS}} \
     --output-dir "<作業フォルダ>" \

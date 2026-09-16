@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import io
 import os
+import re
 import sys
 import time
 import zipfile
@@ -76,7 +77,12 @@ I18N: Dict[str, Dict[str, str]] = {
             "期間外除外 {skipped} 件"
         ),
         "date_range_fmt": "推定公開日範囲: {earliest} ～ {latest}",
-        "date_range_activity_note": "UEA Facila の候補の日付は活動ストリームの日時（読者コメントなどを含む）で、記事の公開日とは限りません。",
+        "date_range_activity_note": "UEA Facila の候補の日付は活動ストリームの日時で、記事の公開日とは限りません。",
+        "collect_partial_fmt": "URL 収集の一部に失敗しました（記事の取りこぼしがあり得ます）: {n} 件",
+        "collect_errors": "URL 収集で失敗した箇所",
+        "no_urls_collect_failed": "候補 URL が見つかりませんでしたが、URL 収集の一部に失敗しているため、期間内に記事が無いとは限りません。",
+        "epc_list_depth_fmt": "El Popola Ĉinio: {date} より前の記事は、トピック別の一覧に載ったものしか見つからないため、候補が不完全な可能性があります。",
+        "skipped_other_host_fmt": "別ホストにあるため収集しなかった記事: {n} 件",
         "no_urls": "候補 URL が見つかりませんでした。期間や方法を変更して再度お試しください。",
         "no_urls_fixed": "候補 URL が見つかりませんでした。期間を変更して再度お試しください。",
         "progress_fetch": "本文を取得中...",
@@ -133,7 +139,12 @@ I18N: Dict[str, Dict[str, str]] = {
             "기간 외 제외 {skipped}"
         ),
         "date_range_fmt": "추정 공개일 범위: {earliest} ~ {latest}",
-        "date_range_activity_note": "UEA Facila의 후보 날짜는 활동 스트림의 시각(독자 댓글 등 포함)이므로 기사 공개일과 다를 수 있습니다.",
+        "date_range_activity_note": "UEA Facila의 후보 날짜는 활동 스트림의 시각이므로 기사 공개일과 다를 수 있습니다.",
+        "collect_partial_fmt": "URL 수집 일부에 실패했습니다 (누락된 기사가 있을 수 있습니다): {n}건",
+        "collect_errors": "URL 수집에 실패한 곳",
+        "no_urls_collect_failed": "후보 URL이 없지만 URL 수집 일부에 실패했으므로, 기간 내 기사가 없다고 단정할 수 없습니다.",
+        "epc_list_depth_fmt": "El Popola Ĉinio: {date} 이전 기사는 주제별 목록에 실린 것만 찾을 수 있어 후보가 불완전할 수 있습니다.",
+        "skipped_other_host_fmt": "다른 호스트에 있어 수집하지 않은 기사: {n}건",
         "no_urls": "후보 URL이 없습니다. 기간이나 방식을 바꿔 다시 시도하세요.",
         "no_urls_fixed": "후보 URL이 없습니다. 기간을 바꿔 다시 시도하세요.",
         "progress_fetch": "본문을 가져오는 중...",
@@ -190,7 +201,12 @@ I18N: Dict[str, Dict[str, str]] = {
             "ekskluditaj ekster periodo {skipped}"
         ),
         "date_range_fmt": "Proksimuma publikiga intervalo: {earliest} – {latest}",
-        "date_range_activity_note": "Ĉe UEA Facila la kandidataj datoj venas el la aktiveca fluo (ankaŭ komentoj de legantoj), do ne nepre estas publikigaj datoj.",
+        "date_range_activity_note": "Ĉe UEA Facila la kandidataj datoj venas el la aktiveca fluo, do ne nepre estas publikigaj datoj.",
+        "collect_partial_fmt": "Parto de la URL-kolektado malsukcesis (eble mankas artikoloj): {n}",
+        "collect_errors": "Malsukcesoj dum URL-kolektado",
+        "no_urls_collect_failed": "Neniuj kandidat-URL-oj trovitaj, sed parto de la URL-kolektado malsukcesis, do ne certas, ke mankas artikoloj en la periodo.",
+        "epc_list_depth_fmt": "El Popola Ĉinio: antaŭ {date} troveblas nur artikoloj listigitaj en temaj sekcioj, do la kandidatoj eble ne estas kompletaj.",
+        "skipped_other_host_fmt": "Artikoloj ne kolektitaj, ĉar ili troviĝas ĉe alia retejo: {n}",
         "no_urls": "Neniuj kandidat-URL-oj trovitaj. Ŝanĝu periodon aŭ metodon kaj reprovu.",
         "no_urls_fixed": "Neniuj kandidat-URL-oj trovitaj. Ŝanĝu la periodon kaj reprovu.",
         "progress_fetch": "Elŝutante ĉeftekstojn...",
@@ -254,6 +270,25 @@ def _describe_exc(lang: str, exc: BaseException) -> str:
         if response is not None:
             return _t(lang, "err_http_fmt", status=response.status_code, url=response.url)
     return f"{type(exc).__name__}: {exc}"
+
+
+def _describe_collect_error(lang: str, err: Any) -> str:
+    """URL 収集の部分失敗を 1 行にする。Monato はエスペラント文の文字列、EPĈ・UEA は (一覧 URL, 例外) の組。"""
+    if isinstance(err, tuple) and len(err) == 2:
+        url, exc = err
+        return f"{url} ({_describe_exc(lang, exc)})"
+    return str(err)
+
+
+_EPC_LIST_DEPTH_RE = re.compile(r"^El Popola Ĉinio: (\d{4}-\d{2}-\d{2}) より前")
+
+
+def _describe_collect_warning(lang: str, text: str) -> str:
+    """ライブラリの注意 (日本語の固定文) を表示言語に直す。知らない形の文はそのまま出す。"""
+    m = _EPC_LIST_DEPTH_RE.match(text)
+    if m:
+        return _t(lang, "epc_list_depth_fmt", date=m.group(1))
+    return text
 
 
 def load_module(module_name: str, relative_path: str):
@@ -390,7 +425,7 @@ def _build_sources(lang: str):
             "default_method": "feed",
             "supports_max_pages": False,
             "include_audio_option": False,
-            "throttle_default": 0.5,
+            "throttle_default": 1.0,
             "min_date": date(2017, 1, 1),
             "source_label": "Scivolemo (scivolemo.wordpress.com)",
         },
@@ -613,6 +648,21 @@ def run_app(lang: str = "ja") -> None:
                 )
             )
 
+        # 取れた分の表やダウンロードより上に出す。0 件でも「期間を変えて」より先に失敗を知らせる
+        collect_errors = state.get("collect_errors") or []
+        if collect_errors:
+            st.warning(_t(current_lang, "collect_partial_fmt", n=len(collect_errors)))
+            with st.expander(_t(current_lang, "collect_errors"), expanded=True):
+                for err in collect_errors:
+                    st.write(_describe_collect_error(current_lang, err))
+        for text in state.get("collect_warnings") or []:
+            st.warning(_describe_collect_warning(current_lang, text))
+        skipped_other_host = state.get("skipped_other_host") or []
+        if skipped_other_host:
+            with st.expander(_t(current_lang, "skipped_other_host_fmt", n=len(skipped_other_host))):
+                for url in skipped_other_host:
+                    st.write(url)
+
         if state["earliest_date"] and state["latest_date"]:
             st.caption(
                 _t(
@@ -626,7 +676,10 @@ def run_app(lang: str = "ja") -> None:
                 st.caption(_t(current_lang, "date_range_activity_note"))
 
         if not state["total"]:
-            st.warning(_t(current_lang, "no_urls_fixed" if state.get("fixed_method") else "no_urls"))
+            if collect_errors:
+                st.warning(_t(current_lang, "no_urls_collect_failed"))
+            else:
+                st.warning(_t(current_lang, "no_urls_fixed" if state.get("fixed_method") else "no_urls"))
             return
 
         st.success(_t(current_lang, "extracted_fmt", n=len(arts)))
@@ -719,6 +772,7 @@ def run_app(lang: str = "ja") -> None:
     if run_clicked:
         # エラーで止まったときに、前回 (別サイトのこともある) の結果が次の再描画で出ないようにする
         st.session_state.pop("last_result", None)
+        st.session_state.pop("last_collect_error", None)
         if start > end:
             st.error(_t(current_lang, "error_range"))
             st.stop()
@@ -741,6 +795,8 @@ def run_app(lang: str = "ja") -> None:
             with st.spinner(_t(current_lang, "spinner_collect")):
                 result = source_cfg["collect"](cfg)
         except Exception as exc:  # noqa: BLE001
+            # 言語切替などで描き直しても消えないよう、例外のまま控えて次の描画で表示言語に訳し直す
+            st.session_state["last_collect_error"] = (exc, current_signature)
             st.error(_t(current_lang, "error_collect_fmt", exc=_describe_exc(current_lang, exc)))
             st.stop()
 
@@ -806,6 +862,11 @@ def run_app(lang: str = "ja") -> None:
             "latest_date": getattr(result, "latest_date", None),
             "dates_from_activity": source_cfg.get("dates_from_activity", False),
             "total": result.total,
+            # Monato の errors は文字列、EPĈ の load_errors・UEA の errors は (一覧 URL, 例外) の組。
+            # 例外のまま持ち、表示言語を切り替えたら説明を作り直す
+            "collect_errors": list(getattr(result, "errors", []) or []) + list(getattr(result, "load_errors", []) or []),
+            "collect_warnings": list(getattr(result, "warnings", []) or []),
+            "skipped_other_host": list(getattr(result, "skipped_other_host", []) or []),
             "fixed_method": len(source_cfg["methods"]) == 1,
             "source_name": source_name,
             "slug": source_cfg["slug"],
@@ -816,8 +877,11 @@ def run_app(lang: str = "ja") -> None:
 
         st.session_state["last_result"] = result_payload
 
+    last_error = st.session_state.get("last_collect_error")
     if result_payload:
         render_results(result_payload)
+    elif last_error and last_error[1] == current_signature:
+        st.error(_t(current_lang, "error_collect_fmt", exc=_describe_exc(current_lang, last_error[0])))
     else:
         st.info(_t(current_lang, "ready"))
 

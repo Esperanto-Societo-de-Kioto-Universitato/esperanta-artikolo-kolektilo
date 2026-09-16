@@ -9,12 +9,13 @@ stream (https://uea.facila.org/malkovri/) and fetch individual article pages.
 """
 from __future__ import annotations
 
+import contextlib
 import json
 import logging
 import re
 import time
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime, timezone, date
 from typing import Dict, Iterable, List, Optional, Tuple
 from urllib.parse import urljoin, urlsplit, urlunsplit
@@ -60,6 +61,13 @@ COLLECT_ERRORS: List[str] = []
 
 class _EmptyListingError(FetchError):
     """一覧の 1 ページ目は取得できたが項目を 1 件も抽出できなかった (ページ構造の変化・メンテナンス画面など)。"""
+
+
+@dataclass
+class UEACollectionResult(URLCollectionResult):
+    # 失敗した一覧経路 (一覧 URL, 例外)。一部の経路が落ちても候補は返るので、欠けている可能性をここで伝える。
+    # 呼び出し側 (アプリ) はモジュール共有の COLLECT_ERRORS ではなくこちらを読む (同時に動く別セッションに消されない)
+    errors: List[Tuple[str, BaseException]] = field(default_factory=list)
 
 
 def _session(cfg: ScrapeConfig) -> requests.Session:
@@ -193,9 +201,9 @@ def _extract_listing_items(container: BeautifulSoup) -> List[tuple[str, Optional
 
 def _ensure_logged_in(session: requests.Session, cfg: ScrapeConfig) -> None:
     """
-    Attempt to sign in if credentials are provided. Newer deployments of
-    uea.facila.org intermittently reject the scraper account, so we treat
-    authentication failures as non-fatal and continue with a public session.
+    Attempt to sign in if credentials are provided. Authentication failures
+    (wrong credentials, changed login form, network errors) are non-fatal:
+    we log a warning and continue with a public session.
     """
     global _LOGGED_IN, _LOGIN_ATTEMPTED
     if _LOGGED_IN or _LOGIN_ATTEMPTED:
@@ -212,30 +220,35 @@ def _ensure_logged_in(session: requests.Session, cfg: ScrapeConfig) -> None:
         return
     _LOGIN_ATTEMPTED = True
     login_url = urljoin(cfg.base_url.rstrip("/") + "/", "ensaluti/")
-    try:
-        resp = session.get(login_url, timeout=cfg.timeout_sec)
-        resp.raise_for_status()
-    except Exception as exc:  # noqa: BLE001
-        logging.warning("UEA Facila login page request failed: %s. Continuing anonymously.", exc)
-        return
-    soup = BeautifulSoup(resp.content, "lxml")
-    csrf = soup.select_one("input[name='csrfKey']")
-    if not csrf or not csrf.get("value"):
-        logging.warning("UEA Facila login page did not provide csrfKey; continuing without login.")
-        return
-    payload = {
-        "auth": LOGIN_USER,
-        "password": LOGIN_PASS,
-        "remember_me": "1",
-        "csrfKey": csrf["value"],
-        "ref": soup.select_one("input[name='ref']")["value"] if soup.select_one("input[name='ref']") else "",
-    }
-    try:
-        post = session.post(login_url, data=payload, timeout=cfg.timeout_sec)
-        post.raise_for_status()
-    except Exception as exc:  # noqa: BLE001
-        logging.warning("UEA Facila login request failed: %s. Continuing anonymously.", exc)
-        return
+    # キャッシュ済みのログインページ (サイトの no-store は無視される) だと、csrfKey に対応するセッション cookie が無く失敗する
+    no_cache = session.cache_disabled() if hasattr(session, "cache_disabled") else contextlib.nullcontext()
+    with no_cache:
+        try:
+            resp = session.get(login_url, timeout=cfg.timeout_sec)
+            resp.raise_for_status()
+        except Exception as exc:  # noqa: BLE001
+            logging.warning("UEA Facila login page request failed: %s. Continuing anonymously.", exc)
+            return
+        soup = BeautifulSoup(resp.content, "lxml")
+        csrf = soup.select_one("input[name='csrfKey']")
+        if not csrf or not csrf.get("value"):
+            logging.warning("UEA Facila login page did not provide csrfKey; continuing without login.")
+            return
+        # Invision Community は送信ボタンの _processLogin でログイン方式を選ぶ。無いとログイン処理をせずフォームを返すだけ
+        submit = soup.select_one("button[name='_processLogin']")
+        payload = {
+            "auth": LOGIN_USER,
+            "password": LOGIN_PASS,
+            "remember_me": "1",
+            "csrfKey": csrf["value"],
+            "_processLogin": (submit.get("value") if submit else None) or "usernamepassword",
+        }
+        try:
+            post = session.post(login_url, data=payload, timeout=cfg.timeout_sec)
+            post.raise_for_status()
+        except Exception as exc:  # noqa: BLE001
+            logging.warning("UEA Facila login request failed: %s. Continuing anonymously.", exc)
+            return
     if session.cookies.get("ips4_member_id"):
         _LOGGED_IN = True
     else:
@@ -257,6 +270,9 @@ def _collect_from_stream(cfg: ScrapeConfig, session: requests.Session, aggregate
 
         min_timestamp_on_page: Optional[datetime] = None
         for href, dt in _extract_listing_items(soup):
+            # コメントの項目 (…?do=findComment) の日時はコメントの投稿日時。記事の投稿項目は別に並ぶ
+            if "do=findComment" in href:
+                continue
             canonical = _canonicalize_url(cfg.base_url, href)
             if not canonical:
                 continue
@@ -331,7 +347,7 @@ def _collect_from_category(cfg: ScrapeConfig, session: requests.Session, path: s
         page += 1
 
 
-def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
+def collect_urls(cfg: ScrapeConfig) -> UEACollectionResult:
     cfg.normalize()
     session = _session(cfg)
 
@@ -339,7 +355,7 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
     COLLECT_ERRORS.clear()
     _ensure_logged_in(session, cfg)
     # ストリームとカテゴリ一覧は同じ 4 区分を別経路でたどるので、一部の一覧ページが落ちても残りで集める。
-    # 落ちたページと 1 ページ目から項目を抽出できなかった経路は COLLECT_ERRORS に残し、すべて失敗したときだけ例外にする
+    # 落ちたページと 1 ページ目から項目を抽出できなかった経路は COLLECT_ERRORS と戻り値の errors に残し、すべて失敗したときだけ例外にする
     base = cfg.base_url.rstrip("/")
     route_errors: List[Tuple[str, BaseException]] = []
     try:
@@ -375,7 +391,7 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
                 latest = d
         UEA_META[url] = {"published": dt}
 
-    return URLCollectionResult(
+    return UEACollectionResult(
         urls=urls,
         feed_initial=len(urls),
         archive_initial=0,
@@ -387,6 +403,7 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
         out_of_range_skipped=0,
         earliest_date=earliest,
         latest_date=latest,
+        errors=list(route_errors),
     )
 
 
@@ -484,22 +501,46 @@ def _extract_title(soup: BeautifulSoup, url: str) -> str:
 def _extract_author(soup: BeautifulSoup) -> Optional[str]:
     author_box = soup.select_one(".gastautoraj-detaloj")
     if author_box:
-        primary = author_box.get_text("\n", strip=True).split("\n", 1)[0]
-        return base_clean_text(primary)
+        primary = base_clean_text(author_box.get_text("\n", strip=True).split("\n", 1)[0])
+        # 共著では紹介欄に <strong>名前</strong> 紹介… が人数分並ぶ。ただし平易化の担当者も紹介欄に載るので、
+        # 本文末尾の右寄せ署名で 2 つ目以降の <strong> に入る名前 (「Simpligis la artikolon <strong>X</strong>」) は除く
+        signatures = [p for p in soup.select("section p[style*='text-align']") if "right" in p.get("style", "")]
+        helpers = (
+            {base_clean_text(st.get_text(" ", strip=True)) for st in signatures[-1].find_all("strong")[1:]}
+            if signatures else set()
+        )
+        names = [primary] if primary else []
+        # 区切りの " " が無いと <strong>名前 <em>('Rico')</em></strong> の空白が消える
+        for st in author_box.find_all("strong")[1:]:
+            name = base_clean_text(st.get_text(" ", strip=True))
+            if name and name not in helpers and name not in names:
+                names.append(name)
+        return ", ".join(names)
     meta_author = soup.select_one(".ipsType_author")
     if meta_author:
         return base_clean_text(meta_author.get_text(" ", strip=True))
     return None
 
 
+_AUDIO_EXTENSIONS = (".mp3", ".m4a", ".ogg", ".oga", ".opus", ".wav")
+
+
 def _extract_audio_links(article: BeautifulSoup) -> List[str]:
     links = set()
     for el in article.find_all(["audio", "source", "a"]):
-        href = el.get("src") or el.get("href")
+        href = (el.get("src") if el.name != "a" else el.get("href")) or ""
+        href = href.strip()
         if not href:
             continue
-        lower = href.lower()
-        if "mp3" in lower or "audio" in lower:
+        # URL に "mp3" を含むだけの外部サイト (vinilkosmo-mp3.com) や <video><source> は音声ではない
+        if el.name == "audio":
+            is_audio = True
+        elif el.name == "source":
+            parent = el.find_parent(["audio", "video", "picture"])
+            is_audio = (parent is not None and parent.name == "audio") or el.get("type", "").lower().startswith("audio/")
+        else:
+            is_audio = urlsplit(href).path.lower().endswith(_AUDIO_EXTENSIONS)
+        if is_audio:
             links.add(href)
     return sorted(links)
 
@@ -542,14 +583,16 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
         fallback = base_clean_text(_inline_text(article_el))
         content_text = fallback
 
-    published: Optional[datetime] = None
-    meta_time = soup.find("time", attrs={"itemprop": "datePublished"}) or soup.find("time")
-    if meta_time and meta_time.get("datetime"):
-        published = _parse_iso_datetime(meta_time["datetime"])
+    # JSON-LD (Article.datePublished) は全ページにある。filmetoj・loke・niaj-legantoj は見出しに <time> が無く、
+    # ページ内の <time> はコメント欄 (.ipsComment) の投稿日時なので使わない
+    published: Optional[datetime] = _extract_json_ld_date(soup)
     if not published:
-        # filmetoj 等のページは <time> 要素を持たないことがあるが、
-        # JSON-LD (application/ld+json) には datePublished が入っている
-        published = _extract_json_ld_date(soup)
+        meta_time = next(
+            (t for t in soup.find_all("time") if t.get("datetime") and not t.find_parent(class_=re.compile(r"ipsComment"))),
+            None,
+        )
+        if meta_time:
+            published = _parse_iso_datetime(meta_time["datetime"])
     if not published:
         cached = UEA_META.get(url, {}).get("published")
         if isinstance(cached, datetime):

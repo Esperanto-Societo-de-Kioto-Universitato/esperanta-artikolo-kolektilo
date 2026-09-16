@@ -22,7 +22,7 @@ if ROOT not in sys.path:
 from retradio_lib import ScrapeConfig, collect_urls, fetch_article, export_all, _session, set_progress_callback  # noqa: E402
 
 DEFAULT_BASE_URL = "https://scivolemo.wordpress.com"
-SOURCE_LABEL = "Scivolemo (scivolemo.com)"
+SOURCE_LABEL = "Scivolemo (scivolemo.wordpress.com)"
 PREFIX = "scivolemo"
 
 
@@ -35,7 +35,7 @@ def parse_args():
     p.add_argument("--base-url", default=DEFAULT_BASE_URL, help="対象サイトのベース URL")
     p.add_argument("--method", default="feed", choices=["auto","rest","both","feed","archive"], help="URL収集方法（Scivolemo は feed 推奨）")
     p.add_argument("--throttle", type=float, default=1.0, help="1リクエスト毎の遅延秒数")
-    p.add_argument("--max-pages", type=int, default=None, help="ページ送りの最大回数（Noneは制限なし）")
+    p.add_argument("--max-pages", type=int, default=None, help="フィード/月別アーカイブのページ送り上限（省略時: フィード 200、アーカイブ無制限。REST では無効）")
     p.add_argument("--include-audio", action="store_true", help="本文メタに MP3 等の音声リンクも含める")
     p.add_argument("--no-cache", action="store_true", help="requests-cache を使わない")
     p.add_argument("--feed-url", help="RSS/Atom フィード URL を直接指定（非 WordPress サイト向け）")
@@ -46,6 +46,13 @@ def parse_args():
         help="大きな期間を扱う際に出力ファイルを年別または月別で分割",
     )
     return p.parse_args()
+
+
+def _parse_day(s: str, name: str) -> date:
+    try:
+        return date.fromisoformat(s)
+    except ValueError:
+        raise SystemExit(f"{name} は YYYY-MM-DD 形式で指定してください。") from None
 
 
 def _group_articles(articles, mode: str) -> List[Tuple[str, list]]:
@@ -77,15 +84,17 @@ def main():
     if args.start:
         if not args.end:
             raise SystemExit("--start を指定する場合は --end も指定してください。")
-        start_d = datetime.fromisoformat(args.start).date()
-        end_d = datetime.fromisoformat(args.end).date()
+        start_d = _parse_day(args.start, "--start")
+        end_d = _parse_day(args.end, "--end")
     else:
         end_raw = args.end or date.today().isoformat()
-        end_d = datetime.fromisoformat(end_raw).date()
+        end_d = _parse_day(end_raw, "--end")
         days = args.days if args.days is not None else 30
         if days <= 0:
             raise SystemExit("--days は正の整数で指定してください。")
         start_d = end_d - timedelta(days=days - 1)
+    if end_d < start_d:
+        raise SystemExit("終了日は開始日以降である必要があります。")
 
     cfg = ScrapeConfig(
         base_url=args.base_url,

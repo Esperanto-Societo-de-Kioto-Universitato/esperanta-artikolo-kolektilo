@@ -11,9 +11,10 @@ collect_urls は実質「Nova!」ページのフォールバックだけで動�
 既存の monato_*.jsonl (--existing) を読み込んで合流し、月別ファイルを
 parallel_scraper.py と同一の形式 (export_all) で書き出す。
 
-備考: 通常の期間指定収集は parallel_scraper.py --method both (既定値) が
-同等のプローブを自動で行うため、本スクリプトは「ID 帯を明示して回収したい」
-場合 (例: 過去年の穴埋め、検証) にのみ使えばよい。
+備考: parallel_scraper.py --method both (既定値) も ID プローブを行うが、
+Nova! 帯域下端から PROBE_MIN_SPAN (monato_lib) を超えて古い ID の記事は、
+ページの日付が ID の位置より数か月遅れていると取れない。そうした記事を拾うため、
+定期取得とは別に本スクリプトで ID 帯を定期的に走査する (過去年の穴埋め・検証にも使う)。
 """
 from __future__ import annotations
 
@@ -91,9 +92,12 @@ def load_existing(existing_dir: Optional[str]) -> Tuple[List[Article], set, Dict
                         audio_links=r.get("audio_links"),
                     )
                 )
-                m = re.search(r"/publika/(\d+)p\.php", r["url"])
+                # 年別インデックス由来の /YYYY/NNNNNN.php?p は同じ記事の
+                # /publika/NNNNNNp.php (冒頭のみ) と ID を共有するので、プローブ対象から外す。
+                # 合流は URL 単位のまま (年別 URL の 000000〜000005 等は年ごとに別記事)
+                m = re.search(r"/(?:publika/(\d{6})p\.php|20\d\d/(\d{6})\.php)", r["url"])
                 if m:
-                    ids.add(int(m.group(1)))
+                    ids.add(int(m.group(1) or m.group(2)))
                 # 同一URLが複数ファイルにある場合は最初のファイルを優先する
                 # (マージ側の seen.setdefault と同じ規則。月ファイルは unknown より
                 # 先にソートされるため、手動配置済みの月ラベルが必ず勝つ)
@@ -119,8 +123,7 @@ def probe_one(article_id: int, cfg: ScrapeConfig) -> Tuple[int, str, Optional[Ar
         text = resp.text
         if "Erarpaĝo" in text or "<h1" not in text:
             return article_id, "miss", None, "ne-artikola paĝo"
-        article = fetch_article(url, cfg, session)
-        time.sleep(cfg.throttle_sec)
+        article = fetch_article(url, cfg, session, resp=resp)
         if not article.content_text.strip():
             return article_id, "miss", None, "malplena enhavo"
         return article_id, "hit", article, ""

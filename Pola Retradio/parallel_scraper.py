@@ -54,6 +54,7 @@ class WorkerResult:
     failures: List[str]
     timer_collect: float
     timer_fetch: float
+    skipped_out_of_range: List[str]
 
 
 def parse_args() -> argparse.Namespace:
@@ -99,7 +100,7 @@ def parse_args() -> argparse.Namespace:
         "--max-pages",
         type=int,
         default=None,
-        help="ページ送りの最大回数（Noneは制限なし）",
+        help="フィード/月別アーカイブのページ送り上限（省略時: フィード 200、アーカイブ無制限。REST では無効）",
     )
     p.add_argument(
         "--include-audio",
@@ -120,6 +121,13 @@ def parse_args() -> argparse.Namespace:
     return p.parse_args()
 
 
+def _parse_day(s: str, name: str) -> date:
+    try:
+        return date.fromisoformat(s)
+    except ValueError:
+        raise SystemExit(f"{name} は YYYY-MM-DD 形式で指定してください。") from None
+
+
 def resolve_date_range(args: argparse.Namespace) -> Tuple[date, date]:
     if args.start is None and args.days is None:
         raise SystemExit("--start もしくは --days の指定が必要です。")
@@ -128,11 +136,11 @@ def resolve_date_range(args: argparse.Namespace) -> Tuple[date, date]:
     if args.start:
         if not args.end:
             raise SystemExit("--start を指定する場合は --end も指定してください。")
-        start_d = datetime.fromisoformat(args.start).date()
-        end_d = datetime.fromisoformat(args.end).date()
+        start_d = _parse_day(args.start, "--start")
+        end_d = _parse_day(args.end, "--end")
     else:
         end_raw = args.end or date.today().isoformat()
-        end_d = datetime.fromisoformat(end_raw).date()
+        end_d = _parse_day(end_raw, "--end")
         days = args.days if args.days is not None else 30
         if days <= 0:
             raise SystemExit("--days は正の整数で指定してください。")
@@ -172,6 +180,7 @@ def worker_task(args: WorkerArgs) -> WorkerResult:
     session = _session(cfg)
     articles: List[Article] = []
     failures: List[str] = []
+    skipped_out_of_range: List[str] = []
 
     for url in urls.urls:
         try:
@@ -179,6 +188,7 @@ def worker_task(args: WorkerArgs) -> WorkerResult:
             if article.published:
                 pub_date = article.published.date()
                 if pub_date < cfg.start_date or pub_date > cfg.end_date:
+                    skipped_out_of_range.append(f"{url} ({pub_date})")
                     continue
             articles.append(article)
         except Exception as exc:  # noqa: BLE001
@@ -197,6 +207,7 @@ def worker_task(args: WorkerArgs) -> WorkerResult:
         failures=failures,
         timer_collect=timer_after_collect - timer_start,
         timer_fetch=timer_after_fetch - timer_after_collect,
+        skipped_out_of_range=skipped_out_of_range,
     )
 
 
@@ -307,6 +318,7 @@ def main() -> None:
         duplicates_removed=0,
         out_of_range_skipped=0,
     )
+    skipped_out_of_range: List[str] = []
     earliest_dates: List[date] = []
     latest_dates: List[date] = []
 
@@ -353,10 +365,12 @@ def main() -> None:
         if urls.latest_date:
             latest_dates.append(urls.latest_date)
         all_articles.extend(result.articles)
+        skipped_out_of_range.extend(result.skipped_out_of_range)
         print(
             f"[INFO] ワーカー #{result.index}: "
             f"{result.start_date} ～ {result.end_date} | "
             f"URL {len(result.urls.urls)} 件 | 本文 {len(result.articles)} 本 | "
+            f"期間外 {len(result.skipped_out_of_range)} 本 | "
             f"URL収集 {result.timer_collect:.1f}s / 本文取得 {result.timer_fetch:.1f}s"
         )
 
@@ -378,6 +392,9 @@ def main() -> None:
     print(
         f"[INFO] 累計時間: URL収集 {total_collect:.1f}s / 本文取得 {total_fetch:.1f}s"
     )
+    print(f"[INFO] 本文取得後に期間外で除外: 合計 {len(skipped_out_of_range)} 本")
+    for item in skipped_out_of_range:
+        print(f"  - {item}")
 
     _report_failures(failed_chunks, overall_failures)
     if not results:
@@ -392,9 +409,12 @@ def main() -> None:
         dates = [a.published.date() for a in subset if a.published]
         chunk_start = min(dates) if dates else start_d
         chunk_end = max(dates) if dates else end_d
-        cfg_chunk = replace(cfg_base, start_date=chunk_start, end_date=chunk_end)
+        # none のときの md の time_range は、scraper.py・アプリと同じく指定期間にする
+        cfg_chunk = cfg_base if args.split_by == "none" else replace(cfg_base, start_date=chunk_start, end_date=chunk_end)
         if args.split_by == "none":
-            basename = None
+            # ファイル名は指定期間から決める。取得できた記事の min/max 日付を使うと
+            # 再実行のたびに別名ファイルが増え、同じ記事が重複して残る。
+            basename = f"pola_retradio_{start_d.isoformat()}_{end_d.isoformat()}"
         else:
             safe_label = label.replace("/", "-")
             basename = f"pola_retradio_{safe_label}"

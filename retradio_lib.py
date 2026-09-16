@@ -23,7 +23,7 @@ import os
 import sys
 import html
 import logging
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, field
 from typing import Iterable, List, Optional, Dict, Tuple, Set, Callable
 from urllib.parse import urljoin, urlparse, urlencode, urlsplit, urlunsplit, parse_qsl
 
@@ -63,7 +63,7 @@ class ScrapeConfig:
     start_date: date = date.today() - timedelta(days=30)
     end_date: date = date.today()
     throttle_sec: float = 1.0
-    max_pages: Optional[int] = None  # feedやアーカイブのページ送り最大数（Noneは制限なし）
+    max_pages: Optional[int] = None  # feedやアーカイブのページ送り最大数（None はフィード 200 ページ・月別アーカイブ無制限・REST は不使用）
     method: str = "auto"             # "feed" | "archive" | "both" | "rest" | "auto"
     categories: Optional[List[str]] = None  # 未使用（将来拡張）
     timezone: str = "Europe/Warsaw"  # 公開日時のタイムゾーン想定
@@ -133,6 +133,8 @@ class FeedEntryData:
     categories: List[str]
     content_html: Optional[str]
     summary_html: Optional[str]
+    # RSS の <enclosure> の音声 URL。Pola Retradio の放送回は mp3 が本文に無くここにだけある
+    enclosures: List[str] = field(default_factory=list)
 
 
 _FEED_ENTRY_CACHE: Dict[str, FeedEntryData] = {}
@@ -468,6 +470,9 @@ def collect_from_feed(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
         return f"{feed_url}{sep}paged={n}"
 
     page = 1
+    # チャンネル題名は 2 ページ目以降「Paĝo N – サイト名」、カテゴリ別フィードは「サイト名 » カテゴリ」になるので、
+    # 最初に取れたページの題名からサイト名部分を取り出して全ページに使う
+    site_title: Optional[str] = None
     _progress("[FEED] 取得開始")
     # paged=N を無視して毎回内容の変わるリンクを返すサーバーで無限ループしないよう、
     # max_pages 未指定時もページ送りに有限の上限を置く (10件/頁 × 200頁 = 2000件相当)
@@ -490,6 +495,8 @@ def collect_from_feed(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
             if page == 1 and not _is_feed_content(resp.content):
                 raise FetchError(f"フィードではない応答です: {url}", url)
             break
+        if site_title is None:
+            site_title = html.unescape(parsed.feed.get("title", "")).split(" » ")[0].rsplit(" – ", 1)[-1].strip()
         stop_due_to_date = False
         added_this_page = 0
         new_links_this_page = 0
@@ -518,7 +525,7 @@ def collect_from_feed(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
                     # 使わない (1ページ目が全部「新しすぎる」だけで古い期間の収集を
                     # 打ち切らないよう、終了判定は「新規URLゼロ」で行う)
                     continue
-            title = html.unescape(e.get("title", "")).strip() or None
+            title = _norm_title(html.unescape(e.get("title", ""))) or None
             content_html = None
             try:
                 content_list = e.get("content")
@@ -534,6 +541,9 @@ def collect_from_feed(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
                 if isinstance(summary_detail, dict):
                     summary_html = summary_detail.get("value")
             author = html.unescape(e.get("author", "")).strip() or None
+            # _extract_page_author と同じく、共有アカウント (サイト名) の署名は著者にしない (Libera Folio)
+            if author and site_title and author.casefold() == site_title.casefold():
+                author = None
             categories: List[str] = []
             for tag in e.get("tags", []):
                 term = None
@@ -544,6 +554,18 @@ def collect_from_feed(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
                 if term:
                     categories.append(html.unescape(term).strip())
             categories = sorted({c for c in categories if c})
+            enclosure_refs = list(e.get("enclosures") or [])
+            enclosure_refs += [l for l in e.get("links") or [] if l.get("rel") == "enclosure"]
+            enclosures: List[str] = []
+            for ref in enclosure_refs:
+                href = (ref.get("href") or "").strip()
+                if not href:
+                    continue
+                if not ((ref.get("type") or "").lower().startswith("audio/") or is_audio_url(href)):
+                    continue
+                href = _normalize_audio_href(href)
+                if href not in enclosures:
+                    enclosures.append(href)
             _FEED_ENTRY_CACHE[link] = FeedEntryData(
                 url=link,
                 title=title,
@@ -552,6 +574,7 @@ def collect_from_feed(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
                 categories=categories,
                 content_html=content_html,
                 summary_html=summary_html,
+                enclosures=enclosures,
             )
             results.append((link, dt))
             added_this_page += 1
@@ -724,7 +747,7 @@ def collect_from_rest(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
             else:
                 dt = None
             title_raw = item.get("title", {}).get("rendered", "")
-            title = html.unescape(title_raw).strip() or None
+            title = _norm_title(html.unescape(title_raw)) or None
             content_html = item.get("content", {}).get("rendered")
             summary_html = item.get("excerpt", {}).get("rendered")
             author_name = None
@@ -746,6 +769,12 @@ def collect_from_rest(cfg: ScrapeConfig, s: Optional[requests.Session] = None) -
                         name = html.unescape(term.get("name", "")).strip()
                         if name:
                             categories.append(name)
+            # Global Voices の特集は独自の分類で categories に無く、class_list の gv_special-<slug> にだけ出る
+            for cls in item.get("class_list") or []:
+                if isinstance(cls, str) and cls.startswith("gv_special-"):
+                    name = _gv_special_name(cls[len("gv_special-"):])
+                    if name:
+                        categories.append(name)
             categories = sorted({c for c in categories if c})
             entry = FeedEntryData(
                 url=link,
@@ -775,9 +804,10 @@ _REST_AUTHOR_NAMES: Dict[Tuple[str, int], Optional[str]] = {}
 
 
 def _fill_authors_from_pages(cfg: ScrapeConfig, s: requests.Session, pending: Dict[int, List[str]]) -> None:
-    """_embedded.author がエラー (Libera Folio は 401、Pola Retradio は 404) で名前の無い記事に著者名を補う。
+    """_embedded.author がエラー (Libera Folio・Global Voices は 401、Pola Retradio は 404) で名前の無い記事に著者名を補う。
     同じ author ID の記事は同じ著者なので、ID ごとに 1 記事だけページを取得してバイラインから名前を読む
-    (記事ごとの追加リクエストはしない)。"""
+    (記事ごとの追加リクエストはしない)。1 ページの読み誤りが同じ ID の全記事に広がるので、
+    _extract_page_author はどの記事のページでも投稿者本人の名前を返す取り方にしておくこと。"""
     base = cfg.base_url.rstrip("/")
     for author_id, links in pending.items():
         key = (base, author_id)
@@ -953,6 +983,10 @@ def collect_urls(cfg: ScrapeConfig) -> URLCollectionResult:
 
 def _clean_text(s: str) -> str:
     s = html.unescape(s)
+    s = s.translate(_INVISIBLE).replace("\x00", "")
+    # U+2028/2029 は <br> と同じく空白に (改行にすると段落内に単独改行ができる)
+    s = re.sub(r"[\u2028\u2029]", " ", s)
+    s = re.sub(r" {2,}", " ", s)
     # 各種空白正規化
     s = re.sub(r'\r\n|\r', '\n', s)
     # 余分な空行を畳む
@@ -980,21 +1014,36 @@ _INLINE_BLOCKS = {"p", "div", "li", "ul", "ol", "dl", "dd", "dt", "blockquote", 
 
 # ASCII の空白の並びは 1 つの空白に。NBSP を含む空白の並び (「Hangulo&nbsp; en」) も 1 つにするが、
 # 単独の NBSP (「Ralph&nbsp;Schmeits」) は書き手が入れた語間なので残す (get_text 時代と同じ)
-_WS_RUN_RE = re.compile(r"[ \t\r\n\f\v\xa0]{2,}|[\t\r\n\f\v]")
+_WS_RUN_RE = re.compile(r"[ \t\r\n\f\v\xa0\u2028\u2029]{2,}|[\t\r\n\f\v\u2028\u2029]")
+
+# 表示されない書式文字 (ソフトハイフン・ゼロ幅空白・ZWNJ・WJ・BOM)。語の途中に入ると検索や語の照合が失敗する。
+# ZWJ (U+200D) は絵文字の結合に要るので残す。空白をまとめる前に消すこと (「2003. \xad La」が二重空白になる)
+_INVISIBLE = {0x00AD: None, 0x200B: None, 0x200C: None, 0x2060: None, 0xFEFF: None}
+
+
+def _norm_title(t: str) -> str:
+    """題名の書式文字を除き、空白の並びを 1 つにまとめる (本文と同じく単独の NBSP は残す)。"""
+    return _WS_RUN_RE.sub(" ", t.translate(_INVISIBLE)).strip()
 
 
 def _inline_text(node) -> str:
     """ブロック要素 1 つ分のテキストを、ブラウザの表示に近い形で返す。
     get_text(" ") はインライン要素 (<span>・<a>・<em> など) の境目ごとに空白を入れるため、句読点の前の
     空白 (「enigmo .」) や語の分断 (「Esperant o」) が起きる。文字列はそのままつなぎ、ソースの空白だけを
-    1 つにまとめる。<br> と入れ子のブロック要素 (<hr> を含む) は空白として扱う。数字の直後の <sup> は
-    指数として ^ を付ける (2^6)。"""
+    1 つにまとめる。<br>・入れ子のブロック要素 (<hr> を含む)・画像などの置換要素は空白として扱う。
+    英数字か ) の直後の <sup> は指数として ^ を付ける (2^6・N^2・4πr^2)。句読点や空白の後の <sup> は
+    脚注番号として空白を挟む。<sub> は何も付けない (CO2)。書式文字 (_INVISIBLE) は除く。"""
     if isinstance(node, NavigableString):
-        return _WS_RUN_RE.sub(" ", str(node)).strip()
+        return _WS_RUN_RE.sub(" ", str(node).translate(_INVISIBLE)).strip()
+    return _inline_nodes_text(node.children)
+
+
+def _inline_nodes_text(nodes) -> str:
+    """兄弟ノードの並び (テキストとインライン要素) を _inline_text と同じ規則で 1 行にする。"""
     out: List[str] = []
 
-    def walk(n) -> None:
-        for ch in n.children:
+    def walk(children) -> None:
+        for ch in children:
             if isinstance(ch, NavigableString):
                 if type(ch) in (NavigableString, CData):
                     out.append(str(ch))
@@ -1002,19 +1051,21 @@ def _inline_text(node) -> str:
                 out.append(" ")
             elif ch.name in ("script", "style", "noscript", "template"):
                 continue
+            elif ch.name in ("img", "video", "audio", "iframe", "embed", "object"):
+                out.append(" ")
             elif ch.name == "sup":
-                prev = "".join(out).rstrip()
-                out.append("^" if prev[-1:].isdigit() and not "".join(out)[-1:].isspace() else " ")
-                walk(ch)
+                last = "".join(out)[-1:]
+                out.append("^" if last and (last.isalnum() or last == ")") else " ")
+                walk(ch.children)
             elif ch.name in _INLINE_BLOCKS:
                 out.append(" ")
-                walk(ch)
+                walk(ch.children)
                 out.append(" ")
             else:
-                walk(ch)
+                walk(ch.children)
 
-    walk(node)
-    return _WS_RUN_RE.sub(" ", "".join(out)).strip()
+    walk(nodes)
+    return _WS_RUN_RE.sub(" ", "".join(out).translate(_INVISIBLE)).strip()
 
 
 def _drop_player_widgets(node: BeautifulSoup) -> None:
@@ -1022,6 +1073,81 @@ def _drop_player_widgets(node: BeautifulSoup) -> None:
     # 音声リンクはこの中の <a> から取るので、音声リンクを抽出した後に呼ぶこと
     for bad in node.select(".powerpress_links, .powerpress_player"):
         bad.decompose()
+
+
+# ブラウザに表示されない中身。<video>/<audio>/<object> の中は再生できないときの代替テキスト、
+# Instagram 埋め込み (blockquote.instagram-media) の中はスクリプトが動かないときの代替 HTML
+# (「View this post on Instagram」など)。GV は投稿の訳を別の blockquote.translation に書いているので、埋め込みごと除いてよい
+_HIDDEN_CONTENT_SELECTOR = "script, style, noscript, template, video, audio, iframe, object, embed, blockquote.instagram-media"
+
+# blockquote の中にこれらがあれば、blockquote を 1 段落にせず中身を段落に分ける
+_QUOTE_INNER_BLOCKS = ["p", "li", "h1", "h2", "h3", "h4", "h5", "h6", "figcaption", "ul", "ol", "blockquote"]
+_BLOCK_NAMES = sorted(_INLINE_BLOCKS)
+
+
+def _iter_text_blocks(container) -> List[str]:
+    """container の中の段落を文書順に 1 段落 1 文字列で返す (空の段落は返さない)。container から表示されない要素を取り除く。
+    タグ名 (p・li など) で列挙すると、<p> に包まれていないテキストが落ちる。WordPress の <p><div class="wp-caption">…</div>本文</p>
+    は lxml もブラウザも div の前で <p> を閉じるので、本文は div の後ろの裸のテキストになる。そこで子を順に見て、
+    ブロック要素の境目ごとにテキストとインライン要素の並びを 1 段落にする。
+    li は入れ子のリストを除いた部分を 1 段落にし、入れ子のリストの項目は別段落にする (リストの後ろのテキストはリストの後の別段落)。blockquote は中に段落 (p・li・見出しなど) が
+    あれば中身を段落に分け (<p> の外のテキストも別段落として残す)、無ければ全体を 1 段落にする。"""
+    for bad in container.select(_HIDDEN_CONTENT_SELECTOR):
+        bad.decompose()
+    return list(_walk_blocks(container))
+
+
+def _walk_blocks(node) -> Iterable[str]:
+    run: list = []
+    for ch in node.children:
+        if isinstance(ch, NavigableString):
+            if type(ch) in (NavigableString, CData):
+                run.append(ch)
+            continue
+        # <a><div>…</div></a> のようにブロックを含むインライン要素も、ブラウザではブロックの所で改行される
+        if ch.name in _INLINE_BLOCKS or ch.find(_BLOCK_NAMES) is not None:
+            text = _inline_nodes_text(run)
+            if text:
+                yield text
+            run = []
+            yield from _block_texts(ch)
+        else:
+            run.append(ch)
+    text = _inline_nodes_text(run)
+    if text:
+        yield text
+
+
+def _block_texts(el) -> Iterable[str]:
+    if el.name == "li":
+        # 入れ子リストのうち一番外側のもの (その上に ul/ol を挟まないもの) だけを切り離す。内側は一緒に付いてくる
+        sublists = [lst for lst in el.find_all(["ul", "ol"])
+                    if next(p for p in lst.parents if p is el or p.name in ("ul", "ol")) is el]
+        # 切り離した位置に目印を残し、ブラウザの表示どおり入れ子リストの後ろのテキストを別段落にする
+        # (目印の NUL は本文と衝突しない。lxml は HTML 中の NUL を U+FFFD に置き換える)
+        markers = []
+        for lst in sublists:
+            markers.append(NavigableString("\x00"))
+            lst.insert_before(markers[-1])
+            lst.extract()
+        parts = _inline_text(el).split("\x00")
+        # 目印を木に残すと、同じ木から本文を取り直す予備経路 (本文が見つからないとき) に NUL が漏れる
+        for marker in markers:
+            marker.extract()
+        if len(parts) != len(sublists) + 1:
+            parts = [_WS_RUN_RE.sub(" ", " ".join(parts))] + [""] * len(sublists)
+        for i, part in enumerate(parts):
+            part = part.strip()
+            if part:
+                yield part
+            if i < len(sublists):
+                yield from _walk_blocks(sublists[i])
+    elif el.name == "blockquote" and not any(d.get_text(strip=True) for d in el.find_all(_QUOTE_INNER_BLOCKS)):
+        text = _inline_text(el)
+        if text:
+            yield text
+    else:
+        yield from _walk_blocks(el)
 
 
 # 記事の外側 (サイドバー・フッターの「最近の投稿」欄・コメント欄・関連記事) を示す class / id
@@ -1056,7 +1182,7 @@ _META_LINE_RE = re.compile(
 def _extract_main_content(soup: BeautifulSoup) -> str:
     """
     WordPress + Elegant Themes(Divi系) を想定しつつ、汎用的に本文を抽出。
-    見出し(H1-H4)と段落(P)、リスト(LI)、写真の説明文(FIGCAPTION)をテキスト化。
+    本文ノードのテキストを段落ごとにテキスト化 (写真の説明文も含む)。
     """
     # 最有力候補
     candidates = [
@@ -1067,6 +1193,10 @@ def _extract_main_content(soup: BeautifulSoup) -> str:
         ".et_pb_post_content",
         ".et_pb_text_inner",
         "#left-area",
+        # Global Voices: div.post.hentry > div.entry-container > div.entry。ページには関連記事カード
+        # article.gv-promo-card があるので 'article' より前に置く
+        ".post .entry",
+        ".entry-container .entry",
         "article"
     ]
     node = None
@@ -1075,6 +1205,7 @@ def _extract_main_content(soup: BeautifulSoup) -> str:
         if node:
             break
     if node is None:
+        sel = None
         node = soup.body or soup
 
     # 不要な要素を除去
@@ -1091,12 +1222,8 @@ def _extract_main_content(soup: BeautifulSoup) -> str:
             texts.append(line)
 
     # タイトル直下の著者・カテゴリ・コメント案内などを緩くスキップ
-    # 写真の説明文 (figcaption) も本文に含める。REST の本文断片では lxml が <figure> を暗黙の <p> で包むため
-    # 説明文が段落として出るので、ページから取ったときも同じ本文になるよう明示的に拾う
-    for h in node.select("h1, h2, h3, h4, p, li, figcaption"):
-        if _has_emitted_ancestor(h, node, names=("p", "li", "figcaption")):
-            continue
-        t = _inline_text(h)
+    # 段落の分け方は REST・フィード経路 (_article_from_feed_entry) と同じ関数にそろえる
+    for t in _iter_text_blocks(node):
         if _META_LINE_RE.match(t):
             continue
         push(t)
@@ -1104,17 +1231,31 @@ def _extract_main_content(soup: BeautifulSoup) -> str:
     # 最低限、空なら全文テキスト
     if not texts:
         push(_inline_text(node))
-    return _clean_text("\n\n".join(texts))
+    content = _clean_text("\n\n".join(texts))
+    if sel in ("article", None) and len(content) < 200:
+        # 本文の入れ物を見つけられず、関連記事カード (GV の article.gv-promo-card) やページ全体に落ちた可能性がある
+        logging.getLogger(__name__).warning("本文の候補要素が見つからず、抽出した本文が %d 字しかありません", len(content))
+    return content
 
 
 def _extract_title(soup: BeautifulSoup) -> str:
-    for sel in ["h1.entry-title", "h1.post-title", "article h1", "h1"]:
+    # GV の最初の h1 はサイトロゴ (h1#site-title、テキスト無し) で、記事の題名は h2.post-title にある
+    for sel in ["h1.entry-title", "h1.post-title", "article h1", "h1", "h2.post-title"]:
         el = soup.select_one(sel)
         if el:
-            return _inline_text(el)
+            text = _inline_text(el)
+            if text:
+                return text
+    og = soup.select_one("meta[property='og:title']")
+    if og and (og.get("content") or "").strip():
+        return _norm_title(og["content"])
     # <title> からサイト名を取り除く
     title = _inline_text(soup.title) if soup.title else ""
-    return re.sub(r"\s*\|\s*Pola Retradio.*$", "", title).strip()
+    site = soup.select_one("meta[property='og:site_name']")
+    site_name = (site.get("content") or "").strip() if site else ""
+    if site_name:
+        title = re.sub(r"\s*[·|]\s*" + re.escape(site_name) + r"\s*$", "", title)
+    return _norm_title(re.sub(r"\s*\|\s*Pola Retradio.*$", "", title))
 
 
 _EO_MONTH_DATE_RE = re.compile(
@@ -1123,18 +1264,27 @@ _EO_MONTH_DATE_RE = re.compile(
 )
 
 
+# Python 3.9 の fromisoformat はコロンの無いオフセット (GV の meta「2025-03-11T12:34:45+0100」) を読めない
+_ISO_OFFSET_NO_COLON_RE = re.compile(r"(T\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?[+-]\d{2})(\d{2})$")
+
+
+def _parse_iso_attr(value: str) -> Optional[datetime]:
+    """time[datetime] や meta の ISO 8601 日時を時刻・オフセット付きで読む。"""
+    return _parse_wp_datetime(_ISO_OFFSET_NO_COLON_RE.sub(r"\1:\2", value.strip()))
+
+
 def _extract_page_published(soup: BeautifulSoup) -> Optional[datetime]:
     """記事ページから公開日を取る。Pola Retradio のページには <time> が無く、ページ全体を探すとフッターの
     「最近の投稿」欄 (span.post-date) やコメントの日付を拾うので、それらの中は見ない。"""
     times = [t for t in soup.find_all("time") if not _in_noise_area(t)]
     times.sort(key=lambda t: "published" not in (t.get("class") or []))
     for t in times:
-        dt = _parse_date_any(t.get("datetime") or _inline_text(t))
+        dt = _parse_iso_attr(t["datetime"]) if (t.get("datetime") or "").strip() else _parse_date_any(_inline_text(t))
         if dt:
             return dt
     meta = soup.select_one("meta[property='article:published_time']")
     if meta and meta.get("content"):
-        dt = _parse_date_any(meta["content"])
+        dt = _parse_iso_attr(meta["content"])
         if dt:
             return dt
     # Divi のメタ行: <span class="published">Mar 5, 2025</span>
@@ -1155,8 +1305,39 @@ def _extract_page_published(soup: BeautifulSoup) -> Optional[datetime]:
     return None
 
 
+# Global Voices の特集 (gv_special) → フィードの <category> に載る名前。既存コーパスに合わせてこの 3 つだけを扱う
+# (Lingua などバッジのある他の特集はフィードのカテゴリに無い)
+_GV_SPECIAL_NAMES = {"the-bridge": "The Bridge", "rising-voices": "Rising Voices", "advox": "GV Advocacy"}
+
+
+def _gv_special_name(key: str) -> Optional[str]:
+    """REST の class_list の slug (the-bridge) またはバッジ画像の alt (The Bridge) を表示名にする。"""
+    return _GV_SPECIAL_NAMES.get(re.sub(r"\s+", "-", key.strip().casefold()))
+
+
+def _extract_gv_translator(soup: BeautifulSoup, site_name: str) -> Optional[str]:
+    """Global Voices の署名欄から Esperanto 版の訳者 (= WordPress の投稿者、フィードの著者) を取る。
+    署名欄には「Verkita (English) de」や他言語版の「Tradukita (Español) de」の行が先に並ぶことがあるので、
+    ラベルが「Tradukita (Esperanto)」の行だけを見る。ラベルと名前のリンクの間に空白が無い
+    (…de</span><a>Herman…) ので、行全体の文字列ではなくラベルの親要素の a.user-link から名前を読む。
+    ヘッダ (div.contributor か .text-credits-section) とフッタに同じ署名が出るので名前は重複を除く。"""
+    names: List[str] = []
+    for label in soup.select("#post-header-credit span.credit-label, .postfooter-credits span.credit-label"):
+        if not re.sub(r"\s+", " ", label.get_text()).strip().startswith("Tradukita (Esperanto)"):
+            continue
+        for a in label.parent.select("a.user-link"):
+            name = re.sub(r"\s+", " ", a.get_text(" ", strip=True))
+            if not name or name in names:
+                continue
+            # 共有アカウント「Global Voices Esperanto」(og:site_name は「Global Voices en Esperanto」) は著者にしない
+            if name.casefold().startswith("global voices") or (site_name and name.casefold() == site_name.casefold()):
+                continue
+            names.append(name)
+    return ", ".join(names) or None
+
+
 def _extract_page_author(soup: BeautifulSoup) -> Optional[str]:
-    """記事ページのバイライン (.author.vcard / rel=author) から著者名を取る。"""
+    """記事ページのバイライン (.author.vcard / rel=author、Global Voices は署名欄) から著者名を取る。"""
     site = soup.select_one("meta[property='og:site_name']")
     site_name = (site.get("content") or "").strip() if site else ""
     for el in soup.select(".author.vcard a, a[rel~='author'], .author.vcard"):
@@ -1170,7 +1351,7 @@ def _extract_page_author(soup: BeautifulSoup) -> Optional[str]:
         if site_name and name.casefold() == site_name.casefold():
             return None
         return name
-    return None
+    return _extract_gv_translator(soup, site_name)
 
 
 def _extract_author_and_categories(soup: BeautifulSoup) -> Tuple[Optional[str], List[str]]:
@@ -1178,6 +1359,13 @@ def _extract_author_and_categories(soup: BeautifulSoup) -> Tuple[Optional[str], 
     # 日付やコメント数まで著者・カテゴリに入る。著者リンクとカテゴリリンク (rel="category tag") だけを見る
     author = _extract_page_author(soup)
     cats = {_inline_text(a) for a in soup.select("a[rel~='category']") if not _in_noise_area(a)}
+    # Global Voices: カテゴリは記事末尾の「Regionoj / Temoj」欄 (div.post-terms) にある。ヘッダのナビにも同じ
+    # term-link-category クラスが並ぶので欄の中だけを読む。特集は欄では別クラスなので、記事ヘッダのバッジの alt から取る
+    cats |= {_inline_text(a) for a in soup.select("div.post-terms .term-link-category a")}
+    for img in soup.select(".custom-post-header img[alt]"):
+        name = _gv_special_name(img.get("alt") or "")
+        if name:
+            cats.add(name)
     return author, sorted(c for c in cats if c)
 
 
@@ -1192,15 +1380,34 @@ def _normalize_audio_href(href: str) -> str:
     return urlunsplit(parts._replace(query=urlencode(query)))
 
 
+_AUDIO_EXTENSIONS = (".mp3", ".m4a", ".ogg", ".oga", ".opus", ".wav")
+
+
+def is_audio_url(href: str) -> bool:
+    # URL 全体の部分一致だと vinilkosmo-mp3.com のようなホスト名や /author/claudiogobbo/ まで拾うので、パスの拡張子で見る
+    try:
+        path = urlsplit(href.strip()).path
+    except ValueError:
+        return False
+    return path.lower().endswith(_AUDIO_EXTENSIONS)
+
+
 def _extract_audio_links(soup: BeautifulSoup) -> List[str]:
     links = set()
-    # audio / mp3 / source
     for el in soup.find_all(["a", "audio", "source"]):
-        href = el.get("href") or el.get("src")
-        if not href:
-            continue
-        lower = href.lower()
-        if "mp3" in lower or "audio" in lower:
+        if el.name == "a":
+            href = el.get("href")
+            ok = bool(href) and is_audio_url(href)
+        elif el.name == "audio":
+            href = el.get("src")
+            ok = bool(href)
+        else:
+            # <video> の中の <source> (mp4) は拾わない
+            href = el.get("src")
+            ok = bool(href) and (
+                el.find_parent("audio") is not None or (el.get("type") or "").lower().startswith("audio/")
+            )
+        if ok:
             links.add(_normalize_audio_href(href))
     return sorted(links)
 
@@ -1215,16 +1422,10 @@ def _article_from_feed_entry(entry: FeedEntryData, cfg: ScrapeConfig) -> Optiona
 
     audio_links: Optional[List[str]] = None
     if cfg.include_audio_links:
-        audio_links = _extract_audio_links(soup) or None
+        audio_links = sorted(set(_extract_audio_links(soup)) | set(entry.enclosures)) or None
     _drop_player_widgets(soup)
 
-    blocks: List[str] = []
-    for node in soup.find_all(["h1", "h2", "h3", "h4", "p", "li", "blockquote", "figcaption"]):
-        if _has_emitted_ancestor(node, soup, names=("p", "li", "blockquote", "figcaption")):
-            continue
-        text = _inline_text(node)
-        if text:
-            blocks.append(text)
+    blocks = _iter_text_blocks(soup)
     if not blocks:
         blocks.append(_inline_text(soup))
     content_text = _clean_text("\n\n".join(blocks))
@@ -1307,8 +1508,8 @@ def _default_source_label(cfg: ScrapeConfig) -> str:
         return "MONATO (monato.be)"
     if "esperanto.china.org.cn" in base:
         return "El Popola Ĉinio (esperanto.china.org.cn)"
-    if "scivolemo.com" in base:
-        return "Scivolemo (scivolemo.com)"
+    if "scivolemo.wordpress.com" in base:
+        return "Scivolemo (scivolemo.wordpress.com)"
     return host
 
 def to_markdown(articles: List[Article], cfg: ScrapeConfig) -> str:

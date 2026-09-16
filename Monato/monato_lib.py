@@ -44,6 +44,9 @@ WAYBACK_SNAPSHOT_URL = "https://web.archive.org/web/{timestamp}/{original}"
 # Nova! ページ (直近掲載分のみ) + ID 連番プローブ (--method archive / both) で補完する。
 PROBE_STOP_OLDER = 15    # 実効下限(-余裕)より古い日付付きページがこの数連続したら走査終了
 PROBE_MARGIN_DAYS = 30   # 「Lasta adapto」日付が号内で前後する非単調性への余裕
+# ID は投稿時に振られ、ページの日付はそれより数か月遅れることがある (帯域下端から
+# 200 ID 以上下で期間内の日付を持つ記事が実在した)。この幅は打ち切りの数を数えずに走査する
+PROBE_MIN_SPAN = 300
 PROBE_MAX_PAGES = 500    # 走査ページ数の安全上限
 PROBE_MAX_ERRORS = 5     # ネットワークエラーがこの数連続したら走査中断
 
@@ -290,7 +293,7 @@ def _probe_article(
     soup = BeautifulSoup(resp.content, "lxml")
     h1 = soup.find("h1")
     title = _inline_text(h1) if h1 else url
-    published = _extract_last_adapto(soup.find("table"))
+    published = _extract_last_adapto(soup)
     return "hit", _CollectedEntry(
         url=url,
         title=title,
@@ -316,11 +319,15 @@ def _collect_from_probe(
       (Nova! に一度も載らない書評等が実在する) も拾う。
     - 打ち切り: 実効下限 (開始日と probe_floor = 公開年別インデックスで取得済みの
       翌年初、の大きい方) より PROBE_MARGIN_DAYS 以上古い日付付きページが
-      PROBE_STOP_OLDER 回連続したら終了。号内で日付が前後するため、カウントは
-      走査位置が Nova! 帯域下端 (min(anchor_ids)) を下回ってから行う。
+      PROBE_STOP_OLDER 回連続したら終了。ID より日付が数か月遅れるページがあるため、
+      カウントは走査位置が Nova! 帯域下端 (min(anchor_ids)) から PROBE_MIN_SPAN を
+      下回ってから行う。これより古い ID で日付の遅い記事は取れない
+      (backfill_publika_probe.py で ID 帯を走査して補う)。
     - 日付なしページ: 直近に見た日付付きページが期間±余裕内にある場合のみ収集
       (published は空のまま出力の unknown グループに現れるので人手で確認する)。
     - ネットワーク障害: PROBE_MAX_ERRORS 回連続で走査中断 (収集は不完全になる)。
+      連続に届かない散発的な失敗も、その ID が期間内の記事だった可能性があるので
+      不完全として報告する。
     - PROBE_MAX_PAGES に達して実効下限まで届かなかったときも収集は不完全。
 
     戻り値: (収集エントリ, 期間外スキップ数, 日付なしスキップ数, 走査が不完全に終わったときのエラー文)
@@ -338,6 +345,7 @@ def _collect_from_probe(
     entries: List[_CollectedEntry] = []
     consecutive_older = 0
     consecutive_errors = 0
+    failed_ids: List[int] = []
     out_of_range = 0
     skipped_undated = 0
     probed = 0
@@ -357,11 +365,13 @@ def _collect_from_probe(
         if cfg.throttle_sec > 0:
             time.sleep(cfg.throttle_sec)
         consecutive_errors = consecutive_errors + 1 if status == "error" else 0
+        if status == "error":
+            failed_ids.append(article_id)
         if status == "hit" and entry is not None:
             if entry.published:
                 pub = entry.published.date()
                 last_dated = pub
-                if article_id < min_anchor:
+                if article_id < min_anchor - PROBE_MIN_SPAN:
                     consecutive_older = consecutive_older + 1 if pub < stop_threshold else 0
                 if cfg.start_date <= pub <= cfg.end_date:
                     entries.append(entry)
@@ -390,8 +400,10 @@ def _collect_from_probe(
         article_id -= 1
     error: Optional[str] = None
     if consecutive_errors >= PROBE_MAX_ERRORS:
+        # 中断直前の連続失敗は中断のエラー文で報告される
+        failed_ids = failed_ids[:-consecutive_errors]
         error = (
-            f"MONATO probo ĉesigita ĉe ID {article_id + 1} post {PROBE_MAX_ERRORS} sinsekvaj "
+            f"MONATO probo ĉesigita ĉe ID {article_id + 1:06d} post {PROBE_MAX_ERRORS} sinsekvaj "
             "retaj eraroj; la kolektado estas nekompleta."
         )
         logging.warning(error)
@@ -399,7 +411,7 @@ def _collect_from_probe(
         if last_dated is None or last_dated >= stop_threshold:
             # 実効下限 - 余裕まで届いていない (期間の始まり側が丸ごと欠け得る)
             error = (
-                f"MONATO probo: atingis PROBE_MAX_PAGES={PROBE_MAX_PAGES} ĉe ID {article_id + 1}, "
+                f"MONATO probo: atingis PROBE_MAX_PAGES={PROBE_MAX_PAGES} ĉe ID {article_id + 1:06d}, "
                 f"sed la plej frua probita dato estas {last_dated or 'nekonata'} (bezonata: antaŭ "
                 f"{stop_threshold}); artikoloj de {floor_date} ĝis tiam povas manki; "
                 "la kolektado estas nekompleta."
@@ -412,6 +424,17 @@ def _collect_from_probe(
                 PROBE_MAX_PAGES,
                 last_dated,
             )
+    if failed_ids:
+        examples = ", ".join(f"{i:06d}" for i in failed_ids[:10])
+        if len(failed_ids) > 10:
+            examples += " …"
+        scattered = (
+            f"MONATO probo: {len(failed_ids)} {'ID-o' if len(failed_ids) == 1 else 'ID-oj'} "
+            "ne atingeblis pro retaj eraroj "
+            f"(ekz. {examples}); la kolektado eble estas nekompleta."
+        )
+        logging.warning(scattered)
+        error = f"{error} {scattered}" if error else scattered
     logging.info(
         "MONATO probo: %s paĝoj probitaj, %s artikoloj en la periodo, "
         "%s ekster ĝi, %s sen dato preterlasitaj.",
@@ -676,17 +699,25 @@ def _find_article_container(soup: BeautifulSoup) -> Tag:
     return node or soup.body or soup
 
 
-def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Session] = None) -> Article:
+def fetch_article(
+    url: str,
+    cfg: ScrapeConfig,
+    session: Optional[requests.Session] = None,
+    resp: Optional[requests.Response] = None,
+) -> Article:
+    """resp (url を取得済みの応答) を渡すと再取得せずに解析する。その場合 404 でも
+    Wayback には退避しない (プローブで不存在の ID をアーカイブ版で拾わないため)。"""
     cfg.normalize()
-    s = session or shared_session(cfg)
-    s.headers.update({"User-Agent": USER_AGENT})
-    # 収集系と同じく retry_get で一時的な 5xx・切断を再試行する
-    # (単発 s.get だと一過性エラーの記事がそのまま欠落する)
-    resp = retry_get(s, url, cfg)
-    if resp.status_code == 404:
-        archived = _fetch_archived_copy(url, s, cfg.timeout_sec)
-        if archived is not None:
-            resp = archived
+    if resp is None:
+        s = session or shared_session(cfg)
+        s.headers.update({"User-Agent": USER_AGENT})
+        # 収集系と同じく retry_get で一時的な 5xx・切断を再試行する
+        # (単発 s.get だと一過性エラーの記事がそのまま欠落する)
+        resp = retry_get(s, url, cfg)
+        if resp.status_code == 404:
+            archived = _fetch_archived_copy(url, s, cfg.timeout_sec)
+            if archived is not None:
+                resp = archived
     resp.raise_for_status()
     soup = BeautifulSoup(resp.content, "lxml")
 
@@ -697,7 +728,6 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
     meta = MONATO_META.get(url, {})
     published_dt = meta.get("published")
     author_hint = meta.get("author_hint")
-    primary_table = soup.find("table")
 
     # \\s と二重エスケープすると「リテラル \ + s*」の意味になり一切マッチしない
     # (author が常に author_hint 頼みになる) ので、\s* が正しい。
@@ -721,7 +751,7 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
     content_text = "\n\n".join(body_paragraphs)
 
     if not published_dt:
-        fallback = _extract_last_adapto(primary_table)
+        fallback = _extract_last_adapto(soup)
         if fallback:
             published_dt = fallback
 
@@ -736,17 +766,21 @@ def fetch_article(url: str, cfg: ScrapeConfig, session: Optional[requests.Sessio
     )
 
 
-def _extract_last_adapto(first_table: Optional[Tag]) -> Optional[datetime]:
-    if not first_table:
+def _extract_last_adapto(soup: Optional[Tag]) -> Optional[datetime]:
+    # publika ページでは最初の table (外枠) にあるが、年別インデックス由来の
+    # /YYYY/NNNNNN.php?p では最初の table が掲載号の注記で、2 つ目以降にある
+    if not soup:
         return None
-    text = first_table.get_text(" ", strip=True)
-    match = re.search(r"Lasta adapto de tiu ĉi paĝo:\s*(\d{4}-\d{2}-\d{2})", text)
-    if not match:
-        return None
-    try:
-        return datetime.strptime(match.group(1), "%Y-%m-%d")
-    except ValueError:
-        return None
+    for table in soup.find_all("table"):
+        text = table.get_text(" ", strip=True)
+        match = re.search(r"Lasta adapto de tiu ĉi paĝo:\s*(\d{4}-\d{2}-\d{2})", text)
+        if not match:
+            continue
+        try:
+            return datetime.strptime(match.group(1), "%Y-%m-%d")
+        except ValueError:
+            return None
+    return None
 
 
 def _fetch_archived_copy(url: str, session: requests.Session, timeout: int) -> Optional[requests.Response]:

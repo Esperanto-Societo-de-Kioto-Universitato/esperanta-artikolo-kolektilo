@@ -6,7 +6,7 @@ venv/
 env/
 .env
 *.log
-retradio_cache.sqlite*
+retradio_cache*.sqlite*
 output/
 *.zip
 *.Zone.Identifier

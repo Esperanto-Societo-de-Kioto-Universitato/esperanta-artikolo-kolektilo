@@ -45,6 +45,7 @@ class WorkerResult:
     articles: List[Article]
     failures: List[str]
     timer_fetch: float
+    skipped_out_of_range: List[str]
 
 
 def parse_args() -> argparse.Namespace:
@@ -60,7 +61,7 @@ def parse_args() -> argparse.Namespace:
         "--workers",
         type=int,
         default=4,
-        help="並列実行するワーカー数（期間の分割数、1以上）",
+        help="並列実行するワーカー数（URL 収集後の本文取得を URL 単位で分担、1以上）",
     )
     p.add_argument(
         "--out",
@@ -92,21 +93,17 @@ def parse_args() -> argparse.Namespace:
         "--max-pages",
         type=int,
         default=None,
-        help="ページ送りの最大回数（Noneは制限なし）",
+        help="Monato では使われません (互換のため受け付けるだけ)",
     )
     p.add_argument(
         "--include-audio",
         action="store_true",
-        help="本文メタに MP3 等の音声リンクも含める",
+        help="Monato では使われません (互換のため受け付けるだけ)",
     )
     p.add_argument(
         "--no-cache",
         action="store_true",
         help="requests-cache を使わない（並列実行時は自動で無効化されます）",
-    )
-    p.add_argument(
-        "--feed-url",
-        help="RSS/Atom フィード URL を直接指定（非 WordPress サイト向け）",
     )
     p.add_argument(
         "--split-by",
@@ -117,6 +114,13 @@ def parse_args() -> argparse.Namespace:
     return p.parse_args()
 
 
+def _parse_day(s: str, name: str) -> date:
+    try:
+        return date.fromisoformat(s)
+    except ValueError:
+        raise SystemExit(f"{name} は YYYY-MM-DD 形式で指定してください。") from None
+
+
 def resolve_date_range(args: argparse.Namespace) -> Tuple[date, date]:
     if args.start is None and args.days is None:
         raise SystemExit("--start もしくは --days の指定が必要です。")
@@ -125,11 +129,11 @@ def resolve_date_range(args: argparse.Namespace) -> Tuple[date, date]:
     if args.start:
         if not args.end:
             raise SystemExit("--start を指定する場合は --end も指定してください。")
-        start_d = datetime.fromisoformat(args.start).date()
-        end_d = datetime.fromisoformat(args.end).date()
+        start_d = _parse_day(args.start, "--start")
+        end_d = _parse_day(args.end, "--end")
     else:
         end_raw = args.end or date.today().isoformat()
-        end_d = datetime.fromisoformat(end_raw).date()
+        end_d = _parse_day(end_raw, "--end")
         days = args.days if args.days is not None else 30
         if days <= 0:
             raise SystemExit("--days は正の整数で指定してください。")
@@ -146,6 +150,7 @@ def worker_task(args: WorkerArgs) -> WorkerResult:
     session = _session(cfg)
     articles: List[Article] = []
     failures: List[str] = []
+    skipped_out_of_range: List[str] = []
 
     if args.meta:
         monato_lib.MONATO_META.clear()
@@ -159,8 +164,11 @@ def worker_task(args: WorkerArgs) -> WorkerResult:
                 pub = article.published.date()
                 # 号日付 (YYYY/MM→月初正規化、常に day=1) は月粒度なので、
                 # 開始日が月の途中でも開始月を落とさないよう月初で比較する。
-                start_cmp = cfg.start_date.replace(day=1) if pub.day == 1 else cfg.start_date
+                # 一覧に日付が無くページの Lasta adapto を使った記事は、1 日でも日単位で比べる
+                is_issue_date = monato_lib.MONATO_META.get(url, {}).get("published") is not None
+                start_cmp = cfg.start_date.replace(day=1) if (is_issue_date and pub.day == 1) else cfg.start_date
                 if not (start_cmp <= pub <= cfg.end_date):
+                    skipped_out_of_range.append(f"{url} ({pub})")
                     continue
             articles.append(article)
         except Exception as exc:  # noqa: BLE001
@@ -176,6 +184,7 @@ def worker_task(args: WorkerArgs) -> WorkerResult:
         articles=articles,
         failures=failures,
         timer_fetch=timer_after_fetch - timer_start,
+        skipped_out_of_range=skipped_out_of_range,
     )
 
 
@@ -210,7 +219,6 @@ def main() -> None:
         include_audio_links=args.include_audio,
         use_cache=not args.no_cache,
         source_label=SOURCE_LABEL,
-        feed_url_override=args.feed_url,
     )
     set_progress_callback(None)
 
@@ -224,6 +232,7 @@ def main() -> None:
 
     urls = url_result.urls
     total_urls = len(urls)
+    skipped_out_of_range: List[str] = []
     if total_urls == 0:
         print(
             f"[INFO] 並列スクレイプ開始: {start_d} ～ {end_d} "
@@ -295,9 +304,11 @@ def main() -> None:
             total_fetch += result.timer_fetch
             overall_failures.extend(result.failures)
             all_articles.extend(result.articles)
+            skipped_out_of_range.extend(result.skipped_out_of_range)
             print(
                 f"[INFO] ワーカー #{result.index}: "
                 f"URL {len(result.processed_urls)} 件 | 本文 {len(result.articles)} 本 | "
+                f"期間外 {len(result.skipped_out_of_range)} 本 | "
                 f"本文取得 {result.timer_fetch:.1f}s"
             )
 
@@ -317,6 +328,9 @@ def main() -> None:
         f"out-of-range skipped {url_result.out_of_range_skipped}"
     )
     print(f"[INFO] 累計時間: URL収集 {total_collect:.1f}s / 本文取得 {total_fetch:.1f}s")
+    print(f"[INFO] 本文取得後に期間外で除外: 合計 {len(skipped_out_of_range)} 本")
+    for item in skipped_out_of_range:
+        print(f"  - {item}")
 
     if url_result.errors:
         print("[ERROR] URL 収集の一部に失敗しました（記事の取りこぼしがあり得ます）:", file=sys.stderr)
@@ -339,7 +353,8 @@ def main() -> None:
         dates = [a.published.date() for a in subset if a.published]
         chunk_start = min(dates) if dates else start_d
         chunk_end = max(dates) if dates else end_d
-        cfg_chunk = replace(cfg_base, start_date=chunk_start, end_date=chunk_end)
+        # none のときの md の time_range は、scraper.py・アプリと同じく指定期間にする
+        cfg_chunk = cfg_base if args.split_by == "none" else replace(cfg_base, start_date=chunk_start, end_date=chunk_end)
         if args.split_by == "none":
             # ファイル名は指定期間から決める。取得できた記事の min/max 日付を使うと
             # 再実行のたびに別名ファイルが増え、同じ記事が重複して残る。

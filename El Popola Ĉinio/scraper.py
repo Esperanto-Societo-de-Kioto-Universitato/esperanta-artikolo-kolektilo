@@ -47,8 +47,8 @@ def parse_args():
     p.add_argument("--base-url", default=DEFAULT_BASE_URL, help="対象サイトのベース URL")
     p.add_argument("--method", default="feed", choices=["auto","rest","both","feed","archive"], help="URL収集方法（El Popola Ĉinio は独自クローラを利用します）")
     p.add_argument("--throttle", type=float, default=1.0, help="1リクエスト毎の遅延秒数")
-    p.add_argument("--max-pages", type=int, default=None, help="ページ送りの最大回数（Noneは制限なし）")
-    p.add_argument("--include-audio", action="store_true", help="本文メタに MP3 等の音声リンクも含める")
+    p.add_argument("--max-pages", type=int, default=None, help="ノードごとの最大ページ数（省略・0 は 20。サイト側の一覧は 10 ページまで）")
+    p.add_argument("--include-audio", action="store_true", help="El Popola Ĉinio では無効 (互換のため受け付けるだけ)")
     p.add_argument("--no-cache", action="store_true", help="requests-cache を使わない")
     p.add_argument(
         "--split-by",
@@ -57,6 +57,13 @@ def parse_args():
         help="大きな期間を扱う際に出力ファイルを年別または月別で分割",
     )
     return p.parse_args()
+
+
+def _parse_day(s: str, name: str) -> date:
+    try:
+        return date.fromisoformat(s)
+    except ValueError:
+        raise SystemExit(f"{name} は YYYY-MM-DD 形式で指定してください。") from None
 
 
 def _group_articles(articles, mode: str) -> List[Tuple[str, list]]:
@@ -88,15 +95,17 @@ def main():
     if args.start:
         if not args.end:
             raise SystemExit("--start を指定する場合は --end も指定してください。")
-        start_d = datetime.fromisoformat(args.start).date()
-        end_d = datetime.fromisoformat(args.end).date()
+        start_d = _parse_day(args.start, "--start")
+        end_d = _parse_day(args.end, "--end")
     else:
         end_raw = args.end or date.today().isoformat()
-        end_d = datetime.fromisoformat(end_raw).date()
+        end_d = _parse_day(end_raw, "--end")
         days = args.days if args.days is not None else 30
         if days <= 0:
             raise SystemExit("--days は正の整数で指定してください。")
         start_d = end_d - timedelta(days=days - 1)
+    if end_d < start_d:
+        raise SystemExit("終了日は開始日以降である必要があります。")
 
     cfg = ScrapeConfig(
         base_url=args.base_url,
@@ -139,6 +148,14 @@ def main():
     )
     if result.earliest_date and result.latest_date:
         print(f"[INFO] URL 範囲（推定公開日）: {result.earliest_date} ～ {result.latest_date}")
+    # 失敗ではないので終了コードは変えない
+    for warning in getattr(result, "warnings", []):
+        print(f"[WARN] {warning}", file=sys.stderr)
+    skipped_other_host = list(getattr(result, "skipped_other_host", []))
+    if skipped_other_host:
+        print(f"[INFO] 他ホストにあるため収集しなかった記事 (動画ページ・本ホストの複製を除く): {len(skipped_other_host)} 件")
+        for url in skipped_other_host:
+            print(f"  - {url}")
 
     s = _session(cfg)
     arts = []

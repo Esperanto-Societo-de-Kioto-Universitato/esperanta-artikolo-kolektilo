@@ -1,0 +1,621 @@
+<title>Kion ni legos?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400;1,7..72,500&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@600;700;900&display=swap">
+<style>
+:root {
+  --ground: #F4F7F1;
+  --surface: #FFFFFF;
+  --ink: #16241C;
+  --ink-soft: #3B4A40;
+  --muted: #637268;
+  --rule: #D6DFD3;
+  --accent: #1D7543;
+  --accent-ink: #FFFFFF;
+  --accent-wash: #E2EFE5;
+  --seal: #B8432A;
+  --seal-ink: #FFFFFF;
+  --easy: #2A7A4B;
+  --mid: #86650E;
+  --hard: #A23B2C;
+  --f-display: "Zen Old Mincho", "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  --f-body: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+  --f-latin: "Literata", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #0F1612;
+    --surface: #16201A;
+    --ink: #E3EAE2;
+    --ink-soft: #C2CDC4;
+    --muted: #8E9F94;
+    --rule: #28352D;
+    --accent: #62C68D;
+    --accent-ink: #0F1612;
+    --accent-wash: #1B2F23;
+    --seal: #E36B4F;
+    --seal-ink: #0F1612;
+    --easy: #72CF98;
+    --mid: #D8B65C;
+    --hard: #EE8B7B;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #0F1612;
+  --surface: #16201A;
+  --ink: #E3EAE2;
+  --ink-soft: #C2CDC4;
+  --muted: #8E9F94;
+  --rule: #28352D;
+  --accent: #62C68D;
+  --accent-ink: #0F1612;
+  --accent-wash: #1B2F23;
+  --seal: #E36B4F;
+  --seal-ink: #0F1612;
+  --easy: #72CF98;
+  --mid: #D8B65C;
+  --hard: #EE8B7B;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 15px;
+  line-height: 1.75;
+  padding-inline: clamp(16px, 4vw, 48px);
+  padding-block: 0 72px;
+}
+.wrap { max-width: 1060px; margin-inline: auto; }
+a { color: var(--accent); text-underline-offset: 3px; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---- masthead ---- */
+.masthead {
+  padding-block: 40px 28px;
+  display: grid;
+  gap: 14px;
+}
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+h1 { margin: 0; display: grid; gap: 6px; }
+h1 .eo {
+  display: flex;
+  align-items: center;
+  gap: 0.28em;
+  font-family: var(--f-latin);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(38px, 7vw, 62px);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  color: var(--accent);
+}
+h1 .eo svg { width: 0.62em; height: 0.62em; flex: none; fill: var(--accent); }
+h1 .ja {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: clamp(19px, 2.6vw, 25px);
+  color: var(--ink);
+  text-wrap: balance;
+}
+.lede { margin: 0; max-width: 40em; color: var(--ink-soft); }
+.facts {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 28px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.facts div { display: flex; gap: 8px; align-items: baseline; }
+.facts dd {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.howto { max-width: 44em; font-size: 14px; color: var(--ink-soft); }
+.howto summary { cursor: pointer; color: var(--accent); font-weight: 700; width: fit-content; }
+.howto ol { margin: 8px 0 0; padding-left: 1.4em; display: grid; gap: 2px; }
+
+/* ---- toolbar ---- */
+.toolbar {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 5;
+  background: var(--ground);
+  border-block: 1px solid var(--rule);
+  padding-block: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.toolbar label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.toolbar input, .toolbar select {
+  font-size: 14px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 6px 10px;
+  min-height: 38px;
+}
+.toolbar input { flex: 1 1 220px; min-width: 0; }
+.toolbar select { flex: 0 1 auto; max-width: 100%; }
+.shown { margin-left: auto; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* ---- tally board ---- */
+.board {
+  margin-block: 22px 8px;
+  padding: 16px 20px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px 32px;
+}
+.board h2 {
+  margin: 0 0 6px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  font-weight: 700;
+}
+.board ol, .board ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+.board li { display: grid; grid-template-columns: 3.2em minmax(0, 1fr) auto; gap: 8px; align-items: baseline; font-size: 14px; }
+.board .bno { font-family: var(--f-latin); font-variant-numeric: tabular-nums; color: var(--muted); }
+.board .bt { overflow-wrap: anywhere; }
+.board .bv { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--accent); }
+.board li.empty { display: block; color: var(--muted); font-size: 14px; }
+.board-foot {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--rule);
+  padding-top: 10px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.btn-reset {
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 4px 12px;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+/* ---- candidate list ---- */
+.list { list-style: none; margin: 0; padding: 0; }
+.item {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 156px;
+  gap: 4px 22px;
+  padding-block: 24px;
+  border-bottom: 1px solid var(--rule);
+}
+.no {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 10px;
+  font-family: var(--f-latin);
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+.no b {
+  display: block;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.seal {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--seal);
+  border-radius: 50%;
+  place-items: center;
+  color: var(--seal);
+  font-family: var(--f-display);
+  font-weight: 900;
+  font-size: 21px;
+  line-height: 1;
+  transform: rotate(-9deg);
+}
+.item.chosen .seal { display: grid; }
+.item.chosen .no b { color: var(--seal); }
+.body { min-width: 0; }
+.ja-title {
+  margin: 0;
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-wrap: balance;
+}
+.eo-title {
+  margin: 2px 0 0;
+  font-family: var(--f-latin);
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.meta {
+  margin: 8px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 14px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.meta .words { font-variant-numeric: tabular-nums; }
+.meta .src { color: var(--ink-soft); font-weight: 500; }
+.lv { font-weight: 700; }
+.lv[data-lv="やさしい"] { color: var(--easy); }
+.lv[data-lv="ふつう"] { color: var(--mid); }
+.lv[data-lv="手ごわい"] { color: var(--hard); }
+.summary { margin: 8px 0 0; max-width: 38em; }
+.note { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
+.links { margin: 6px 0 0; display: flex; flex-wrap: wrap; gap: 2px 18px; font-size: 13px; }
+
+.vote {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-content: start;
+}
+.tally {
+  grid-column: 1 / -1;
+  min-height: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  color: var(--accent);
+}
+.sei { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
+.count { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; align-self: center; }
+.count b { color: var(--ink); font-size: 15px; }
+.btns { display: flex; gap: 6px; }
+.btn-plus, .btn-minus {
+  min-width: 40px;
+  min-height: 38px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn-plus { background: var(--accent); color: var(--accent-ink); border: 1px solid var(--accent); padding: 0 12px; }
+.btn-minus { background: transparent; color: var(--ink-soft); border: 1px solid var(--rule); }
+.btn-minus:disabled { opacity: 0.4; cursor: default; }
+.btn-choose {
+  grid-column: 1 / -1;
+  min-height: 34px;
+  background: transparent;
+  color: var(--seal);
+  border: 1px solid var(--seal);
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.btn-choose[aria-pressed="true"] { background: var(--seal); color: var(--seal-ink); font-weight: 700; }
+.btn-plus:active, .btn-minus:active, .btn-choose:active { transform: translateY(1px); }
+.nohit { padding-block: 40px; color: var(--muted); text-align: center; }
+
+.foot {
+  margin-top: 36px;
+  font-size: 12.5px;
+  color: var(--muted);
+  max-width: 48em;
+  display: grid;
+  gap: 6px;
+}
+.foot p { margin: 0; }
+
+@media (max-width: 760px) {
+  .item { grid-template-columns: 46px minmax(0, 1fr); }
+  .vote { grid-column: 2; grid-template-columns: auto 1fr auto; align-items: center; margin-top: 6px; }
+  .tally { grid-column: auto; min-height: 0; }
+  .btn-choose { grid-column: 1 / -1; }
+  .no b { font-size: 22px; }
+  .board { grid-template-columns: minmax(0, 1fr); }
+  .shown { margin-left: 0; }
+  .toolbar { position: static; }
+  .toolbar input { flex-basis: 100%; }
+  .toolbar select { flex: 1 1 calc(50% - 4px); }
+}
+@media print {
+  :root, :root[data-theme="dark"], :root:not([data-theme="light"]) {
+    --ground: #FFFFFF; --surface: #FFFFFF; --ink: #000000; --ink-soft: #222222; --muted: #444444;
+    --rule: #BBBBBB; --accent: #1D7543; --seal: #B8432A; --easy: #2A7A4B; --mid: #86650E; --hard: #A23B2C;
+  }
+  .toolbar, .vote .btns, .btn-choose, .board-foot, .howto { display: none; }
+  body { background: #fff; color: #000; }
+  .item { break-inside: avoid; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-plus:active, .btn-minus:active, .btn-choose:active { transform: none; }
+}
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <p class="eyebrow">京都大学エスペラント研究会 ／ 例会の輪読えらび</p>
+    <h1>
+      <span class="eo" lang="eo"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4 61.8 38.2 97.6 38.8 69 60.6 79.4 95 50 74.4 20.6 95 31 60.6 2.4 38.8 38.2 38.2Z"/></svg>Kion ni legos?</span>
+      <span class="ja">次の輪読、どれにする？</span>
+    </h1>
+    <p class="lede">2025年3月〜2026年9月に集めたエスペラント記事から、輪読に向く候補を選びました。日本語タイトルと紹介を見て、読みたい記事を番号で挙げてください。どれも全文が読める記事で、原文へのリンクつきです。</p>
+    <dl class="facts" id="facts"></dl>
+    <details class="howto">
+      <summary>例会での使い方</summary>
+      <ol>
+        <li>気になる記事を番号で挙げる（絞り込みでテーマ・難しさ・長さを選べます）</li>
+        <li>候補ごとに挙手の数を「＋1」で記録する（票は正の字で表示）</li>
+        <li>読む記事が決まったら「今回読む」を押す</li>
+      </ol>
+    </details>
+  </header>
+
+  <div class="toolbar" role="region" aria-label="絞り込みと並べ替え">
+    <label for="q">キーワード</label>
+    <input id="q" type="search" placeholder="キーワード（日本語・エスペラント）" autocomplete="off">
+    <label for="f-site">出典</label>
+    <select id="f-site"></select>
+    <label for="f-theme">テーマ</label>
+    <select id="f-theme"></select>
+    <label for="f-level">難しさ</label>
+    <select id="f-level"></select>
+    <label for="f-len">長さ</label>
+    <select id="f-len">
+      <option value="">長さ：すべて</option>
+      <option value="s">〜700語</option>
+      <option value="m">700〜1,200語</option>
+      <option value="l">1,200語〜</option>
+    </select>
+    <label for="sort">並べ替え</label>
+    <select id="sort">
+      <option value="no">番号順</option>
+      <option value="votes">票の多い順</option>
+      <option value="short">短い順</option>
+      <option value="new">新しい順</option>
+    </select>
+    <span class="shown" id="shown" aria-live="polite"></span>
+  </div>
+
+  <section class="board" aria-label="集計">
+    <div>
+      <h2>票の多い記事</h2>
+      <ol id="top"></ol>
+    </div>
+    <div>
+      <h2>今回読む</h2>
+      <ul id="chosen"></ul>
+    </div>
+    <div class="board-foot">
+      <span>票と「今回読む」の印は、この端末のブラウザにだけ保存されます。例会では司会の端末で記録してください。</span>
+      <button class="btn-reset" id="reset" type="button">票と印をすべて消す</button>
+    </div>
+  </section>
+
+  <ul class="list" id="list"></ul>
+
+  <footer class="foot">
+    <p id="foot-src"></p>
+    <p>各記事の著作権は掲載サイト・著者に帰属します。「原文」は掲載サイトの記事、「抽出md」は取得した本文（エスペラントの題名と本文の Markdown。語注・著者紹介を含み、朗読案内・写真説明・クレジット・URL は除いてあるので、注釈ルビツールにそのまま読み込めます）です。記事の全文はコーパス <a href="https://github.com/Esperanto-Societo-de-Kioto-Universitato/esperanta-artikolo-korpuso" target="_blank" rel="noopener">esperanta-artikolo-korpuso</a> にも収録しています。</p>
+    <p id="foot-ruby" hidden>「ルビ付きで読む」は <a href="https://github.com/Esperanto-Societo-de-Kioto-Universitato/esperanto-radiko-cjk-annotator" target="_blank" rel="noopener">esperanto-radiko-cjk-annotator</a>（日本語版・注釈ルビモード）で語根の上に日本語訳を付けたページです。</p>
+  </footer>
+</div>
+
+<script>
+const CANDIDATES = /*__DATA__*/[];
+const META = /*__META__*/{};
+const SITE_LABEL = {
+  uea_facila: "UEA Facila",
+  libera_folio: "Libera Folio",
+  global_voices_eo: "Global Voices",
+  el_popola_cxinio: "El Popola Ĉinio",
+  monato: "MONATO"
+};
+const LEVELS = ["やさしい", "ふつう", "手ごわい"];
+const STORE_KEY = "kion-ni-legos:" + (META.edition || "v1");
+const STROKES = ["M3 3H17", "M10 3V17", "M10 10H15.5", "M4.5 10V17", "M2 17H18"];
+
+const state = { votes: {}, chosen: [] };
+try {
+  const raw = localStorage.getItem(STORE_KEY);
+  if (raw) {
+    const saved = JSON.parse(raw);
+    if (saved && typeof saved === "object") {
+      state.votes = saved.votes || {};
+      state.chosen = Array.isArray(saved.chosen) ? saved.chosen : [];
+    }
+  }
+} catch (e) { /* 保存領域が使えない環境では記録なしで動く */ }
+function save() {
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (e) {}
+}
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const fmt = (n) => n.toLocaleString("ja-JP");
+const votesOf = (no) => state.votes[no] || 0;
+const isChosen = (no) => state.chosen.includes(no);
+const sessions = (w) => (w > 1500 ? "2回に分けて" : "1回");
+const ym = (d) => Number(d.slice(0, 4)) + "年" + Number(d.slice(5, 7)) + "月";
+
+function tally(n) {
+  if (!n) return "";
+  const glyph = (k) => '<svg class="sei" viewBox="0 0 20 20" aria-hidden="true">' + STROKES.slice(0, k).map((d) => '<path d="' + d + '"/>').join("") + "</svg>";
+  let out = "";
+  for (let i = 0; i < Math.floor(n / 5); i++) out += glyph(5);
+  if (n % 5) out += glyph(n % 5);
+  return out;
+}
+
+function fillSelect(id, label, values, fmtFn) {
+  const el = $(id);
+  el.innerHTML = '<option value="">' + esc(label) + "：すべて</option>" +
+    values.map((v) => '<option value="' + esc(v) + '">' + esc(fmtFn ? fmtFn(v) : v) + "</option>").join("");
+}
+
+function initControls() {
+  const sites = [...new Set(CANDIDATES.map((c) => c.site))];
+  fillSelect("f-site", "出典", sites, (s) => SITE_LABEL[s] || s);
+  const themes = [...new Set(CANDIDATES.map((c) => c.theme))].sort((a, b) => a.localeCompare(b, "ja"));
+  fillSelect("f-theme", "テーマ", themes);
+  fillSelect("f-level", "難しさ", LEVELS.filter((l) => CANDIDATES.some((c) => c.level === l)));
+  const words = CANDIDATES.map((c) => c.words);
+  const dates = CANDIDATES.map((c) => c.published).filter(Boolean).sort();
+  $("facts").innerHTML = [
+    ["候補", CANDIDATES.length + "本"],
+    ["出典", sites.length + "サイト"],
+    ["本文", fmt(Math.min(...words)) + "〜" + fmt(Math.max(...words)) + "語"],
+    ["掲載", ym(dates[0]) + "〜" + ym(dates[dates.length - 1])]
+  ].map(([k, v]) => "<div><dt>" + k + "</dt><dd>" + v + "</dd></div>").join("");
+  $("foot-src").textContent = "選定: " + (META.selected || "") + "。出典別の本数: " +
+    sites.map((s) => (SITE_LABEL[s] || s) + " " + CANDIDATES.filter((c) => c.site === s).length).join("、") + "。";
+}
+
+// x 方式 (cx, gx, ...) で打った検索語も字上符の表記に当てる
+const dex = (s) => s.replace(/([cghjsu])x/g, (m, c) => ({ c: "ĉ", g: "ĝ", h: "ĥ", j: "ĵ", s: "ŝ", u: "ŭ" })[c]);
+
+function filtered() {
+  const q = dex($("q").value.trim().toLowerCase());
+  const site = $("f-site").value, theme = $("f-theme").value, level = $("f-level").value, len = $("f-len").value;
+  let rows = CANDIDATES.filter((c) => {
+    if (site && c.site !== site) return false;
+    if (theme && c.theme !== theme) return false;
+    if (level && c.level !== level) return false;
+    if (len === "s" && c.words > 700) return false;
+    if (len === "m" && (c.words <= 700 || c.words > 1200)) return false;
+    if (len === "l" && c.words <= 1200) return false;
+    if (q) {
+      const hay = dex([c.ja_title, c.eo_title, c.summary, c.note, c.theme, c.level, SITE_LABEL[c.site], "no." + c.no, String(c.no)].join(" ").toLowerCase());
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  const sort = $("sort").value;
+  const byNo = (a, b) => a.no - b.no;
+  if (sort === "votes") rows.sort((a, b) => votesOf(b.no) - votesOf(a.no) || byNo(a, b));
+  else if (sort === "short") rows.sort((a, b) => a.words - b.words || byNo(a, b));
+  else if (sort === "new") rows.sort((a, b) => b.published.localeCompare(a.published) || byNo(a, b));
+  else rows.sort(byNo);
+  return rows;
+}
+
+function voteHTML(c) {
+  const v = votesOf(c.no);
+  return '<div class="tally">' + tally(v) + "</div>" +
+    '<span class="count"><b>' + v + "</b> 票</span>" +
+    '<span class="btns">' +
+    '<button class="btn-minus" type="button" data-act="minus" data-no="' + c.no + '" aria-label="No.' + c.no + ' の票を1つ減らす"' + (v ? "" : " disabled") + ">−</button>" +
+    '<button class="btn-plus" type="button" data-act="plus" data-no="' + c.no + '" aria-label="No.' + c.no + ' に1票">＋1</button>' +
+    "</span>" +
+    '<button class="btn-choose" type="button" data-act="choose" data-no="' + c.no + '" aria-pressed="' + isChosen(c.no) + '">' + (isChosen(c.no) ? "今回読む ✓" : "今回読む") + "</button>";
+}
+
+function itemHTML(c) {
+  return '<li class="item' + (isChosen(c.no) ? " chosen" : "") + '" id="c' + c.no + '">' +
+    '<div class="no">No.<b>' + c.no + '</b><span class="seal" aria-hidden="true">決</span></div>' +
+    '<div class="body">' +
+      '<h2 class="ja-title">' + esc(c.ja_title) + "</h2>" +
+      '<p class="eo-title" lang="eo">' + esc(c.eo_title) + "</p>" +
+      '<p class="meta"><span class="src">' + esc(SITE_LABEL[c.site] || c.site) + "</span>" +
+        (c.published ? '<time datetime="' + esc(c.published) + '">' + esc(c.published) + "</time>" : "<span>掲載日不明</span>") +
+        '<span class="words" title="本文のおおよその語数（語注・朗読案内・写真説明・クレジット・URL を除く）">本文 ' + fmt(c.words) + "語・" + sessions(c.words) + "</span>" +
+        '<span class="lv" data-lv="' + esc(c.level) + '">' + esc(c.level) + "</span>" +
+        "<span>" + esc(c.theme) + "</span></p>" +
+      '<p class="summary">' + esc(c.summary) + "</p>" +
+      (c.note ? '<p class="note">※ ' + esc(c.note) + "</p>" : "") +
+      '<p class="links">' +
+        (c.ruby ? '<a href="' + esc(c.ruby) + '">ルビ付きで読む</a>' : "") +
+        '<a href="' + esc(c.url) + '" target="_blank" rel="noopener">原文（' + esc(SITE_LABEL[c.site] || c.site) + "）</a>" +
+        (c.md_url ? '<a href="' + esc(c.md_url) + '" target="_blank" rel="noopener">抽出md</a>' : "") +
+      "</p>" +
+    "</div>" +
+    '<div class="vote" id="v' + c.no + '">' + voteHTML(c) + "</div>" +
+  "</li>";
+}
+
+function renderList() {
+  const rows = filtered();
+  $("list").innerHTML = rows.length ? rows.map(itemHTML).join("") : '<li class="nohit">条件に合う記事がありません。絞り込みを戻してください。</li>';
+  $("shown").textContent = rows.length === CANDIDATES.length ? "全" + rows.length + "本" : rows.length + " / " + CANDIDATES.length + "本を表示";
+}
+
+function renderBoard() {
+  const byNo = Object.fromEntries(CANDIDATES.map((c) => [c.no, c]));
+  const top = CANDIDATES.filter((c) => votesOf(c.no) > 0).sort((a, b) => votesOf(b.no) - votesOf(a.no) || a.no - b.no).slice(0, 8);
+  $("top").innerHTML = top.length
+    ? top.map((c) => '<li><span class="bno">No.' + c.no + '</span><span class="bt">' + esc(c.ja_title) + '</span><span class="bv">' + votesOf(c.no) + "票</span></li>").join("")
+    : '<li class="empty">まだ票はありません。</li>';
+  const chosen = state.chosen.filter((no) => byNo[no]);
+  $("chosen").innerHTML = chosen.length
+    ? chosen.map((no) => '<li><span class="bno">No.' + no + '</span><span class="bt">' + esc(byNo[no].ja_title) + '</span><span class="bv">' + fmt(byNo[no].words) + "語</span></li>").join("")
+    : '<li class="empty">まだ決まっていません。</li>';
+}
+
+function refreshItem(no) {
+  const c = CANDIDATES.find((x) => x.no === no);
+  const v = $("v" + no);
+  if (v && c) v.innerHTML = voteHTML(c);
+  const li = $("c" + no);
+  if (li) li.classList.toggle("chosen", isChosen(no));
+}
+
+$("list").addEventListener("click", (ev) => {
+  const btn = ev.target.closest("button[data-act]");
+  if (!btn) return;
+  const no = Number(btn.dataset.no);
+  const act = btn.dataset.act;
+  if (act === "plus") state.votes[no] = votesOf(no) + 1;
+  if (act === "minus") state.votes[no] = Math.max(0, votesOf(no) - 1);
+  if (act === "choose") state.chosen = isChosen(no) ? state.chosen.filter((x) => x !== no) : [...state.chosen, no];
+  save();
+  if ($("sort").value === "votes" && act !== "choose") renderList();
+  else refreshItem(no);
+  renderBoard();
+  let again = document.querySelector('#v' + no + ' button[data-act="' + act + '"]');
+  if (!again || again.disabled) again = document.querySelector('#v' + no + ' button[data-act="plus"]');
+  if (again) {
+    again.focus({ preventScroll: true });
+    again.closest(".item").scrollIntoView({ block: "nearest" });
+  }
+});
+["q", "f-site", "f-theme", "f-level", "f-len", "sort"].forEach((id) => $(id).addEventListener(id === "q" ? "input" : "change", renderList));
+$("reset").addEventListener("click", () => {
+  if (!confirm("この端末に記録した票と「今回読む」の印をすべて消します。よろしいですか？")) return;
+  state.votes = {};
+  state.chosen = [];
+  save();
+  renderList();
+  renderBoard();
+});
+
+initControls();
+if (CANDIDATES.some((c) => c.ruby)) $("foot-ruby").hidden = false;
+renderList();
+renderBoard();
+</script>

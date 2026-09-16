@@ -85,11 +85,18 @@ def parse_args() -> argparse.Namespace:
         help="URL収集方法（WordPress REST 推奨）",
     )
     p.add_argument("--throttle", type=float, default=0.5, help="1リクエスト毎の遅延秒数")
-    p.add_argument("--max-pages", type=int, default=None, help="ページ送り最大回数（Noneは制限なし）")
+    p.add_argument("--max-pages", type=int, default=None, help="フィード/月別アーカイブのページ送り上限（省略時: フィード 200、アーカイブ無制限。REST では無効）")
     p.add_argument("--no-cache", action="store_true", help="requests-cache を使わない")
     p.add_argument("--feed-url", help="RSS/Atom フィード URL を直接指定（必要時）")
     p.add_argument("--split-by", choices=["none", "year", "month"], default="none", help="出力を年/月で分割")
     return p.parse_args()
+
+
+def _parse_day(s: str, name: str) -> date:
+    try:
+        return date.fromisoformat(s)
+    except ValueError:
+        raise SystemExit(f"{name} は YYYY-MM-DD 形式で指定してください。") from None
 
 
 def resolve_date_range(args: argparse.Namespace) -> Tuple[date, date]:
@@ -100,11 +107,11 @@ def resolve_date_range(args: argparse.Namespace) -> Tuple[date, date]:
     if args.start:
         if not args.end:
             raise SystemExit("--start を指定する場合は --end も指定してください。")
-        start_d = datetime.fromisoformat(args.start).date()
-        end_d = datetime.fromisoformat(args.end).date()
+        start_d = _parse_day(args.start, "--start")
+        end_d = _parse_day(args.end, "--end")
     else:
         end_raw = args.end or date.today().isoformat()
-        end_d = datetime.fromisoformat(end_raw).date()
+        end_d = _parse_day(end_raw, "--end")
         days = args.days if args.days is not None else 30
         if days <= 0:
             raise SystemExit("--days は正の整数で指定してください。")
@@ -149,12 +156,14 @@ def worker_task(args: WorkerArgs):
     session = _session(cfg)
     articles: List[Article] = []
     failures: List[str] = []
+    skipped_out_of_range: List[str] = []
     for url in urls.urls:
         try:
             article = fetch_article(url, cfg, session)
             if article.published:
                 d = article.published.date()
                 if d < cfg.start_date or d > cfg.end_date:
+                    skipped_out_of_range.append(f"{url} ({d})")
                     continue
             articles.append(article)
         except Exception as exc:  # noqa: BLE001
@@ -173,6 +182,7 @@ def worker_task(args: WorkerArgs):
         failures=failures,
         timer_collect=timer_after_collect - timer_start,
         timer_fetch=timer_after_fetch - timer_after_collect,
+        skipped_out_of_range=skipped_out_of_range,
     )
 
 
@@ -261,6 +271,7 @@ def main() -> None:
         duplicates_removed=0,
         out_of_range_skipped=0,
     )
+    skipped_out_of_range: List[str] = []
     earliest_dates: List[date] = []
     latest_dates: List[date] = []
 
@@ -305,9 +316,10 @@ def main() -> None:
         if urls.latest_date:
             latest_dates.append(urls.latest_date)
         all_articles.extend(r["articles"])
+        skipped_out_of_range.extend(r["skipped_out_of_range"])
         print(
             f"[INFO] ワーカー #{r['index']}: {r['start_date']} ～ {r['end_date']} | "
-            f"URL {len(r['urls'].urls)} 件 | 本文 {len(r['articles'])} 本 | "
+            f"URL {len(r['urls'].urls)} 件 | 本文 {len(r['articles'])} 本 | 期間外 {len(r['skipped_out_of_range'])} 本 | "
             f"URL収集 {r['timer_collect']:.1f}s / 本文取得 {r['timer_fetch']:.1f}s"
         )
 
@@ -324,6 +336,9 @@ def main() -> None:
         f"out-of-range skipped {combined_stats['out_of_range_skipped']}"
     )
     print(f"[INFO] 累計時間: URL収集 {total_collect:.1f}s / 本文取得 {total_fetch:.1f}s")
+    print(f"[INFO] 本文取得後に期間外で除外: 合計 {len(skipped_out_of_range)} 本")
+    for item in skipped_out_of_range:
+        print(f"  - {item}")
 
     _report_failures(failed_chunks, overall_failures)
     if not results:
@@ -338,7 +353,8 @@ def main() -> None:
         dates = [a.published.date() for a in subset if a.published]
         chunk_start = min(dates) if dates else start_d
         chunk_end = max(dates) if dates else end_d
-        cfg_chunk = replace(cfg_base, start_date=chunk_start, end_date=chunk_end)
+        # none のときの md の time_range は、アプリと同じく指定期間にする
+        cfg_chunk = cfg_base if args.split_by == "none" else replace(cfg_base, start_date=chunk_start, end_date=chunk_end)
         if args.split_by == "none":
             # ファイル名は指定期間から決める。取得できた記事の min/max 日付を使うと
             # 再実行のたびに別名ファイルが増え、同じ記事が重複して残る。
